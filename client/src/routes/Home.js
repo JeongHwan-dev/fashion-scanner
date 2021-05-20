@@ -1,39 +1,32 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
+
+import Navigation from 'components/Navigation';
+
 import 'routes/css/Home.css';
+
 import background from 'videos/background.mp4';
 import magazine from 'videos/magazine.mp4';
 import fashionIcon from 'videos/fashionIcon.mp4';
 
 const Home = () => {
+  const history = useHistory();
+
+  // Member 페이지 이동 핸들러
+  const onMoveMember = () => {
+    history.push('/member');
+  };
+
   return (
     <>
       {/* HEADER */}
-      <header>
-        <nav className="inner">
-          <a href="/" className="logo">
-            <img src={require('images/fs_logo.png').default} alt="FASHION SCANNER" />
-          </a>
-          <div className="link-group">
-            <ul className="link">
-              <li>
-                <a href="/">서비스 소개</a>
-              </li>
-              <li>
-                <a href="/">룩북</a>
-              </li>
-              <li>
-                <a href="/">당신의 패션은 어떤 멤버?</a>
-              </li>
-              <li>
-                <a href="/">요청하기</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </header>
+      <Navigation />
       {/* SECTIONS */}
       <section>
         {/* SECTION 01: INTRODUCTION */}
+        <div className="section__title">
+          <img src={require('images/sample.png').default} alt="FASHION SCANNER" />
+        </div>
         <div className="section__introduction">
           <video autoPlay muted loop id="background__video">
             <source src={background} type="video/mp4" />
@@ -62,7 +55,7 @@ const Home = () => {
                 <p>Fashion</p>
               </div>
             </li>
-            <li>
+            <li className="dsc">
               패션 스케너는 인공지능 기술을 이용한 이미지 스캐닝 서비스입니다.
               <br />
               셀럽들의 패션 스타일을 분석하여 사용자들에게 유사한 패션 스타일을 제시합니다.
@@ -132,7 +125,7 @@ const Home = () => {
                 <br />
                 AI가 어떤 멤버와 패션 성향이 가장 비슷한지 알려드립니다.
               </p>
-              <button>바로가기</button>
+              <button onClick={onMoveMember}>바로가기</button>
             </div>
             <img src={require('images/group_photo.png').default} alt="GROUP Photo" />
           </div>

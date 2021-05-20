@@ -28,7 +28,7 @@ video {
 }
 
 /* HEADER */
-header {
+/* header {
   position: fixed;
   top: 0;
   z-index: 1;
@@ -79,9 +79,24 @@ header .link-group ul.link li a {
 }
 header .link-group ul.link li a:hover {
   color: #d1d6db;
-}
+} */
 
 /* SECTIONS */
+
+section .section__title {
+  height: 900px;
+}
+section .section__title img {
+  margin: 0 auto;
+  padding: 300px 0;
+}
+/* section .section__title h1 {
+  margin: 0 auto;
+  padding: 300px 0;
+  font-size: 150px;
+  font-weight: bold;
+  text-align: center;
+} */
 
 /* SECTION 01: INTRODUCTION */
 section .section__introduction {
@@ -123,7 +138,24 @@ section .section__introduction li {
   text-align: center;
   margin-bottom: 50px;
   color: #b0b8c1;
+  /* animation: appear 1.6s 0.27s cubic-bezier(0.16, 1, 0.3, 1) forwards; */
 }
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+section .section__introduction .dsc {
+  background: linear-gradient(to right, #f2a7bb, #b3d4ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 section .section__introduction li:nth-child(3) {
   display: flex;
   padding: 25px 30%;

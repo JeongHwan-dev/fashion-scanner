@@ -1,0 +1,53 @@
+* {
+  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+}
+.member__title {
+  width: 100%;
+  padding-bottom: 50px;
+  /* background-color: #af6166; */
+  background: linear-gradient(to bottom, #de999d, #af6166);
+  /* top: 0; */
+}
+
+section .member__title img:first-child {
+  margin: 0 auto 40px;
+  padding-top: 130px;
+  /* padding: 0; */
+  width: 1000px;
+  height: auto;
+  /* border: 10px solid #ffffff; */
+}
+section .member__title img:nth-child(2) {
+  padding: 0;
+  margin: 0 auto;
+}
+
+section .member__upload {
+  padding: 100px 0;
+  height: 1000px;
+  background-color: #fff;
+}
+section .member__upload ul li {
+  margin: 0 auto;
+  text-align: center;
+}
+section .member__upload h1 {
+  color: #d97e9f;
+  font-size: 65px;
+  font-weight: bold;
+  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+  text-align: center;
+}
+section .member__upload ul li button {
+  margin: 50px auto;
+  padding: 10px 60px;
+  font-size: 24px;
+  color: #d97e9f;
+  border: 5px solid #d97e9f;
+  border-radius: 20px;
+  background-color: #fff;
+}
+section .member__upload ul li button:hover {
+  color: white;
+  background-color: #d97e9f;
+}
