@@ -1,4 +1,4 @@
 server/web/.env.dev
-server/postgres
-server/django.db.backends.sqlite3
-server/fashion_scanner/__pycache__
+server/web/postgres
+server/web/django.db.backends.sqlite3
+server/web/fashion_scanner/__pycache__
