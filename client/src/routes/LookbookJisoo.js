@@ -16,14 +16,13 @@ const Lookbook = () => {
   const mainWrap = {
     display: 'flex',
     height: '100%',
-    justifyContent: 'spaceBetween',
+    justifyContent: 'space-between',
     alignItems: 'center',
   };
 
   const memberImg = {
     width: '395px',
     padding: '0 50px',
-
   };
 
   const memberName = {
@@ -31,6 +30,11 @@ const Lookbook = () => {
     color: '#FBBCBC',
     padding: '0 50px',
   };
+
+  const lookbookMain = {
+    backgroundColor: 'white',
+    height: '1500px'
+  }
 
   const backgroundBox = {
     width: '560px',
@@ -45,7 +49,7 @@ const Lookbook = () => {
     position: 'relative',
     top: '-350px',
     left: '150px',
-  }
+  };
 
   const infoBox = {
     width: '600px',
@@ -53,29 +57,95 @@ const Lookbook = () => {
     backgroundColor: '#E4E4E4',
     position: 'relative',
     top: '-800px',
-    left: '700px'
-  }
+    left: '700px',
+  };
 
   const infoTitle = {
     color: '#5F5F5F',
     fontSize: '20px',
     lineHeight: '150%',
-    fontWeight: 'bold'
-  }
+    fontWeight: 'bold',
+  };
 
   const infoContent = {
     color: '#7E7E7E',
     fontSize: '16px',
-    lineHeight: '150%'
-  }
+    lineHeight: '150%',
+  };
 
   const recommImage = {
     width: '180px',
     height: 'auto',
     display: 'inline',
     verticalAlign: 'top',
+    margin: '5px',
+  };
+
+  const arrows = {
+    position: 'relative',
+    top: '500px',
+    justifyContent: 'space-between',
+    display: 'flex',
+  };
+
+  const leftArrow = {
+    width: '50px',
+    transform: 'rotate(180deg)',
+    position: 'relative',
+    marginLeft: '40px',
+  };
+
+  const rightArrow = {
+    width: '50px',
+    position: 'relative',
+    marginRight: '40px',
+    zIndex: '1',
+  };
+
+  const numberingWrap = {
+    position: 'relative',
+    top: '950px',
+  };
+
+  const numbering = {
+    display: 'block',
+    textAlign: 'center',
+    color: '#666666'
+  };
+
+  const styles = {
+    display: 'flex',
+    justifyContent: 'center',
+    position: 'relative',
+    top: '-700px'
+  };
+
+  const style = {
+    width: '200px',
+    height: '230px',
+    display: 'inline-block',
+    verticalAlign: 'top',
     margin: '5px'
-  }
+  };
+
+  const othersTitle = {
+    lineHeight: '80px',
+    display: 'inline-block',
+    fontSize: '64px',
+    marginTop: '200px',
+  };
+
+  const otherMember = {
+    display: 'inline-block',
+    width: '250px',
+    verticalAlign: 'top',
+  };
+
+  const otherWrap = {
+    display: 'flex',
+    justifyContent: 'space-evenly',
+    margin: '50px'
+  };
 
   return (
     <>
@@ -123,12 +193,27 @@ const Lookbook = () => {
         </div>
       </section>
       {/* 룩북 메인 */}
-      <section className="lookbook_main" style={{ backgroundColor: 'white' }}>
+      <section className="lookbook_main" style={lookbookMain}>
         <div className="lookbook_bg">
+          <div className="arrows" style={arrows}>
+            <div className="left_arrow">
+              <a href="#">
+                <img src={arrow} style={leftArrow} />
+              </a>
+            </div>
+            <div className="right_arrow">
+              <a href="#">
+                <img src={arrow} style={rightArrow} />
+              </a>
+            </div>
+          </div>
+          <div className="numbering_wrap" style={numberingWrap}>
+            <p style={numbering}>1 of 10</p>
+          </div>
           <div className="behind_box" style={backgroundBox}></div>
           <div className="stylebox" style={styleBox}>
             <img src={jisooStyle01} style={{ width: '500px' }} />
-          </div>          
+          </div>
           <div className="styleinfo" style={infoBox}>
             <div className="style_txt_wrap" style={{ padding: '50px 0 40px 30px' }}>
               <h6 style={infoTitle}>TYPE</h6>
@@ -138,30 +223,56 @@ const Lookbook = () => {
               <h6 style={infoTitle}>FEATURES</h6>
               <p style={infoContent}>반팔, 하프넥, 스트라이프 패턴</p>
             </div>
-            <div className="recomm" style={{ textAlign: "center" }}>
-              <img src={recomm01} style={recommImage} />
-              <img src={recomm02} style={recommImage} />
-              <img src={recomm03} style={recommImage} />
+            <div className="recomm" style={{ textAlign: 'center' }}>
+              <a href="#">
+                <img src={recomm01} style={recommImage} />
+              </a>
+              <a href="#">
+                <img src={recomm02} style={recommImage} />
+              </a>
+              <a href="#">
+                <img src={recomm03} style={recommImage} />
+              </a>
             </div>
           </div>
         </div>
-        <p>1 of 10</p>
-        <div className="styles">
-          <img src={jisooStyle02} />
-          <img src={jisooStyle03} />
-          <img src={jisooStyle02} />
-          <img src={jisooStyle03} />
-          <img src={jisooStyle02} />
+
+        <div className="styles" style={styles}>
+          <a href="#">
+            <img src={jisooStyle02} style={style} />
+          </a>
+          <a href="#">
+          <img src={jisooStyle03} style={style} />
+          </a>    
+          <a href="#">
+          <img src={jisooStyle02} style={style} />
+          </a> 
+          <a href="#">
+          <img src={jisooStyle03} style={style} />
+          </a> 
+          <a href="#">
+          <img src={jisooStyle02} style={style} />
+          </a>       
         </div>
       </section>
       {/* 다른 멤버 확인하기 */}
       <section>
-        <h2>다른 멤버 확인하기</h2>
+        <div className="others_wrap" style={otherWrap}>
+          <p style={othersTitle}>다른 멤버 <br /> 확인하기</p>
         <div className="members">
-          <img src={memberRose} />
-          <img src={memberJisoo} />
-          <img src={memberJennie} />
-          <img src={memberLisa} />
+          <a href="#">
+            <img src={memberRose} style={otherMember} />
+          </a>
+          <a href="#">
+            <img src={memberJisoo} style={otherMember} />
+          </a>
+          <a href="#">
+            <img src={memberJennie} style={otherMember} />
+          </a>
+          <a href="#">
+            <img src={memberLisa} style={otherMember} />
+          </a>
+        </div>
         </div>
       </section>
       {/* footer */}
