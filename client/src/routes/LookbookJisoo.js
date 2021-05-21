@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import jisooMain from '../images/lookbook_jisoo_main.png';
-import jisooStyle01 from '../images/lookbook_jisoo_style01.png';
-import jisooStyle02 from '../images/lookbook_jisoo_style02.png';
-import jisooStyle03 from '../images/lookbook_jisoo_style03.png';
+import jisooStyle1 from '../images/lookbook_jisoo_style1.png';
+import jisooStyle2 from '../images/lookbook_jisoo_style2.png';
+import jisooStyle3 from '../images/lookbook_jisoo_style3.png';
+import jisooStyle4 from '../images/lookbook_jisoo_style4.jpeg';
+import jisooStyle5 from '../images/lookbook_jisoo_style5.jpeg';
+import jisooStyle6 from '../images/lookbook_jisoo_style6.jpeg';
+import jisooStyle7 from '../images/lookbook_jisoo_style7.jpeg';
+import jisooStyle8 from '../images/lookbook_jisoo_style8.jpeg';
+import jisooStyle9 from '../images/lookbook_jisoo_style9.jpeg';
+import jisooStyle10 from '../images/lookbook_jisoo_style10.jpeg';
 import memberRose from '../images/lookbook_members_rose.png';
 import memberJisoo from '../images/lookbook_members_jisoo.png';
 import memberJennie from '../images/lookbook_members_jennie.png';
@@ -11,8 +18,10 @@ import recomm01 from '../images/lookbook_recomm01.jpeg';
 import recomm02 from '../images/lookbook_recomm02.jpeg';
 import recomm03 from '../images/lookbook_recomm03.jpeg';
 import arrow from '../images/lookbook_arrow.png';
+import { Link } from 'react-router-dom';
 
 const Lookbook = () => {
+  // css
   const mainWrap = {
     display: 'flex',
     height: '100%',
@@ -33,8 +42,8 @@ const Lookbook = () => {
 
   const lookbookMain = {
     backgroundColor: 'white',
-    height: '1500px'
-  }
+    height: '1400px',
+  };
 
   const backgroundBox = {
     width: '560px',
@@ -49,6 +58,7 @@ const Lookbook = () => {
     position: 'relative',
     top: '-350px',
     left: '150px',
+    display: 'inline-block',
   };
 
   const infoBox = {
@@ -75,10 +85,11 @@ const Lookbook = () => {
 
   const recommImage = {
     width: '180px',
-    height: 'auto',
+    height: '270px',
     display: 'inline',
     verticalAlign: 'top',
     margin: '5px',
+    objectFit: 'cover',
   };
 
   const arrows = {
@@ -110,22 +121,23 @@ const Lookbook = () => {
   const numbering = {
     display: 'block',
     textAlign: 'center',
-    color: '#666666'
+    color: '#666666',
   };
 
   const styles = {
     display: 'flex',
     justifyContent: 'center',
     position: 'relative',
-    top: '-700px'
+    top: '-700px',
   };
 
   const style = {
-    width: '200px',
-    height: '230px',
+    width: '100px',
+    height: '100px',
     display: 'inline-block',
     verticalAlign: 'top',
-    margin: '5px'
+    margin: '5px',
+    objectFit: 'cover',
   };
 
   const othersTitle = {
@@ -138,14 +150,47 @@ const Lookbook = () => {
   const otherMember = {
     display: 'inline-block',
     width: '250px',
+    height: '568px',
     verticalAlign: 'top',
+    filter: 'grayscale(1)',
   };
 
   const otherWrap = {
     display: 'flex',
     justifyContent: 'space-evenly',
-    margin: '50px'
+    margin: '50px',
   };
+
+  const [lookbookNum, setLookbookNum] = useState(1);
+
+  function clickRightArrow() {
+    if (lookbookNum < 10) {
+      setLookbookNum(lookbookNum + 1);
+    } else {
+      setLookbookNum(1);
+    }
+  }
+
+  function clickLeftArrow() {
+    if (lookbookNum === 1) {
+      setLookbookNum(10);
+    } else {
+      setLookbookNum(lookbookNum - 1);
+    }
+  }
+
+  function removeFilter(e) {
+    e.target.style.filter = 'none';
+  }
+
+  function changeMemberToGrayscale(e) {
+    e.target.style.filter = 'grayscale(1)';
+  }
+
+  // function goToMall(e) {
+  //   e.target.style.filter = 'opacity(0.5)';
+  // }
+  
 
   return (
     <>
@@ -176,8 +221,8 @@ const Lookbook = () => {
       {/* 멤버 소개 */}
       <section>
         <div className="main_wrap" style={mainWrap}>
-          <div className="main_member_img" style={memberImg}>
-            <img src={jisooMain} />
+          <div className="main_member_img" style={memberImg} alt="member">
+            <img src={jisooMain} alt="member" />
           </div>
           <div className="main_txt_wrap" style={{ width: 'calc(100% - 500px)' }}>
             <h1 style={memberName}>JISOO</h1>
@@ -196,83 +241,101 @@ const Lookbook = () => {
       <section className="lookbook_main" style={lookbookMain}>
         <div className="lookbook_bg">
           <div className="arrows" style={arrows}>
-            <div className="left_arrow">
-              <a href="#">
-                <img src={arrow} style={leftArrow} />
-              </a>
-            </div>
-            <div className="right_arrow">
-              <a href="#">
-                <img src={arrow} style={rightArrow} />
-              </a>
-            </div>
+            <button
+              type="button"
+              style={{ backgroundColor: 'white', border: '0', cursor: 'pointer' }}
+              onClick={clickLeftArrow}
+            >
+              <img src={arrow} style={leftArrow} alt="left_arrow" />
+            </button>
+            <button
+              type="button"
+              style={{ backgroundColor: 'white', border: '0', cursor: 'pointer' }}
+              onClick={clickRightArrow}
+            >
+              <img src={arrow} style={rightArrow} alt="right_arrow" />
+            </button>
           </div>
-          <div className="numbering_wrap" style={numberingWrap}>
-            <p style={numbering}>1 of 10</p>
-          </div>
-          <div className="behind_box" style={backgroundBox}></div>
-          <div className="stylebox" style={styleBox}>
-            <img src={jisooStyle01} style={{ width: '500px' }} />
-          </div>
-          <div className="styleinfo" style={infoBox}>
-            <div className="style_txt_wrap" style={{ padding: '50px 0 40px 30px' }}>
-              <h6 style={infoTitle}>TYPE</h6>
-              <p style={infoContent}>원피스</p>
-              <h6 style={infoTitle}>COLOR</h6>
-              <p style={infoContent}>19181E</p>
-              <h6 style={infoTitle}>FEATURES</h6>
-              <p style={infoContent}>반팔, 하프넥, 스트라이프 패턴</p>
+          
+          <div className="lookbook_slide">
+            <div className="numbering_wrap" style={numberingWrap}>
+              <p style={numbering}>{lookbookNum} of 10</p>
             </div>
-            <div className="recomm" style={{ textAlign: 'center' }}>
-              <a href="#">
-                <img src={recomm01} style={recommImage} />
-              </a>
-              <a href="#">
-                <img src={recomm02} style={recommImage} />
-              </a>
-              <a href="#">
-                <img src={recomm03} style={recommImage} />
-              </a>
+            <div className="behind_box" style={backgroundBox}></div>
+            <div className="stylebox" style={styleBox}>
+              <img src={jisooStyle1} style={{ width: '500px' }} alt="lookbook" />
+            </div>
+            <div className="styleinfo" style={infoBox}>
+              <div className="style_txt_wrap" style={{ padding: '50px 0 40px 30px' }}>
+                <h6 style={infoTitle}>TYPE</h6>
+                <p style={infoContent}>원피스</p>
+                <h6 style={infoTitle}>COLOR</h6>
+                <p style={infoContent}>19181E</p>
+                <h6 style={infoTitle}>FEATURES</h6>
+                <p style={infoContent}>반팔, 하프넥, 스트라이프 패턴</p>
+              </div>
+              <div className="recomm" style={{ textAlign: 'center' }}>
+                <img src={recomm01} style={recommImage} alt="recommended_style" />
+                <img src={recomm02} style={recommImage} alt="recommended_style" />
+                <img src={recomm03} style={recommImage} alt="recommended_style" />
+              </div>
             </div>
           </div>
         </div>
 
-        <div className="styles" style={styles}>
-          <a href="#">
-            <img src={jisooStyle02} style={style} />
-          </a>
-          <a href="#">
-          <img src={jisooStyle03} style={style} />
-          </a>    
-          <a href="#">
-          <img src={jisooStyle02} style={style} />
-          </a> 
-          <a href="#">
-          <img src={jisooStyle03} style={style} />
-          </a> 
-          <a href="#">
-          <img src={jisooStyle02} style={style} />
-          </a>       
-        </div>
+        <ul className="styles" style={styles}>
+          <li>
+              <img src={jisooStyle1} style={style} alt="lookbook" />
+          </li>
+          <li>
+              <img src={jisooStyle2} style={style} alt="lookbook" />
+          </li>
+          <li>
+              <img src={jisooStyle3} style={style} alt="lookbook" />
+          </li>
+          <li>
+              <img src={jisooStyle4} style={style} alt="lookbook" />
+          </li>
+          <li>
+              <img src={jisooStyle5} style={style} alt="lookbook" />
+          </li>
+          <li>
+              <img src={jisooStyle6} style={style} alt="lookbook" />
+          </li>
+          <li>
+              <img src={jisooStyle7} style={style} alt="lookbook" />
+          </li>
+          <li>
+              <img src={jisooStyle8} style={style} alt="lookbook" />
+          </li>
+          <li>
+              <img src={jisooStyle9} style={style} alt="lookbook" />
+          </li>
+          <li>
+              <img src={jisooStyle10} style={style} alt="lookbook" />
+          </li>
+        </ul>
       </section>
       {/* 다른 멤버 확인하기 */}
       <section>
         <div className="others_wrap" style={otherWrap}>
-          <p style={othersTitle}>다른 멤버 <br /> 확인하기</p>
-        <div className="members">
-          <a href="#">
-            <img src={memberRose} style={otherMember} />
-          </a>
-          <a href="#">
-            <img src={memberJisoo} style={otherMember} />
-          </a>
-          <a href="#">
-            <img src={memberJennie} style={otherMember} />
-          </a>
-          <a href="#">
-            <img src={memberLisa} style={otherMember} />
-          </a>
-        </div>
+          <p style={othersTitle}>
+            다른 멤버 <br /> 확인하기
+          </p>
+          <div className="members">
+            <Link to="/" onMouseOver={removeFilter} onMouseLeave={changeMemberToGrayscale}>
+              <img src={memberRose} style={otherMember} alt="other_member" />
+            </Link>
+            <Link to="/jisoolookbook" onMouseOver={removeFilter} onMouseLeave={changeMemberToGrayscale}>
+              <img src={memberJisoo} style={otherMember} alt="other_member" />
+            </Link>
+            <Link to="#" onMouseOver={removeFilter} onMouseLeave={changeMemberToGrayscale}>
+              <img src={memberJennie} style={otherMember} alt="other_member" />
+            </Link>
+            <Link to="#" onMouseOver={removeFilter} onMouseLeave={changeMemberToGrayscale}>
+              <img src={memberLisa} style={otherMember} alt="other_member" />
+            </Link>
+          </div>
         </div>
       </section>
       {/* footer */}
