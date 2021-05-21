@@ -1,1 +1,4 @@
+server/.env.dev
+server/postgres
+server/django.db.backends.sqlite3
 server/fashion_scanner/__pycache__
