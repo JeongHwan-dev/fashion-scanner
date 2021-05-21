@@ -4,19 +4,18 @@ services:
     db:
         image: postgres
         volumes:
-            - ./data/db:/var/lib/postgresql/data
+            - ./web/data/db:/var/lib/postgresql/data
         environment: 
             - POSTGRES_DB=postgres
             - POSTGRES_USER=postgres
             - POSTGRES_PASSWORD=postgres
     web:
-        build: .
+        build: ./web
         command: python manage.py runserver 0.0.0.0:8000
         volumes:
-            - .:/code
+            - ./web:/usr/src/app/
         ports: 
             - "8000:8000"
-        env_file: 
-            - ./.env.dev
+        env_file: ./web/.env.dev
         depends_on:
             - db
