@@ -21,11 +21,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get("SECRET_KEY")
+# SECRET_KEY = 'django-insecure'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = int(os.environ.get("DEBUG", default=0))
+# DEBUG = True
 
-ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS").split(" ")
+# ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS", "localhost").split(" ")
+ALLOWED_HOSTS = ["localhost", "127.0.0.1", "[::1]"]
 
 
 # Application definition
@@ -37,6 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'user',
 ]
 
 MIDDLEWARE = [
@@ -81,6 +86,12 @@ DATABASES = {
         'PASSWORD': os.environ.get("SQL_PASSWORD", "password"),
         'HOST': os.environ.get("SQL_HOST", "localhost"),
         'PORT': os.environ.get("SQL_PORT", "5432"),
+        # 'ENGINE': "django.db.backends.postgresql",
+        # 'NAME': 'postgres',
+        # 'USER': 'postgres',
+        # 'PASSWORD': 'postgres',
+        # 'HOST': 'db',
+        # 'PORT': '5432',
     }
 }
 

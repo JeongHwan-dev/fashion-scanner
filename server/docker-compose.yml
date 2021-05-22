@@ -16,6 +16,6 @@ services:
             - ./web:/usr/src/app/
         ports: 
             - "8000:8000"
-        env_file: ./web/.env.dev
+        env_file: ./web/.env
         depends_on:
             - db
