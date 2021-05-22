@@ -20,7 +20,7 @@ import recomm03 from '../images/lookbook_recomm03.jpeg';
 import arrow from '../images/lookbook_arrow.png';
 import { Link } from 'react-router-dom';
 
-const Lookbook = () => {
+const LookbookTest = () => {
   // css
   const mainWrap = {
     display: 'flex',
@@ -385,7 +385,13 @@ const Lookbook = () => {
                 </div>
               </div>
             </div>
-
+            {/* {jisooApi.map(({ id, lookbook_img, Category, Color, Attribute1, Attribute2, Attribute3 }) => {
+              return (
+                <>
+                  <p style={{ color: 'black' }}>{id}, {lookbook_img}, {Category}, {Color}, {Attribute1}, {Attribute2}, {Attribute3}</p>
+                </>
+              )
+            })} */}
             
           </div>
         </div>
@@ -434,4 +440,4 @@ const Lookbook = () => {
   );
 };
 
-export default Lookbook;
+export default LookbookTest;
