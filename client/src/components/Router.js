@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from 'routes/Home';
 import LookbookTest from 'routes/LookbookJisooTest';
-import Lookbook from '../routes/LookbookJisoo';
 
 const AppRouter = () => {
   return (
