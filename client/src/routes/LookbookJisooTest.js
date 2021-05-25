@@ -1,15 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
 import jisooMain from '../images/lookbook_jisoo_main.png';
-// import jisooStyle1 from '../images/lookbook_jisoo_style1.png';
-// import jisooStyle2 from '../images/lookbook_jisoo_style2.png';
-// import jisooStyle3 from '../images/lookbook_jisoo_style3.png';
-// import jisooStyle4 from '../images/lookbook_jisoo_style4.jpeg';
-// import jisooStyle5 from '../images/lookbook_jisoo_style5.jpeg';
-// import jisooStyle6 from '../images/lookbook_jisoo_style6.png';
-// import jisooStyle7 from '../images/lookbook_jisoo_style7.png';
-// import jisooStyle8 from '../images/lookbook_jisoo_style8.jpeg';
-// import jisooStyle9 from '../images/lookbook_jisoo_style9.jpeg';
-// import jisooStyle10 from '../images/lookbook_jisoo_style10.jpeg';
 import memberRose from '../images/lookbook_members_rose.png';
 import memberJisoo from '../images/lookbook_members_jisoo.png';
 import memberJennie from '../images/lookbook_members_jennie.png';
@@ -20,6 +10,7 @@ import recomm03 from '../images/lookbook_recomm03.jpeg';
 import arrow from '../images/lookbook_arrow.png';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import LookbookSlider from './LookbookSlider';
 
 const LookbookTest = () => {
   // css
@@ -180,84 +171,84 @@ const LookbookTest = () => {
   // api 만들어보기
   const jisooApi = [
     {
-      id: '1',
-      lookbook_img: '/images/lookbook_jisoo_style1.png',
+      id: '0',
+      lookbook_img: '/images/lookbook_jisoo_style0.png',
       Category: '원피스',
       Color: '#707073',
       Attributes: ['반팔', '하프넥', '스트라이프패턴'],
     },
     {
-      id: '2',
-      lookbook_img: '/images/lookbook_jisoo_style2.png',
+      id: '1',
+      lookbook_img: '/images/lookbook_jisoo_style1.png',
       Category: '반팔 티셔츠',
       Color: '#bc323c',
       Attributes: ['반팔', '크롭', '무지티'],
     },
     {
-      id: '3',
-      lookbook_img: '/images/lookbook_jisoo_style3.png',
+      id: '2',
+      lookbook_img: '/images/lookbook_jisoo_style2.png',
       Category: '정장자켓',
       Color: '#575c5f',
       Attributes: ['긴팔', '회색', '잔무늬'],
     },
     {
-      id: '4',
-      lookbook_img: '/images/lookbook_jisoo_style4.png',
+      id: '3',
+      lookbook_img: '/images/lookbook_jisoo_style3.png',
       Category: '반팔 티셔츠',
       Color: '#f8f9ef',
       Attributes: ['반팔', '무지티', '라운드넥'],
     },
     {
-      id: '5',
-      lookbook_img: '/images/lookbook_jisoo_style5.png',
+      id: '4',
+      lookbook_img: '/images/lookbook_jisoo_style4.png',
       Category: '가디건',
       Color: '#eec090',
       Attributes: ['긴팔', '패턴 없음', '카라 있음'],
     },
     {
-      id: '6',
-      lookbook_img: '/images/lookbook_jisoo_style6.png',
+      id: '5',
+      lookbook_img: '/images/lookbook_jisoo_style5.png',
       Category: '셔츠',
       Color: '#3070a2',
       Attributes: ['긴팔', '패턴 없음', '청셔츠'],
     },
     {
-      id: '7',
-      lookbook_img: '/images/lookbook_jisoo_style7.png',
+      id: '6',
+      lookbook_img: '/images/lookbook_jisoo_style6.png',
       Category: '원피스',
       Color: '#cd3842',
       Attributes: ['긴팔', '오프 숄더', '홀터넥'],
     },
     {
-      id: '8',
-      lookbook_img: '/images/lookbook_jisoo_style8.png',
+      id: '7',
+      lookbook_img: '/images/lookbook_jisoo_style7.png',
       Category: '원피스',
       Color: '#eec86f',
       Attributes: ['반팔', '스퀘어넥', '허리장식 있음'],
     },
     {
-      id: '9',
-      lookbook_img: '/images/lookbook_jisoo_style9.png',
+      id: '8',
+      lookbook_img: '/images/lookbook_jisoo_style8.png',
       Category: '원피스',
       Color: '#337062',
       Attributes: ['긴팔', '니트원피스', '뷔스티에 형식'],
     },
     {
-      id: '10',
-      lookbook_img: '/images/lookbook_jisoo_style10.png',
+      id: '9',
+      lookbook_img: '/images/lookbook_jisoo_style9.png',
       Category: '청자켓',
       Color: '#616b81',
       Attributes: ['긴팔', '연청', '숏자켓'],
     },
   ];
 
-  // let lookbookMainImg = `/images/lookbook_jisoo_style${lookbookNum}.png`;
-
   // axios.get('https://virtserver.swaggerhub.com/bky373/fashion-scanner-apis/v1/member/1')
   //   .then(response => {
   //     console.log(response.data)
   //   })
 
+
+  // 객체로 한번에 묶을 수 있는 방법 찾아보기.
   const imageRef = useRef(null);
   const thumRef = useRef(null);
   const typeRef = useRef(null);
@@ -271,56 +262,42 @@ const LookbookTest = () => {
   const colors = [];
   const attributes = [];
   jisooApi.map(({ id, lookbook_img, Color, Category, Attributes }) => {
-    ids.push(id);
-    urls.push(lookbook_img);
-    categories.push(Category);
-    colors.push(Color);
-    attributes.push(Attributes);
+    id = parseInt(id);
+    return (
+      ids.push(id),
+      urls.push(lookbook_img),
+      categories.push(Category),
+      colors.push(Color),
+      attributes.push(Attributes)
+    );
   });
   // console.log(ids, urls, categories, colors, attributes)
 
+
   // imageRef.current.src = 
-  // typeRef.current.innerHTML = 
-  // colorRef.current.innerHTML = 
-  // featruesRef.current.innerHTML = 
+  // typeRef.current.innerHTML =  Category
+  // colorRef.current.innerHTML = Color
+  // featruesRef.current.innerHTML = Attributes
   // countRef.current.innerHTML = `${id} of 10`;
-
-
-  // console.log(next)
-
-  const [lookbookNum, setLookbookNum] = useState(1);
   
-  const handleNextBtn = () => {
-    if (lookbookNum < 10){
-      imageRef.current.src = urls[lookbookNum];
-      typeRef.current.innerHTML = categories[lookbookNum];
-      colorRef.current.innerHTML = colors[lookbookNum];
-      featruesRef.current.innerHTML = attributes[lookbookNum];
-      countRef.current.innerHTML = `${lookbookNum + 1} of 10`;
-      setLookbookNum(lookbookNum + 1);
+  const [id, setId] = useState(0);
+  const [url, setUrl] = useState('/images/lookbook_jisoo_style0.png');
+  const [category, setCategory] = useState('원피스');
+  const [color, setColor] = useState('#707073');
+  const [features, setFeatures] = useState(['반팔', '하프넥', '스트라이프패턴']);
+
+  const onNextBtn = () => {
+    if (id < 9){
+      setId(id + 1);
+      setUrl(jisooApi[id + 1].lookbook_img);
+      setCategory(jisooApi[id + 1].Category);
+      setColor(jisooApi[id + 1].Color);
+      setFeatures(jisooApi[id + 1].Attributes);
     } else {
-      setLookbookNum(0);
+      setId(0);
     }
   }
 
-  const handlePrevBtn = () => {
-    if (lookbookNum === 1) {
-      setLookbookNum(lookbookNum + 9);
-      imageRef.current.src = urls[lookbookNum + 8];
-      typeRef.current.innerHTML = categories[lookbookNum + 8];
-      colorRef.current.innerHTML = colors[lookbookNum + 8];
-      featruesRef.current.innerHTML = attributes[lookbookNum + 8];
-      countRef.current.innerHTML = `${lookbookNum + 9} of 10`;
-    } else {
-      setLookbookNum(lookbookNum - 1); // lookbookNum: 2 -> lookbookNum(1)
-      imageRef.current.src = urls[lookbookNum - 1];
-      typeRef.current.innerHTML = categories[lookbookNum - 1];
-      colorRef.current.innerHTML = colors[lookbookNum - 1];
-      featruesRef.current.innerHTML = attributes[lookbookNum - 1];
-      countRef.current.innerHTML = `${lookbookNum} of 10`;
-    }
-    
-  }
 
   return (
     <>
@@ -370,19 +347,18 @@ const LookbookTest = () => {
       {/* 룩북 메인 */}
       <section className="lookbook_main" style={lookbookMain}>
         <div className="lookbook_bg">
+          
           <div className="arrows" style={arrows}>
             <button
               type="button"
               style={{ backgroundColor: 'white', border: '0', cursor: 'pointer' }}
-              onClick={handlePrevBtn}
-              // onClick={clickLeftArrow}
             >
               <img src={arrow} style={leftArrow} alt="left_arrow" />
             </button>
             <button
               type="button"
               style={{ backgroundColor: 'white', border: '0', cursor: 'pointer' }}
-              onClick={handleNextBtn}
+              onClick={onNextBtn}
             >
               <img src={arrow} style={rightArrow} alt="right_arrow" />
             </button>
@@ -391,8 +367,10 @@ const LookbookTest = () => {
           <div className="lookbook_slide">
             <div className="numbering_wrap" style={numberingWrap}>
               <p style={numbering} ref={countRef}>
-                {' '}
-                1 of 10{' '}
+                {/* {' '}
+                1 of 10{' '} */}
+                id: {id}, {url}, {category}, {color}, {features}
+                
               </p>
             </div>
             <div className="behind_box" style={backgroundBox}></div>
@@ -402,7 +380,7 @@ const LookbookTest = () => {
                 {/* <img src={jisooStyle10} style={{ width: '500px' }} alt="lookbook" /> */}
                 <img
                   // src={lookbookMainImg}
-                  src="/images/lookbook_jisoo_style1.png"
+                  src="/images/lookbook_jisoo_style0.png"
                   style={{ width: '500px' }}
                   alt="lookbook"
                   id="bigimg"
@@ -436,31 +414,33 @@ const LookbookTest = () => {
 
         <ul style={styles}>
           {jisooApi.map(({ id, lookbook_img, Category, Color, Attributes }) => {
-            let thumId = `thum_${id}`;
+            // console.log(id) // 0 , 1, 2, 3, ... 9
+            let count = parseInt(id) + 1;
+            // console.log(count); // 1, 2, 3, 4, ... 10
             const selectImage = (e) => {
               imageRef.current.src = e.target.src;
               typeRef.current.innerHTML = Category;
               colorRef.current.innerHTML = Color;
               featruesRef.current.innerHTML = Attributes;
-              countRef.current.innerHTML = `${id} of 10`;
+              countRef.current.innerHTML = `${count} of 10`;
             };
 
             return (
-              <>
                 <li key={id}>
                   <img
                     src={lookbook_img}
                     style={style}
-                    id={thumId}
+                    id={id}
                     alt="lookbook"
                     ref={thumRef}
                     onClick={selectImage}
                   />
                 </li>
-              </>
             );
           })}
         </ul>
+
+
       </section>
       {/* 다른 멤버 확인하기 */}
       <section>
