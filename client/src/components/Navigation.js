@@ -19,7 +19,7 @@ const Navigation = () => {
                 <a href="/">룩북</a>
               </li>
               <li>
-                <a href="/">당신의 패션은 어떤 멤버?</a>
+                <a href="/">멤버 매칭</a>
               </li>
               <li>
                 <a href="/">요청하기</a>

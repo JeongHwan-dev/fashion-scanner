@@ -1,37 +1,14 @@
 import React from 'react';
-import Navigation from 'components/Navigation';
-import 'routes/css/Home.css';
-import Title from 'components/HomeComponents/Title';
-import Introduction from 'components/HomeComponents/Introduction';
-import Magazine from 'components/HomeComponents/Magazine';
-import BpVideo from 'components/HomeComponents/BpVideo';
-import Lookbook from 'components/HomeComponents/Lookbook';
-import Matching from 'components/HomeComponents/Matching';
-import Footer from 'components/Footer';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import 'components/css/Footer.css';
 
-const Home = () => {
+const Footer = () => {
   return (
     <>
-      {/* HEADER */}
-      <Navigation />
-      {/* SECTIONS */}
-      {/* 01: TITLE SECTION */}
-      <Title />
-      {/* 02: INTRODUCTION */}
-      <Introduction />
-      {/* 03: MAGAZINE */}
-      <Magazine />
-      {/* 04: BPVIDEO */}
-      <BpVideo />
-      {/* 05: LOOKBOOK */}
-      <Lookbook />
-      {/* 06: MATCHING */}
-      <Matching />
-      {/* FOOTER */}
-      <Footer />
-      {/* <footer>
-        <div className="inner">
-          <div className="info">
+      <footer>
+        <div className="footer__inner">
+          <div className="footer__info">
             <div className="info__contact">
               <ul>
                 <li>
@@ -55,14 +32,14 @@ const Home = () => {
               <FontAwesomeIcon icon={faTwitter} className="sns__icon" />
             </div>
           </div>
-          <div className="copyright">
+          <div className="footer__copyright">
             <span className="material-icons">copyright</span>
             <span>Copyright Fashion Scanner. All Rights Reserved, 2021</span>
           </div>
         </div>
-      </footer> */}
+      </footer>
     </>
   );
 };
 
-export default Home;
+export default Footer;

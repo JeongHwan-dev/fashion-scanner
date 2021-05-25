@@ -2,7 +2,7 @@
 * {
   font-family: 'Spoqa Han Sans Neo', 'sans-serif';
 }
-body {
+.root {
   color: white;
   font-size: 16px;
   font-weight: 400;
@@ -27,273 +27,56 @@ video {
   top: -100;
 }
 
-/* HEADER */
-/* header {
-  position: fixed;
-  top: 0;
-  z-index: 1;
-  width: 100%;
-  height: 58px;
-  background-color: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(30px);
-  border-bottom: 1px solid rgba(0, 27, 55, 0.1);
-}
-header nav {
-  position: relative;
-}
-header .logo {
-  height: 20px;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  margin: 20px auto;
-}
-header img {
-  height: 20px;
-  width: 100;
-}
-header .link-group {
-  position: absolute;
-  top: 10px;
-  right: 0;
-  display: flex;
-  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
-}
-header .link-group ul.link {
-  display: flex;
-}
-header .link-group ul.link li {
-  width: auto;
-  height: 100%;
-  position: relative;
-}
-header .link-group ul.link li a {
-  width: auto;
-  height: 100%;
-  padding: 12px 10px;
-  display: block;
-  box-sizing: border-box;
-  font-size: 15px;
-  color: #ffffff;
-}
-header .link-group ul.link li a:hover {
-  color: #d1d6db;
-} */
-
-/* SECTIONS */
-
-section .section__title {
-  height: 900px;
-}
-section .section__title img {
-  margin: 0 auto;
-  padding: 300px 0;
-}
-/* section .section__title h1 {
-  margin: 0 auto;
-  padding: 300px 0;
-  font-size: 150px;
-  font-weight: bold;
-  text-align: center;
-} */
-
-/* SECTION 01: INTRODUCTION */
-section .section__introduction {
-  height: 100%;
-  padding: 120px 0 600px;
-  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
-}
-section .section__introduction #background__video {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -1;
-  overflow: hidden;
-  opacity: 0.5;
-}
-section .section__introduction ul {
-  z-index: 1;
-}
-section .section__introduction li:first-child {
-  font-size: 80px;
-  font-weight: bold;
-  text-align: center;
-  color: #ffffff;
-  margin-bottom: 10px;
-}
-section .section__introduction li:first-child img {
-  margin: 0 auto;
-  padding-top: 45px;
-  padding-bottom: 35px;
-}
-section .section__introduction li {
-  font-size: 28px;
-  font-weight: 600;
-  line-height: 1.6;
-  text-align: center;
-  margin-bottom: 50px;
-  color: #b0b8c1;
-  /* animation: appear 1.6s 0.27s cubic-bezier(0.16, 1, 0.3, 1) forwards; */
-}
-@keyframes appear {
-  0% {
-    opacity: 0;
-    transform: translateY(60px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-section .section__introduction .dsc {
-  background: linear-gradient(to right, #f2a7bb, #b3d4ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-section .section__introduction li:nth-child(3) {
-  display: flex;
-  padding: 25px 30%;
-}
-section .section__introduction li:nth-child(3) div {
-  margin: 0 auto;
-  padding: 10px;
-}
-section .section__introduction li:nth-child(3) div img {
-  width: 120px;
-  height: 120px;
-  /* animation: target_image 8s;
-  animation-iteration-count: infinite;
-  transform-origin: 25% 100%; */
-}
-/* @keyframes target_image {
-  0% {
-    transform: rotateY(0deg);
-  }
-  100% {
-    transform: rotateY(360deg);
-  }
-} */
-section .section__introduction li:nth-child(3) div p {
-  font-size: 20px;
-  font-weight: 400;
-  text-align: center;
-  padding: 10px 0;
-}
-section .section__introduction li span:nth-child(1) {
-  color: #b3d4ff;
-}
-section .section__introduction li span:nth-child(2) {
-  color: #b17efc;
-}
-section .section__introduction li span:nth-child(3) {
-  color: #f2a7bb;
-}
-section .section__introduction li span:nth-child(4) {
-  color: #d97e9f;
-}
-
-/* SECTION 02: MAGAZINE */
-section .section__magazine {
-  padding-bottom: 240px;
-  display: flex;
-}
-section .section__magazine video {
-  width: 50%;
-}
-section .section__magazine li {
-  padding: 30px 50px;
-  font-size: 24px;
-  text-align: center;
-  line-height: 1.8;
-  color: #b0b8c1;
-  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
-}
-section .section__magazine li img {
-  width: 500px;
-  margin: 0 auto;
-}
-
-/* SECTION 03: VIDEO */
-section .section__fashionIcon {
-  padding-bottom: 240px;
-}
-
-/* SECTION 04: LOOKBOOK */
-section .section__lookbook {
-  padding-bottom: 240px;
-  height: 900px;
-}
-/* section .section__lookbook ul li p {
-  font-size: 80px;
-  font-weight: bold;
-  color: #f2a7bb;
-  text-align: center;
-  font-family: "Spoqa Han Sans Neo", "sans-serif";
-  padding-bottom: 50px;
-} */
-section .section__lookbook ul li img {
-  margin: 0 auto;
-  padding-bottom: 60px;
-}
-section .section__lookbook ul li .members {
-  width: 1000px;
-  margin: 0 auto;
-}
-section .section__lookbook ul li a img {
-  float: left;
-  width: 250px;
-  filter: grayscale(100%);
-}
-section .section__lookbook ul li a:hover img {
-  filter: none;
-}
-
-/* SECTION 05: WHICH MEMBER ARE YOU */
-section .section__member {
-  padding-bottom: 240px;
-}
-section .section__member .inner {
-  display: flex;
-  justify-content: center;
-}
-section .section__member .member__description {
-  padding-top: 60px;
-}
-section .section__member .member__description img {
-  padding-bottom: 20px;
-}
-section .section__member .member__description img:nth-child(2) {
-  padding-bottom: 40px;
-}
-section .section__member .member__description p {
-  font-size: 24px;
-  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
-  color: #b0b8c1;
-  line-height: 1.6;
-}
-section .section__member .member__description button {
-  margin: 30px 0;
-  padding: 10px 60px;
-  font-size: 24px;
-  color: #d97e9f;
-  border-color: #d97e9f;
-  background-color: #101010;
-}
-section .section__member .member__description button:hover {
-  color: #ffffff;
-  background-color: #d97e9f;
-}
-
 /* FOOTER */
 footer {
   bottom: 0;
   width: 100%;
-  height: 300px;
+  height: 400px;
   background-color: #1b1b1b;
+}
+
+footer .inner {
+  width: 1100px;
+  position: relative;
+  line-height: 3;
+  font-size: 18px;
+  font-weight: 300;
+  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+  color: #d1d6db;
+}
+footer .info {
+  display: flex;
+  padding-top: 60px;
+}
+footer .info .info__contact {
+  position: absolute;
+  left: 0;
+}
+footer .info .info__sns {
+  position: absolute;
+  right: 0;
+}
+footer .info .info__sns .sns__icon {
+  font-size: 30px;
+  margin-right: 16px;
+  cursor: pointer;
+}
+footer .info .info__contact .material-icons {
+  margin-right: 15px;
+  padding: 8px;
+  border-radius: 100%;
+  background-color: #3a3a3a;
+}
+footer .inner .copyright {
+  position: absolute;
+  padding-top: 200px;
+  justify-content: center;
+}
+/* footer .inner .copyright span {
+  padding: 0;
+  margin: 10px auto;
+} */
+footer .copyright .material-icons {
+  margin-right: 15px;
+  padding: 0;
 }

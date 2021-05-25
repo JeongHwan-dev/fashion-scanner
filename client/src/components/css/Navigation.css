@@ -75,8 +75,8 @@ header .link-group ul.link li a {
   display: block;
   box-sizing: border-box;
   font-size: 15px;
-  color: #d1d6db;
+  color: #fff;
 }
 header .link-group ul.link li a:hover {
-  color: #ffffff;
+  color: #d1d6db;
 }
