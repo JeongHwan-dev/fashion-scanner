@@ -1,0 +1,27 @@
+/* OTHERS SECTION */
+.others {
+  padding: 100px;
+}
+.others__inner {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* OTHERS DSC */
+.others__dsc {
+  margin: auto 0;
+}
+
+.others__dsc h2 {
+  font-size: 60px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.others__img img {
+  display: inline-block;
+  width: 220px;
+  height: 500px;
+  vertical-align: top;
+  object-fit: cover;
+}

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
-import 'components/homeComponents/css/Matching.css';
+import 'components/HomeComponents/css/Matching.css';
 
 const Matching = () => {
   const history = useHistory();

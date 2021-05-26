@@ -1,40 +1,42 @@
-import React, { useState, useRef, useEffect } from 'react';
-import jisooMain from '../images/lookbook_jisoo_main.png';
-import memberRose from '../images/lookbook_members_rose.png';
-import memberJisoo from '../images/lookbook_members_jisoo.png';
-import memberJennie from '../images/lookbook_members_jennie.png';
-import memberLisa from '../images/lookbook_members_lisa.png';
-import recomm01 from '../images/lookbook_recomm01.jpeg';
-import recomm02 from '../images/lookbook_recomm02.jpeg';
-import recomm03 from '../images/lookbook_recomm03.jpeg';
-import arrow from '../images/lookbook_arrow.png';
-import { Link } from 'react-router-dom';
-import axios from 'axios';
-import LookbookSlider from './LookbookSlider';
+import React, { useRef, useState } from 'react';
 
-const LookbookTest = () => {
-  // css
-  const mainWrap = {
-    display: 'flex',
-    height: '100%',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-  };
-
-  const memberImg = {
-    width: '395px',
-    padding: '0 50px',
-  };
-
-  const memberName = {
-    fontSize: '48px',
-    color: '#FBBCBC',
-    padding: '0 50px',
-  };
-
+const LookbookMain = () => {
   const lookbookMain = {
     backgroundColor: 'white',
     height: '1200px',
+  };
+
+  const arrows = {
+    position: 'relative',
+    top: '500px',
+    justifyContent: 'space-between',
+    display: 'flex',
+  };
+
+  const leftArrow = {
+    width: '50px',
+    transform: 'rotate(180deg)',
+    position: 'relative',
+    marginLeft: '40px',
+  };
+
+  const rightArrow = {
+    width: '50px',
+    position: 'relative',
+    marginRight: '40px',
+    zIndex: '1',
+  };
+
+  const numberingWrap = {
+    position: 'absolute',
+    top: '1350px',
+    left: '47%',
+  };
+
+  const numbering = {
+    display: 'block',
+    textAlign: 'center',
+    color: '#666666',
   };
 
   const backgroundBox = {
@@ -84,39 +86,6 @@ const LookbookTest = () => {
     objectFit: 'cover',
   };
 
-  const arrows = {
-    position: 'relative',
-    top: '500px',
-    justifyContent: 'space-between',
-    display: 'flex',
-  };
-
-  const leftArrow = {
-    width: '50px',
-    transform: 'rotate(180deg)',
-    position: 'relative',
-    marginLeft: '40px',
-  };
-
-  const rightArrow = {
-    width: '50px',
-    position: 'relative',
-    marginRight: '40px',
-    zIndex: '1',
-  };
-
-  const numberingWrap = {
-    position: 'absolute',
-    top: '1350px',
-    left: '47%',
-  };
-
-  const numbering = {
-    display: 'block',
-    textAlign: 'center',
-    color: '#666666',
-  };
-
   const styles = {
     display: 'flex',
     justifyContent: 'center',
@@ -133,42 +102,6 @@ const LookbookTest = () => {
     objectFit: 'cover',
   };
 
-  const othersTitle = {
-    lineHeight: '80px',
-    display: 'inline-block',
-    fontSize: '64px',
-    marginTop: '200px',
-  };
-
-  const otherMember = {
-    display: 'inline-block',
-    width: '250px',
-    height: '568px',
-    verticalAlign: 'top',
-    filter: 'grayscale(1)',
-  };
-
-  const otherWrap = {
-    display: 'flex',
-    justifyContent: 'space-evenly',
-    margin: '50px',
-  };
-
-  // 지정한 필터 없애기
-  function removeFilter(e) {
-    e.target.style.filter = 'none';
-  }
-
-  // 다른멤버 확인하기 섹션의 멤버들 이미지 흑백으로 설정하기
-  function changeMemberToGrayscale(e) {
-    e.target.style.filter = 'grayscale(1)';
-  }
-
-  // function goToMall(e) {
-  //   e.target.style.filter = 'opacity(0.5)';
-  // }
-
-  // api 만들어보기
   const jisooApi = [
     {
       id: '0',
@@ -242,12 +175,6 @@ const LookbookTest = () => {
     },
   ];
 
-  // axios.get('https://virtserver.swaggerhub.com/bky373/fashion-scanner-apis/v1/member/1')
-  //   .then(response => {
-  //     console.log(response.data)
-  //   })
-
-
   // 객체로 한번에 묶을 수 있는 방법 찾아보기.
   const imageRef = useRef(null);
   const thumRef = useRef(null);
@@ -271,15 +198,7 @@ const LookbookTest = () => {
       attributes.push(Attributes)
     );
   });
-  // console.log(ids, urls, categories, colors, attributes)
 
-
-  // imageRef.current.src = 
-  // typeRef.current.innerHTML =  Category
-  // colorRef.current.innerHTML = Color
-  // featruesRef.current.innerHTML = Attributes
-  // countRef.current.innerHTML = `${id} of 10`;
-  
   const [id, setId] = useState(0);
   const [url, setUrl] = useState('/images/lookbook_jisoo_style0.png');
   const [category, setCategory] = useState('원피스');
@@ -298,69 +217,31 @@ const LookbookTest = () => {
     }
   }
 
-
   return (
     <>
-      {/* HEADER */}
-      <header>
-        <nav className="inner">
-          <a href="/" className="logo">
-            <img src={require('images/fs_logo.png').default} alt="FASHION SCANNER" />
-          </a>
-          <div className="link-group">
-            <ul className="link">
-              <li>
-                <a href="/">서비스 소개</a>
-              </li>
-              <li>
-                <a href="/">룩북</a>
-              </li>
-              <li>
-                <a href="/">당신의 패션은 어떤 멤버?</a>
-              </li>
-              <li>
-                <a href="/">요청하기</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </header>
-      {/* 멤버 소개 */}
-      <section>
-        <div className="main_wrap" style={mainWrap}>
-          <div className="main_member_img" style={memberImg} alt="member">
-            <img src={jisooMain} alt="member" />
-          </div>
-          <div className="main_txt_wrap" style={{ width: 'calc(100% - 500px)' }}>
-            <h1 style={memberName}>JISOO</h1>
-            <p style={{ padding: '0 50px' }}>
-              아니한 심장은 위하여서 타오르고 그들의 황금시대를 것이다. 열락의 충분히 착목한는 가는
-              것은 위하여서. 따뜻한 우는 능히 별과 충분히 이상이 시들어 오직 있는가? 얼음 안고,
-              평화스러운 사람은 우리는 같이, 품고 온갖 있다. 것이 우리 웅대한 착목한는 것이다. 너의
-              있는 불어 운다. 같지 착목한는 없으면 투명하되 남는 피가 스며들어 힘있다. 그들의 것이
-              바로 이상, 대고, 것이다.보라, 힘있다. 얼마나 피어나는 온갖 우는 사막이다. 심장의
-              위하여 구하기 놀이 봄바람을 위하여 고행을 때문이다. 싶이 소담스러운 지혜는 것이다.
-            </p>
-          </div>
-        </div>
-      </section>
-      {/* 룩북 메인 */}
       <section className="lookbook_main" style={lookbookMain}>
         <div className="lookbook_bg">
-          
           <div className="arrows" style={arrows}>
             <button
               type="button"
               style={{ backgroundColor: 'white', border: '0', cursor: 'pointer' }}
             >
-              <img src={arrow} style={leftArrow} alt="left_arrow" />
+              <img
+                src={require('images/lookbook_arrow.png').default}
+                style={leftArrow}
+                alt="left_arrow"
+              />
             </button>
             <button
               type="button"
               style={{ backgroundColor: 'white', border: '0', cursor: 'pointer' }}
               onClick={onNextBtn}
             >
-              <img src={arrow} style={rightArrow} alt="right_arrow" />
+              <img
+                src={require('images/lookbook_arrow.png').default}
+                style={rightArrow}
+                alt="right_arrow"
+              />
             </button>
           </div>
 
@@ -370,7 +251,6 @@ const LookbookTest = () => {
                 {/* {' '}
                 1 of 10{' '} */}
                 id: {id}, {url}, {category}, {color}, {features}
-                
               </p>
             </div>
             <div className="behind_box" style={backgroundBox}></div>
@@ -403,9 +283,21 @@ const LookbookTest = () => {
                   </p>
                 </div>
                 <div className="recomm" style={{ textAlign: 'center' }}>
-                  <img src={recomm01} style={recommImage} alt="recommended_style" />
-                  <img src={recomm02} style={recommImage} alt="recommended_style" />
-                  <img src={recomm03} style={recommImage} alt="recommended_style" />
+                  <img
+                    src={require('images/lookbook_recomm01.jpeg').default}
+                    style={recommImage}
+                    alt="recommended_style"
+                  />
+                  <img
+                    src={require('images/lookbook_recomm02.jpeg').default}
+                    style={recommImage}
+                    alt="recommended_style"
+                  />
+                  <img
+                    src={require('images/lookbook_recomm03.jpeg').default}
+                    style={recommImage}
+                    alt="recommended_style"
+                  />
                 </div>
               </div>
             </div>
@@ -426,54 +318,22 @@ const LookbookTest = () => {
             };
 
             return (
-                <li key={id}>
-                  <img
-                    src={lookbook_img}
-                    style={style}
-                    id={id}
-                    alt="lookbook"
-                    ref={thumRef}
-                    onClick={selectImage}
-                  />
-                </li>
+              <li key={id}>
+                <img
+                  src={lookbook_img}
+                  style={style}
+                  id={id}
+                  alt="lookbook"
+                  ref={thumRef}
+                  onClick={selectImage}
+                />
+              </li>
             );
           })}
         </ul>
-
-
       </section>
-      {/* 다른 멤버 확인하기 */}
-      <section>
-        <div className="others_wrap" style={otherWrap}>
-          <p style={othersTitle}>
-            다른 멤버 <br /> 확인하기
-          </p>
-          <div className="members">
-            <Link to="/" onMouseOver={removeFilter} onMouseLeave={changeMemberToGrayscale}>
-              <img src={memberRose} style={otherMember} alt="other_member" />
-            </Link>
-            <Link
-              to="/jisoolookbook"
-              onMouseOver={removeFilter}
-              onMouseLeave={changeMemberToGrayscale}
-            >
-              <img src={memberJisoo} style={otherMember} alt="other_member" />
-            </Link>
-            <Link to="#" onMouseOver={removeFilter} onMouseLeave={changeMemberToGrayscale}>
-              <img src={memberJennie} style={otherMember} alt="other_member" />
-            </Link>
-            <Link to="#" onMouseOver={removeFilter} onMouseLeave={changeMemberToGrayscale}>
-              <img src={memberLisa} style={otherMember} alt="other_member" />
-            </Link>
-          </div>
-        </div>
-      </section>
-      {/* footer */}
-      <footer>
-        <div className="inner"></div>
-      </footer>
     </>
   );
 };
 
-export default LookbookTest;
+export default LookbookMain;

@@ -1,0 +1,39 @@
+/* MEMBERINFO SECTION */
+.memberinfo {
+  padding: 120px 230px 0;
+}
+
+.memberinfo__inner {
+  display: flex;
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.memberinfo__inner p {
+  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+}
+
+/* MEMBERINFO DSC */
+.memberinfo__img {
+  margin-right: 20px;
+}
+
+.memberinfo__img img {
+  width: 400px;
+}
+
+.memberinfo__dsc {
+  margin-left: 10px;
+  padding-top: 140px;
+}
+
+.memberinfo__dsc h2 {
+  font-size: 52px;
+  color: #f2a7bb;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.memberinfo__dsc p {
+  font-size: 18px;
+}

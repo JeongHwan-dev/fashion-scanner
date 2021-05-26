@@ -1,12 +1,12 @@
 import React from 'react';
 import Navigation from 'components/commonComponents/Navigation';
 import Footer from 'components/commonComponents/Footer';
-import Title from 'components/homeComponents/Title';
-import Introduction from 'components/homeComponents/Introduction';
-import Magazine from 'components/homeComponents/Magazine';
-import BpVideo from 'components/homeComponents/BpVideo';
-import Lookbook from 'components/homeComponents/Lookbook';
-import Matching from 'components/homeComponents/Matching';
+import Title from 'components/HomeComponents/Title';
+import Introduction from 'components/HomeComponents/Introduction';
+import Magazine from 'components/HomeComponents/Magazine';
+import BpVideo from 'components/HomeComponents/BpVideo';
+import Lookbook from 'components/HomeComponents/Lookbook';
+import Matching from 'components/HomeComponents/Matching';
 import 'routes/css/Home.css';
 
 const Home = () => {
