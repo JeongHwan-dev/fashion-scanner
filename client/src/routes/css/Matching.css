@@ -1,0 +1,140 @@
+.root {
+  background-color: #fff;
+  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+}
+.page__member {
+  background-color: #fff;
+}
+
+.member__title {
+  width: 100%;
+  padding-bottom: 50px;
+  /* background-color: #af6166; */
+  background: linear-gradient(to bottom, #de999d, #af6166);
+  /* top: 0; */
+}
+
+section .member__title img:first-child {
+  margin: 0 auto 40px;
+  padding-top: 130px;
+  width: 1000px;
+  height: auto;
+}
+section .member__title img:nth-child(2) {
+  padding: 0;
+  margin: 0 auto;
+}
+
+section .member__upload {
+  padding: 100px 0;
+  height: 100%;
+  background-color: #fff;
+}
+section .member__upload ul li {
+  margin: 0 auto 60px;
+  text-align: center;
+}
+section .member__upload h1 {
+  color: #d97e9f;
+  font-size: 65px;
+  font-weight: bold;
+  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+  text-align: center;
+}
+section .member__upload ul li .upload__btn {
+  width: 60px;
+  height: 50px;
+  margin: 100px auto;
+  padding: 10px 50px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #d97e9f;
+  border: 5px solid #d97e9f;
+  border-radius: 6px;
+  background-color: #fff;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+section .member__upload ul li .upload__btn:hover {
+  color: white;
+  background-color: #d97e9f;
+}
+
+.member__example {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  color: black;
+  display: flex;
+  padding-bottom: 100px;
+}
+.member__example .example__good {
+  margin-right: 16px;
+}
+.member__example .example__bad {
+  margin-left: 16px;
+}
+.member__example .example__inner {
+  display: flex;
+  margin: 0 auto;
+}
+.member__example img {
+  width: 520px;
+}
+.member__example h2 {
+  font-size: 48px;
+  font-weight: 500;
+  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+  line-height: 1.8;
+}
+.member__example p {
+  font-size: 23px;
+  font-weight: 300;
+  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+  line-height: 1.6;
+}
+.member__example .good__description {
+  padding-top: 28px;
+  position: absolute;
+}
+.member__example .bad__description {
+  padding-bottom: 100px;
+}
+
+.submit {
+  background-color: #fff;
+  display: flex;
+}
+.submit button {
+  width: 200px;
+  height: 60px;
+  margin: 0 auto 200px;
+  padding: 10px 50px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #646464;
+  cursor: pointer;
+  border: 5px solid #646464;
+  border-radius: 6px;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+.submit button:hover {
+  color: white;
+  background-color: #646464;
+}
+
+.member__upload .upload__preview {
+}
+.member__upload .upload__preview input {
+}
+.member__upload .upload__preview .preview__attachment {
+  width: 300px;
+  border-radius: 6 px;
+  margin: 60px auto 20px;
+}
+.member__upload .upload__preview span {
+  font-size: 25px;
+  color: #d97e9f;
+  cursor: pointer;
+}

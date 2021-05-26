@@ -1,0 +1,33 @@
+/* LOOKBOOK SECTION */
+.lookbook {
+  padding: 280px 0;
+}
+.lookbook__inner {
+  width: 2000px;
+  height: 820px;
+  margin: 0 auto;
+}
+
+/* LOOKBOOK TITLE */
+.lookbook__title img {
+  margin: 0 auto 60px;
+}
+
+/* LOOKBOOK MEMBERS */
+.lookbook__members {
+  width: 1100px;
+  margin: 0 auto;
+}
+.lookbook__members a .member {
+  float: left;
+  width: 250px;
+  margin: 12px;
+  filter: grayscale(100%);
+  transform: skewX(-8deg);
+  transition: transform 0.2s, filter 0.6s;
+}
+.lookbook__members a .member:hover {
+  z-index: 1;
+  filter: none;
+  transform: skewX(-8deg) scale(1.1);
+}
