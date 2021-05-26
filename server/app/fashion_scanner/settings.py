@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'clothes_style'
+    'clothes_style',
+    'member',
 ]
 
 MIDDLEWARE = [

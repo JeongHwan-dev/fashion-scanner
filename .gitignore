@@ -2,3 +2,5 @@ server/.env.dev
 server/app/postgres
 server/app/django.db.backends.sqlite3
 server/app/fashion_scanner/__pycache__
+server/env
+migrations

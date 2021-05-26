@@ -1,8 +1,9 @@
 from django.db import models
 
 class ClothesCategory(models.Model):
-    category_name_en = models.CharField(max_length=32, null=False)
-    category_name_kr = models.CharField(max_length=32, null=False)
+    id = models.AutoField(primary_key=True)
+    category_name_en = models.CharField(max_length=32, blank=False, null=False)
+    category_name_kr = models.CharField(max_length=32, blank=False, null=False)
 
     class Meta:
         db_table = 'clothes_category'
@@ -11,8 +12,9 @@ class ClothesCategory(models.Model):
 
 
 class ClothesAttributes(models.Model):
-    attribute_name_en = models.CharField(max_length=32, null=False)
-    attribute_name_kr = models.CharField(max_length=32, null=False)
+    id = models.AutoField(primary_key=True)
+    attribute_name_en = models.CharField(max_length=32, blank=False, null=False)
+    attribute_name_kr = models.CharField(max_length=32, blank=False, null=False)
 
     class Meta:
         db_table = 'clothes_attribute'
@@ -21,7 +23,8 @@ class ClothesAttributes(models.Model):
 
 
 class Color(models.Model):
-    hex_code = models.CharField(max_length=32, null=False)
+    id = models.AutoField(primary_key=True)
+    hex_code = models.CharField(max_length=32, blank=False, null=False)
 
     class Meta:
         db_table = 'color'
