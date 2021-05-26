@@ -3,7 +3,7 @@ from .models import LookbookClothes, ShopClothes, UserRequestClothes
 
 
 class LookbookClothesAdmin(admin.ModelAdmin):
-    list_display = ("id", "member", "category_id", "registered_date")
+    list_display = ("id", "member_id", "category_id", "registered_date")
 
 
 class ShopClothesAdmin(admin.ModelAdmin):
