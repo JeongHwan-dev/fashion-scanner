@@ -9,7 +9,7 @@ const Example = () => {
           <div className="example__good">
             <img src={require('images/good_example.png').default} alt="Good Example" />
             <div className="good__dsc">
-              <h2>나쁜 예</h2>
+              <h2>좋은 예</h2>
               <p>
                 여러 명이 함께 직은 사진은 분석할 수 없습니다.
                 <br />
@@ -23,7 +23,7 @@ const Example = () => {
           </div>
           <div className="example__bad">
             <div className="bad__dsc">
-              <h2>좋은 예</h2>
+              <h2>나쁜 예</h2>
               <p>
                 여러 명이 함께 직은 사진은 분석할 수 없습니다.
                 <br />

@@ -1,0 +1,37 @@
+/* EXAMPLE */
+.example {
+  background-color: #fff;
+}
+.example__inner {
+  display: flex;
+  width: 1100px;
+  margin: 0 auto;
+  color: #484848;
+  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+}
+.example__inner h2 {
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 1.8;
+}
+.example__inner p {
+  font-size: 23px;
+  font-weight: 300;
+  line-height: 1.6;
+}
+.example__inner img {
+  width: 520px;
+}
+
+/* EXAMPLE GOOD */
+.example__good {
+  margin: 0 auto;
+}
+
+/* EXAMPLE BAD */
+.example__bad {
+  margin: 0 auto;
+}
+.example__bad .bad__dsc {
+  margin-bottom: 70px;
+}

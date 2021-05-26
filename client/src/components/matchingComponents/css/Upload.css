@@ -1,0 +1,59 @@
+/* UPLOAD */
+.upload {
+  padding: 100px 0;
+  background-color: #fff;
+}
+.upload__inner {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+/* UPLOAD TITLE */
+.upload__title {
+  text-align: center;
+  margin-bottom: 36px;
+}
+.upload__title h1 {
+  color: #d97e9f;
+  font-size: 65px;
+  font-weight: bold;
+  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+}
+
+/* UPLOAD BTN */
+.upload__btn {
+  text-align: center;
+}
+.upload__btn label {
+  padding: 10px 60px;
+  margin: 0 auto 60px;
+  border-radius: 30px;
+  box-sizing: border-box;
+  border: 3px solid #d97e9f;
+  color: #d97e9f;
+  font-size: 24px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.upload__btn label:hover {
+  background-color: #d97e9f;
+  color: white;
+}
+
+/* UPLOAD PREVIEW */
+.upload__preview img {
+  width: 460px;
+  margin: 0 auto 24px;
+  border-radius: 6px;
+}
+.upload__preview span {
+  color: #646464;
+  font-size: 32px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.1s, color 0.3s;
+}
+.upload__preview span:hover {
+  color: #d97e9f;
+  transform: scale(1.3);
+}

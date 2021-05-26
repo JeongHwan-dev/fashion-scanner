@@ -3,59 +3,67 @@ import { useHistory } from 'react-router-dom';
 import axios from 'axios';
 import Navigation from 'components/commonComponents/Navigation';
 import Footer from 'components/commonComponents/Footer';
-import 'routes/css/Matching.css';
+import MatchingTitle from 'components/matchingComponents/MatchingTitle';
+import 'routes/css/MemberMatching.css';
+import Example from 'components/matchingComponents/Example';
+import Upload from 'components/matchingComponents/Upload';
+import Submit from 'components/matchingComponents/Submit';
 
 const Matching = () => {
-  const url = `${window.location.origin}:5000`;
-  const history = useHistory();
-  const [attachment, setAttachment] = useState(''); // 첨부파일
+  // const url = `${window.location.origin}:5000`;
+  // const history = useHistory();
+  // const [attachment, setAttachment] = useState(''); // 첨부파일
 
-  // [첨부파일] 업로드 핸들러
-  const onFileChange = (event) => {
-    const {
-      target: { files },
-    } = event;
-    const theFile = files[0];
-    const reader = new FileReader();
+  // // [첨부파일] 업로드 핸들러
+  // const onFileChange = (event) => {
+  //   const {
+  //     target: { files },
+  //   } = event;
+  //   const theFile = files[0];
+  //   const reader = new FileReader();
 
-    reader.onloadend = (finishedEvent) => {
-      const {
-        currentTarget: { result },
-      } = finishedEvent;
-      setAttachment(result);
-    };
-    reader.readAsDataURL(theFile);
-  };
+  //   reader.onloadend = (finishedEvent) => {
+  //     const {
+  //       currentTarget: { result },
+  //     } = finishedEvent;
+  //     setAttachment(result);
+  //   };
+  //   reader.readAsDataURL(theFile);
+  // };
 
-  // [첨부파일] Clear 핸들러
-  const onClearAttachment = () => {
-    setAttachment('');
-  };
+  // // [첨부파일] Clear 핸들러
+  // const onClearAttachment = () => {
+  //   setAttachment('');
+  // };
 
-  // 사진 제출 핸들러
-  const onSubmit = async (event) => {
-    event.preventDefault();
-    console.log(attachment);
-    await axios
-      .post(url + '/match', {
-        body: JSON.stringify({
-          user_image: attachment,
-        }),
-      })
-      .then(() => {
-        history.puch({
-          pathname: '/loading',
-        });
-      })
-      .catch(() => {
-        alert('error');
-      });
-  };
+  // // 사진 제출 핸들러
+  // const onSubmit = async (event) => {
+  //   event.preventDefault();
+  //   console.log(attachment);
+  //   await axios
+  //     .post(url + '/match', {
+  //       body: JSON.stringify({
+  //         user_image: attachment,
+  //       }),
+  //     })
+  //     .then(() => {
+  //       history.puch({
+  //         pathname: '/loading',
+  //       });
+  //     })
+  //     .catch(() => {
+  //       alert('error');
+  //     });
+  // };
 
   return (
     <>
       <Navigation />
-      <section className="page__member">
+      <MatchingTitle />
+      <Upload />
+      <Example />
+      <Submit />
+      {/* <section className="page__member">
         <div className="member__title">
           <img src={require('images/members_photo.jpg').default} alt="Members Photo" />
           <img src={require('images/matching_logo3.png').default} alt="WHICH MEMBER ARE YOU?" />
@@ -132,7 +140,7 @@ const Matching = () => {
       </section>
       <section className="submit">
         <button onClick={onSubmit}>결과보기</button>
-      </section>
+      </section> */}
       <Footer />
     </>
   );

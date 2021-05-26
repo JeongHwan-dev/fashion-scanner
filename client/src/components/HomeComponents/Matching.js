@@ -6,7 +6,7 @@ const Matching = () => {
   const history = useHistory();
   // Matching 페이지 이동 핸들러
   const onMoveMember = () => {
-    history.push('/member');
+    history.push('/member-matching');
   };
 
   return (
