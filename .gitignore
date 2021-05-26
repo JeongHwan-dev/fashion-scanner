@@ -5,3 +5,5 @@ server/app/fashion_scanner/__pycache__
 server/env
 migrations
 __pycache__
+data_setting.py
+lookbook_data.csv

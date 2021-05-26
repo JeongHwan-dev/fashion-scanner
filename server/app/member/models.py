@@ -21,3 +21,4 @@ class BlackpinkMember(models.Model):
         db_table = "blackpink_member"
         verbose_name = "블랙핑크 멤버"
         verbose_name_plural = "블랙핑크 멤버"
+        ordering = ['id']

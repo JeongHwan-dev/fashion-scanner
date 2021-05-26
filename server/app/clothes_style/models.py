@@ -16,6 +16,7 @@ class ClothesCategory(models.Model):
         db_table = "clothes_category"
         verbose_name = "의류 카테고리"
         verbose_name_plural = "의류 카테고리"
+        ordering = ['id']
 
 
 class ClothesAttribute(models.Model):
@@ -33,6 +34,7 @@ class ClothesAttribute(models.Model):
         db_table = "clothes_attribute"
         verbose_name = "의류 속성"
         verbose_name_plural = "의류 속성"
+        ordering = ['id']
 
 
 class Color(models.Model):
@@ -47,3 +49,4 @@ class Color(models.Model):
         db_table = "color"
         verbose_name = "색상"
         verbose_name_plural = "색상"
+        ordering = ['id']
