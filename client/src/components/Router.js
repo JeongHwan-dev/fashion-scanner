@@ -8,6 +8,8 @@ const AppRouter = () => {
     <Router>
       <Switch>
         <Route exact path="/" component={Home} />
+        <Route path="/jisoolookbook" component={LookbookTest} />
+        <Route path="/swiper" component={LookbookSlider} />
       </Switch>
       <Switch>
         <Route exact path="/matching" component={Matching} />
