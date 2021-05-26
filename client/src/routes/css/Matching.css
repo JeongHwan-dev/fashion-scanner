@@ -1,8 +1,6 @@
-* {
-  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
-}
 .root {
   background-color: #fff;
+  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
 }
 .page__member {
   background-color: #fff;

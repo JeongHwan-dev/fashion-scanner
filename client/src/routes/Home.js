@@ -1,13 +1,13 @@
 import React from 'react';
-import Navigation from 'components/Navigation';
+import Navigation from 'components/commonComponents/Navigation';
+import Footer from 'components/commonComponents/Footer';
+import Title from 'components/homeComponents/Title';
+import Introduction from 'components/homeComponents/Introduction';
+import Magazine from 'components/homeComponents/Magazine';
+import BpVideo from 'components/homeComponents/BpVideo';
+import Lookbook from 'components/homeComponents/Lookbook';
+import Matching from 'components/homeComponents/Matching';
 import 'routes/css/Home.css';
-import Title from 'components/HomeComponents/Title';
-import Introduction from 'components/HomeComponents/Introduction';
-import Magazine from 'components/HomeComponents/Magazine';
-import BpVideo from 'components/HomeComponents/BpVideo';
-import Lookbook from 'components/HomeComponents/Lookbook';
-import Matching from 'components/HomeComponents/Matching';
-import Footer from 'components/Footer';
 
 const Home = () => {
   return (
@@ -29,38 +29,6 @@ const Home = () => {
       <Matching />
       {/* FOOTER */}
       <Footer />
-      {/* <footer>
-        <div className="inner">
-          <div className="info">
-            <div className="info__contact">
-              <ul>
-                <li>
-                  <span className="material-icons">place</span>
-                  <span>강남구 선릉로 433 세방빌딩 6층 (주)패션스케너</span>
-                </li>
-                <li>
-                  <span className="material-icons">phone</span>
-                  <span>02-5986-8861</span>
-                </li>
-                <li>
-                  <span className="material-icons">email</span>
-                  <span>support@fashionscanner.com</span>
-                </li>
-              </ul>
-            </div>
-            <div className="info__sns">
-              <h3>GET TO KNOW US</h3>
-              <FontAwesomeIcon icon={faFacebook} className="sns__icon" />
-              <FontAwesomeIcon icon={faInstagram} className="sns__icon" />
-              <FontAwesomeIcon icon={faTwitter} className="sns__icon" />
-            </div>
-          </div>
-          <div className="copyright">
-            <span className="material-icons">copyright</span>
-            <span>Copyright Fashion Scanner. All Rights Reserved, 2021</span>
-          </div>
-        </div>
-      </footer> */}
     </>
   );
 };

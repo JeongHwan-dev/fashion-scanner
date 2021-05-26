@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import axios from 'axios';
-import Navigation from 'components/Navigation';
-import 'routes/css/Member.css';
+import Navigation from 'components/commonComponents/Navigation';
+import Footer from 'components/commonComponents/Footer';
+import 'routes/css/Matching.css';
 
-const Member = () => {
+const Matching = () => {
   const url = `${window.location.origin}:5000`;
   const history = useHistory();
   const [attachment, setAttachment] = useState(''); // 첨부파일
@@ -57,7 +58,7 @@ const Member = () => {
       <section className="page__member">
         <div className="member__title">
           <img src={require('images/members_photo.jpg').default} alt="Members Photo" />
-          <img src={require('images/member_logo3.png').default} alt="WHICH MEMBER ARE YOU?" />
+          <img src={require('images/matching_logo3.png').default} alt="WHICH MEMBER ARE YOU?" />
         </div>
         <div className="member__upload">
           <ul>
@@ -132,11 +133,9 @@ const Member = () => {
       <section className="submit">
         <button onClick={onSubmit}>결과보기</button>
       </section>
-      {/* <footer>
-        <div className="inner"></div>
-      </footer> */}
+      <Footer />
     </>
   );
 };
 
-export default Member;
+export default Matching;

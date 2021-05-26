@@ -1,5 +1,5 @@
 import React from 'react';
-import 'components/HomeComponents/css/Lookbook.css';
+import 'components/homeComponents/css/Lookbook.css';
 
 const Lookbook = () => {
   return (

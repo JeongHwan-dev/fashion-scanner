@@ -1,7 +1,6 @@
 import React from 'react';
-import 'components/css/Navigation.css';
+import 'components/commonComponents/css/Navigation.css';
 
-// 네비게이션 컴포넌트
 const Navigation = () => {
   return (
     <>
@@ -13,16 +12,16 @@ const Navigation = () => {
           <div className="link-group">
             <ul className="link">
               <li>
-                <a href="/">서비스 소개</a>
+                <a href="javascript:void(0)">서비스 소개</a>
               </li>
               <li>
-                <a href="/">룩북</a>
+                <a href="javascript:void(0)">룩북</a>
               </li>
               <li>
-                <a href="/">멤버 매칭</a>
+                <a href="javascript:void(0)">멤버 매칭</a>
               </li>
               <li>
-                <a href="/">요청하기</a>
+                <a href="javascript:void(0)">요청하기</a>
               </li>
             </ul>
           </div>

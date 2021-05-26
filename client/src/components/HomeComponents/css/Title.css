@@ -7,9 +7,10 @@
   margin-top: 320px;
 }
 .title__inner img {
-  margin: 0 auto 20px;
+  margin: 0 auto 16px;
 }
 .title__inner h2 {
+  margin: 0;
   font-size: 72px;
   font-weight: 600;
   text-align: center;

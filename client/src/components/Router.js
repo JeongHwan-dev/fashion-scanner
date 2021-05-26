@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from 'routes/Home';
-import Member from 'routes/Member';
+import Matching from 'routes/Matching';
 
 const AppRouter = () => {
   return (
@@ -10,7 +10,7 @@ const AppRouter = () => {
         <Route exact path="/" component={Home} />
       </Switch>
       <Switch>
-        <Route exact path="/member" component={Member} />
+        <Route exact path="/matching" component={Matching} />
       </Switch>
     </Router>
   );

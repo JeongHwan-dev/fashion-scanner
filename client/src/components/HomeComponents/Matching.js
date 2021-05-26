@@ -1,6 +1,6 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
-import 'components/HomeComponents/css/Matching.css';
+import 'components/homeComponents/css/Matching.css';
 
 const Matching = () => {
   const history = useHistory();
@@ -15,8 +15,8 @@ const Matching = () => {
         <div className="matching__inner">
           <div className="matching__contents">
             <div className="contents__title">
-              <img src={require('images/member_logo1.png').default} alt="WHICH MEMBER" />
-              <img src={require('images/member_logo2.png').default} alt="ARE YOU?" />
+              <img src={require('images/matching_logo1.png').default} alt="WHICH MEMBER" />
+              <img src={require('images/matching_logo2.png').default} alt="ARE YOU?" />
             </div>
             <div className="contents__dsc">
               <p>
