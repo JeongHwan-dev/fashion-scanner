@@ -8,21 +8,24 @@ class LookbookClothes(models.Model):
     member = models.ForeignKey(
         "member.BlackpinkMember",
         related_name="lookbook_clothes",
-        on_delete=models.CASCADE,
+        on_delete=models.SET_NULL,
+        null=True,
         db_column="member_id",
         verbose_name="블랙핑크 멤버",
     )
     color = models.ForeignKey(
         "clothes_style.Color",
         related_name="lookbook_clothes",
-        on_delete=models.CASCADE,
+        on_delete=models.SET_NULL,
+        null=True,
         db_column="color_id",
         verbose_name="의류 색상",
     )
     category = models.ForeignKey(
         "clothes_style.ClothesCategory",
         related_name="lookbook_clothes",
-        on_delete=models.CASCADE,
+        on_delete=models.SET_NULL,
+        null=True,
         db_column="clothes_category_id",
         verbose_name="의류 카테고리",
     )
@@ -48,7 +51,8 @@ class ShopClothes(models.Model):
     lookbook_clothes = models.ForeignKey(
         "LookbookClothes",
         related_name="shop_clothes",
-        on_delete=models.CASCADE,
+        on_delete=models.SET_NULL,
+        null=True,
         db_column="lookbook_clothes_id",
         verbose_name="룩북 의류",
     )
@@ -69,14 +73,16 @@ class UserRequestClothes(models.Model):
     user = models.ForeignKey(
         "fsuser.Fsuser",
         related_name="user_request_clothes",
-        on_delete=models.CASCADE,
+        on_delete=models.SET_NULL,
+        null=True,
         db_column="user_id",
         verbose_name="사용자",
     )
     lookbook_clothes = models.ForeignKey(
         "LookbookClothes",
         related_name="user_request_clothes",
-        on_delete=models.CASCADE,
+        on_delete=models.SET_NULL,
+        null=True,
         db_column="lookbook_clothes_id",
         verbose_name="룩북 의류",
     )

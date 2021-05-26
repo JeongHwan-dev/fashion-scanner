@@ -9,7 +9,8 @@ class BlackpinkMember(models.Model):
     color = models.OneToOneField(
         "clothes_style.Color",
         related_name="member",
-        on_delete=models.CASCADE,
+        on_delete=models.SET_NULL,
+        null=True,
         db_column="color_id",
         verbose_name="상징색",
     )
