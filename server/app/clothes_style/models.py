@@ -4,10 +4,10 @@ from django.db import models
 class ClothesCategory(models.Model):
     id = models.AutoField(primary_key=True)
     category_name_en = models.CharField(
-        max_length=32, unique=True, blank=False, null=False, verbose_name="카테고리 영문"
+        max_length=32, unique=True, blank=False, null=False, verbose_name="의류 카테고리 영문"
     )
     category_name_kr = models.CharField(
-        max_length=32, unique=True, blank=False, null=False, verbose_name="카테고리 한국어"
+        max_length=32, unique=True, blank=False, null=False, verbose_name="의류 카테고리 한국어"
     )
 
     def __str__(self):
@@ -22,10 +22,10 @@ class ClothesCategory(models.Model):
 class ClothesAttribute(models.Model):
     id = models.AutoField(primary_key=True)
     attribute_name_en = models.CharField(
-        max_length=32, unique=True, blank=False, null=False, verbose_name="속성 영어"
+        max_length=32, unique=True, blank=False, null=False, verbose_name="의류 속성 영어"
     )
     attribute_name_kr = models.CharField(
-        max_length=32, unique=True, blank=False, null=False, verbose_name="속성 한국어"
+        max_length=32, unique=True, blank=False, null=False, verbose_name="의류 속성 한국어"
     )
 
     def __str__(self):

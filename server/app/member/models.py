@@ -16,7 +16,7 @@ class BlackpinkMember(models.Model):
     )
 
     def __str__(self):
-        return f"{self.member_name}"
+        return f"{self.member_name}({self.id})"
 
     class Meta:
         db_table = "blakpink_member"

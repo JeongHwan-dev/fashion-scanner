@@ -4,7 +4,7 @@ from django.db import models
 class LookbookClothes(models.Model):
     id = models.AutoField(primary_key=True)
     file_path = models.TextField(blank=False, null=False, verbose_name="이미지 경로")
-    registered_date = models.DateField(auto_now_add=True, verbose_name="등록 날짜")
+    registered_date = models.DateTimeField(auto_now_add=True, verbose_name="등록 날짜")
     member = models.ForeignKey(
         "member.BlackpinkMember",
         related_name="lookbook_clothes",
