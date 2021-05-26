@@ -7,5 +7,6 @@ class BlackpinkMember(models.Model):
 
     class Meta:
         db_table = 'blakpink_member'
-        verbose_name = '의류 카테고리'
-        verbose_name_plural = '의류 카테고리'
+        verbose_name = '블랙핑크 멤버'
+        verbose_name_plural = '블랙핑크 멤버'
+        

@@ -1,3 +1,7 @@
 from django.contrib import admin
+from .models import Fsuser
 
-# Register your models here.
+class FsuserAdmin(admin.ModelAdmin):
+    list_display = ('email',)
+
+admin.site.register(Fsuser, FsuserAdmin)

@@ -1,3 +1,7 @@
 from django.contrib import admin
+from .models import BlackpinkMember
 
-# Register your models here.
+class BlackpinkMemberAdmin(admin.ModelAdmin):
+    list_display = ('member_name',)
+
+admin.site.register(BlackpinkMember, BlackpinkMemberAdmin)
