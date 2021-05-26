@@ -11,7 +11,7 @@ class ClothesCategory(models.Model):
         verbose_name_plural = '의류 카테고리'
 
 
-class ClothesAttributes(models.Model):
+class ClothesAttribute(models.Model):
     id = models.AutoField(primary_key=True)
     attribute_name_en = models.CharField(max_length=32, blank=False, null=False)
     attribute_name_kr = models.CharField(max_length=32, blank=False, null=False)
