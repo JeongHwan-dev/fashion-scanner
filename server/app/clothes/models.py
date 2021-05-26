@@ -5,7 +5,7 @@ class LookbookClothes(models.Model):
     id = models.AutoField(primary_key=True)
     file_path = models.TextField(blank=False, null=False, verbose_name="이미지 경로")
     registered_date = models.DateTimeField(auto_now_add=True, verbose_name="등록 날짜")
-    member = models.ForeignKey(
+    member_id = models.ForeignKey(
         "member.BlackpinkMember",
         related_name="lookbook_clothes",
         on_delete=models.SET_NULL,
@@ -13,7 +13,7 @@ class LookbookClothes(models.Model):
         db_column="member_id",
         verbose_name="블랙핑크 멤버",
     )
-    color = models.ForeignKey(
+    color_id = models.ForeignKey(
         "clothes_style.Color",
         related_name="lookbook_clothes",
         on_delete=models.SET_NULL,
@@ -21,7 +21,7 @@ class LookbookClothes(models.Model):
         db_column="color_id",
         verbose_name="의류 색상",
     )
-    category = models.ForeignKey(
+    category_id = models.ForeignKey(
         "clothes_style.ClothesCategory",
         related_name="lookbook_clothes",
         on_delete=models.SET_NULL,
@@ -48,7 +48,7 @@ class LookbookClothes(models.Model):
 class ShopClothes(models.Model):
     id = models.AutoField(primary_key=True)
     webpage_url = models.TextField(blank=False, null=False, verbose_name="웹 페이지 URL")
-    lookbook_clothes = models.ForeignKey(
+    lookbook_clothes_id = models.ForeignKey(
         "LookbookClothes",
         related_name="shop_clothes",
         on_delete=models.SET_NULL,
@@ -69,8 +69,8 @@ class ShopClothes(models.Model):
 class UserRequestClothes(models.Model):
     id = models.AutoField(primary_key=True)
     file_path = models.TextField(blank=False, null=False, verbose_name="이미지 경로")
-    registered_date = models.DateField(auto_now_add=True, verbose_name="등록 날짜")
-    user = models.ForeignKey(
+    request_date = models.DateField(auto_now_add=True, verbose_name="등록 날짜")
+    user_id = models.ForeignKey(
         "fsuser.Fsuser",
         related_name="user_request_clothes",
         on_delete=models.SET_NULL,
@@ -78,7 +78,7 @@ class UserRequestClothes(models.Model):
         db_column="user_id",
         verbose_name="사용자",
     )
-    lookbook_clothes = models.ForeignKey(
+    lookbook_clothes_id = models.ForeignKey(
         "LookbookClothes",
         related_name="user_request_clothes",
         on_delete=models.SET_NULL,

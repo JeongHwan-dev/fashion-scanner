@@ -6,7 +6,7 @@ class BlackpinkMember(models.Model):
     member_name = models.CharField(
         max_length=32, blank=False, null=False, verbose_name="멤버 이름"
     )
-    color = models.OneToOneField(
+    color_id = models.OneToOneField(
         "clothes_style.Color",
         related_name="member",
         on_delete=models.SET_NULL,
@@ -19,6 +19,6 @@ class BlackpinkMember(models.Model):
         return f"{self.member_name}({self.id})"
 
     class Meta:
-        db_table = "blakpink_member"
+        db_table = "blackpink_member"
         verbose_name = "블랙핑크 멤버"
         verbose_name_plural = "블랙핑크 멤버"

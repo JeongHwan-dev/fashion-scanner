@@ -3,15 +3,15 @@ from .models import LookbookClothes, ShopClothes, UserRequestClothes
 
 
 class LookbookClothesAdmin(admin.ModelAdmin):
-    list_display = ("id", "member", "category", "registered_date")
+    list_display = ("id", "member", "category_id", "registered_date")
 
 
 class ShopClothesAdmin(admin.ModelAdmin):
-    list_display = ("id", "lookbook_clothes")
+    list_display = ("id", "lookbook_clothes_id")
 
 
 class UserRequestClothesAdmin(admin.ModelAdmin):
-    list_display = ("id", "user", "registered_date")
+    list_display = ("id", "user_id", "request_date", "lookbook_clothes_id")
 
 
 admin.site.register(LookbookClothes, LookbookClothesAdmin)
