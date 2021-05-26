@@ -2,7 +2,6 @@ from django.db import models
 
 
 class BlackpinkMember(models.Model):
-    id = models.AutoField(primary_key=True)
     member_name = models.CharField(
         max_length=32, blank=False, null=False, verbose_name="멤버 이름"
     )

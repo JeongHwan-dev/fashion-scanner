@@ -2,7 +2,6 @@ from django.db import models
 
 
 class ClothesCategory(models.Model):
-    id = models.AutoField(primary_key=True)
     category_name_en = models.CharField(
         max_length=32, unique=True, blank=False, null=False, verbose_name="의류 카테고리 영문"
     )
@@ -20,7 +19,6 @@ class ClothesCategory(models.Model):
 
 
 class ClothesAttribute(models.Model):
-    id = models.AutoField(primary_key=True)
     attribute_name_en = models.CharField(
         max_length=32, unique=True, blank=False, null=False, verbose_name="의류 속성 영어"
     )
@@ -38,7 +36,6 @@ class ClothesAttribute(models.Model):
 
 
 class Color(models.Model):
-    id = models.AutoField(primary_key=True)
     hex_code = models.CharField(
         max_length=6, unique=True, blank=False, null=False, verbose_name="색상 코드"
     )

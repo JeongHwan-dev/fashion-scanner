@@ -2,7 +2,6 @@ from django.db import models
 
 
 class LookbookClothes(models.Model):
-    id = models.AutoField(primary_key=True)
     file_path = models.TextField(blank=False, null=False, verbose_name="이미지 경로")
     registered_date = models.DateTimeField(auto_now_add=True, verbose_name="등록 날짜")
     member_id = models.ForeignKey(
@@ -46,7 +45,6 @@ class LookbookClothes(models.Model):
 
 
 class ShopClothes(models.Model):
-    id = models.AutoField(primary_key=True)
     webpage_url = models.TextField(blank=False, null=False, verbose_name="웹 페이지 URL")
     lookbook_clothes_id = models.ForeignKey(
         "LookbookClothes",
@@ -67,7 +65,6 @@ class ShopClothes(models.Model):
 
 
 class UserRequestClothes(models.Model):
-    id = models.AutoField(primary_key=True)
     file_path = models.TextField(blank=False, null=False, verbose_name="이미지 경로")
     request_date = models.DateField(auto_now_add=True, verbose_name="등록 날짜")
     user_id = models.ForeignKey(
