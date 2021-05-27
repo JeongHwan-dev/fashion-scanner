@@ -1,0 +1,54 @@
+/* LOOKBOOK SECTION */
+.lookbookmain {
+  background-color: white;
+  padding: 20px 50px;
+}
+
+.lookbookmain__inner {
+  display: flex;
+  width: 1200px;
+  height: 1000px;
+  margin: 0 auto;
+  display: block;
+}
+
+/* LOOKBOOK SWIPER 1 */
+.lookbookmain_swiper1 {
+  height: 800px;
+}
+
+/* LOOBOOK SWIEPR 1 - MAIN IMAGE */
+.lookbookmain__img {
+  position: absolute;
+  top: 70px;
+  left: 150px;
+  margin: 10px;
+  z-index: 1;
+}
+
+.lookbookmain__img img{
+  width: 400px;
+  height: 500px;
+  object-fit: cover;
+}
+
+/* LOOKBOOK SWIPER 1 - BACKGROUND BOX */
+.lookbookmain__bgbox {
+  width: 460px;
+  height: 370px;
+  background-color: #19181E;
+  position: absolute;
+  top: 40px;
+  left: 300px;
+}
+
+/* LOOKBOOK SWIPER 1 - INFO BOX */
+.lookbookmain__infobox {
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  top: 250px;
+  left: 600px;
+  background-color: #E4E4E4;
+  z-index: 1;
+}

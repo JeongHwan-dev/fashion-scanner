@@ -27,7 +27,7 @@ const LookbookJisoo = () => {
       {/* 멤버 소개 */}
       <MemberInfo />
       {/* 룩북 메인 */}
-      {/* <LookbookMain /> */}
+      <LookbookMain />
       {/* 다른 멤버 확인하기 */}
       <Others />
       {/* footer */}

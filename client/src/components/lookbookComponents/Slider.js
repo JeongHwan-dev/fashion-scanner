@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide, Swiperslide } from 'swiper/react';
 import SwiperCore from 'swiper';
 
 import 'swiper/swiper-bundle.css';
-import zIndex from '@material-ui/core/styles/zIndex';
+
 
 const Slider = () => {
   const jisooApi = [
