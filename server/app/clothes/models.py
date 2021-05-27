@@ -1,8 +1,24 @@
+import os
+import uuid
 from django.db import models
 
 
+def image_upload_to(instance, filename):
+    ext = filename.split(".")[-1]
+    return os.path.join(
+        instance.UPLOAD_PATH, f"{uuid.uuid4()}.{ext}"
+    )  # 16자리 고유한 아이디 생성
+
+
 class LookbookClothes(models.Model):
-    file_path = models.TextField(blank=False, null=False, verbose_name="이미지 경로")
+    UPLOAD_PATH = "user-upload"
+
+    image = models.ImageField(
+        upload_to=image_upload_to,
+        default=f"{UPLOAD_PATH}/data.png",
+        verbose_name="룩북 이미지",
+    )
+    order = models.SmallIntegerField()  # image numbering
     registered_date = models.DateTimeField(auto_now_add=True, verbose_name="등록 날짜")
     member_id = models.ForeignKey(
         "member.BlackpinkMember",
@@ -42,7 +58,7 @@ class LookbookClothes(models.Model):
         db_table = "lookbook_clothes"
         verbose_name = "룩북 의류"
         verbose_name_plural = "룩북 의류"
-        ordering = ["id"]
+        ordering = ["registered_date"]
 
 
 class ShopClothes(models.Model):
@@ -67,7 +83,13 @@ class ShopClothes(models.Model):
 
 
 class UserRequestClothes(models.Model):
-    file_path = models.TextField(blank=False, null=False, verbose_name="이미지 경로")
+    UPLOAD_PATH = "user-upload"
+
+    image = models.ImageField(
+        upload_to=image_upload_to,
+        default=f"{UPLOAD_PATH}/data.png",
+        verbose_name="사용자 요청 이미지",
+    )
     request_date = models.DateField(auto_now_add=True, verbose_name="등록 날짜")
     user_id = models.ForeignKey(
         "fsuser.Fsuser",
@@ -93,4 +115,4 @@ class UserRequestClothes(models.Model):
         db_table = "user_request_clothes"
         verbose_name = "사용자 요청 의류"
         verbose_name_plural = "사용자 요청 의류"
-        ordering = ["id"]
+        ordering = ["request_date"]

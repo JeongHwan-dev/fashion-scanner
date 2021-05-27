@@ -27,4 +27,4 @@ class Fsuser(models.Model):
         db_table = "fs_user"
         verbose_name = "사용자"
         verbose_name_plural = "사용자"
-        ordering = ["id"]
+        ordering = ["registered_date"]
