@@ -1,25 +1,22 @@
-/* EXAMPLE */
-.example {
-  background-color: #fff;
-}
-.example__inner {
+/* PICTURE EXAMPLE */
+.picture__example {
   display: flex;
   width: 1100px;
-  margin: 0 auto;
+  margin: 60px auto 80px;
   color: #484848;
   font-family: 'Spoqa Han Sans Neo', 'sans-serif';
 }
-.example__inner h2 {
+.picture__example h2 {
   font-size: 48px;
   font-weight: 500;
   line-height: 1.8;
 }
-.example__inner p {
+.picture__example p {
   font-size: 23px;
   font-weight: 300;
   line-height: 1.6;
 }
-.example__inner img {
+.picture__example img {
   width: 520px;
 }
 

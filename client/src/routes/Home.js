@@ -1,21 +1,20 @@
 import React from 'react';
 import Navigation from 'components/commonComponents/Navigation';
-import Footer from 'components/commonComponents/Footer';
 import Title from 'components/homeComponents/Title';
 import Introduction from 'components/homeComponents/Introduction';
 import Magazine from 'components/homeComponents/Magazine';
 import BpVideo from 'components/homeComponents/BpVideo';
 import Lookbook from 'components/homeComponents/Lookbook';
-import Matching from 'components/homeComponents/Matching';
-import 'routes/css/Home.css';
+import MemberMatching from 'components/homeComponents/MemberMatching';
+import Footer from 'components/commonComponents/Footer';
 
 const Home = () => {
   return (
-    <>
+    <div className="home">
       {/* HEADER */}
       <Navigation />
       {/* SECTIONS */}
-      {/* 01: TITLE SECTION */}
+      {/* 01: TITLE */}
       <Title />
       {/* 02: INTRODUCTION */}
       <Introduction />
@@ -25,11 +24,11 @@ const Home = () => {
       <BpVideo />
       {/* 05: LOOKBOOK */}
       <Lookbook />
-      {/* 06: MATCHING */}
-      <Matching />
+      {/* 06: MEMBERMATCHING */}
+      <MemberMatching />
       {/* FOOTER */}
       <Footer />
-    </>
+    </div>
   );
 };
 

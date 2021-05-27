@@ -1,22 +1,3 @@
-/* .footer__inner {
-  position: relative;
-  width: 1200px;
-  margin: 0 auto;
-  padding: 100px 0;
-  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
-}
-.footer__info {
-  display: flex;
-}
-
-.footer__info .info__contact {
-}
-
-.footer__info .info__sns {
-  position: absolute;
-  right: 0;
-} */
-
 /* FOOTER */
 footer {
   bottom: 0;
@@ -65,3 +46,22 @@ footer .copyright .material-icons {
   margin-right: 15px;
   padding: 0;
 }
+
+/* .footer__inner {
+  position: relative;
+  width: 1200px;
+  margin: 0 auto;
+  padding: 100px 0;
+  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+}
+.footer__info {
+  display: flex;
+}
+
+.footer__info .info__contact {
+}
+
+.footer__info .info__sns {
+  position: absolute;
+  right: 0;
+} */

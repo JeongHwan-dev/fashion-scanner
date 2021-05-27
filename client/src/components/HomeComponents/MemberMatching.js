@@ -1,19 +1,20 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
-import 'components/homeComponents/css/Matching.css';
+import 'components/homeComponents/css/MemberMatching.css';
 
-const Matching = () => {
+const MemberMatching = () => {
   const history = useHistory();
+
   // Matching 페이지 이동 핸들러
   const onMoveMember = () => {
-    history.push('/member-matching');
+    history.push('/matching');
   };
 
   return (
     <>
-      <section className="matching">
-        <div className="matching__inner">
-          <div className="matching__contents">
+      <section className="memberMatching">
+        <div className="memberMatching__inner">
+          <div className="memberMatching__contents">
             <div className="contents__title">
               <img src={require('images/matching_logo1.png').default} alt="WHICH MEMBER" />
               <img src={require('images/matching_logo2.png').default} alt="ARE YOU?" />
@@ -29,7 +30,7 @@ const Matching = () => {
               <button onClick={onMoveMember}>바로가기</button>
             </div>
           </div>
-          <div className="matching__img">
+          <div className="memberMatching__img">
             <img src={require('images/group_photo.png').default} alt="GROUP Photo" />
           </div>
         </div>
@@ -38,4 +39,4 @@ const Matching = () => {
   );
 };
 
-export default Matching;
+export default MemberMatching;

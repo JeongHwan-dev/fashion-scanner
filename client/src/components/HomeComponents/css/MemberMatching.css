@@ -1,30 +1,30 @@
-/* MATCHING SECTION */
-.matching {
-  padding: 280px 0;
+/* MEMBER MATCHING SECTION */
+.memberMatching {
+  padding: 200px 0 100px;
 }
-.matching__inner {
+.memberMatching__inner {
   display: flex;
   width: 1400px;
   margin: 0 auto;
   font-family: 'Spoqa Han Sans Neo', 'sans-serif';
 }
 
-/* MATCHING CONTENTS */
-.matching__contents .contents__title {
+/* MEMBER MATCHING CONTENTS */
+.memberMatching__contents .contents__title {
   padding: 80px 0 40px;
 }
-.matching__contents .contents__title img:first-child {
+.memberMatching__contents .contents__title img:first-child {
   margin-bottom: 20px;
 }
-.matching__contents .contents__dsc {
+.memberMatching__contents .contents__dsc {
   color: #b0b8c1;
   font-size: 24px;
   line-height: 1.6;
 }
-.matching__contents .contents__btn {
+.memberMatching__contents .contents__btn {
   margin-top: 30px;
 }
-.matching__contents .contents__btn button {
+.memberMatching__contents .contents__btn button {
   padding: 10px 60px;
   border-radius: 4px;
   border-color: #d97e9f;
@@ -34,7 +34,7 @@
   cursor: pointer;
   transition: 0.4s;
 }
-.matching__contents .contents__btn button:hover {
+.memberMatching__contents .contents__btn button:hover {
   background-color: #d97e9f;
-  color: #ffffff;
+  color: #fff;
 }
