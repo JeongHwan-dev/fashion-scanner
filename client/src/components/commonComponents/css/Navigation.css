@@ -51,6 +51,7 @@ header .link-group ul.link li a {
   padding: 12px 10px;
   color: #fff;
   font-size: 15px;
+  cursor: pointer;
   transition: 0.1s;
 }
 header .link-group ul.link li a:hover {

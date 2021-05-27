@@ -1,0 +1,152 @@
+/* REQUEST */
+.request {
+  padding: 200px 0 200px;
+}
+.request__inner {
+  width: 1400px;
+  margin: 0 auto;
+  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+}
+
+/* REQUEST TITLE */
+.request__title {
+  text-align: center;
+}
+.request__title h2 {
+  margin-bottom: 20px;
+  font-size: 60px;
+  font-weight: 600;
+}
+.request__title p {
+  margin-bottom: 80px;
+}
+.request__title p span {
+  margin: 0 5px;
+  font-size: 30px;
+  font-weight: 500;
+}
+.request__title p span:nth-child(1) {
+  color: #f2a7bb;
+}
+.request__title p span:nth-child(2) {
+  color: #b17efc;
+}
+
+/* REQUEST BODY */
+.request__body {
+  display: flex;
+  width: 1000px;
+  margin: 0 auto;
+}
+
+/* REQUEST BODY IMAGE */
+.request__body .body__image {
+  margin-right: 50px;
+}
+.request__body .body__image .image__preview img {
+  width: 450px;
+  height: 450px;
+}
+.request__body .body__image label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 180px;
+  height: 48px;
+  margin: 20px auto 0;
+  border: none;
+  border-radius: 6px;
+  background-color: #3a3a3a;
+  font-size: 24px;
+  text-align: center;
+  color: #dcdcdc;
+  cursor: pointer;
+}
+.request__body .body__image label span {
+  margin-left: 5px;
+  font-size: 16px;
+  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+}
+
+/* REQUEST BODY INFO */
+.request__body .body__info p {
+  width: 450px;
+  margin-bottom: 30px;
+  font-size: 18px;
+  line-height: 1.8;
+}
+.request__body .body__info .info__input {
+  margin-bottom: 50px;
+}
+.request__body .body__info input[type='text'] {
+  width: 450px;
+  height: 48px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  padding: 0 18px;
+  border: none;
+  border-radius: 6px;
+  background-color: #343434;
+  color: #fff;
+  font-size: 16px;
+  transition: 0.2s;
+}
+.request__body .body__info input[type='text']:hover {
+  outline: none;
+  box-shadow: 0 0 0 2px #f2a7bb;
+}
+.request__body .body__info input[type='text']:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #d97e9f;
+}
+.request__body .body__info .info__agree {
+  margin-bottom: 10px;
+  color: #d1d6db;
+  font-size: 16px;
+}
+.request__body .body__info label {
+  font-size: 16px;
+}
+.request__body .body__info input[type='checkbox'] {
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 6px;
+}
+.request__body .body__info input[type='checkbox']:hover {
+  outline: none;
+  box-shadow: 0 0 0 1px #f2a7bb;
+}
+.request__body .body__info button {
+  width: 450px;
+  height: 48px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 6px;
+  background-color: #f2a7bb;
+  font-size: 16px;
+  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+  color: #fff;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.request__body .body__info button:hover {
+  background-color: #d97e9f;
+}
+
+/* SWEET ALERT */
+.swal-modal .swal-button-container {
+  display: flex;
+}
+.swal-modal .swal-button-container button {
+  width: 120px;
+  margin: 0 auto;
+  border-radius: 6px;
+  background-color: #f2a7bb;
+  box-shadow: 0 0 0 0;
+  transition: 0.3s;
+}
+.swal-modal .swal-button-container button:hover {
+  background-color: #d97e9f;
+}

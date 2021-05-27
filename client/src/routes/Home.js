@@ -6,6 +6,7 @@ import Magazine from 'components/homeComponents/Magazine';
 import BpVideo from 'components/homeComponents/BpVideo';
 import Lookbook from 'components/homeComponents/Lookbook';
 import MemberMatching from 'components/homeComponents/MemberMatching';
+import Request from 'components/homeComponents/Request';
 import Footer from 'components/commonComponents/Footer';
 
 const Home = () => {
@@ -26,6 +27,8 @@ const Home = () => {
       <Lookbook />
       {/* 06: MEMBERMATCHING */}
       <MemberMatching />
+      {/* 07: REQUEST */}
+      <Request />
       {/* FOOTER */}
       <Footer />
     </div>

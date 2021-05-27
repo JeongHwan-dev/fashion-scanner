@@ -2,9 +2,18 @@ import React from 'react';
 import 'components/commonComponents/css/Navigation.css';
 
 const Navigation = () => {
-  const handleScroll = () => {
+  // 섹션들의 Y 좌표
+  const sectionY = {
+    introY: 1018,
+    lookbookY: 4240,
+    matchingY: 5354,
+    requestY: 6507,
+  };
+
+  // 스크롤 핸들러
+  const onScrollHandler = (y) => {
     window.scroll({
-      top: 2000,
+      top: y,
       behavior: 'smooth',
     });
   };
@@ -19,18 +28,16 @@ const Navigation = () => {
           <div className="link-group">
             <ul className="link">
               <li>
-                <a href="javascript:void(0)" onClick={handleScroll}>
-                  서비스 소개
-                </a>
+                <a onClick={() => onScrollHandler(sectionY.introY)}>서비스 소개</a>
               </li>
               <li>
-                <a href="javascript:void(0)">룩북</a>
+                <a onClick={() => onScrollHandler(sectionY.lookbookY)}>룩북</a>
               </li>
               <li>
-                <a href="javascript:void(0)">멤버 매칭</a>
+                <a onClick={() => onScrollHandler(sectionY.matchingY)}>멤버 매칭</a>
               </li>
               <li>
-                <a href="javascript:void(0)">요청하기</a>
+                <a onClick={() => onScrollHandler(sectionY.requestY)}>요청하기</a>
               </li>
             </ul>
           </div>
