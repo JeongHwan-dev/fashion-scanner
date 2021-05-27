@@ -42,7 +42,7 @@ class LookbookClothes(models.Model):
         db_table = "lookbook_clothes"
         verbose_name = "룩북 의류"
         verbose_name_plural = "룩북 의류"
-        ordering = ['id']
+        ordering = ["id"]
 
 
 class ShopClothes(models.Model):
@@ -63,7 +63,7 @@ class ShopClothes(models.Model):
         db_table = "shop_clothes"
         verbose_name = "쇼핑몰 의류"
         verbose_name_plural = "쇼핑몰 의류"
-        ordering = ['id']
+        ordering = ["id"]
 
 
 class UserRequestClothes(models.Model):
@@ -93,4 +93,4 @@ class UserRequestClothes(models.Model):
         db_table = "user_request_clothes"
         verbose_name = "사용자 요청 의류"
         verbose_name_plural = "사용자 요청 의류"
-        ordering = ['id']
+        ordering = ["id"]

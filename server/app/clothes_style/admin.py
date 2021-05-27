@@ -3,15 +3,15 @@ from .models import ClothesCategory, ClothesAttribute, Color
 
 
 class ClothesCategoryAdmin(admin.ModelAdmin):
-    list_display = ("category_name_en", "category_name_kr")
+    list_display = ("id", "category_name_en", "category_name_kr")
 
 
 class ClothesAttributeAdmin(admin.ModelAdmin):
-    list_display = ("attribute_name_en", "attribute_name_kr")
+    list_display = ("id", "attribute_name_en", "attribute_name_kr")
 
 
 class ColorAdmin(admin.ModelAdmin):
-    list_display = ("hex_code",)
+    list_display = ("id", "hex_code",)
 
 
 admin.site.register(ClothesCategory, ClothesCategoryAdmin)
