@@ -2,6 +2,13 @@ import React from 'react';
 import 'components/commonComponents/css/Navigation.css';
 
 const Navigation = () => {
+  const handleScroll = () => {
+    window.scroll({
+      top: 2000,
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <>
       <header>
@@ -12,7 +19,9 @@ const Navigation = () => {
           <div className="link-group">
             <ul className="link">
               <li>
-                <a href="javascript:void(0)">서비스 소개</a>
+                <a href="javascript:void(0)" onClick={handleScroll}>
+                  서비스 소개
+                </a>
               </li>
               <li>
                 <a href="javascript:void(0)">룩북</a>
