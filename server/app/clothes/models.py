@@ -4,6 +4,10 @@ from django.db import models
 
 
 def image_upload_to(instance, filename):
+    return os.path.join(instance.UPLOAD_PATH, f"{filename}")
+
+
+def image_upload_to_with_uuid(instance, filename):
     ext = filename.split(".")[-1]
     return os.path.join(
         instance.UPLOAD_PATH, f"{uuid.uuid4()}.{ext}"
@@ -11,14 +15,13 @@ def image_upload_to(instance, filename):
 
 
 class LookbookClothes(models.Model):
-    UPLOAD_PATH = "user-upload"
+    UPLOAD_PATH = "lookbook"
 
     image = models.ImageField(
         upload_to=image_upload_to,
         default=f"{UPLOAD_PATH}/data.png",
         verbose_name="룩북 이미지",
     )
-    order = models.SmallIntegerField()  # image numbering
     registered_date = models.DateTimeField(auto_now_add=True, verbose_name="등록 날짜")
     member_id = models.ForeignKey(
         "member.BlackpinkMember",
@@ -86,7 +89,7 @@ class UserRequestClothes(models.Model):
     UPLOAD_PATH = "user-upload"
 
     image = models.ImageField(
-        upload_to=image_upload_to,
+        upload_to=image_upload_to_with_uuid,
         default=f"{UPLOAD_PATH}/data.png",
         verbose_name="사용자 요청 이미지",
     )
