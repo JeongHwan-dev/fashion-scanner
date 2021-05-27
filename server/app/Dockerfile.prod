@@ -27,4 +27,4 @@ COPY ./entrypoint.sh .
 COPY . .
 
 # Run entrypoint.sh
-ENTRYPOINT ["/usr/src/app/entrypoint.sh"]
+ENTRYPOINT ["/usr/src/app/entrypoint.prod.sh"]

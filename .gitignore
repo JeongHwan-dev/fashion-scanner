@@ -1,4 +1,6 @@
 server/.env.dev
+server/.env.prod
+server/.env.prod.db
 server/app/postgres
 server/app/django.db.backends.sqlite3
 server/app/fashion_scanner/__pycache__
@@ -10,3 +12,4 @@ data_setting.py
 lookbook_data.csv
 lookbook
 user-upload
+client/
