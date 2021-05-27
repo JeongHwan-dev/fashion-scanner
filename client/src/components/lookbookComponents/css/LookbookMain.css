@@ -7,21 +7,40 @@
 .lookbookmain__inner {
   display: flex;
   width: 1200px;
-  height: 1000px;
+  height: 900px;
   margin: 0 auto;
   display: block;
 }
 
 /* LOOKBOOK SWIPER 1 */
-.lookbookmain_swiper1 {
+.lookbookmain__mainswiper {
+  height: 720px;
+}
+
+.lookbookmain__swiper1 {
   height: 800px;
+}
+
+/* LOOKBOOK SWIPER 1 - PREV, NEXT BUTTON (SWIPER JS CSS) */
+.swiper-button-prev::after, .swiper-button-next::after {
+  color: #9c9c9ca4;
+}
+
+/* LOOKBOOK SWIPER 1 - BULLET BUTTON (SWIPER JS CSS) */
+.swiper-pagination-bullet {
+  opacity: 0.5;
+  background-color: #9c9c9c;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
 }
 
 /* LOOBOOK SWIEPR 1 - MAIN IMAGE */
 .lookbookmain__img {
   position: absolute;
-  top: 70px;
-  left: 150px;
+  top: 60px;
+  left: 130px;
   margin: 10px;
   z-index: 1;
 }
@@ -34,21 +53,142 @@
 
 /* LOOKBOOK SWIPER 1 - BACKGROUND BOX */
 .lookbookmain__bgbox {
-  width: 460px;
-  height: 370px;
+  width: 300px;
+  height: 300px;
   background-color: #19181E;
   position: absolute;
   top: 40px;
-  left: 300px;
+  left: 400px;
 }
 
 /* LOOKBOOK SWIPER 1 - INFO BOX */
 .lookbookmain__infobox {
   width: 500px;
-  height: 500px;
+  height: 450px;
   position: absolute;
-  top: 250px;
-  left: 600px;
+  top: 200px;
+  left: 570px;
   background-color: #E4E4E4;
   z-index: 1;
+}
+
+/* LOOKBOOK SWIPER 1 - INFO BOX - TEXT CONTENT */
+.lookbookmain__infotxtwrapper {
+  display: flex;
+  justify-content: space-evenly;
+  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+}
+
+.lookbookmain__infotitle{
+  display: inline-block;
+  line-height: 2;
+  margin-top: 50px;
+}
+
+.lookbookmain__infotitle h3{
+  color: #5f5f5f;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.lookbookmain__infocontent {
+  display: inline-block;
+  line-height: 2.28;
+  margin-top: 50px;
+}
+
+.lookbookmain__infocontent span{
+  color: #7E7E7E;
+}
+
+.lookbookmain__colorcontent {
+  display: block;
+}
+
+/* LOOKBOOK SWIPER 1 - INFO BOX - RECOMMEND IMAGE */
+.lookbookmain__recomm {
+  width: 450px;
+  height: 280px;
+  margin: auto;
+}
+
+.lookbookmain__recomminner {
+  display: flex;    
+  height: 100%;
+  justify-content: space-evenly;
+  vertical-align: middle;
+  align-items: center;
+}
+
+.lookbookmain__recomminner img {
+  width: 140px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.lookbookmain__recommimg {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* LOOKBOOK SWIPER 1 - INFO BOX - RECOMMEND EFFECT */
+.lookbookmain__gotomall {
+  opacity: 0;
+  position: absolute;
+  color: #222222;
+  background-color: rgba(200, 200, 200, 0.5);
+  width: 14;
+  width: 140px;
+  height: 200px;
+}
+
+.lookbookmain__gotomall span {
+  padding: 10px;
+  border: 3px solid #d97e9f;
+  position: absolute;
+  top: 35%;
+  left: 7px;
+}
+
+.lookbookmain__gotomall:hover{
+  opacity: 1;
+}
+
+
+/* LOOKBOOK SWIPER 2 (THUMBNAILS) */
+.lookbookmain__thumbswiper {
+  margin-top: 20px;
+}
+
+.lookbookmain__thumbswiper .swiper-wrapper {
+  position: relative;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  transition-property: transform;
+  box-sizing: content-box;
+  justify-content: center;
+}
+
+/* LOOKBOOK SWIPER 2 - THUMBNAILS IMAGE */
+.lookbookmain__swiper2 {
+  display: inline-block;
+}
+
+.lookbookmain__swiper2 img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+/* LOOKBOOK SWIPER 2 - THUMBNAILS EFFECT */
+.lookbookmain__thumbswiper .swiper-wrapper .swiper-slide {
+  width: 80px !important;
+}
+
+.lookbookmain__thumbswiper .swiper-wrapper .swiper-slide.swiper-slide-thumb-active {
+  filter: drop-shadow(1px 1px 3px rgba(32, 32, 32, 0.568));
 }

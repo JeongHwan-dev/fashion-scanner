@@ -1,6 +1,6 @@
 /* OTHERS SECTION */
 .others {
-  padding: 100px;
+  padding: 100px 80px;
 }
 .others__inner {
   display: flex;
@@ -24,4 +24,9 @@
   height: 500px;
   vertical-align: top;
   object-fit: cover;
+  filter: grayscale(1);
+}
+
+.others__img img:hover{
+  filter: none;
 }

@@ -14,12 +14,6 @@ const LookbookJisoo = () => {
   //     console.log(response.data)
   //   })
 
-  // imageRef.current.src = 
-  // typeRef.current.innerHTML =  Category
-  // colorRef.current.innerHTML = Color
-  // featruesRef.current.innerHTML = Attributes
-  // countRef.current.innerHTML = `${id} of 10`;
-
   return (
     <>
       {/* HEADER */}

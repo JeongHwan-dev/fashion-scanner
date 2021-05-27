@@ -11,14 +11,8 @@ const AppRouter = () => {
     <Router>
       <Switch>
         <Route exact path="/" component={Home} />
-      </Switch>
-      <Switch>
         <Route path="/swiper" component={LookbookSlider} />
-      </Switch>
-      <Switch>
         <Route path='/jisoolookbook' component={LookbookJisoo} />
-      </Switch>
-      <Switch>
         <Route exact path="/matching" component={Matching} />
       </Switch>
     </Router>
