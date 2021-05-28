@@ -9,6 +9,9 @@ body {
   color: white;
   overflow-x: hidden;
 }
+html {
+  scroll-behavior: smooth;
+}
 img {
   display: block;
 }

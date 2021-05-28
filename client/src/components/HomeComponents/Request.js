@@ -79,7 +79,7 @@ const Request = () => {
 
   return (
     <>
-      <section className="request">
+      <section className="request" id="section__request">
         <div className="request__inner">
           <div className="request__title">
             <h2>

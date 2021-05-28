@@ -11,7 +11,7 @@ const Lookbook = () => {
 
   return (
     <>
-      <section className="lookbook">
+      <section className="lookbook" id="section__lookbook">
         <div className="lookbook__inner">
           <div className="lookbook__title">
             <img src={require('images/lookbook_logo.png').default} alt="BLACKPINK LOOKBOOK" />

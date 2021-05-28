@@ -5,7 +5,7 @@ import 'components/homeComponents/css/BpVideo.css';
 const BpVideo = () => {
   return (
     <>
-      <section className="bpVideo">
+      <section className="bpVideo" id="section__bpVideo">
         <video autoPlay muted loop>
           <source src={fashionIcon} type="video/mp4" />
         </video>

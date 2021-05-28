@@ -4,7 +4,7 @@ import 'components/homeComponents/css/Introduction.css';
 const Introduction = () => {
   return (
     <>
-      <section className="introduction">
+      <section className="introduction" id="section__introduction">
         <div className="introduction__inner">
           <ul>
             <li className="introduction__title">

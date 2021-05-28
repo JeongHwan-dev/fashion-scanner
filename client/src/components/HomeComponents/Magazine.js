@@ -5,7 +5,7 @@ import 'components/homeComponents/css/Magazine.css';
 const Magazine = () => {
   return (
     <>
-      <section className="magazine">
+      <section className="magazine" id="section__magazine">
         <div className="magazine__inner">
           <div className="magazine__video">
             <video autoPlay muted>

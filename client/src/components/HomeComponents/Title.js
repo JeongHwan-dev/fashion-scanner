@@ -5,7 +5,7 @@ import 'components/homeComponents/css/Title.css';
 const Title = () => {
   return (
     <>
-      <section className="title">
+      <section className="title" id="section__title">
         <div className="title__inner">
           <img src={require('images/title_logo.png').default} alt="FASHION SCANNER" />
           <h2>DISCOVER THE NEW TRENDS</h2>
