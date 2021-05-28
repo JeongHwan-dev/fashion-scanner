@@ -6,13 +6,13 @@ const MemberMatching = () => {
   const history = useHistory();
 
   // Matching 페이지 이동 핸들러
-  const onMoveMember = () => {
+  const onMoveMatching = () => {
     history.push('/matching');
   };
 
   return (
     <>
-      <section className="memberMatching">
+      <section className="memberMatching" id="section__memberMatching">
         <div className="memberMatching__inner">
           <div className="memberMatching__contents">
             <div className="contents__title">
@@ -27,7 +27,7 @@ const MemberMatching = () => {
               </p>
             </div>
             <div className="contents__btn">
-              <button onClick={onMoveMember}>바로가기</button>
+              <button onClick={onMoveMatching}>바로가기</button>
             </div>
           </div>
           <div className="memberMatching__img">
