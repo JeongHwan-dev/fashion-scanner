@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import axios from 'axios';
+import swal from 'sweetalert';
 import Example from 'components/matchingComponents/Example';
 import 'components/matchingComponents/css/Picture.css';
 
@@ -33,22 +34,42 @@ const Picture = () => {
 
   // [옷 사진] 제출 핸들러
   const onSubmit = async (event) => {
-    event.preventDefault();
-    console.log(attachment);
-    await axios
-      .post(url + '/match', {
-        body: JSON.stringify({
-          user_image: attachment,
-        }),
-      })
-      .then(() => {
-        history.puch({
-          pathname: '/loading',
+    if (attachment) {
+      event.preventDefault();
+      console.log(attachment);
+      await axios
+        .post(url + '/match', {
+          body: JSON.stringify({
+            user_image: attachment,
+          }),
+        })
+        .then(() => {
+          history.puch({
+            pathname: '/loading',
+          });
+          swal({
+            title: '스캐닝 완료',
+            text: '',
+            icon: 'success',
+            button: '확인',
+          });
+        })
+        .catch(() => {
+          swal({
+            title: '스캐닝 오류',
+            text: 'error',
+            icon: 'warning',
+            button: '확인',
+          });
         });
-      })
-      .catch(() => {
-        alert('error');
+    } else {
+      swal({
+        title: '스캐닝 실패',
+        text: '업로드한 이미지 파일이 없습니다.',
+        icon: 'error',
+        button: '확인',
       });
+    }
   };
 
   return (

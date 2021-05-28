@@ -34,7 +34,7 @@
   font-size: 24px;
   color: #d97e9f;
   cursor: pointer;
-  transition: 0.4s;
+  transition: 0.3s;
 }
 .upload__btn label:hover {
   background-color: #d97e9f;
@@ -75,13 +75,13 @@
   margin: 0 auto;
   padding: 10px 0;
   border: 3px solid #646464;
-  border-radius: 4px;
+  border-radius: 6px;
   background-color: #fff;
   color: #646464;
   font-size: 24px;
   font-family: 'Spoqa Han Sans Neo', 'sans-serif';
   cursor: pointer;
-  transition: 0.4s;
+  transition: 0.3s;
 }
 .picture__submit button:hover {
   background-color: #646464;

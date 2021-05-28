@@ -62,7 +62,7 @@ const Request = () => {
       } else {
         swal({
           title: '요청 완료',
-          text: '1주일 이내로 알람 메일을 보내드립니다.',
+          text: '요청해 주신 사진 업데이트는 약 1주일 간의 시간이 소요됩니다.',
           icon: 'success',
           button: '확인',
         });
@@ -111,12 +111,14 @@ const Request = () => {
             </div>
             <div className="body__info">
               <p>
-                추가를 원하는 셀럽들의 사진들을 업로드해주세요.
+                룩북에 추가하고 싶은 사진이 있으신가요?
                 <br />
-                사용자의 요청을 받아 룩북페이지에 추가시켜드립니다.
+                블랙핑크 멤버가 입은 옷과 비슷한 옷을 한 번에 찾고 싶으신가요? 그럼 사진을 공유해
+                주세요!
                 <br />
-                요청해주신 사진이 업로드되면 입력해주신 이메일 주소로 알람 메일을 보내드립니다.
+                요청해 주신 사진은 패션 스캐너의 인공지능 시스템을 거쳐 룩북에 추가될 것입니다.
               </p>
+              <span>&#8251; 이메일 입력 시 요청 사진이 업로드되면 알림 메일을 보내드립니다.</span>
               <form>
                 <div className="info__input">
                   <input type="text" onChange={onEmailHandler} placeholder="이메일" />
