@@ -2,8 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from 'routes/Home';
 import Matching from 'routes/Matching';
-import LookbookSlider from 'components/lookbookComponents/Slider';
-import LookbookJisoo from 'routes/LookbookJisoo';
+import LookbookPage from 'routes/LookbookPage';
 
 
 const AppRouter = () => {
@@ -11,8 +10,7 @@ const AppRouter = () => {
     <Router>
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route path="/swiper" component={LookbookSlider} />
-        <Route path='/jisoolookbook' component={LookbookJisoo} />
+        <Route path='/lookbook/:memberId' component={LookbookPage} />
         <Route exact path="/matching" component={Matching} />
       </Switch>
     </Router>

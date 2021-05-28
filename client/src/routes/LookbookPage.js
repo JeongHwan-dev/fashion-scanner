@@ -7,7 +7,7 @@ import LookbookMain from 'components/lookbookComponents/LookbookMain';
 import Others from 'components/lookbookComponents/Others';
 
 
-const LookbookJisoo = () => {
+const LookbookPage = () => {
 
   // axios.get('https://virtserver.swaggerhub.com/bky373/fashion-scanner-apis/v1/member/1')
   //   .then(response => {
@@ -30,4 +30,4 @@ const LookbookJisoo = () => {
   );
 };
 
-export default LookbookJisoo;
+export default LookbookPage;

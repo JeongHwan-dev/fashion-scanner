@@ -11,6 +11,7 @@
 
 .memberinfo__inner p {
   font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+  text-align: justify;
 }
 
 /* MEMBERINFO DSC */
@@ -28,12 +29,12 @@
 }
 
 .memberinfo__dsc h2 {
+  margin-bottom: 12px;
   font-size: 52px;
   color: #f2a7bb;
   font-weight: 700;
-  margin-bottom: 12px;
 }
 
 .memberinfo__dsc p {
-  font-size: 18px;
+  font-size: 16px;
 }
