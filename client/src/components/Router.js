@@ -4,7 +4,6 @@ import Home from 'routes/Home';
 import LookbookPage from 'routes/LookbookPage';
 import Matching from 'routes/Matching';
 import DevTeam from 'routes/DevTeam';
-import LookbookPage from 'routes/LookbookPage';
 
 const AppRouter = () => {
   return (

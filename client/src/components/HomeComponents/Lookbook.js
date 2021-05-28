@@ -1,7 +1,14 @@
 import React from 'react';
-import 'components/HomeComponents/css/Lookbook.css';
+import { useHistory } from 'react-router-dom';
+import 'components/homeComponents/css/Lookbook.css';
 
 const Lookbook = () => {
+  const history = useHistory();
+
+  const onMoveJisoo = () => {
+    history.push('/lookbook/1');
+  };
+
   return (
     <>
       <section className="lookbook">
@@ -10,8 +17,8 @@ const Lookbook = () => {
             <img src={require('images/lookbook_logo.png').default} alt="BLACKPINK LOOKBOOK" />
           </div>
           <div className="lookbook__members">
-            <a href="javascript:void(0)">
-              <img className="member" src={require('images/jisu_photo.jpg').default} alt="JISU" />
+            <a onClick={onMoveJisoo}>
+              <img className="member" src={require('images/jisoo_photo.jpg').default} alt="JISOO" />
             </a>
             <a href="javascript:void(0)">
               <img

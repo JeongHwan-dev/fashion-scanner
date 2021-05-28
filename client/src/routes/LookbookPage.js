@@ -1,18 +1,14 @@
-import React from 'react';
-// import axios from 'axios';
+import React, { useEffect } from 'react';
 import Navigation from 'components/commonComponents/Navigation';
 import Footer from 'components/commonComponents/Footer';
 import MemberInfo from 'components/lookbookComponents/MemberInfo';
 import LookbookMain from 'components/lookbookComponents/LookbookMain';
 import Others from 'components/lookbookComponents/Others';
 
-
 const LookbookPage = () => {
-
-  // axios.get('https://virtserver.swaggerhub.com/bky373/fashion-scanner-apis/v1/member/1')
-  //   .then(response => {
-  //     console.log(response.data)
-  //   })
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>

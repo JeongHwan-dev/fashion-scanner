@@ -1,6 +1,6 @@
 import React from 'react';
 import magazine from 'videos/magazine.mp4';
-import 'components/HomeComponents/css/Magazine.css';
+import 'components/homeComponents/css/Magazine.css';
 
 const Magazine = () => {
   return (
