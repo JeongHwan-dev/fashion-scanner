@@ -1,0 +1,67 @@
+/* OTHERS SECTION */
+.others {
+  padding: 100px 80px;
+}
+.others__inner {
+  display: flex;
+  flex-direction: column;
+}
+
+/* OTHERS DSC */
+.others__dsc {
+  margin-bottom: 100px;
+}
+
+.others__dsc h2 {
+  font-family: 'BLACK PINK', 'sans-serif';;
+  font-size: 60px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.others__img div {
+  display: inline-block;
+}
+
+.others__img img {
+  display: inline-block;
+  width: 450px;
+  margin: 50px;
+  transition: transform 0.2s;
+}
+
+.others__img > :nth-child(1) img {
+  margin-left: 120px;
+  transform: rotate(340deg);
+}
+
+.others__img > :nth-child(1) img:hover {
+  transform: rotate(340deg) scale(1.1);
+}
+
+.others__img > :nth-child(2) img {
+  margin-left: 100px;
+  margin-bottom: 0;
+  transform: rotate(10deg);
+}
+
+.others__img > :nth-child(2) img:hover {
+  transform: rotate(10deg) scale(1.1);
+}
+
+.others__img > :nth-child(3) img {
+  margin-left: 130px;
+  transform: rotate(355deg);
+}
+
+.others__img > :nth-child(3) img:hover {
+  transform: rotate(355deg) scale(1.1);
+}
+
+.others__img > :nth-child(4) img {
+  transform: rotate(5deg);
+}
+
+.others__img > :nth-child(4) img:hover {
+  transform: rotate(5deg) scale(1.1);
+}

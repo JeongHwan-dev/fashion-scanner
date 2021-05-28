@@ -1,6 +1,6 @@
 import React from 'react';
 import background from 'videos/background.mp4';
-import 'components/homeComponents/css/Title.css';
+import 'components/HomeComponents/css/Title.css';
 
 const Title = () => {
   return (

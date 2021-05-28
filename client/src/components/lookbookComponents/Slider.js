@@ -3,9 +3,9 @@ import { Swiper, SwiperSlide, Swiperslide } from 'swiper/react';
 import SwiperCore from 'swiper';
 
 import 'swiper/swiper-bundle.css';
-import zIndex from '@material-ui/core/styles/zIndex';
 
-const LookbookSlider = () => {
+
+const Slider = () => {
   const jisooApi = [
     {
       id: '0',
@@ -137,4 +137,4 @@ const LookbookSlider = () => {
   );
 };
 
-export default LookbookSlider;
+export default Slider;

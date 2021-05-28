@@ -1,6 +1,10 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
+<<<<<<< HEAD:client/src/components/HomeComponents/MemberMatching.js
 import 'components/homeComponents/css/MemberMatching.css';
+=======
+import 'components/HomeComponents/css/Matching.css';
+>>>>>>> 0b9c445b268fede987b11a66eec5a0b8a287d01f:client/src/components/HomeComponents/Matching.js
 
 const MemberMatching = () => {
   const history = useHistory();
