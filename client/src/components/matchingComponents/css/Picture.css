@@ -15,10 +15,10 @@
   text-align: center;
 }
 .upload__title h1 {
-  color: #d97e9f;
   font-size: 65px;
   font-weight: bold;
   font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+  color: #d97e9f;
 }
 
 /* UPLOAD BUTTON */
@@ -26,13 +26,13 @@
   text-align: center;
 }
 .upload__btn label {
-  padding: 10px 60px;
-  margin: 0 auto;
-  border-radius: 30px;
   box-sizing: border-box;
+  margin: 0 auto;
+  padding: 10px 60px;
   border: 3px solid #d97e9f;
-  color: #d97e9f;
+  border-radius: 30px;
   font-size: 24px;
+  color: #d97e9f;
   cursor: pointer;
   transition: 0.4s;
 }
@@ -51,9 +51,9 @@
   border-radius: 6px;
 }
 .upload__preview span {
-  color: #646464;
   font-size: 32px;
   font-weight: 600;
+  color: #646464;
   cursor: pointer;
   transition: transform 0.1s, color 0.3s;
 }
@@ -72,8 +72,8 @@
 .picture__submit button {
   width: 210px;
   height: 60px;
-  padding: 10px 0;
   margin: 0 auto;
+  padding: 10px 0;
   border: 3px solid #646464;
   border-radius: 4px;
   background-color: #fff;

@@ -11,7 +11,7 @@
 .introduction__title {
   margin-bottom: 20px;
   background: linear-gradient(to right, #f2a7bb, #b3d4ff);
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 82px;
   font-weight: bold;

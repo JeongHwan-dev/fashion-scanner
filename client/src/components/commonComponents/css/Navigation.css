@@ -49,8 +49,8 @@ header .link-group ul.link li a {
   height: 100%;
   box-sizing: border-box;
   padding: 12px 10px;
-  color: #fff;
   font-size: 15px;
+  color: #fff;
   cursor: pointer;
   transition: 0.1s;
 }

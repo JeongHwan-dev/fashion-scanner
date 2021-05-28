@@ -11,27 +11,29 @@ import Footer from 'components/commonComponents/Footer';
 
 const Home = () => {
   return (
-    <div className="home">
-      {/* HEADER */}
-      <Navigation />
-      {/* SECTIONS */}
-      {/* 01: TITLE */}
-      <Title />
-      {/* 02: INTRODUCTION */}
-      <Introduction />
-      {/* 03: MAGAZINE */}
-      <Magazine />
-      {/* 04: BPVIDEO */}
-      <BpVideo />
-      {/* 05: LOOKBOOK */}
-      <Lookbook />
-      {/* 06: MEMBERMATCHING */}
-      <MemberMatching />
-      {/* 07: REQUEST */}
-      <Request />
-      {/* FOOTER */}
-      <Footer />
-    </div>
+    <>
+      <div className="home">
+        {/* HEADER */}
+        <Navigation />
+        {/* SECTIONS */}
+        {/* 01: TITLE */}
+        <Title />
+        {/* 02: INTRODUCTION */}
+        <Introduction />
+        {/* 03: MAGAZINE */}
+        <Magazine />
+        {/* 04: BPVIDEO */}
+        <BpVideo />
+        {/* 05: LOOKBOOK */}
+        <Lookbook />
+        {/* 06: MEMBERMATCHING */}
+        <MemberMatching />
+        {/* 07: REQUEST */}
+        <Request />
+        {/* FOOTER */}
+        <Footer />
+      </div>
+    </>
   );
 };
 
