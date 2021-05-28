@@ -1,0 +1,41 @@
+/* MEMBER MATCHING SECTION */
+.memberMatching {
+  padding: 200px 0 100px;
+}
+.memberMatching__inner {
+  display: flex;
+  width: 1400px;
+  margin: 0 auto;
+  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+}
+
+/* MEMBER MATCHING CONTENTS */
+.memberMatching__contents .contents__title {
+  padding: 80px 0 40px;
+}
+.memberMatching__contents .contents__title img:first-child {
+  margin-bottom: 20px;
+}
+.memberMatching__contents .contents__dsc {
+  color: #b0b8c1;
+  font-size: 24px;
+  line-height: 1.6;
+}
+.memberMatching__contents .contents__btn {
+  margin-top: 30px;
+}
+.memberMatching__contents .contents__btn button {
+  padding: 10px 60px;
+  border-radius: 6px;
+  border-color: #d97e9f;
+  background-color: #101010;
+  color: #d97e9f;
+  font-size: 24px;
+  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+  cursor: pointer;
+  transition: 0.3s;
+}
+.memberMatching__contents .contents__btn button:hover {
+  background-color: #d97e9f;
+  color: #fff;
+}
