@@ -6,7 +6,10 @@ const Lookbook = () => {
   const history = useHistory();
 
   const onMoveJisoo = () => {
-    history.push('/lookbook/1');
+    history.push({
+      pathname: '/lookbook/jisoo',
+      state: 3
+    });
   };
 
   return (
