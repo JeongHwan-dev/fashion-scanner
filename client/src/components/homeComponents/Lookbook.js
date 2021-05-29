@@ -6,7 +6,31 @@ const Lookbook = () => {
   const history = useHistory();
 
   const onMoveJisoo = () => {
-    history.push('/lookbook/1');
+    history.push({
+      pathname: '/lookbook/jisoo',
+      state: 3
+    });
+  };
+
+  const onMoveJennie = () => {
+    history.push({
+      pathname: '/lookbook/jennie',
+      state: 1
+    });
+  };
+
+  const onMoveRose = () => {
+    history.push({
+      pathname: '/lookbook/rose',
+      state: 2
+    });
+  };
+
+  const onMoveLisa = () => {
+    history.push({
+      pathname: '/lookbook/lisa',
+      state: 4
+    });
   };
 
   return (
@@ -20,17 +44,17 @@ const Lookbook = () => {
             <a onClick={onMoveJisoo}>
               <img className="member" src={require('images/jisoo_photo.jpg').default} alt="JISOO" />
             </a>
-            <a href="javascript:void(0)">
+            <a onClick={onMoveJennie}>
               <img
                 className="member"
                 src={require('images/jennie_photo.jpg').default}
                 alt="JENNIE"
               />
             </a>
-            <a href="javascript:void(0)">
+            <a onClick={onMoveLisa}>
               <img className="member" src={require('images/lisa_photo.jpg').default} alt="LISA" />
             </a>
-            <a href="javascript:void(0)">
+            <a onClick={onMoveRose}>
               <img className="member" src={require('images/rose_photo.jpg').default} alt="ROSE" />
             </a>
           </div>

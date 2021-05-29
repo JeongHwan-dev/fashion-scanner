@@ -3,7 +3,6 @@
   background-color: white;
   padding: 20px 50px;
 }
-
 .lookbookmain__inner {
   display: block;
   width: 1200px;
@@ -15,7 +14,6 @@
 .lookbookmain__mainswiper {
   height: 720px;
 }
-
 .lookbookmain__swiper1 {
   height: 800px;
 }
@@ -30,7 +28,6 @@
   opacity: 0.5;
   background-color: #9c9c9c;
 }
-
 .swiper-pagination-bullet-active {
   opacity: 1;
 }
@@ -43,21 +40,10 @@
   left: 130px;
   z-index: 1;
 }
-
 .lookbookmain__img img{
   width: 400px;
   height: 500px;
   object-fit: cover;
-}
-
-/* LOOKBOOK SWIPER 1 - BACKGROUND BOX */
-.lookbookmain__bgbox {
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  background-color: #19181E;
-  top: 40px;
-  left: 400px;
 }
 
 /* LOOKBOOK SWIPER 1 - INFO BOX */
@@ -77,29 +63,24 @@
   font-family: 'Spoqa Han Sans Neo', 'sans-serif';
   justify-content: space-evenly;
 }
-
 .lookbookmain__infotitle{
   display: inline-block;
   margin-top: 50px;
   line-height: 2;
 }
-
 .lookbookmain__infotitle h3{
   font-weight: 500;
   font-size: 18px;
   color: #5f5f5f;
 }
-
 .lookbookmain__infocontent {
   display: inline-block;
   margin-top: 50px;
   line-height: 2.28;
 }
-
 .lookbookmain__infocontent span{
   color: #7E7E7E;
 }
-
 .lookbookmain__colorcontent {
   display: block;
 }
@@ -110,7 +91,6 @@
   height: 280px;
   margin: auto;
 }
-
 .lookbookmain__recomminner {
   display: flex;    
   height: 100%;
@@ -118,13 +98,11 @@
   vertical-align: middle;
   align-items: center;
 }
-
 .lookbookmain__recomminner img {
   width: 140px;
   height: 200px;
   object-fit: cover;
 }
-
 .lookbookmain__recommimg {
   display: flex;
   position: relative;
@@ -141,7 +119,6 @@
   color: #222222;
   opacity: 0;
 }
-
 .lookbookmain__gotomall span {
   position: absolute;
   padding: 5px;
@@ -150,17 +127,14 @@
   top: 40%;
   left: 10%;
 }
-
 .lookbookmain__gotomall:hover{
   opacity: 1;
 }
-
 
 /* LOOKBOOK SWIPER 2 (THUMBNAILS) */
 .lookbookmain__thumbswiper {
   margin-top: 20px;
 }
-
 .lookbookmain__thumbswiper .swiper-wrapper {
   display: flex;
   position: relative;
@@ -175,7 +149,6 @@
 .lookbookmain__swiper2 {
   display: inline-block;
 }
-
 .lookbookmain__swiper2 img {
   width: 80px;
   height: 80px;
@@ -187,7 +160,6 @@
 .lookbookmain__thumbswiper .swiper-wrapper .swiper-slide {
   width: 80px !important;
 }
-
 .lookbookmain__thumbswiper .swiper-wrapper .swiper-slide.swiper-slide-thumb-active {
   filter: drop-shadow(1px 1px 3px rgba(32, 32, 32, 0.568));
 }
