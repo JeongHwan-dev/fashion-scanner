@@ -1,8 +1,17 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import 'components/matchingComponents/css/MemberCard.css';
 
 const MemberCard = ({ memberObj }) => {
-  const onMoveLookbook = () => {};
+  const history = useHistory();
+
+  // 멤버 룩북 페이지 이동 핸들러
+  const onMoveLookbook = ({ name }) => {
+    history.push({
+      pathname: `/lookbook/${name}`,
+    });
+  };
+
   return (
     <>
       <div className="container">
@@ -25,7 +34,13 @@ const MemberCard = ({ memberObj }) => {
             </div>
           </div>
           <div className="card__btn">
-            <button onClick={onMoveLookbook}>{memberObj.btnLabel}</button>
+            <button
+              onClick={() => {
+                onMoveLookbook(memberObj.name);
+              }}
+            >
+              {memberObj.btnLabel}
+            </button>
           </div>
         </div>
       </div>

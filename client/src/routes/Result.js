@@ -35,6 +35,7 @@ const Result = () => {
         feature: '',
       },
     });
+    // 추후 API 불러오기로 수정
     // getResult();
   }, []);
 
