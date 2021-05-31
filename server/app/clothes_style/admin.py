@@ -11,7 +11,10 @@ class ClothesAttributeAdmin(admin.ModelAdmin):
 
 
 class ColorAdmin(admin.ModelAdmin):
-    list_display = ("id", "hex_code",)
+    list_display = (
+        "id",
+        "hex_code",
+    )
 
 
 admin.site.register(ClothesCategory, ClothesCategoryAdmin)
