@@ -11,6 +11,7 @@ const LookbookPage = () => {
   const location = useLocation();
   const memberId = location.state;
   // console.log(memberId) // 3 ok!
+  // jennie:1, rose:2, jisoo:3, lisa:4
   const lookbookApi = `http://elice-kdt-ai-track-vm-ai-13.koreacentral.cloudapp.azure.com:8000/api/members/${memberId}/lookbook`;
   const [member, setMemeber] = useState([]);
   const [memberColor, setMemberColor] = useState('');
@@ -38,7 +39,7 @@ const LookbookPage = () => {
       {/* HEADER */}
       <Navigation />
       {/* 멤버 소개 */}
-      <MemberInfo member={member} />
+      <MemberInfo memberId={memberId} />
       {/* 룩북 메인 */}
       <LookbookMain member={member} memberColor={memberColor} />
       {/* 다른 멤버 확인하기 */}

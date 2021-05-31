@@ -18,6 +18,8 @@
 }
 .memberinfo__img img {
   width: 400px;
+  height: 400px;
+  object-fit: cover;
 }
 .memberinfo__dsc {
   margin-left: 10px;
