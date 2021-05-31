@@ -1,0 +1,73 @@
+/* MAIN IMAGE SECTION */
+.faqmain{
+  padding: 100px 50px;
+}
+.faqmain__inner{
+  display: flex;
+  justify-content: center;
+}
+
+/* MAIN IMAGE BACKGROUND */
+.faqmain__inner__bg{
+  position: relative;
+  width: 1300px;
+  height: 500px;
+  background-color: #BD8F9D;
+  margin: 0;
+  border-radius: 50px;
+}
+
+/* MAIN IMAGE BLACKPINK */
+.faqmain__img__bg{
+  width: 500px;
+  height: 230px;
+  background-color: #b17285;
+  border-radius: 200px;
+  display: inline-block;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 140px;
+  left: 400px;
+}
+.faqmain__img {
+  position: absolute;
+  top: 80px;
+  left: 450px;
+}
+.faqmain__img img{
+  height: 350px;
+  width: auto;
+  display: inline-block;
+  border-radius: 200px;
+}
+
+/* MAIN IMAGE TITLE */
+.faqmain__inner__bg h2{
+  display: inline-block;
+  color: #6b3f4c;
+  font-size: 72px;
+  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+  font-weight: bold;
+}
+.faqmain__inner__bg h2:nth-child(1){
+  position: absolute;
+  top: 90px;
+  left: 200px;
+  z-index: 2;
+}
+.faqmain__inner__bg h2:nth-child(2){
+  position: absolute;
+  top: 160px;
+  left: 220px;
+}
+.faqmain__inner__bg h2:nth-child(3){
+  position: absolute;
+  top: 300px;
+  left: 800px;
+  z-index: 2;
+}
+.faqmain__inner__bg h2:nth-child(4){
+  position: absolute;
+  top: 370px;
+  left: 820px;
+}

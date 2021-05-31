@@ -5,14 +5,11 @@ import MemberInfo from 'components/lookbookComponents/MemberInfo';
 import LookbookMain from 'components/lookbookComponents/LookbookMain';
 import Others from 'components/lookbookComponents/Others';
 import axios from 'axios';
-import { useLocation } from 'react-router';
 
-const LookbookPage = () => {
-  const location = useLocation();
-  const memberId = location.state;
-  // console.log(memberId) // 3 ok!
+const LookbookJisoo = () => {
+  const memberId = 3;
   // jennie:1, rose:2, jisoo:3, lisa:4
-  const lookbookApi = `http://elice-kdt-ai-track-vm-ai-13.koreacentral.cloudapp.azure.com:8000/api/members/${memberId}/lookbook`;
+  const lookbookApi = `http://elice-kdt-ai-track-vm-ai-13.koreacentral.cloudapp.azure.com:8000/api/members/3/lookbook`;
   const [member, setMemeber] = useState([]);
   const [memberColor, setMemberColor] = useState('');
 
@@ -20,15 +17,12 @@ const LookbookPage = () => {
     const getLookbookData = async () => {
       await axios.get(lookbookApi)
         .then(response => {
-          // console.log(response);
           setMemeber(response.data.lookbookData);
           setMemberColor(response.data.symbolColor);
         })
     }
     getLookbookData();
   }, []);
-  // console.log(member);
-  // console.log(memberColor);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -50,4 +44,4 @@ const LookbookPage = () => {
   );
 };
 
-export default LookbookPage;
+export default LookbookJisoo;
