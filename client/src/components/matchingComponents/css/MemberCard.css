@@ -51,6 +51,7 @@
 /* CARD BACK */
 .container .card.back {
   background-color: #1b1b1b;
+  overflow: hidden;
   transform: rotateY(-180deg);
 }
 .container:hover .card.back {
@@ -58,7 +59,6 @@
 }
 .container .card.back .card__bg {
   width: 100%;
-  overflow: hidden;
   position: relative;
 }
 .container .card.back .card__bg .bg__sign {
