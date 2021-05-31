@@ -15,7 +15,7 @@ const FAQ = () => {
     {/* QUESTIONS */}
     <Questions />
     {/* FOOTER */}
-    {/* <Footer /> */}
+    <Footer />
     </>
   );
 }
