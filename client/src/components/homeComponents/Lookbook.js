@@ -8,28 +8,28 @@ const Lookbook = () => {
   const onMoveJisoo = () => {
     history.push({
       pathname: '/lookbook/jisoo',
-      state: 3
+      state: 3,
     });
   };
 
   const onMoveJennie = () => {
     history.push({
       pathname: '/lookbook/jennie',
-      state: 1
+      state: 1,
     });
   };
 
   const onMoveRose = () => {
     history.push({
       pathname: '/lookbook/rose',
-      state: 2
+      state: 2,
     });
   };
 
   const onMoveLisa = () => {
     history.push({
       pathname: '/lookbook/lisa',
-      state: 4
+      state: 4,
     });
   };
 
