@@ -53,7 +53,7 @@ const LookbookMain = ({ member, memberColor }) => {
                           marginRight: '5px',
                         }}
                       ></div>
-                      <span>{color}</span>
+                      {/* <span>{color}</span> */}
                     </div>
                     <span>{features}</span>
                   </div>
