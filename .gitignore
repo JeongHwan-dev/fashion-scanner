@@ -12,6 +12,5 @@ data_setting.py
 lookbook_data.csv
 lookbook
 user-upload
-client/
+client/node_modules/
 static
-media

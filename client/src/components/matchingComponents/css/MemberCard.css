@@ -1,0 +1,109 @@
+/* CONTAINER */
+.container {
+  width: 528px;
+  height: 704px;
+  margin: 0 auto 500px;
+}
+
+/* CARD */
+.container .card {
+  width: 528px;
+  height: 704px;
+  box-sizing: border-box;
+  box-shadow: 5px 5px 10px gray;
+  border: 3px solid #333;
+  border-radius: 1%;
+  backface-visibility: hidden;
+  transition: 1s;
+}
+
+/* CARD FRONT */
+.container .card.front {
+  position: absolute;
+  background: linear-gradient(to bottom, #f2a7bb, #f3f3f3);
+  transform: rotateY(0deg);
+}
+.container:hover .card.front {
+  transform: rotateY(180deg);
+}
+.container .card.front .card__title {
+  width: 340px;
+  margin: 100px auto 200px;
+  padding: 10px;
+  border: 7px solid #000;
+  box-sizing: border-box;
+}
+.container .card.front .card__title img {
+  display: block;
+  margin: 0 auto;
+}
+.container .card.front .card__subtitle {
+  box-sizing: border-box;
+  margin: 0 auto;
+  transform: rotate(-20deg);
+}
+
+.container .card.front .card__subtitle img {
+  display: block;
+  margin: 0 auto;
+}
+
+/* CARD BACK */
+.container .card.back {
+  background-color: #1b1b1b;
+  overflow: hidden;
+  transform: rotateY(-180deg);
+}
+.container:hover .card.back {
+  transform: rotateY(0deg);
+}
+.container .card.back .card__bg {
+  width: 100%;
+  position: relative;
+}
+.container .card.back .card__bg .bg__sign {
+  display: flex;
+  position: absolute;
+  bottom: 90px;
+  right: 0;
+  left: 0;
+  justify-content: center;
+}
+.container .card.back .card__bg .bg__sign img {
+  display: block;
+}
+.container .card.back .card__dsc {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.container .card.back .card__dsc p {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+  color: #f2a7bb;
+}
+.container .card.back .card__btn {
+  height: 114px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .card.back .card__btn button {
+  padding: 10px 30px;
+  border-color: #d97e9f;
+  border-radius: 6px;
+  background-color: #1b1b1b;
+  font-size: 18px;
+  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+  color: #d97e9f;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.container .card.back .card__btn button:hover {
+  background-color: #d97e9f;
+  color: #fff;
+}

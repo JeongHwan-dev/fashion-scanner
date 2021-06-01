@@ -1,0 +1,33 @@
+/* MATCHING TITLE */
+.matchingTitle {
+  width: 100%;
+  height: 1000px;
+  background: linear-gradient(to bottom, #de999d, #af6166);
+}
+.matchingTitle__inner {
+  padding-top: 130px;
+}
+.matchingTitle__inner img:nth-child(1) {
+  width: 1000px;
+  height: auto;
+  margin: 0 auto 50px;
+}
+.matchingTitle__inner img:nth-child(2) {
+  margin: 0 auto 50px;
+  padding: 0;
+}
+
+.matchingTitle__inner a {
+  display: flex;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+  font-size: 60px;
+  color: #fff;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.matchingTitle__inner a:hover {
+  color: #b0b8c1;
+}
