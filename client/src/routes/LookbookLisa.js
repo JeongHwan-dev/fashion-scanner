@@ -9,13 +9,13 @@ import axios from 'axios';
 const LookbookLisa = () => {
   // jennie:1, rose:2, jisoo:3, lisa:4
   const memberId = 4;
-  const lookbookApi = `http://elice-kdt-ai-track-vm-ai-13.koreacentral.cloudapp.azure.com:8000`;
+  const url = `http://elice-kdt-ai-track-vm-ai-13.koreacentral.cloudapp.azure.com:8000`;
   const [member, setMemeber] = useState([]);
   const [memberColor, setMemberColor] = useState('');
 
   useEffect(() => {
     const getLookbookData = async () => {
-      await axios.get(lookbookApi + `/api/members/${memberId}/lookbook`)
+      await axios.get(url + `/api/members/${memberId}/lookbook`)
       // 응답(성공)
       .then((response) => {
         setMemeber(response.data.lookbookData);
