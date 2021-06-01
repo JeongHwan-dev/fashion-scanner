@@ -1,13 +1,10 @@
 import os
-from django.http import Http404
-from django.shortcuts import get_object_or_404
 from rest_framework import status
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from djangorestframework_camel_case.render import CamelCaseJSONRenderer
 from member.models import BlackpinkMember
 from clothes.models import LookbookClothes
-from clothes_style.models import ClothesCategory, ClothesAttribute, Color
 from rest_framework.exceptions import NotFound
 import json
 
