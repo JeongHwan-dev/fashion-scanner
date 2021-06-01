@@ -1,6 +1,7 @@
 /* MAIN IMAGE SECTION */
 .faqmain{
   padding: 100px 50px;
+  height: 500px;
 }
 .faqmain__inner{
   display: flex;
@@ -8,6 +9,9 @@
 }
 
 /* MAIN IMAGE BACKGROUND */
+.fagmain__inner__wrapper{
+  position: absolute;
+}
 .faqmain__inner__bg{
   position: relative;
   width: 1300px;
@@ -15,6 +19,17 @@
   background-color: #BD8F9D;
   margin: 0;
   border-radius: 50px;
+}
+
+/* MAIN IMAGE TEAM */
+.faqmain__team__img{
+  display: flex;
+  justify-content: center;
+}
+.faqmain__team__img img{
+  height: 500px;
+  display: inline-block;
+  border-radius: 25px;
 }
 
 /* MAIN IMAGE BLACKPINK */

@@ -8,6 +8,7 @@ import LookbookJennie from 'routes/LookbookJennie';
 import LookbookRose from 'routes/LookbookRose';
 import LookbookLisa from 'routes/LookbookLisa';
 import LookbookJisoo from 'routes/LookbookJisoo';
+import Loading from 'routes/Loading';
 
 const AppRouter = () => {
   return (
@@ -21,6 +22,7 @@ const AppRouter = () => {
         <Route exact path="/matching" component={Matching} />
         <Route exact path="/devteam" component={DevTeam} />
         <Route exact path="/faq" component={FAQ} />
+        <Route exact path="/matching/loading" component={Loading} />
       </Switch>
     </Router>
   );

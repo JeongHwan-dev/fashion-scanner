@@ -35,6 +35,11 @@
 }
 
 /* QUESTIONS CONTENT */
+.questions__inner{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .questions__question{
   margin-bottom: 50px;
 }
