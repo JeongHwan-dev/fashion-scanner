@@ -11,6 +11,7 @@ const FailCard = () => {
       pathname: '/matching',
     });
   };
+
   return (
     <>
       <div className="failCard">

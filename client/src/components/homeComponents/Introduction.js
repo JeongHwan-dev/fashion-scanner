@@ -38,6 +38,9 @@ const Introduction = () => {
               </p>
             </li>
           </ul>
+          <a className="material-icons" href="#section__magazine">
+            expand_more
+          </a>
         </div>
       </section>
     </>
