@@ -6,10 +6,6 @@ import Footer from 'components/commonComponents/Footer';
 import 'routes/css/Matching.css';
 
 const Matching = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
   return (
     <>
       <div className="matching">

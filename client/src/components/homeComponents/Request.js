@@ -98,7 +98,7 @@ const Request = () => {
               </div>
               <div className="image__upload">
                 <label className="material-icons" for="reqeust-file">
-                  upload_file <span>사진 업로드</span>
+                  upload_file<span>사진 업로드</span>
                 </label>
                 <input
                   type="file"
