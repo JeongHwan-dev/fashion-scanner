@@ -1,6 +1,7 @@
 /* QUESTIONS SECTION */
 .questions{
-  padding: 0 200px 200px;
+  width: 800px;
+  margin: auto;
 }
 
 /* QUESTIONS TITLE */
@@ -35,11 +36,11 @@
 }
 
 /* QUESTIONS CONTENT */
-.questions__inner{
+/* .questions__inner{
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
+} */
 .questions__question{
   margin-bottom: 50px;
 }
