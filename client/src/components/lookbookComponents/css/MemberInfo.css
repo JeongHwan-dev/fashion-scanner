@@ -1,0 +1,38 @@
+/* MEMBERINFO SECTION */
+.memberinfo {
+  padding: 120px 230px 0;
+}
+.memberinfo__inner {
+  display: flex;
+  width: 1150px;
+  margin: 0 auto;
+}
+.memberinfo__inner p {
+  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+  text-align: justify;
+}
+
+/* MEMBERINFO DSC */
+.memberinfo__img {
+  margin-right: 100px;
+}
+.memberinfo__img img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+}
+.memberinfo__dsc {
+  margin-left: 10px;
+  padding: 30px 0;
+}
+.memberinfo__dsc h2 {
+  margin-bottom: 34px;
+  font-size: 84px;
+  font-weight: 600;
+  color: #f2a7bb;
+}
+.memberinfo__dsc p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #b0b8c1;
+}
