@@ -74,7 +74,7 @@ const Picture = () => {
 
   return (
     <>
-      <section className="picture">
+      <section className="picture" id="section__picture">
         <div className="picture__upload">
           <ul>
             <li className="upload__title">

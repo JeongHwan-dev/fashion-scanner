@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import ScrollToTop from 'components/commonComponents/ScrollToTop';
 import Home from 'routes/Home';
 import LookbookPage from 'routes/LookbookPage';
 import Matching from 'routes/Matching';
@@ -11,6 +12,7 @@ import DevTeam from 'routes/DevTeam';
 const AppRouter = () => {
   return (
     <Router>
+      <ScrollToTop />
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/lookbook/:memberId" component={LookbookPage} />
