@@ -81,7 +81,7 @@
 }
 .request__body .body__info span {
   font-size: 16px;
-  color: #d1d6db;
+  color: #b0b8c1;
 }
 .request__body .body__info .info__input {
   margin-bottom: 50px;
@@ -109,7 +109,7 @@
 }
 .request__body .body__info .info__agree {
   margin-bottom: 10px;
-  color: #d1d6db;
+  color: #b0b8c1;
   font-size: 16px;
 }
 .request__body .body__info label {
