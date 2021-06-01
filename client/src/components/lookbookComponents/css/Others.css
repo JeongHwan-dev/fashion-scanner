@@ -1,0 +1,71 @@
+/* OTHERS SECTION */
+.others .inner__bg {
+  position: absolute;
+  z-index: -2;
+  opacity: 0.6;
+}
+.others__inner {
+  /* flex-direction: column; */
+  width: 1400px;
+  margin: 0 auto;
+  padding: 100px;
+}
+
+/* OTHERS DSC */
+.others__title {
+  margin-bottom: 120px;
+  text-align: center;
+}
+.others__title h2 {
+  font-family: 'BLACK PINK', 'sans-serif';
+  font-size: 72px;
+  font-weight: 600;
+  text-align: center;
+  color: #f2a7bb;
+}
+
+/* OTHERS IMG */
+.others__img img {
+  display: inline-block;
+  width: 450px;
+  margin: 0 80px;
+  filter: grayscale(100%);
+  transform: skewX(-8deg);
+  transition: transform 0.2s, filter 0.6s;
+}
+.others__img img:hover {
+  z-index: 1;
+  filter: none;
+}
+.others__img .img__line1 {
+  width: 1300px;
+  margin: 0 auto 100px;
+}
+.others__img .img__line2 {
+  width: 1300px;
+  margin: 0 auto;
+}
+.others__img .img__line1 .img1 {
+  transform: rotate(-15deg);
+}
+.others__img .img__line1 .img1:hover {
+  transform: rotate(-15deg) scale(1.1);
+}
+.others__img .img__line1 .img2 {
+  transform: rotate(20deg);
+}
+.others__img .img__line1 .img2:hover {
+  transform: rotate(20deg) scale(1.1);
+}
+.others__img .img__line2 .img3 {
+  transform: rotate(-3deg);
+}
+.others__img .img__line2 .img3:hover {
+  transform: rotate(-3deg) scale(1.1);
+}
+.others__img .img__line2 .img4 {
+  transform: rotate(14deg);
+}
+.others__img .img__line2 .img4:hover {
+  transform: rotate(14deg) scale(1.1);
+}
