@@ -1,24 +1,30 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import Navigation from 'components/commonComponents/Navigation';
 import Footer from 'components/commonComponents/Footer';
+import Navigation from 'components/commonComponents/Navigation';
+import React from 'react';
 import 'routes/css/Loading.css';
+import loadingVideo from 'videos/Loading.mov';
 
 const Loading = () => {
-  const url = `http://elice-kdt-ai-track-vm-ai-13.koreacentral.cloudapp.azure.com:8000`;
-
   return (
     <>
+      {/* HEADER */}
+      <Navigation />
+      {/* LOADING PAGE */}
       <div className="loading">
-        <Navigation />
-        <div className="loading__inner">
-          {/* <video autoPlay loop muted>
-            <source src={loadingVd} type="video/mp4" />
-          </video> */}
-          테스트
+        <div className="loading__title">
+          <h3>Loading</h3>
+          <span>.</span>
+          <span>.</span>
+          <span>.</span>
         </div>
-        <Footer />
+        <div className="loading__video">
+          <video autoPlay loop muted>
+            <source src={loadingVideo} type="video/mp4" />
+          </video>
+        </div>
       </div>
+      {/* FOOTER */}
+      <Footer />
     </>
   );
 };
