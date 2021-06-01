@@ -1,9 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import 'components/faqComponents/css/Questions.css';
 
-const Questions = () => {
-  const [blackpink, setBlackpink] = useState(false);
-
+const Questions = ({ blackpink, setBlackpink }) => {
   return (
     <section className="questions" id="section__questions">
       <div className="questions__inner">
