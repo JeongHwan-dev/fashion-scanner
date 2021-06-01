@@ -63,7 +63,7 @@ class LookbookClothes(models.Model):
 
 
 class ShopClothes(models.Model):
-    UPLOAD_PATH = "shop_crawling"
+    UPLOAD_PATH = "shop-crawling"
 
     image = models.ImageField(
         upload_to=image_upload_to,

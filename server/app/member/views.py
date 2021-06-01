@@ -1,3 +1,4 @@
+import os
 from django.http import Http404
 from django.shortcuts import get_object_or_404
 from rest_framework import status
@@ -11,8 +12,8 @@ from .errors import MemberNotExistException
 import json
 
 
-class MemberLookbookListAPIView(APIView):
-    """멤버의 Lookbook 리스트를 조회하는 API 구현 클래스"""
+class MemberLookbookPIView(APIView):
+    """멤버의 Lookbook 리스트를 조회하는 API 클래스"""
 
     renderer_classes = [CamelCaseJSONRenderer]
 
@@ -25,11 +26,7 @@ class MemberLookbookListAPIView(APIView):
         Returns:
             멤버 인스턴스
         """
-        try:
-            return BlackpinkMember.objects.select_related("color").get(pk=pk)
-
-        except BlackpinkMember.DoesNotExist:
-            raise MemberNotExistException()
+        return BlackpinkMember.objects.select_related("color").get(pk=pk)
 
     def get(self, request, pk, format=None):
         """pk에 해당하는 멤버의 Lookbook 리스트와 상징색을 반환합니다.
@@ -53,44 +50,41 @@ class MemberLookbookListAPIView(APIView):
                 status_code:
                     상태 코드
         """
-        try:
-            base_url = "http://elice-kdt-ai-track-vm-ai-13.koreacentral.cloudapp.azure.com:8000"
-            member = self.get_object(pk)
-            symbol_color = member.color.hex_code
-            lookbook_list = (
-                LookbookClothes.objects.select_related("color")
-                .select_related("category")
-                .prefetch_related("shop_clothes")
-                .prefetch_related("attributes")
-                .filter(member=pk)
-            )
-
-            result = dict()
-            result["lookbook_data"] = []
-            for lookbook in lookbook_list:
-                data = dict()
-                data["lookbook_id"] = lookbook.id
-                data["lookbook_image"] = base_url + lookbook.image.url
-                data["color"] = lookbook.color.hex_code
-                data["category"] = lookbook.category.name_kr
-                data["attributes"] = [
-                    attr.name_kr for attr in lookbook.attributes.all()
-                ]
-                data["similar_images"] = json.dumps(
-                    [
-                        {
-                            "image": base_url + clothes.image.url,
-                            "link": clothes.webpage_url,
-                        }
-                        for clothes in lookbook.shop_clothes.all()
-                    ]
-                )
-                result["lookbook_data"].append(data)
-
-            result["symbol_color"] = symbol_color
-            result["status_code"] = status.HTTP_200_OK
-
-            return Response(result)
-
-        except MemberNotExistException:
+        if not (1 <= pk <= 4):
             raise MemberNotExistException()
+
+        BASE_URL = os.environ.get("BASE_URL")
+        member = self.get_object(pk)
+        symbol_color = member.color.hex_code
+        lookbook_list = (
+            LookbookClothes.objects.select_related("color")
+            .select_related("category")
+            .prefetch_related("shop_clothes")
+            .prefetch_related("attributes")
+            .filter(member=pk)
+        )
+
+        result = dict()
+        result["lookbook_data"] = []
+        for lookbook in lookbook_list:
+            data = dict()
+            data["lookbook_id"] = lookbook.id
+            data["lookbook_image"] = BASE_URL + lookbook.image.url
+            data["color"] = lookbook.color.hex_code
+            data["category"] = lookbook.category.name_kr
+            data["attributes"] = [attr.name_kr for attr in lookbook.attributes.all()]
+            data["similar_images"] = json.dumps(
+                [
+                    {
+                        "image": BASE_URL + clothes.image.url,
+                        "link": clothes.webpage_url,
+                    }
+                    for clothes in lookbook.shop_clothes.all()
+                ]
+            )
+            result["lookbook_data"].append(data)
+
+        result["symbol_color"] = symbol_color
+        result["status_code"] = status.HTTP_200_OK
+
+        return Response(result)
