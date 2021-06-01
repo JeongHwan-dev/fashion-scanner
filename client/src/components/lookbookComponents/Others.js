@@ -17,14 +17,14 @@ const Others = () => {
           </div>
           <div className="others__img">
             <div className="img__line1">
-              <Link to="/">
+              <Link to="/lookbook/jisoo">
                 <img
                   className="img1"
                   src={require('images/lookbook_members_jisoo.png').default}
                   alt="jisoo"
                 />
               </Link>
-              <Link to="/">
+              <Link to="/lookbook/lisa">
                 <img
                   className="img2"
                   src={require('images/lookbook_members_lisa.png').default}
@@ -33,14 +33,14 @@ const Others = () => {
               </Link>
             </div>
             <div className="img__line2">
-              <Link to="/">
+              <Link to="/lookbook/jennie">
                 <img
                   className="img3"
                   src={require('images/lookbook_members_jennie.png').default}
                   alt="jennie"
                 />
               </Link>
-              <Link to="/">
+              <Link to="/lookbook/rose">
                 <img
                   className="img4"
                   src={require('images/lookbook_members_rose.png').default}
