@@ -3,6 +3,9 @@
   width: 800px;
   margin: auto;
 }
+.questions__inner{
+  margin-bottom: 50px;
+}
 
 /* QUESTIONS TITLE */
 .questions__inner h2{
