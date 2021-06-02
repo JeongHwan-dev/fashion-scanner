@@ -1,5 +1,4 @@
 import Footer from 'components/commonComponents/Footer';
-import Navigation from 'components/commonComponents/Navigation';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import 'routes/css/NotFound.css';
@@ -7,8 +6,6 @@ import 'routes/css/NotFound.css';
 const NotFound = () => {
   return (
     <>
-      {/* HEADER */}
-      <Navigation />
       {/* NOT FOUND MAIN PAGE */}
       <div className="notfound">
         <div className="notfound__inner">
