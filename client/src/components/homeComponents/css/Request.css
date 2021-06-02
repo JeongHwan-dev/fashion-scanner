@@ -86,7 +86,7 @@
 .request__body .body__info .info__input {
   margin-bottom: 50px;
 }
-.request__body .body__info input[type='text'] {
+.request__body .body__info input[type='email'] {
   width: 450px;
   height: 48px;
   box-sizing: border-box;
@@ -99,11 +99,11 @@
   font-size: 16px;
   transition: 0.2s;
 }
-.request__body .body__info input[type='text']:hover {
+.request__body .body__info input[type='email']:hover {
   outline: none;
   box-shadow: 0 0 0 2px #f2a7bb;
 }
-.request__body .body__info input[type='text']:focus {
+.request__body .body__info input[type='email']:focus {
   outline: none;
   box-shadow: 0 0 0 2px #d97e9f;
 }

@@ -23,7 +23,7 @@ const Introduction = () => {
               </div>
               <div>
                 <img src={require('images/scanner_logo.png').default} alt="Scanner" />
-                <p>Scanner</p>
+                <p>Scanning</p>
               </div>
               <div>
                 <img src={require('images/fashion_logo.png').default} alt="Fashion" />

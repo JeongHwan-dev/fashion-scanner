@@ -2,49 +2,90 @@
 footer {
   bottom: 0;
   width: 100%;
-  height: 400px;
+  height: 100%;
   background-color: #1b1b1b;
 }
 footer .inner {
   width: 1100px;
   position: relative;
+  padding: 50px 0 100px;
   line-height: 3;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 300;
   font-family: 'Spoqa Han Sans Neo', 'sans-serif';
   color: #d1d6db;
 }
 footer .info {
   display: flex;
-  padding-top: 60px;
+  height: 200px;
+  margin-bottom: 30px;
 }
 footer .info .info__contact {
   position: absolute;
   left: 0;
 }
-footer .info .info__sns {
+footer .info .info__contact li:first-child {
+  margin-bottom: 30px;
+}
+footer .info .info__contact .material-icons {
+  margin-right: 15px;
+  padding: 5px;
+  border-radius: 100%;
+  background-color: #3a3a3a;
+  font-size: 16px;
+}
+
+footer .info .info__team {
   position: absolute;
   right: 0;
 }
-footer .info .info__sns .sns__icon {
+footer .info .info__team .sns__icon {
   font-size: 30px;
   margin-right: 16px;
   cursor: pointer;
 }
-footer .info .info__contact .material-icons {
-  margin-right: 15px;
-  padding: 8px;
-  border-radius: 100%;
-  background-color: #3a3a3a;
+footer .info .info__team li:nth-child(1),
+footer .info .info__team li:nth-child(2) {
+  line-height: 2.5;
+}
+footer .info .info__team ul li {
+  font-size: 16px;
+}
+footer .info .info__team ul li a {
+  text-decoration: none;
+  color: #fff;
+  transition: 0.3s;
+}
+footer .info .info__team ul li a:hover {
+  color: #d1d6db;
+}
+
+footer .info .info__team li:nth-child(2) {
+  /* margin-bottom: 20px; */
+}
+footer .info .info__team .team__dev {
+  margin-bottom: 25px;
+}
+footer .info .info__team .team__sns li:first-child {
+  margin-bottom: 5px;
+}
+footer .info .info__team li {
+  /* line-height: 1.8; */
 }
 footer .inner .copyright {
   position: absolute;
-  padding-top: 200px;
+  width: 100%;
+}
+footer .inner .copyright p {
+  display: flex;
+  font-size: 16px;
   justify-content: center;
 }
 footer .copyright .material-icons {
   margin-right: 15px;
-  padding: 0;
+  display: flex;
+  align-items: center;
+  font-size: 24px;
 }
 
 /* .footer__inner {

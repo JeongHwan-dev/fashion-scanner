@@ -27,7 +27,7 @@ const MemberMatching = () => {
               </p>
             </div>
             <div className="contents__btn">
-              <button onClick={onMoveMatching}>바로가기</button>
+              <a href="/matching">바로가기</a>
             </div>
           </div>
           <div className="memberMatching__img">

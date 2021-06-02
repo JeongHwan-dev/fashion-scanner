@@ -1,38 +1,7 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
 import 'components/homeComponents/css/Lookbook.css';
 
 const Lookbook = () => {
-  const history = useHistory();
-
-  const onMoveJisoo = () => {
-    history.push({
-      pathname: '/lookbook/jisoo',
-      state: 3,
-    });
-  };
-
-  const onMoveJennie = () => {
-    history.push({
-      pathname: '/lookbook/jennie',
-      state: 1,
-    });
-  };
-
-  const onMoveRose = () => {
-    history.push({
-      pathname: '/lookbook/rose',
-      state: 2,
-    });
-  };
-
-  const onMoveLisa = () => {
-    history.push({
-      pathname: '/lookbook/lisa',
-      state: 4,
-    });
-  };
-
   return (
     <>
       <section className="lookbook" id="section__lookbook">
@@ -42,16 +11,16 @@ const Lookbook = () => {
             <span>멤버들을 클릭하여 룩북을 확인해보세요.</span>
           </div>
           <div className="lookbook__members">
-            <a onClick={onMoveJisoo}>
+            <a href="/lookbook/jisoo">
               <img className="member" src="/images/jisoo_btn_photo.jpg" alt="JISOO" />
             </a>
-            <a onClick={onMoveJennie}>
+            <a href="/lookbook/jennie">
               <img className="member" src="/images/jennie_btn_photo.jpg" alt="JENNIE" />
             </a>
-            <a onClick={onMoveLisa}>
+            <a href="/lookbook/lisa">
               <img className="member" src="/images/lisa_btn_photo.jpg" alt="LISA" />
             </a>
-            <a onClick={onMoveRose}>
+            <a href="/lookbook/rose">
               <img className="member" src="/images/rose_btn_photo.jpg" alt="ROSE" />
             </a>
           </div>
