@@ -48,11 +48,17 @@
 .others__img .img__line1 .img1 {
   transform: rotate(-15deg);
 }
+.others__img .img__line1 .img1.scroll {
+  animation: 1.2s moveJisoo ease;
+}
 .others__img .img__line1 .img1:hover {
   transform: rotate(-15deg) scale(1.1);
 }
 .others__img .img__line1 .img2 {
   transform: rotate(20deg);
+}
+.others__img .img__line1 .img2.scroll {
+  animation: 1.2s moveLisa ease;
 }
 .others__img .img__line1 .img2:hover {
   transform: rotate(20deg) scale(1.1);
@@ -60,12 +66,52 @@
 .others__img .img__line2 .img3 {
   transform: rotate(-3deg);
 }
+.others__img .img__line2 .img3.scroll {
+  animation: 1.2s moveJennie ease;
+}
 .others__img .img__line2 .img3:hover {
   transform: rotate(-3deg) scale(1.1);
 }
 .others__img .img__line2 .img4 {
   transform: rotate(14deg);
 }
+.others__img .img__line2 .img4.scroll {
+  animation: 1.2s moveRose ease;
+}
 .others__img .img__line2 .img4:hover {
   transform: rotate(14deg) scale(1.1);
+}
+
+/* OTHERS IMG ANIMATION */
+@keyframes moveJisoo {
+  from {
+    transform: translate(-200%, -100%) rotate(-15deg);
+  }
+  to {
+    transform: translate(0%, 0%) rotate(-15deg);
+  }
+}
+@keyframes moveLisa {
+  from {
+    transform: translate(300%, -200%) rotate(20deg);
+  }
+  to {
+    transform: translate(0%, 0%) rotate(20deg);
+  }
+}
+@keyframes moveJennie {
+  from {
+    transform: translate(-200%, 200%) rotate(-3deg);
+  }
+  to {
+    transform: translate(0%, 0%) rotate(-3deg);
+  }
+}
+@keyframes moveRose {
+  from {
+    transform: translate(400%, 200%) rotate(14deg);
+  }
+  to {
+    transform: translate(0%, 0%) rotate(14deg);
+  }
 }
