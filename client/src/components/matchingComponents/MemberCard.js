@@ -6,9 +6,9 @@ const MemberCard = ({ memberObj }) => {
   const history = useHistory();
 
   // 멤버 룩북 페이지 이동 핸들러
-  const onMoveLookbook = ({ name }) => {
+  const onMoveLookbook = () => {
     history.push({
-      pathname: `/lookbook/${name}`,
+      pathname: `/lookbook/${memberObj.name}`,
     });
   };
 
@@ -34,13 +34,7 @@ const MemberCard = ({ memberObj }) => {
             </div>
           </div>
           <div className="card__btn">
-            <button
-              onClick={() => {
-                onMoveLookbook(memberObj.name);
-              }}
-            >
-              {memberObj.btnLabel}
-            </button>
+            <button onClick={onMoveLookbook}>{memberObj.btnLabel}</button>
           </div>
         </div>
       </div>

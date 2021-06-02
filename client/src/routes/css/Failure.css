@@ -1,11 +1,4 @@
 /* FAILURE */
 .failure {
-  background-color: #fff;
-}
-.failure__inner {
-  width: 80%;
-  height: 745px;
-  margin: 0 auto;
-  padding: 150px 0 300px;
-  color: fff;
+  background-color: #f3f3f3;
 }

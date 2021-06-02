@@ -1,8 +1,8 @@
-import Footer from 'components/commonComponents/Footer';
-import Navigation from 'components/commonComponents/Navigation';
 import React from 'react';
-import 'routes/css/Loading.css';
+import Navigation from 'components/commonComponents/Navigation';
+import Footer from 'components/commonComponents/Footer';
 import loadingVideo from 'videos/Loading.mov';
+import 'routes/css/Loading.css';
 
 const Loading = () => {
   return (

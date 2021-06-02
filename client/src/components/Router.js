@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import ScrollToTop from 'components/commonComponents/ScrollToTop';
 import Home from 'routes/Home';
 import Matching from 'routes/Matching';
 import Loading from 'routes/Loading';
+import Loading2 from 'routes/Loading2';
 import Result from 'routes/Result';
 import Failure from 'routes/Failure';
 import DevTeam from 'routes/DevTeam';
@@ -12,12 +12,10 @@ import LookbookJennie from 'routes/LookbookJennie';
 import LookbookRose from 'routes/LookbookRose';
 import LookbookLisa from 'routes/LookbookLisa';
 import LookbookJisoo from 'routes/LookbookJisoo';
-import NotFound from 'routes/NotFound';
 
 const AppRouter = () => {
   return (
     <Router>
-      <ScrollToTop />
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/lookbook/jennie" component={LookbookJennie} />
@@ -31,7 +29,7 @@ const AppRouter = () => {
         <Route exact path="/devteam" component={DevTeam} />
         <Route exact path="/faq" component={FAQ} />
         <Route exact path="/matching/loading" component={Loading} />
-        <Route component={NotFound} />
+        <Route exact path="/matching/loading2" component={Loading2} />
       </Switch>
     </Router>
   );

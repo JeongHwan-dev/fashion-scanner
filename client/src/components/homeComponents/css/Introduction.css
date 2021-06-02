@@ -6,6 +6,20 @@
   font-family: 'Spoqa Han Sans Neo', 'sans-serif';
   animation: appear 3s 0.27s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
+.introduction__inner a {
+  display: flex;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+  font-size: 60px;
+  color: #fff;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.introduction__inner a:hover {
+  color: #b0b8c1;
+}
 
 /* INTRODUCTION TITLE */
 .introduction__title {
@@ -75,6 +89,7 @@
 
 /* INTRODUCTION DSC */
 .introduction__dsc p {
+  margin-bottom: 50px;
   font-size: 28px;
   font-weight: 600;
   text-align: center;

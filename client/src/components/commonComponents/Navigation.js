@@ -12,16 +12,16 @@ const Navigation = () => {
           <div className="link-group">
             <ul className="link">
               <li>
-                <a href="#section__introduction">서비스 소개</a>
+                <a href="/#section__introduction">서비스 소개</a>
               </li>
               <li>
-                <a href="#section__lookbook">룩북</a>
+                <a href="/#section__lookbook">룩북</a>
               </li>
               <li>
-                <a href="#section__memberMatching">멤버 매칭</a>
+                <a href="/#section__memberMatching">멤버 매칭</a>
               </li>
               <li>
-                <a href="#section__request">요청하기</a>
+                <a href="/#section__request">요청하기</a>
               </li>
             </ul>
           </div>

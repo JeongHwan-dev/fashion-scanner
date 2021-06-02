@@ -23,7 +23,7 @@ const Introduction = () => {
               </div>
               <div>
                 <img src={require('images/scanner_logo.png').default} alt="Scanner" />
-                <p>Scanner</p>
+                <p>Scanning</p>
               </div>
               <div>
                 <img src={require('images/fashion_logo.png').default} alt="Fashion" />
@@ -38,6 +38,9 @@ const Introduction = () => {
               </p>
             </li>
           </ul>
+          <a className="material-icons" href="#section__magazine">
+            expand_more
+          </a>
         </div>
       </section>
     </>

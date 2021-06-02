@@ -24,18 +24,18 @@
 .memberMatching__contents .contents__btn {
   margin-top: 30px;
 }
-.memberMatching__contents .contents__btn button {
+.memberMatching__contents .contents__btn a {
   padding: 10px 60px;
+  border: 2px solid #d97e9f;
   border-radius: 6px;
-  border-color: #d97e9f;
   background-color: #101010;
-  color: #d97e9f;
   font-size: 24px;
   font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+  color: #d97e9f;
   cursor: pointer;
   transition: 0.3s;
 }
-.memberMatching__contents .contents__btn button:hover {
+.memberMatching__contents .contents__btn a:hover {
   background-color: #d97e9f;
   color: #fff;
 }
