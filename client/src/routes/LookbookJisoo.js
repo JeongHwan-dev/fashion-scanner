@@ -9,7 +9,7 @@ import axios from 'axios';
 const LookbookJisoo = () => {
   // jennie:1, rose:2, jisoo:3, lisa:4
   const memberId = 3;
-  const lookbookApi = `http://elice-kdt-ai-track-vm-ai-13.koreacentral.cloudapp.azure.com:8000/api/members/3/lookbook`;
+  const lookbookApi = `/api/members/3/lookbook`;
   const [member, setMemeber] = useState([]);
   const [memberColor, setMemberColor] = useState('');
 
