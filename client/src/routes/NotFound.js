@@ -20,8 +20,6 @@ const NotFound = () => {
           </div>
         </div>
       </div>
-      {/* FOOTER */}
-      <Footer />
     </>
   );
 };
