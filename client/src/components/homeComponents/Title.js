@@ -7,7 +7,7 @@ const Title = () => {
     <>
       <section className="title" id="section__title">
         <div className="title__inner">
-          <img src={require('images/title_logo.png').default} alt="FASHION SCANNER" />
+          <img src="/images/home/fs_s1_logo.png" alt="FASHION SCANNER" />
           <h2>DISCOVER THE NEW TRENDS</h2>
         </div>
         <video autoPlay muted loop id="bg-video">

@@ -75,7 +75,7 @@ const Picture = () => {
   return (
     <>
       <section className="picture" id="section__picture">
-        <div className="picture__upload">
+        <div className="picture__inner">
           <ul>
             <li className="upload__title">
               <h1>가장 자주 입는 옷 사진을 올려주세요.</h1>

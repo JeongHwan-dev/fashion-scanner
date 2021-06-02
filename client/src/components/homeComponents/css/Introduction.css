@@ -1,19 +1,22 @@
 /* INTRODUCTION SECTION */
 .introduction {
-  padding: 200px 0 200px;
+  padding: 200px 0 100px;
 }
 .introduction__inner {
+  position: relative;
+  width: 1100px;
+  margin: 0 auto;
   font-family: 'Spoqa Han Sans Neo', 'sans-serif';
-  animation: appear 3s 0.27s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  /* animation: appear 3s 0.27s cubic-bezier(0.16, 1, 0.3, 1) forwards; */
 }
 .introduction__inner a {
   display: flex;
+  justify-content: center;
   width: 60px;
   height: 60px;
   margin: 0 auto;
   font-size: 60px;
   color: #fff;
-  justify-content: center;
   cursor: pointer;
   transition: 0.3s;
 }
@@ -24,24 +27,26 @@
 /* INTRODUCTION TITLE */
 .introduction__title {
   margin-bottom: 20px;
+}
+.introduction__title h2 {
   background: linear-gradient(to right, #f2a7bb, #b3d4ff);
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 82px;
-  font-weight: bold;
+  font-size: 72px;
+  font-weight: 600;
   text-align: center;
   color: #ffffff;
 }
 
 /* INTRODUCTION KEYWORD */
 .introduction__keyword {
-  margin-bottom: 60px;
+  margin-bottom: 65px;
   text-align: center;
 }
 .introduction__keyword span {
-  margin: 0 8px;
-  font-size: 34px;
-  font-weight: 600;
+  margin: 0 5px;
+  font-size: 32px;
+  font-weight: 500;
 }
 .introduction__keyword span:nth-child(1) {
   color: #b3d4ff;
@@ -59,11 +64,11 @@
 /* INTRODUCTION LOGOS */
 .introduction__logos {
   display: flex;
-  padding: 25px 30%;
-  margin-bottom: 60px;
+  justify-content: center;
+  margin-bottom: 65px;
 }
 .introduction__logos div {
-  margin: 0 auto;
+  margin: 0 50px;
 }
 .introduction__logos div img {
   width: 120px;
@@ -85,6 +90,7 @@
   font-size: 22px;
   font-weight: 400;
   text-align: center;
+  color: #b0b8c1;
 }
 
 /* INTRODUCTION DSC */
@@ -92,7 +98,7 @@
   margin-bottom: 50px;
   font-size: 28px;
   font-weight: 600;
+  line-height: 1.8;
   text-align: center;
-  line-height: 1.6;
   color: #b0b8c1;
 }

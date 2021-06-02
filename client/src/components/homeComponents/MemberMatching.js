@@ -1,15 +1,7 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
 import 'components/homeComponents/css/MemberMatching.css';
 
 const MemberMatching = () => {
-  const history = useHistory();
-
-  // Matching 페이지 이동 핸들러
-  const onMoveMatching = () => {
-    history.push('/matching');
-  };
-
   return (
     <>
       <section className="memberMatching" id="section__memberMatching">

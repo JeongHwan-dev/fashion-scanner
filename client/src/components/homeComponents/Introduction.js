@@ -18,15 +18,15 @@ const Introduction = () => {
             </li>
             <li className="introduction__logos">
               <div>
-                <img src={require('images/ai_logo.png').default} alt="AI" />
+                <img src="/images/home/ai_logo.png" alt="AI" />
                 <p>AI</p>
               </div>
               <div>
-                <img src={require('images/scanner_logo.png').default} alt="Scanner" />
+                <img src="/images/home/scanner_logo.png" alt="Scanner" />
                 <p>Scanning</p>
               </div>
               <div>
-                <img src={require('images/fashion_logo.png').default} alt="Fashion" />
+                <img src="/images/home/fashion_logo.png" alt="Fashion" />
                 <p>Fashion</p>
               </div>
             </li>

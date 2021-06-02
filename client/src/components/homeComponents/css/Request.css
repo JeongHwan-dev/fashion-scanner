@@ -1,9 +1,10 @@
 /* REQUEST */
 .request {
-  padding: 100px 0 250px;
+  padding: 150px 0 250px;
 }
 .request__inner {
-  width: 1400px;
+  position: relative;
+  width: 1100px;
   margin: 0 auto;
   font-family: 'Spoqa Han Sans Neo', 'sans-serif';
 }
@@ -13,12 +14,12 @@
   text-align: center;
 }
 .request__title h2 {
-  margin-bottom: 20px;
-  font-size: 60px;
+  margin-bottom: 15px;
+  font-size: 58px;
   font-weight: 600;
 }
 .request__title p {
-  margin-bottom: 80px;
+  margin-bottom: 50px;
 }
 .request__title p span {
   margin: 0 5px;
@@ -41,11 +42,11 @@
 
 /* REQUEST BODY IMAGE */
 .request__body .body__image {
-  margin-right: 50px;
+  margin: 0 auto;
 }
 .request__body .body__image .image__preview img {
-  width: 450px;
-  height: 450px;
+  width: 420px;
+  height: 420px;
 }
 .request__body .body__image label {
   display: flex;
@@ -59,7 +60,7 @@
   background-color: #414141;
   font-size: 24px;
   text-align: center;
-  color: #dcdcdc;
+  color: #fff;
   cursor: pointer;
   transition: 0.3s;
 }
@@ -78,19 +79,20 @@
   margin-bottom: 10px;
   font-size: 18px;
   line-height: 1.8;
+  color: #f3f3f3;
 }
 .request__body .body__info span {
   font-size: 16px;
   color: #b0b8c1;
 }
 .request__body .body__info .info__input {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 .request__body .body__info input[type='email'] {
   width: 450px;
   height: 48px;
   box-sizing: border-box;
-  margin: 40px 0 10px;
+  margin: 30px 0 10px;
   padding: 0 18px;
   border: none;
   border-radius: 6px;
@@ -114,6 +116,7 @@
 }
 .request__body .body__info label {
   font-size: 16px;
+  color: #f3f3f3;
 }
 .request__body .body__info input[type='checkbox'] {
   width: 16px;
