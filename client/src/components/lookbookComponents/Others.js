@@ -6,16 +6,11 @@ import useOnScreen from 'hooks/useOnScreen';
 const Others = () => {
   const imageRef = useRef(null);
   const isVisible = useOnScreen(imageRef);
-  console.log(isVisible)
+  console.log(isVisible);
 
   return (
     <>
       <section className="others">
-        <img
-          className="inner__bg"
-          src={require('images/member_select_bg.png').default}
-          alt="BLACKPINK BACKGROUND"
-        />
         <div className="others__inner">
           <div className="others__title">
             <h2>CHECK OUT THE OTHER MEMBERS</h2>

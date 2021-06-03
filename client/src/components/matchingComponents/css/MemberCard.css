@@ -2,6 +2,7 @@
 .container {
   width: 528px;
   height: 704px;
+  perspective: 1500px;
   margin: 0 auto 500px;
 }
 
