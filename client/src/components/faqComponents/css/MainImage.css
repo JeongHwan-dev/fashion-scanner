@@ -6,13 +6,10 @@
   position: relative;
   width: 1100px;
   margin: 0 auto;
-  /* display: flex; */
-  /* justify-content: center; */
 }
 
 /* MAIN IMAGE BACKGROUND */
 .fagmain__inner__wrapper {
-  /* position: absolute; */
   width: 1050px;
   height: 450px;
   margin: 0 auto;
@@ -26,17 +23,9 @@
 }
 
 /* MAIN IMAGE TEAM */
-.faqmain__team__img {
-  /* display: flex; */
-  /* justify-content: center; */
-  /* margin: 0 auto; */
-}
 .faqmain__team__img img {
   width: 1050px;
   height: 450px;
-  /* height: 500px; */
-  /* margin: 0 auto; */
-  /* display: inline-block; */
   border-radius: 15px;
 }
 

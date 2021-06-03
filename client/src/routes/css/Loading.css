@@ -14,6 +14,7 @@
 .loading__title h3,
 .loading__title span {
   display: inline-block;
+  margin-right: 10px;
   font-size: 24px;
   color: #515254;
 }

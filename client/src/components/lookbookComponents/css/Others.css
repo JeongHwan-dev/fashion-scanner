@@ -35,7 +35,6 @@
 .others__img img {
   display: inline-block;
   width: 450px;
-  /* justify-content: center; */
   margin: 0 50px;
   filter: grayscale(100%);
   transform: skewX(-8deg);
