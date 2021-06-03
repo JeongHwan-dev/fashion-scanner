@@ -21,12 +21,12 @@
 }
 .matchingTitle__inner a {
   display: flex;
+  justify-content: center;
   width: 60px;
   height: 60px;
   margin: 0 auto;
   font-size: 60px;
   color: #fff;
-  justify-content: center;
   cursor: pointer;
   transition: 0.3s;
 }

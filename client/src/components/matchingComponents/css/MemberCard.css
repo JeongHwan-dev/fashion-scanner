@@ -1,8 +1,8 @@
 /* CONTAINER */
 .container {
+  perspective: 1500px;
   width: 528px;
   height: 704px;
-  perspective: 1500px;
   margin: 0 auto 500px;
 }
 
@@ -28,11 +28,11 @@
   transform: rotateY(180deg);
 }
 .container .card.front .card__title {
+  box-sizing: border-box;
   width: 340px;
   margin: 100px auto 200px;
   padding: 10px;
   border: 7px solid #000;
-  box-sizing: border-box;
 }
 .container .card.front .card__title img {
   display: block;
@@ -51,24 +51,24 @@
 
 /* CARD BACK */
 .container .card.back {
-  background-color: #1b1b1b;
   overflow: hidden;
+  background-color: #1b1b1b;
   transform: rotateY(-180deg);
 }
 .container:hover .card.back {
   transform: rotateY(0deg);
 }
 .container .card.back .card__bg {
-  width: 100%;
   position: relative;
+  width: 100%;
 }
 .container .card.back .card__bg .bg__sign {
   display: flex;
+  justify-content: center;
   position: absolute;
   bottom: 90px;
-  right: 0;
   left: 0;
-  justify-content: center;
+  right: 0;
 }
 .container .card.back .card__bg .bg__sign img {
   display: block;
@@ -88,10 +88,10 @@
   color: #f2a7bb;
 }
 .container .card.back .card__btn {
-  height: 114px;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 114px;
 }
 .container .card.back .card__btn button {
   padding: 10px 30px;

@@ -1,7 +1,7 @@
 /* LOOKBOOK SECTION */
 .lookbookmain {
-  background-color: white;
   padding: 150px 0 200px;
+  background-color: white;
 }
 .lookbookmain__inner {
   display: block;
@@ -15,8 +15,8 @@
   height: 800px;
 }
 .lookbookmain__swiper1 {
-  height: 800px;
   position: relative;
+  height: 800px;
 }
 
 /* LOOKBOOK SWIPER 1 - PREV, NEXT BUTTON (SWIPER JS CSS) */

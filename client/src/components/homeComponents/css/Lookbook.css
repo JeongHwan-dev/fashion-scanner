@@ -15,11 +15,11 @@
 }
 .lookbook__title span {
   display: flex;
+  justify-content: center;
   margin-bottom: 30px;
   font-size: 20px;
   font-weight: 300;
   color: #b0b8c1;
-  justify-content: center;
 }
 
 /* LOOKBOOK MEMBERS */
@@ -31,13 +31,13 @@
   float: left;
   width: 200px;
   margin: 12px;
-  filter: grayscale(100%);
   cursor: pointer;
   transform: skewX(-8deg);
   transition: transform 0.2s, filter 0.6s;
+  filter: grayscale(100%);
 }
 .lookbook__members a .member:hover {
   z-index: 1;
-  filter: none;
   transform: skewX(-8deg) scale(1.1);
+  filter: none;
 }

@@ -18,8 +18,8 @@
   position: relative;
   width: 1050px;
   height: 450px;
-  background-color: #f2a7bb;
   border-radius: 50px;
+  background-color: #f2a7bb;
 }
 
 /* MAIN IMAGE TEAM */
@@ -31,15 +31,15 @@
 
 /* MAIN IMAGE BLACKPINK */
 .faqmain__img__bg {
-  width: 500px;
-  height: 230px;
-  background-color: #b17285;
-  border-radius: 200px;
   display: inline-block;
-  transform: rotate(45deg);
   position: absolute;
   top: 110px;
   left: 300px;
+  width: 500px;
+  height: 230px;
+  border-radius: 200px;
+  background-color: #b17285;
+  transform: rotate(45deg);
 }
 .faqmain__img {
   position: absolute;
@@ -47,11 +47,11 @@
   left: 350px;
 }
 .faqmain__img img {
+  display: inline-block;
+  top: 20px;
   height: 350px;
   width: auto;
-  display: inline-block;
   border-radius: 200px;
-  top: 20px;
 }
 
 /* MAIN IMAGE TITLE */
@@ -60,10 +60,10 @@
 }
 .faqmain__inner__bg h2 {
   display: inline-block;
-  color: #6b3f4c;
   font-size: 72px;
   font-family: 'Spoqa Han Sans Neo', 'sans-serif';
   font-weight: bold;
+  color: #6b3f4c;
 }
 .faqmain__inner__bg h2:nth-child(1) {
   position: absolute;

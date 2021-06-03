@@ -97,8 +97,8 @@
   border: none;
   border-radius: 6px;
   background-color: #343434;
-  color: #fff;
   font-size: 16px;
+  color: #fff;
   transition: 0.2s;
 }
 .request__body .body__info input[type='email']:hover {
@@ -111,8 +111,8 @@
 }
 .request__body .body__info .info__agree {
   margin-bottom: 10px;
-  color: #b0b8c1;
   font-size: 16px;
+  color: #b0b8c1;
 }
 .request__body .body__info label {
   font-size: 16px;
