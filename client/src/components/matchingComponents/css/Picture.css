@@ -4,8 +4,9 @@
 }
 
 /* PICTURE UPLOAD */
-.picture__upload {
-  width: 1200px;
+.picture__inner {
+  position: relative;
+  width: 1100px;
   margin: 0 auto;
 }
 
@@ -15,7 +16,7 @@
   text-align: center;
 }
 .upload__title h1 {
-  font-size: 65px;
+  font-size: 60px;
   font-weight: bold;
   font-family: 'Spoqa Han Sans Neo', 'sans-serif';
   color: #d97e9f;
@@ -46,7 +47,8 @@
   margin: 36px 0;
 }
 .upload__preview img {
-  width: 460px;
+  width: 300px;
+  height: 400px;
   margin: 0 auto 24px;
   border-radius: 6px;
 }
@@ -70,10 +72,9 @@
   margin: 0 auto;
 }
 .picture__submit button {
-  width: 210px;
+  width: 180px;
   height: 60px;
   margin: 0 auto;
-  padding: 10px 0;
   border: 3px solid #646464;
   border-radius: 6px;
   background-color: #fff;

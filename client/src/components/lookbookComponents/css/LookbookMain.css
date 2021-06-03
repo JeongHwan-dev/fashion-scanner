@@ -1,32 +1,34 @@
 /* LOOKBOOK SECTION */
 .lookbookmain {
+  padding: 150px 0 200px;
   background-color: white;
-  padding: 20px 50px;
 }
 .lookbookmain__inner {
   display: block;
-  width: 1200px;
-  height: 900px;
+  position: relative;
+  width: 1100px;
   margin: 0 auto;
 }
 
 /* LOOKBOOK SWIPER 1 */
 .lookbookmain__mainswiper {
-  height: 720px;
+  height: 800px;
 }
 .lookbookmain__swiper1 {
+  position: relative;
   height: 800px;
 }
 
 /* LOOKBOOK SWIPER 1 - PREV, NEXT BUTTON (SWIPER JS CSS) */
-.swiper-button-prev::after, .swiper-button-next::after {
+.swiper-button-prev::after,
+.swiper-button-next::after {
   color: #9c9c9ca4;
 }
 
 /* LOOKBOOK SWIPER 1 - BULLET BUTTON (SWIPER JS CSS) */
 .swiper-pagination-bullet {
-  opacity: 0.5;
   background-color: #9c9c9c;
+  opacity: 0.5;
 }
 .swiper-pagination-bullet-active {
   opacity: 1;
@@ -37,13 +39,21 @@
   position: absolute;
   margin: 10px;
   top: 60px;
-  left: 130px;
+  left: 75px;
   z-index: 1;
 }
-.lookbookmain__img img{
+.lookbookmain__img img {
   width: 400px;
   height: 500px;
   object-fit: cover;
+}
+
+.lookbookmain__bgbox {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: 40px;
+  left: 300px;
 }
 
 /* LOOKBOOK SWIPER 1 - INFO BOX */
@@ -51,9 +61,9 @@
   position: absolute;
   width: 500px;
   height: 450px;
-  background-color: #E4E4E4;
+  background-color: #e4e4e4;
   top: 200px;
-  left: 570px;
+  right: 75px;
   z-index: 1;
 }
 
@@ -63,12 +73,12 @@
   font-family: 'Spoqa Han Sans Neo', 'sans-serif';
   justify-content: space-evenly;
 }
-.lookbookmain__infotitle{
+.lookbookmain__infotitle {
   display: inline-block;
   margin-top: 50px;
   line-height: 2;
 }
-.lookbookmain__infotitle h3{
+.lookbookmain__infotitle h3 {
   font-weight: 500;
   font-size: 18px;
   color: #5f5f5f;
@@ -78,8 +88,8 @@
   margin-top: 50px;
   line-height: 2.28;
 }
-.lookbookmain__infocontent span{
-  color: #7E7E7E;
+.lookbookmain__infocontent span {
+  color: #7e7e7e;
 }
 .lookbookmain__colorcontent {
   display: block;
@@ -92,7 +102,7 @@
   margin: auto;
 }
 .lookbookmain__recomminner {
-  display: flex;    
+  display: flex;
   height: 100%;
   justify-content: space-evenly;
   vertical-align: middle;
@@ -127,12 +137,14 @@
   top: 40%;
   left: 10%;
 }
-.lookbookmain__gotomall:hover{
+.lookbookmain__gotomall:hover {
   opacity: 1;
 }
 
 /* LOOKBOOK SWIPER 2 (THUMBNAILS) */
 .lookbookmain__thumbswiper {
+  /* height: 500px; */
+  width: 1100px;
   margin-top: 20px;
 }
 .lookbookmain__thumbswiper .swiper-wrapper {
@@ -152,14 +164,19 @@
 .lookbookmain__swiper2 img {
   width: 80px;
   height: 80px;
-  object-fit: cover;
   cursor: pointer;
 }
 
 /* LOOKBOOK SWIPER 2 - THUMBNAILS EFFECT */
 .lookbookmain__thumbswiper .swiper-wrapper .swiper-slide {
+  opacity: 0.5;
+  perspective: 300px;
   width: 80px !important;
+  transition: 0.3s;
 }
 .lookbookmain__thumbswiper .swiper-wrapper .swiper-slide.swiper-slide-thumb-active {
+  opacity: 1;
+  transform: scaleX(1.25);
+  z-index: 1;
   filter: drop-shadow(1px 1px 3px rgba(32, 32, 32, 0.568));
 }

@@ -6,10 +6,12 @@ const DevTeamTitle = () => {
   return (
     <>
       <div className="devTeam__title">
-        <img src={require('images/team_logo.png').default} alt="FASHION SCANNER TEAM" />
-        <video autoPlay muted loop>
-          <source src={cultureTop} type="video/mp4" />
-        </video>
+        <img src="/images/devTeam/dev_team_logo.png" alt="FASHION SCANNER TEAM" />
+        <div className="title__video">
+          <video autoPlay muted loop>
+            <source src={cultureTop} type="video/mp4" />
+          </video>
+        </div>
       </div>
     </>
   );

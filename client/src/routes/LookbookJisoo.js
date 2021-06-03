@@ -7,24 +7,26 @@ import Others from 'components/lookbookComponents/Others';
 import axios from 'axios';
 
 const LookbookJisoo = () => {
-  // jennie:1, rose:2, jisoo:3, lisa:4
+  // jennie: 1, rose: 2, jisoo: 3, lisa: 4
   const memberId = 3;
-  const lookbookApi = `http://elice-kdt-ai-track-vm-ai-13.koreacentral.cloudapp.azure.com:8000/api/members/3/lookbook`;
   const [member, setMemeber] = useState([]);
   const [memberColor, setMemberColor] = useState('');
 
   useEffect(() => {
     const getLookbookData = async () => {
-      await axios.get(lookbookApi).then((response) => {
-        setMemeber(response.data.lookbookData);
-        setMemberColor(response.data.symbolColor);
-      });
+      await axios
+        .get(`/api/members/${memberId}/lookbook`)
+        // 응답(성공)
+        .then((response) => {
+          setMemeber(response.data.lookbookData);
+          setMemberColor(response.data.symbolColor);
+        })
+        // 응답(실패)
+        .catch((error) => {
+          console.log(error);
+        });
     };
     getLookbookData();
-  }, []);
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
   }, []);
 
   return (

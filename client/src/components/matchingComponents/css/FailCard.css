@@ -8,9 +8,9 @@
 
 /* FAIL CARD IMAGE */
 .failCard__img {
+  overflow: hidden;
   box-sizing: border-box;
   margin: 0 auto 20px;
-  overflow: hidden;
   transition: 1s;
 }
 .failCard__img img {

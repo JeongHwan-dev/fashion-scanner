@@ -9,14 +9,15 @@ SwiperCore.use([Navigation, Pagination, Thumbs]);
 const LookbookMain = ({ member, memberColor }) => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const symbolColor = `#${memberColor}`;
+
   const slides = member.map(
-    ({ id, lookbookImage, category, color, attributes, similarImages }) => {
+    ({ lookbookId, lookbookImage, category, color, attributes, similarImages }) => {
       let features = `${attributes[0]}, ${attributes[1]}, ${attributes[2]}`;
       let colorbox = `#${color}`;
       let similars = JSON.parse(similarImages);
-      // console.log(lookbookImage);
+
       return (
-        <SwiperSlide key={id}>
+        <SwiperSlide key={lookbookId}>
           <div className="lookbookmain__swiper1">
             <div className="lookbookmain__img">
               <img src={lookbookImage} alt="lookbook" />
@@ -24,12 +25,7 @@ const LookbookMain = ({ member, memberColor }) => {
             <div
               className="lookbookmain__bgbox"
               style={{
-                position: 'absolute',
-                width: '300px',
-                height: '300px',
                 backgroundColor: `${symbolColor}`,
-                top: '40px',
-                left: '400px',
               }}
             ></div>
             <div className="lookbookmain__infobox">
@@ -84,9 +80,9 @@ const LookbookMain = ({ member, memberColor }) => {
     },
   );
 
-  const thumbnails = member.map(({ id, lookbookImage }) => {
+  const thumbnails = member.map(({ lookbookId, lookbookImage }) => {
     return (
-      <SwiperSlide key={id}>
+      <SwiperSlide key={lookbookId}>
         <div className="lookbookmain__swiper2">
           <img src={lookbookImage} alt="thumbnail" />
         </div>

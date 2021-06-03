@@ -22,7 +22,7 @@ const Home = () => {
         <Introduction />
         {/* 03: MAGAZINE */}
         <Magazine />
-        {/* 04: BPVIDEO */}
+        {/* 04: BLACKPINK VIDEO */}
         <BpVideo />
         {/* 05: LOOKBOOK */}
         <Lookbook />

@@ -9,7 +9,10 @@ const MemberInfo = ({ memberId }) => {
         <div className="memberinfo__inner">
           <div className="memberinfo__img">
             {memberId === 1 ? (
-              <img src={require('images/lookbook_jennie_main.png').default} alt="blackpink member" />
+              <img
+                src={require('images/lookbook_jennie_main.png').default}
+                alt="blackpink member"
+              />
             ) : (
               <></>
             )}
@@ -48,11 +51,12 @@ const MemberInfo = ({ memberId }) => {
               <>
                 <h2>ROSE</h2>
                 <p>
-                독보적인 분위기의 소유자, '생로랑의 뷰티 뮤즈' 로제. <br />
-뼈대가 얇고 마른 체형으로 여리여리해 보이지만 근육이 잘 잡혀 있어 심플한 옷들도 감각적으로 소화해 냅니다.
-한국 셀러브리티 최초로 전세계 생로랑 매장 외벽을 장식하기도 하며 업계에서 꾸준한 영향력을 행사하고 있고,
-현재는 생로랑뿐만 아니라 티파니앤코 글로벌 앰버서더로도 활동하고 있습니다. <br />
-블랙핑크의 비단결 목소리 로제의 룩을 확인해보세요.
+                  독보적인 분위기의 소유자, '생로랑의 뷰티 뮤즈' 로제. <br />
+                  뼈대가 얇고 마른 체형으로 여리여리해 보이지만 근육이 잘 잡혀 있어 심플한 옷들도
+                  감각적으로 소화해 냅니다. 한국 셀러브리티 최초로 전세계 생로랑 매장 외벽을
+                  장식하기도 하며 업계에서 꾸준한 영향력을 행사하고 있고, 현재는 생로랑뿐만 아니라
+                  티파니앤코 글로벌 앰버서더로도 활동하고 있습니다. <br />
+                  블랙핑크의 비단결 목소리 로제의 룩을 확인해보세요.
                 </p>
               </>
             ) : (

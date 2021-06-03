@@ -1,23 +1,25 @@
 /* LOOKBOOK SECTION */
 .lookbook {
-  padding: 100px 0 200px;
+  padding: 150px 0 100px;
 }
 .lookbook__inner {
-  height: 820px;
+  position: relative;
+  width: 1100px;
   margin: 0 auto;
 }
 
 /* LOOKBOOK TITLE */
 .lookbook__title img {
   margin: 0 auto 25px;
+  width: 1000px;
 }
 .lookbook__title span {
   display: flex;
+  justify-content: center;
   margin-bottom: 30px;
   font-size: 20px;
   font-weight: 300;
   color: #b0b8c1;
-  justify-content: center;
 }
 
 /* LOOKBOOK MEMBERS */
@@ -27,15 +29,15 @@
 }
 .lookbook__members a .member {
   float: left;
-  width: 230px;
+  width: 200px;
   margin: 12px;
-  filter: grayscale(100%);
   cursor: pointer;
   transform: skewX(-8deg);
   transition: transform 0.2s, filter 0.6s;
+  filter: grayscale(100%);
 }
 .lookbook__members a .member:hover {
   z-index: 1;
-  filter: none;
   transform: skewX(-8deg) scale(1.1);
+  filter: none;
 }
