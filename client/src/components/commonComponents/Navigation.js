@@ -7,7 +7,7 @@ const Navigation = () => {
       <header>
         <nav className="inner">
           <a href="/" className="logo">
-            <img src={require('images/fs_logo.png').default} alt="FASHION SCANNER" />
+            <img src="/images/common/fs_s3_logo.png" alt="FASHION SCANNER" />
           </a>
           <div className="link-group">
             <ul className="link">

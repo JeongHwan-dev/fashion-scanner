@@ -9,7 +9,7 @@ const MainImage = ({ blackpink }) => {
           {!blackpink ? (
             <>
               <div className="faqmain__team__img">
-                <img src={require('images/faq_main_team.png').default} alt="team" />
+                <img src="/images/faq/faq_main_team.png" alt="team" />
               </div>
             </>
           ) : (
