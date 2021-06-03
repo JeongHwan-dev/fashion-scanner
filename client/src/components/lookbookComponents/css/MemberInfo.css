@@ -29,7 +29,6 @@
   padding: 50px 0;
 }
 .memberinfo__dsc h2 {
-  opacity: 0;
   margin-bottom: 40px;
   font-size: 85px;
   font-weight: 600;
@@ -38,16 +37,17 @@
   animation-iteration-count: 1;
   animation-delay: 0s;
   animation-fill-mode: forwards;
+  opacity: 0;
 }
 .memberinfo__dsc p {
-  opacity: 0;
   font-size: 18px;
-  line-height: 1.8;
   color: #b0b8c1;
   animation: toTheRight 1s 16 linear;
   animation-iteration-count: 1;
   animation-delay: 0.6s;
   animation-fill-mode: forwards;
+  line-height: 1.8;
+  opacity: 0;
 }
 
 /* MEMBERINFO ANIMATION */

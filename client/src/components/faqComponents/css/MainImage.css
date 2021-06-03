@@ -33,12 +33,12 @@
 .faqmain__img__bg {
   display: inline-block;
   position: absolute;
-  top: 110px;
-  left: 300px;
   width: 500px;
   height: 230px;
-  border-radius: 200px;
   background-color: #b17285;
+  top: 110px;
+  left: 300px;
+  border-radius: 200px;
   transform: rotate(45deg);
 }
 .faqmain__img {
@@ -48,9 +48,9 @@
 }
 .faqmain__img img {
   display: inline-block;
-  top: 20px;
-  height: 350px;
   width: auto;
+  height: 350px;
+  top: 20px;
   border-radius: 200px;
 }
 
