@@ -2,7 +2,8 @@
 body {
   overflow-x: hidden;
   height: 100%;
-  background-color: #101010;
+  /* background-color: #101010; */
+  background-color: #000;
   font-size: 16px;
   font-weight: 400;
   font-family: 'Spoqa Han Sans Neo', 'sans-serif';
