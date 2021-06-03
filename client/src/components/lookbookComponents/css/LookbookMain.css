@@ -27,8 +27,8 @@
 
 /* LOOKBOOK SWIPER 1 - BULLET BUTTON (SWIPER JS CSS) */
 .swiper-pagination-bullet {
-  background-color: #9c9c9c;
   opacity: 0.5;
+  background-color: #9c9c9c;
 }
 .swiper-pagination-bullet-active {
   opacity: 1;
@@ -43,35 +43,35 @@
   z-index: 1;
 }
 .lookbookmain__img img {
+  object-fit: cover;
   width: 400px;
   height: 500px;
-  object-fit: cover;
 }
 
 .lookbookmain__bgbox {
   position: absolute;
-  width: 300px;
-  height: 300px;
   top: 40px;
   left: 300px;
+  width: 300px;
+  height: 300px;
 }
 
 /* LOOKBOOK SWIPER 1 - INFO BOX */
 .lookbookmain__infobox {
   position: absolute;
-  width: 500px;
-  height: 450px;
-  background-color: #e4e4e4;
   top: 200px;
   right: 75px;
   z-index: 1;
+  width: 500px;
+  height: 450px;
+  background-color: #e4e4e4;
 }
 
 /* LOOKBOOK SWIPER 1 - INFO BOX - TEXT CONTENT */
 .lookbookmain__infotxtwrapper {
   display: flex;
-  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
   justify-content: space-evenly;
+  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
 }
 .lookbookmain__infotitle {
   display: inline-block;
@@ -103,9 +103,9 @@
 }
 .lookbookmain__recomminner {
   display: flex;
-  height: 100%;
   justify-content: space-evenly;
   vertical-align: middle;
+  height: 100%;
   align-items: center;
 }
 .lookbookmain__recomminner img {
@@ -122,20 +122,20 @@
 
 /* LOOKBOOK SWIPER 1 - INFO BOX - RECOMMEND EFFECT */
 .lookbookmain__gotomall {
+  opacity: 0;
   position: absolute;
   width: 140px;
   height: 200px;
   background-color: rgba(200, 200, 200, 0.5);
   color: #222222;
-  opacity: 0;
 }
 .lookbookmain__gotomall span {
   position: absolute;
+  top: 40%;
+  left: 10%;
   padding: 5px;
   background-color: #d97e9f;
   color: rgb(241, 241, 241);
-  top: 40%;
-  left: 10%;
 }
 .lookbookmain__gotomall:hover {
   opacity: 1;
@@ -143,18 +143,17 @@
 
 /* LOOKBOOK SWIPER 2 (THUMBNAILS) */
 .lookbookmain__thumbswiper {
-  /* height: 500px; */
   width: 1100px;
   margin-top: 20px;
 }
 .lookbookmain__thumbswiper .swiper-wrapper {
   display: flex;
-  position: relative;
-  height: 100%;
-  z-index: 1;
-  transition-property: transform;
-  box-sizing: content-box;
   justify-content: center;
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  box-sizing: content-box;
+  transition-property: transform;
 }
 
 /* LOOKBOOK SWIPER 2 - THUMBNAILS IMAGE */
@@ -176,7 +175,7 @@
 }
 .lookbookmain__thumbswiper .swiper-wrapper .swiper-slide.swiper-slide-thumb-active {
   opacity: 1;
-  transform: scaleX(1.25);
   z-index: 1;
+  transform: scaleX(1.25);
   filter: drop-shadow(1px 1px 3px rgba(32, 32, 32, 0.568));
 }

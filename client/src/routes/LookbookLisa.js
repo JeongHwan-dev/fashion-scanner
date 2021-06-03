@@ -14,22 +14,19 @@ const LookbookLisa = () => {
 
   useEffect(() => {
     const getLookbookData = async () => {
-      await axios.get(`/api/members/${memberId}/lookbook`)
-      // 응답(성공)
-      .then((response) => {
-        setMemeber(response.data.lookbookData);
-        setMemberColor(response.data.symbolColor);
-      })
-      // 응답(실패)
-      .catch((error) => {
-        console.log(error);
-      })
+      await axios
+        .get(`/api/members/${memberId}/lookbook`)
+        // 응답(성공)
+        .then((response) => {
+          setMemeber(response.data.lookbookData);
+          setMemberColor(response.data.symbolColor);
+        })
+        // 응답(실패)
+        .catch((error) => {
+          console.log(error);
+        });
     };
     getLookbookData();
-  }, []);
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
   }, []);
 
   return (

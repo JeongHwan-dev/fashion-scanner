@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation, Pagination, Thumbs } from 'swiper';
-import 'swiper/swiper-bundle.css';
 import 'components/lookbookComponents/css/LookbookMain.css';
+import 'swiper/swiper-bundle.css';
 
 SwiperCore.use([Navigation, Pagination, Thumbs]);
 

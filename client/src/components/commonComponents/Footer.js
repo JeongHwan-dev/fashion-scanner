@@ -12,7 +12,7 @@ const Footer = () => {
             <div className="info__contact">
               <ul>
                 <li>
-                  <img src="/images/fs_logo3.png" alt="FASHION SCANNER" />
+                  <img src="/images/common/fs_s2_logo.png" alt="FASHION SCANNER" />
                 </li>
                 <li>
                   <p>

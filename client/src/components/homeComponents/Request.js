@@ -5,7 +5,7 @@ import axios from 'axios';
 
 const Request = () => {
   const url = `http://elice-kdt-ai-track-vm-ai-13.koreacentral.cloudapp.azure.com:8000`;
-  const [previewImg, setPreviewImg] = useState('images/request_sample.jpg');
+  const [previewImg, setPreviewImg] = useState('images/home/request_sample.jpg');
   const [requestImg, setRequestImg] = useState('');
   const [email, setEmail] = useState('');
   const [isChecked, setIsChecked] = useState(false);

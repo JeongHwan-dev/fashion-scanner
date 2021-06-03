@@ -9,25 +9,22 @@ const MemberInfo = ({ memberId }) => {
         <div className="memberinfo__inner">
           <div className="memberinfo__img">
             {memberId === 1 ? (
-              <img
-                src={require('images/lookbook_jennie_main.png').default}
-                alt="blackpink member"
-              />
+              <img src="/images/lookbook/lookbook_jennie_main.png" alt="JENNIE" />
             ) : (
               <></>
             )}
             {memberId === 2 ? (
-              <img src={require('images/lookbook_rose_main.png').default} alt="blackpink member" />
+              <img src="/images/lookbook/lookbook_rose_main.png" alt="ROSE" />
             ) : (
               <></>
             )}
             {memberId === 3 ? (
-              <img src={require('images/lookbook_jisoo_main.png').default} alt="blackpink member" />
+              <img src="/images/lookbook/lookbook_jisoo_main.png" alt="JISOO" />
             ) : (
               <></>
             )}
             {memberId === 4 ? (
-              <img src={require('images/lookbook_lisa_main.png').default} alt="blackpink member" />
+              <img src="/images/lookbook/lookbook_lisa_main.png" alt="LISA" />
             ) : (
               <></>
             )}
