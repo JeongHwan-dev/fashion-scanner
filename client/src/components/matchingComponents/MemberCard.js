@@ -17,10 +17,10 @@ const MemberCard = ({ memberObj }) => {
       <div className="container">
         <div className="card front">
           <div className="card__title">
-            <img src={require('images/blackpink_logo2.png').default} alt="BLACKPINK" />
+            <img src="/images/matching/card_title.png" alt="BLACKPINK" />
           </div>
           <div className="card__subtitle">
-            <img src={require('images/card_subtitle1.png').default} alt="Which member are you?" />
+            <img src="/images/matching/card_subtitle.png" alt="Which member are you?" />
           </div>
         </div>
         <div className="card back">

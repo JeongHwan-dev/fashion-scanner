@@ -1,12 +1,12 @@
 /* OTHERS SECTION */
 .others {
-  background-image: url('images/member_select_bg.png');
   overflow: hidden;
+  background-image: url('images/member_select_bg.png');
 }
 .others .inner__bg {
+  opacity: 0.6;
   position: absolute;
   z-index: -2;
-  opacity: 0.6;
 }
 .others__inner {
   width: 1100px;

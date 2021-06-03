@@ -27,7 +27,6 @@ const AppRouter = () => {
         <Route exact path="/matching/result" component={Result} />
         <Route exact path="/devteam" component={DevTeam} />
         <Route exact path="/faq" component={FAQ} />
-        <Route exact path="/matching/loading" component={Loading} />
       </Switch>
     </Router>
   );

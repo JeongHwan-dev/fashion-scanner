@@ -130,9 +130,9 @@
   box-shadow: 0 0 0 1px #f2a7bb;
 }
 .request__body .body__info button {
+  box-sizing: border-box;
   width: 450px;
   height: 48px;
-  box-sizing: border-box;
   border: none;
   border-radius: 6px;
   background-color: #f2a7bb;
