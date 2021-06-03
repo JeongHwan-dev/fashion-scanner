@@ -1,8 +1,8 @@
 /* LOADING BACKGROUND */
 .loading {
   position: relative;
-  background-color: white;
   height: 850px;
+  background-color: white;
 }
 
 /* LOADING TITLE */

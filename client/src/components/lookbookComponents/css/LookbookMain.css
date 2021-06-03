@@ -27,8 +27,8 @@
 
 /* LOOKBOOK SWIPER 1 - BULLET BUTTON (SWIPER JS CSS) */
 .swiper-pagination-bullet {
-  opacity: 0.5;
   background-color: #9c9c9c;
+  opacity: 0.5;
 }
 .swiper-pagination-bullet-active {
   opacity: 1;
