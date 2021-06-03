@@ -40,9 +40,9 @@ const LookbookJennie = () => {
       {/* 멤버 소개 */}
       <MemberInfo memberId={memberId} />
       {/* 룩북 메인 */}
-      {/* <LookbookMain member={member} memberColor={memberColor} /> */}
+      <LookbookMain member={member} memberColor={memberColor} />
       {/* 다른 멤버 확인하기 */}
-      {/* <Others /> */}
+      <Others />
       {/* footer */}
       <Footer />
     </>
