@@ -5,7 +5,7 @@ import axios from 'axios';
 
 const Request = () => {
   const url = `http://elice-kdt-ai-track-vm-ai-13.koreacentral.cloudapp.azure.com:8000`;
-  const [previewImg, setPreviewImg] = useState('images/home/request_sample.jpg');
+  const [previewImg, setPreviewImg] = useState('/images/request_sample.jpg');
   const [requestImg, setRequestImg] = useState('');
   const [email, setEmail] = useState('');
   const [isChecked, setIsChecked] = useState(false);
@@ -61,6 +61,7 @@ const Request = () => {
               user_image: requestImg,
               email: email,
             };
+            console.log(data);
 
             await axios.post(url + '/api/request', data).then((response) => {
               console.log(response);
@@ -142,7 +143,7 @@ const Request = () => {
                 <img src={previewImg} alt="sample" />
               </div>
               <div className="image__upload">
-                <label className="material-icons" for="reqeust-file">
+                <label className="material-icons" htmlFor="reqeust-file">
                   upload_file<span>사진 업로드</span>
                 </label>
                 <input
@@ -174,7 +175,7 @@ const Request = () => {
                   />
                   <p className="info__agree">&nbsp;&nbsp;* 이메일 입력은 선택사항입니다.</p>
                   <label>
-                    <input type="checkbox" checked={isChecked} onClick={onAgreeHandler} />
+                    <input type="checkbox" checked={isChecked} onChange={onAgreeHandler} />
                     이메일 수집 및 이용에 대한 동의
                   </label>
                 </div>
