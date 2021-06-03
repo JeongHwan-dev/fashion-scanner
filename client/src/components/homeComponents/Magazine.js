@@ -8,7 +8,7 @@ const Magazine = () => {
       <section className="magazine" id="section__magazine">
         <div className="magazine__inner">
           <div className="magazine__title">
-            <img src={require('images/blackpink_logo.png').default} alt="BLACKPINK" />
+            <img src="/images/home/blackpink_logo.png" alt="BLACKPINK" />
           </div>
           <div className="magazine__info">
             <div className="magazine__video">

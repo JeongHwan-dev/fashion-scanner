@@ -9,8 +9,8 @@ const NotFound = () => {
       <div className="notfound">
         <div className="notfound__inner">
           <div className="notfound__img">
-            <img src={require('images/notfound_heart.png').default} alt="heart" />
-            <img src={require('images/notfound.png').default} alt="blackpink" />
+            <img src="/images/notFound/notfound_heart.png" alt="heart" />
+            <img src="/images/notFound/notfound.png" alt="blackpink" />
           </div>
           <div className="notfound__dsc">
             <h2>Oops!</h2>

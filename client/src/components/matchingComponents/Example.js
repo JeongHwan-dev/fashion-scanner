@@ -6,7 +6,7 @@ const Example = () => {
     <>
       <div className="picture__example">
         <div className="example__good">
-          <img src={require('images/good_example.png').default} alt="Good Example" />
+          <img src="/images/matching/good_example.png" alt="Good Example" />
           <div className="good__dsc">
             <h2>좋은 예</h2>
             <p>
@@ -33,7 +33,7 @@ const Example = () => {
               흑백사진은 분석 시 정확한 결과를 얻기가 힘듬니다.
             </p>
           </div>
-          <img src={require('images/bad_example.png').default} alt="Bad Example" />
+          <img src="/images/matching/bad_example.png" alt="Bad Example" />
         </div>
       </div>
     </>

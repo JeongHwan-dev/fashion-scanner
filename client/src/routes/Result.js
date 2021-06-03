@@ -25,8 +25,8 @@ const Result = () => {
     setResult({
       memberObj: {
         name: 'jisoo',
-        photo: '/images/jisoo_card.jpg',
-        sign: '/images/jisoo_sign.png',
+        photo: '/images/matching/jisoo_card.jpg',
+        sign: '/images/matching/jisoo_sign.png',
         comment: '당신의 패션은 블랙 컬러로 포인트를 주는 지수와 매칭됩니다.',
         btnLabel: '지수 룩북 바로가기',
       },

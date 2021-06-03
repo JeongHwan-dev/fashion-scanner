@@ -4,10 +4,10 @@
 }
 .questions__inner {
   position: relative;
+  box-sizing: border-box;
   width: 1100px;
   margin: 0 auto;
   padding: 0 100px;
-  box-sizing: border-box;
 }
 
 /* QUESTIONS TITLE */
@@ -34,8 +34,8 @@
   cursor: pointer;
 }
 .questions__tab__content.active {
-  background-color: #313740a1;
   border-radius: 30px;
+  background-color: #313740a1;
 }
 
 .questions__tab__content.active h3 {
