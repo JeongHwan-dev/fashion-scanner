@@ -40,14 +40,14 @@
   opacity: 0;
 }
 .memberinfo__dsc p {
+  line-height: 1.8;
+  opacity: 0;
   font-size: 18px;
   color: #b0b8c1;
   animation: toTheRight 1s 16 linear;
   animation-iteration-count: 1;
   animation-delay: 0.6s;
   animation-fill-mode: forwards;
-  line-height: 1.8;
-  opacity: 0;
 }
 
 /* MEMBERINFO ANIMATION */
