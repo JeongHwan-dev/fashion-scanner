@@ -90,7 +90,7 @@ class ShopClothes(models.Model):
         ordering = ["id"]
 
 
-class UserRequestClothes(models.Model):
+class UserUploadClothes(models.Model):
     UPLOAD_PATH = "user-upload"
 
     image = models.ImageField(
@@ -98,10 +98,10 @@ class UserRequestClothes(models.Model):
         default=f"{UPLOAD_PATH}/data.png",
         verbose_name="사용자 요청 이미지",
     )
-    request_date = models.DateField(auto_now_add=True, verbose_name="등록 날짜")
+    upload_date = models.DateTimeField(auto_now_add=True, verbose_name="등록 날짜")
     user = models.ForeignKey(
         "fsuser.Fsuser",
-        related_name="user_request_clothes",
+        related_name="user_upload_clothes",
         on_delete=models.SET_NULL,
         null=True,
         db_column="user_id",
@@ -109,7 +109,7 @@ class UserRequestClothes(models.Model):
     )
     lookbook_clothes = models.ForeignKey(
         "LookbookClothes",
-        related_name="user_request_clothes",
+        related_name="user_upload_clothes",
         on_delete=models.SET_NULL,
         null=True,
         db_column="lookbook_clothes_id",
@@ -120,7 +120,7 @@ class UserRequestClothes(models.Model):
         return f"사용자 요청 의류({self.id})"
 
     class Meta:
-        db_table = "user_request_clothes"
+        db_table = "user_upload_clothes"
         verbose_name = "사용자 요청 의류"
         verbose_name_plural = "사용자 요청 의류"
-        ordering = ["request_date"]
+        ordering = ["upload_date"]

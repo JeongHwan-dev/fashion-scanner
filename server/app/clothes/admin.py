@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import LookbookClothes, ShopClothes, UserRequestClothes
+from .models import LookbookClothes, ShopClothes, UserUploadClothes
 
 
 class LookbookClothesAdmin(admin.ModelAdmin):
@@ -10,10 +10,10 @@ class ShopClothesAdmin(admin.ModelAdmin):
     list_display = ("id", "lookbook_clothes")
 
 
-class UserRequestClothesAdmin(admin.ModelAdmin):
-    list_display = ("id", "user", "request_date", "lookbook_clothes")
+class UserUploadClothesAdmin(admin.ModelAdmin):
+    list_display = ("id", "user", "upload_date", "lookbook_clothes")
 
 
 admin.site.register(LookbookClothes, LookbookClothesAdmin)
 admin.site.register(ShopClothes, ShopClothesAdmin)
-admin.site.register(UserRequestClothes, UserRequestClothesAdmin)
+admin.site.register(UserUploadClothes, UserUploadClothesAdmin)
