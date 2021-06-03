@@ -7,9 +7,11 @@ const DevTeamTitle = () => {
     <>
       <div className="devTeam__title">
         <img src={require('images/team_logo.png').default} alt="FASHION SCANNER TEAM" />
-        <video autoPlay muted loop>
-          <source src={cultureTop} type="video/mp4" />
-        </video>
+        <div className="title__video">
+          <video autoPlay muted loop>
+            <source src={cultureTop} type="video/mp4" />
+          </video>
+        </div>
       </div>
     </>
   );

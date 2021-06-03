@@ -3,11 +3,16 @@
   margin-bottom: 200px;
 }
 .devTeam__title img {
+  width: 1050px;
   margin: 0 auto 80px;
 }
+
+.devTeam__title .title__video {
+  width: 1050px;
+  margin: 0 auto;
+}
 .devTeam__title video {
-  width: 1300px;
-  height: 730px;
   border: #fff;
   border-radius: 12px;
+  margin: 0 auto;
 }

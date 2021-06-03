@@ -32,7 +32,7 @@ const Introduction = () => {
             </li>
             <li className="introduction__dsc">
               <p>
-                패션스캐너는 업계에서 가장 HOT 한 케이팝 스타들의 패션을 분석합니다.
+                패션 스캐너는 업계에서 가장 HOT 한 케이팝 스타들의 패션을 분석합니다.
                 <br />
                 패션 전문 인공지능과 함께 새로운 패션 트렌드를 확인해보세요.
               </p>
