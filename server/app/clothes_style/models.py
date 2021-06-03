@@ -6,7 +6,7 @@ class ClothesCategory(models.Model):
         max_length=32, unique=True, blank=False, null=False, verbose_name="의류 카테고리 영어"
     )
     name_kr = models.CharField(
-        max_length=32, unique=True, blank=False, null=False, verbose_name="의류 카테고리 한국어"
+        max_length=32, blank=False, null=False, verbose_name="의류 카테고리 한국어"
     )
 
     def __str__(self):
@@ -24,7 +24,7 @@ class ClothesAttribute(models.Model):
         max_length=32, unique=True, blank=False, null=False, verbose_name="의류 속성 영어"
     )
     name_kr = models.CharField(
-        max_length=32, unique=True, blank=False, null=False, verbose_name="의류 속성 한국어"
+        max_length=32, blank=False, null=False, verbose_name="의류 속성 한국어"
     )
 
     def __str__(self):
