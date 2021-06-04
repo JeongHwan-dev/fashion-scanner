@@ -42,3 +42,26 @@
 .loading__video video {
   width: 400px;
 }
+
+@media screen and (max-width:375px){
+  /* LOADING BACKGROUND */
+.loading {
+  width: 100%;
+}
+
+/* LOADING TITLE */
+.loading__title {
+  top: 25%;
+  left: 33%;
+}
+
+/* LOADING VIDEO */
+.loading__video {
+  display: flex;
+  justify-content: center;
+  height: 90%;
+}
+.loading__video video {
+  width: 200px;
+}
+}

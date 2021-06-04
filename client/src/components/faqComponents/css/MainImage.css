@@ -88,3 +88,74 @@
   right: 120px;
   z-index: 1;
 }
+
+@media screen and (max-width: 375px) {
+  /* MAIN IMAGE SECTION */
+.faqmain {
+  padding: 0;
+  width: 100%;
+}
+.faqmain__inner {
+  width: inherit;
+}
+
+/* MAIN IMAGE BACKGROUND */
+.fagmain__inner__wrapper {
+  width: inherit;
+  height: auto;
+}
+.faqmain__inner__bg {
+  position: relative;
+  width: 90%;
+  height: 600px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+/* MAIN IMAGE BLACKPINK */
+.faqmain__img__bg {
+  display: none;
+}
+.faqmain__img {
+  position: static;
+  display: flex;
+  width: 90%;
+  margin: auto;
+  top: 0; left: 0;
+}
+.faqmain__img img {
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  top: 0;
+}
+
+/* MAIN IMAGE TITLE */
+.faqmain__inner__bg {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.faqmain__inner__bg h2 {
+  display: inline-block;
+  font-size: 60px;
+  font-weight: bold;
+  color: #6b3f4c;
+}
+.faqmain__inner__bg h2:nth-child(1) {
+  top: 10%; 
+  left: 11%;
+}
+.faqmain__inner__bg h2:nth-child(2) {
+  top: 20%;
+  left: 9%;
+}
+.faqmain__inner__bg h2:nth-child(3) {
+  bottom: 20%;
+  right: 20%;
+}
+.faqmain__inner__bg h2:nth-child(4) {
+  bottom: 10%;
+  right: 30%;
+}
+}
