@@ -12,7 +12,7 @@ const MainImage = ({ blackpink, isMobile}) => {
           {!blackpink && !isMobile ? (
             <>
               <div className="faqmain__team__img">
-                <img src={require('images/faq_main_team.png').default} alt="team" />
+                <img src="/images/faq/faq_main_team.png" alt="team" />
               </div>
             </>
           ) : (
@@ -25,7 +25,7 @@ const MainImage = ({ blackpink, isMobile}) => {
                 <h2>PINK</h2>
                 <div className="faqmain__img__bg"></div>
                 <div className="faqmain__img">
-                  <img src={require('images/faq_main.png').default} alt="main image" />
+                  <img src="/images/faq/faq_main_blackpink.png" alt="main image" />
                 </div>
               </div>
             </>

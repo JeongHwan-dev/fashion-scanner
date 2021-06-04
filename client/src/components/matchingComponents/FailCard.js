@@ -6,7 +6,7 @@ const FailCard = () => {
     <>
       <div className="failCard__inner">
         <div className="failCard__img">
-          <img src="/images/failure_group_photo.jpg" alt="Failure" />
+          <img src="/images/matching/failure_group_photo.jpg" alt="Failure" />
         </div>
         <div className="failCard__text">
           <p>잠시 후 다시 시도해주세요.</p>

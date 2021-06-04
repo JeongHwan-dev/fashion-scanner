@@ -8,8 +8,8 @@ const MemberMatching = () => {
         <div className="memberMatching__inner">
           <div className="memberMatching__contents">
             <div className="contents__title">
-              <img src={require('images/matching_logo1.png').default} alt="WHICH MEMBER" />
-              <img src={require('images/matching_logo2.png').default} alt="ARE YOU?" />
+              <img src="/images/home/matching_logo1.png" alt="WHICH MEMBER" />
+              <img src="/images/home/matching_logo2.png" alt="ARE YOU?" />
             </div>
             <div className="contents__dsc">
               <p>
@@ -23,7 +23,7 @@ const MemberMatching = () => {
             </div>
           </div>
           <div className="memberMatching__img">
-            <img src={require('images/group_photo.png').default} alt="GROUP Photo" />
+            <img src="/images/home/matching_group_photo.png" alt="GROUP Photo" />
           </div>
         </div>
       </section>
