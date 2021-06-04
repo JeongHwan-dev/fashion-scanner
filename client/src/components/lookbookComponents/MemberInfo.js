@@ -8,10 +8,10 @@ const MemberInfo = ({ memberId }) => {
       <section className="memberinfo">
         <div className="memberinfo__inner">
           <div className="memberinfo__img">
-            {memberId === 1 && <img src="/images/lookbook/lookbook_jennie_main.png" alt="JENNIE" />}
-            {memberId === 2 && <img src="/images/lookbook/lookbook_rose_main.png" alt="ROSE" />}
-            {memberId === 3 && <img src="/images/lookbook/lookbook_jisoo_main.png" alt="JISOO" />}
-            {memberId === 4 && <img src="/images/lookbook/lookbook_lisa_main.png" alt="LISA" />}
+            {memberId === 1 && <img src="/images/lookbooks/lookbook_jennie_main.png" alt="JENNIE" />}
+            {memberId === 2 && <img src="/images/lookbooks/lookbook_rose_main.png" alt="ROSE" />}
+            {memberId === 3 && <img src="/images/lookbooks/lookbook_jisoo_main.png" alt="JISOO" />}
+            {memberId === 4 && <img src="/images/lookbooks/lookbook_lisa_main.png" alt="LISA" />}
           </div>
           <div className="memberinfo__dsc">
             {memberId === 1 && (
