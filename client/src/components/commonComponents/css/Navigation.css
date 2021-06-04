@@ -105,56 +105,57 @@ header .language-group ul.language span {
 
 @media screen and (max-width: 375px) {
   /* NAVIGATION */
-header {
-  position: fixed !important;
-  width: 375px;
-}
-header .inner {
-  width: inherit;
-  margin: 0 auto;
-}
+  header {
+    position: fixed !important;
+    top: 0;
+    width: 375px;
+    z-index: 3;
+  }
+  header .inner {
+    width: inherit;
+    margin: 0 auto;
+  }
 
-/* NAVIGATION LOGO */
-header .logo {
-  left: 115px;
-}
-header img {
-  width: 150px;
-  height: auto;
-}
+  /* NAVIGATION LOGO */
+  header .logo {
+    left: 115px;
+  }
+  header img {
+    width: 150px;
+    height: auto;
+  }
 
-/* HAMBURGER ICON */
-header .inner .material-icons {
-  display: inline-block;
-  padding: 15px;
-}
+  /* HAMBURGER ICON */
+  header .inner .material-icons {
+    display: inline-block;
+    padding: 15px;
+  }
 
-/* NAVIGATION LINK GROUP */
-header .link-group {
-  overflow: hidden;
-  top: 58px;
-  right: 0;
-  width: inherit;
-  height: 0;
-  background-color: rgba(0, 0, 0, 0.664);
-  transition: height 0.4s;
-}
-header .link-group.active {
-  height: 180px;
-}
-header .link-group ul.link {
-  flex-direction: column;
-  width: inherit;
-}
-header .link-group ul.link li a {
-  padding: 12px 20px;
-}
+  /* NAVIGATION LINK GROUP */
+  header .link-group {
+    overflow: hidden;
+    top: 58px;
+    right: 0;
+    width: inherit;
+    height: 0;
+    background-color: rgba(0, 0, 0, 0.664);
+    transition: height 0.4s;
+  }
+  header .link-group.active {
+    height: 180px;
+  }
+  header .link-group ul.link {
+    flex-direction: column;
+    width: inherit;
+  }
+  header .link-group ul.link li a {
+    padding: 12px 20px;
+  }
 
-/* NAVIGATION LANGUAGE GROUP */
-header .language-group {
-  top: 6px;
-  right: 10px;
-  padding: 10px;
-}
-
+  /* NAVIGATION LANGUAGE GROUP */
+  header .language-group {
+    top: 6px;
+    right: 10px;
+    padding: 10px;
+  }
 }
