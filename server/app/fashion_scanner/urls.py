@@ -21,7 +21,8 @@ from member import views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("api/members/<int:pk>/lookbook/", views.MemberLookbookPIView.as_view()),
+    path("api/members/", include("member.urls")),
+    path("api/user/", include("fsuser.urls")),
 ]
 
 if settings.DEBUG:

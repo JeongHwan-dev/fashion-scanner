@@ -160,12 +160,10 @@ REST_FRAMEWORK = {
         "djangorestframework_camel_case.parser.CamelCaseMultiPartParser",
         "djangorestframework_camel_case.parser.CamelCaseJSONParser",
     ),
-}
-
-REST_FRAMEWORK = {
     "JSON_UNDERSCOREIZE": {
         "no_underscore_before_number": True,
     },
+    "EXCEPTION_HANDLER": "fashion_scanner.exceptions.custom_exception_handler",
 }
 
 
