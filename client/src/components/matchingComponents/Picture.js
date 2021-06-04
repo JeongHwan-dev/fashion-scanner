@@ -6,11 +6,13 @@ import Example from 'components/matchingComponents/Example';
 import 'components/matchingComponents/css/Picture.css';
 
 const Picture = () => {
-  const url = `${window.location.origin}:5000`;
+  const url = `http://elice-kdt-ai-track-vm-ai-13.koreacentral.cloudapp.azure.com:8000`;
   const history = useHistory();
-  const [attachment, setAttachment] = useState('');
+  const [previewImg, setPreviewImg] = useState('');
+  const [requestImg, setRequestImg] = useState('');
+  const [isChecked, setIsChecked] = useState(false);
 
-  // [옷 사진] 업로드 핸들러
+  // [매칭 요청 사진] 업로드 핸들러
   const onFileChange = (event) => {
     const {
       target: { files },
@@ -22,41 +24,49 @@ const Picture = () => {
       const {
         currentTarget: { result },
       } = finishedEvent;
-      setAttachment(result);
+      setPreviewImg(result);
     };
     reader.readAsDataURL(theFile);
+    setRequestImg(theFile);
   };
 
-  // [옷 사진] 지우기 핸들러
-  const onClearAttachment = () => {
-    setAttachment('');
+  // [매칭 요청 사진] 지우기 핸들러
+  const onClearPreviewImg = () => {
+    setPreviewImg('');
   };
 
-  // [옷 사진] 제출 핸들러
-  const onSubmit = async (event) => {
-    if (attachment) {
-      event.preventDefault();
-      console.log(attachment);
+  // [매칭 요청 사진] 제출 핸들러
+  const onSubmit = async () => {
+    if (requestImg) {
+      const formData = new FormData();
+      const config = {
+        headers: {
+          'content-type': 'multipart/form-data',
+        },
+      };
+
+      formData.append('userImage', requestImg);
+      console.log(formData);
+
       await axios
-        .post(url + '/match', {
-          body: JSON.stringify({
-            user_image: attachment,
-          }),
-        })
-        .then(() => {
-          history.puch({
-            pathname: '/loading',
-          });
-          swal({
-            title: '스캐닝 완료',
-            text: '',
-            icon: 'success',
-            button: '확인',
-          });
+        .post(url + '/api/user/matching', formData, config)
+        .then((response) => {
+          if (response.status === 200) {
+            swal({
+              title: '사진 전송 완료',
+              text: '',
+              icon: 'success',
+              button: '확인',
+            });
+
+            history.push({
+              pathname: '/matching/loading',
+            });
+          }
         })
         .catch(() => {
           swal({
-            title: '스캐닝 오류',
+            title: '사진 전송 오류',
             text: 'error',
             icon: 'warning',
             button: '확인',
@@ -72,39 +82,57 @@ const Picture = () => {
     }
   };
 
+  // [사진 제공 동의] 체크 핸들러
+  const onCheckHandler = () => {
+    setIsChecked(!isChecked);
+  };
+
   return (
     <>
       <section className="picture" id="section__picture">
         <div className="picture__inner">
-          <ul>
-            <li className="upload__title">
-              <h1>가장 자주 입는 옷 사진을 올려주세요.</h1>
-            </li>
-            <li className="upload__btn">
-              <label className="material-icons" for="input-file">
-                add_a_photo
-              </label>
-              <input
-                type="file"
-                id="input-file"
-                accept="image/*"
-                onChange={onFileChange}
-                style={{ display: 'none' }}
-              />
-              {attachment && (
-                <div className="upload__preview">
-                  <img src={attachment} alt="첨부한 이미지" />
-                  <span className="material-icons" onClick={onClearAttachment}>
-                    clear
-                  </span>
-                </div>
-              )}
-            </li>
-          </ul>
-        </div>
-        <Example />
-        <div className="picture__submit">
-          <button onClick={onSubmit}>결과보기</button>
+          <div className="picture__upload">
+            <ul>
+              <li className="upload__title">
+                <h1>가장 자주 입는 옷 사진을 올려주세요.</h1>
+              </li>
+              <li className="upload__btn">
+                <label className="material-icons" for="input-file">
+                  add_a_photo
+                </label>
+                <input
+                  type="file"
+                  id="input-file"
+                  accept="image/*"
+                  onChange={onFileChange}
+                  style={{ display: 'none' }}
+                />
+                {previewImg && (
+                  <div className="upload__preview">
+                    <img src={previewImg} alt="첨부한 이미지" />
+                    <span className="material-icons" onClick={onClearPreviewImg}>
+                      clear
+                    </span>
+                  </div>
+                )}
+              </li>
+            </ul>
+          </div>
+          <Example />
+          <div className="picture__agree">
+            <p>
+              첨부된 사진은 목적 달성 후 내부 방침 및 기타 관련 법령에 따라 일정기간 저장됩니다.
+            </p>
+            <label>
+              <input type="checkbox" checked={isChecked} onChange={onCheckHandler} />
+              동의합니다.
+            </label>
+          </div>
+          <div className="picture__submit">
+            <button disabled={!isChecked} onClick={onSubmit}>
+              결과보기
+            </button>
+          </div>
         </div>
       </section>
     </>

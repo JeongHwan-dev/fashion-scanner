@@ -1,22 +1,30 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import useOnScreen from 'hooks/useOnScreen';
 import 'components/homeComponents/css/Introduction.css';
+import intro from 'videos/intro.mp4';
 
 const Introduction = () => {
+  const imageRef = useRef(null);
+  const isVisible = useOnScreen(imageRef);
+
   return (
     <>
-      <section className="introduction" id="section__introduction">
+      <section className="introduction" id="section__introduction" ref={imageRef}>
         <div className="introduction__inner">
+          <video autoPlay muted loop className={`introduction__bg ${isVisible ? 'scroll' : ''}`}>
+            <source src={intro} type="video/mp4"></source>
+          </video>
           <ul>
-            <li className="introduction__title">
+            <li className={`introduction__title ${isVisible ? 'scroll' : ''}`}>
               <h2>케이팝 스타들의 패션을 스캔합니다</h2>
             </li>
-            <li className="introduction__keyword">
+            <li className={`introduction__keyword ${isVisible ? 'scroll' : ''}`}>
               <span>#AI</span>
               <span>#IMAGE_SCANNING</span>
               <span>#FASHION</span>
               <span>#K-POP_STAR</span>
             </li>
-            <li className="introduction__logos">
+            <li className={`introduction__logos ${isVisible ? 'scroll' : ''}`}>
               <div>
                 <img src="/images/home/ai_logo.png" alt="AI" />
                 <p>AI</p>
@@ -30,7 +38,7 @@ const Introduction = () => {
                 <p>Fashion</p>
               </div>
             </li>
-            <li className="introduction__dsc">
+            <li className={`introduction__dsc ${isVisible ? 'scroll' : ''}`}>
               <p>
                 패션 스캐너는 업계에서 가장 HOT 한 케이팝 스타들의 패션을 분석합니다.
                 <br />
@@ -38,7 +46,7 @@ const Introduction = () => {
               </p>
             </li>
           </ul>
-          <a className="material-icons" href="#section__magazine">
+          <a className={`material-icons ${isVisible ? 'scroll' : ''}`} href="#section__magazine">
             expand_more
           </a>
         </div>

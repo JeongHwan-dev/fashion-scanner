@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import Navigation from 'components/commonComponents/Navigation';
 import Footer from 'components/commonComponents/Footer';
 import MemberInfo from 'components/lookbookComponents/MemberInfo';
 import LookbookMain from 'components/lookbookComponents/LookbookMain';
 import Others from 'components/lookbookComponents/Others';
-import axios from 'axios';
 
 const LookbookJennie = () => {
   // jennie:1, rose:2, jisoo:3, lisa:4

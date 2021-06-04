@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Navigation from 'components/commonComponents/Navigation';
 import MatchingTitle from 'components/matchingComponents/MatchingTitle';
 import Picture from 'components/matchingComponents/Picture';

@@ -5,7 +5,7 @@ import axios from 'axios';
 
 const Request = () => {
   const url = `http://elice-kdt-ai-track-vm-ai-13.koreacentral.cloudapp.azure.com:8000`;
-  const [previewImg, setPreviewImg] = useState('images/home/request_sample.jpg');
+  const [previewImg, setPreviewImg] = useState('/images/request_sample.jpg');
   const [requestImg, setRequestImg] = useState('');
   const [email, setEmail] = useState('');
   const [isChecked, setIsChecked] = useState(false);
@@ -25,7 +25,6 @@ const Request = () => {
       setPreviewImg(result);
     };
     reader.readAsDataURL(theFile);
-
     setRequestImg(theFile);
   };
 
@@ -45,7 +44,7 @@ const Request = () => {
   };
 
   // [이메일 수집 및 이용 동의] 체크 핸들러
-  const onAgreeHandler = () => {
+  const onCheckHandler = () => {
     setIsChecked(!isChecked);
   };
 
@@ -57,12 +56,18 @@ const Request = () => {
           // 사진 업로드, 이메일 작성, 정보 제공 동의 체크 모두 완료 시
           if (isEmail(email)) {
             // 유효한 이메일 형식일 경우
-            let data = {
-              user_image: requestImg,
-              email: email,
+            const formData = new FormData();
+            const config = {
+              headers: {
+                'content-type': 'multipart/form-data',
+              },
             };
 
-            await axios.post(url + '/api/request', data).then((response) => {
+            formData.append('userImage', requestImg);
+            formData.append('email', email);
+            console.log(formData);
+
+            await axios.post(url + '/api/user/request', formData, config).then((response) => {
               console.log(response);
 
               if (response.status === 200) {
@@ -142,7 +147,7 @@ const Request = () => {
                 <img src={previewImg} alt="sample" />
               </div>
               <div className="image__upload">
-                <label className="material-icons" for="reqeust-file">
+                <label className="material-icons" htmlFor="reqeust-file">
                   upload_file<span>사진 업로드</span>
                 </label>
                 <input
@@ -174,7 +179,7 @@ const Request = () => {
                   />
                   <p className="info__agree">&nbsp;&nbsp;* 이메일 입력은 선택사항입니다.</p>
                   <label>
-                    <input type="checkbox" checked={isChecked} onClick={onAgreeHandler} />
+                    <input type="checkbox" checked={isChecked} onChange={onCheckHandler} />
                     이메일 수집 및 이용에 대한 동의
                   </label>
                 </div>

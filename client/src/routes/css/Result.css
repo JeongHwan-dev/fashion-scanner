@@ -1,10 +1,9 @@
 /* RESULT */
 .result {
-  background-color: #fff;
+  background-color: #242424;
 }
 .result__inner {
-  width: 80%;
-  height: 1000px;
+  width: 1100px;
   margin: 0 auto;
   padding: 110px 0 300px;
   color: black;
@@ -13,6 +12,7 @@
 /* RESULT GUIDE */
 .result__inner .guide {
   color: #f2a7bb;
+  transform: 0.5s;
 }
 .result__inner .guide p {
   font-size: 20px;
@@ -24,4 +24,21 @@
   width: 60px;
   margin: 0 auto 6px;
   font-size: 60px;
+}
+.result__inner .guide.clicked {
+  animation: fade-out 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* RESULT CARDS */
+.result__inner .cards {
+  display: flex;
 }
