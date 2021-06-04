@@ -81,3 +81,35 @@ footer .copyright .material-icons {
   margin-right: 15px;
   font-size: 24px;
 }
+
+@media screen and (max-width: 375px) {
+footer .inner {
+  width: inherit;
+  padding: 50px 20px;
+  font-size: 15px;
+}
+footer .info {
+  height: 400px;
+}
+
+/* FOOTER INFO CONTACT */
+footer .info .info__contact {
+  position: static;
+}
+footer .info .info__contact li:first-child img {
+  width: 250px;
+  height: auto;
+}
+
+/* FOOTER INFO TEAM */
+footer .info .info__team {
+  top: 250px;
+  left: 20px;
+}
+footer .inner .copyright {
+  width: 330px;
+}
+footer .inner .copyright p {
+  font-size: 12px;
+}
+}

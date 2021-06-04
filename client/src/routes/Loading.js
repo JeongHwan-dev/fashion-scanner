@@ -31,8 +31,7 @@ const Loading = () => {
         </div>
       </div>
       {/* FOOTER */}
-      {/* <Footer /> */}
-      {!isMobile ? <Footer /> : null}
+      <Footer />
     </>
   );
 };

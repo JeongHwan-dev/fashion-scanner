@@ -105,6 +105,10 @@ header .language-group ul.language span {
 
 @media screen and (max-width: 375px) {
   /* NAVIGATION */
+header {
+  position: fixed !important;
+  width: 375px;
+}
 header .inner {
   width: inherit;
   margin: 0 auto;
@@ -132,6 +136,7 @@ header .link-group {
   right: 0;
   width: inherit;
   height: 0;
+  background-color: rgba(0, 0, 0, 0.664);
   transition: height 0.4s;
 }
 header .link-group.active {

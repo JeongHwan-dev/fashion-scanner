@@ -13,13 +13,13 @@ const FAQ = () => {
   return (
     <>
       {/* HEADER */}
-      {!isMobile && <Navigation />}
+      <Navigation />
       {/* MAIN IMAGE */}
       <MainImage blackpink={blackpink} isMobile={isMobile} />
       {/* QUESTIONS */}
       <Questions blackpink={blackpink} setBlackpink={setBlackpink} />
       {/* FOOTER */}
-      {!isMobile && <Footer />}
+      <Footer />
     </>
   );
 };
