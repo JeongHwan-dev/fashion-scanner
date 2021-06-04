@@ -13,3 +13,5 @@
 `npm install sweetalert`
 
 `npm install swiper`
+
+`npm install react-responsive`

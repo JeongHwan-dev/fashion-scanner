@@ -26,12 +26,17 @@ header img {
   height: 20px;
 }
 
+/* HAMBURGER ICON */
+header .inner .material-icons {
+  display: none;
+}
+
 /* NAVIGATION LINK GROUP */
 header .link-group {
   display: flex;
   position: absolute;
   top: 10px;
-  right: 0;
+  right: 200px;
   font-family: 'Spoqa Han Sans Neo', 'sans-serif';
 }
 header .link-group ul.link {
@@ -55,4 +60,102 @@ header .link-group ul.link li a {
 }
 header .link-group ul.link li a:hover {
   color: #d1d6db;
+}
+
+/* NAVIGATION LANGUAGE GROUP */
+header .language-group {
+  display: flex;
+  position: absolute;
+  top: 10px;
+  right: 0;
+  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+}
+header .language-group ul {
+  display: flex;
+}
+header .language-group ul.language li {
+  position: relative;
+  width: auto;
+  height: 100%;
+}
+header .language-group ul.language li a {
+  display: block;
+  width: auto;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 12px 10px;
+  font-size: 15px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.1s;
+}
+header .language-group ul.language li a:hover {
+  color: #d1d6db;
+}
+header .language-group ul.language span {
+  display: block;
+  width: auto;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 12px 10px;
+  font-size: 15px;
+  color: #fff;
+  transition: 0.1s;
+}
+
+@media screen and (max-width: 375px) {
+  /* NAVIGATION */
+  header {
+    position: fixed !important;
+    top: 0;
+    width: 375px;
+    z-index: 3;
+  }
+  header .inner {
+    width: inherit;
+    margin: 0 auto;
+  }
+
+  /* NAVIGATION LOGO */
+  header .logo {
+    left: 115px;
+  }
+  header img {
+    width: 150px;
+    height: auto;
+  }
+
+  /* HAMBURGER ICON */
+  header .inner .material-icons {
+    display: inline-block;
+    padding: 15px;
+  }
+
+  /* NAVIGATION LINK GROUP */
+  header .link-group {
+    overflow: hidden;
+    top: 58px;
+    right: 0;
+    width: inherit;
+    height: 0;
+    background-color: rgba(0, 0, 0, 0.664);
+    transition: height 0.4s;
+  }
+  header .link-group.active {
+    height: 180px;
+  }
+  header .link-group ul.link {
+    flex-direction: column;
+    width: inherit;
+  }
+  header .link-group ul.link li a {
+    padding: 12px 20px;
+  }
+
+  /* NAVIGATION LANGUAGE GROUP */
+  header .language-group {
+    top: 6px;
+    right: 10px;
+    padding: 10px;
+  }
 }

@@ -18,14 +18,14 @@ const Others = () => {
               <a href="/lookbook/jisoo">
                 <img
                   className={`img1 ${isVisible ? 'scroll' : ''}`}
-                  src="/images/lookbook/lookbook_members_jisoo.png"
+                  src="/images/lookbooks/lookbook_members_jisoo.png"
                   alt="JISOO"
                 />
               </a>
               <a href="/lookbook/lisa">
                 <img
                   className={`img2 ${isVisible ? 'scroll' : ''}`}
-                  src="/images/lookbook/lookbook_members_lisa.png"
+                  src="/images/lookbooks/lookbook_members_lisa.png"
                   alt="LISA"
                 />
               </a>
@@ -34,14 +34,14 @@ const Others = () => {
               <a href="/lookbook/jennie">
                 <img
                   className={`img3 ${isVisible ? 'scroll' : ''}`}
-                  src="/images/lookbook/lookbook_members_jennie.png"
+                  src="/images/lookbooks/lookbook_members_jennie.png"
                   alt="JENNIE"
                 />
               </a>
               <a href="/lookbook/rose">
                 <img
                   className={`img4 ${isVisible ? 'scroll' : ''}`}
-                  src="/images/lookbook/lookbook_members_rose.png"
+                  src="/images/lookbooks/lookbook_members_rose.png"
                   alt="ROSE"
                 />
               </a>

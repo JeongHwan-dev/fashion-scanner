@@ -11,6 +11,7 @@ import LookbookJennie from 'routes/LookbookJennie';
 import LookbookRose from 'routes/LookbookRose';
 import LookbookLisa from 'routes/LookbookLisa';
 import LookbookJisoo from 'routes/LookbookJisoo';
+import NotFound from 'routes/NotFound';
 
 const AppRouter = () => {
   return (
@@ -27,6 +28,8 @@ const AppRouter = () => {
         <Route exact path="/matching/result" component={Result} />
         <Route exact path="/devteam" component={DevTeam} />
         <Route exact path="/faq" component={FAQ} />
+        <Route exact path="/matching/loading" component={Loading} />
+        <Route component={NotFound} />
       </Switch>
     </Router>
   );
