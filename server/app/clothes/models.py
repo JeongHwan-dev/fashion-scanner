@@ -17,7 +17,6 @@ class LookbookClothes(models.Model):
 
     image = models.ImageField(
         upload_to=image_upload_to,
-        default=f"{UPLOAD_PATH}/data.png",
         verbose_name="룩북 이미지",
     )
     registered_date = models.DateTimeField(auto_now_add=True, verbose_name="등록 날짜")
@@ -95,7 +94,6 @@ class UserUploadClothes(models.Model):
 
     image = models.ImageField(
         upload_to=image_upload_to_with_uuid,
-        default=f"{UPLOAD_PATH}/data.png",
         verbose_name="사용자 요청 이미지",
     )
     upload_date = models.DateTimeField(auto_now_add=True, verbose_name="등록 날짜")
@@ -103,6 +101,7 @@ class UserUploadClothes(models.Model):
         "fsuser.Fsuser",
         related_name="user_upload_clothes",
         on_delete=models.SET_NULL,
+        blank=True,
         null=True,
         db_column="user_id",
         verbose_name="사용자",
@@ -111,10 +110,16 @@ class UserUploadClothes(models.Model):
         "LookbookClothes",
         related_name="user_upload_clothes",
         on_delete=models.SET_NULL,
+        blank=True,
         null=True,
         db_column="lookbook_clothes_id",
         verbose_name="룩북 의류",
     )
+
+    def save(self, *args, **kwargs):
+        self.full_clean()
+
+        super().save(*args, **kwargs)
 
     def __str__(self):
         return f"사용자 요청 의류({self.id})"
