@@ -8,29 +8,13 @@ const MemberInfo = ({ memberId }) => {
       <section className="memberinfo">
         <div className="memberinfo__inner">
           <div className="memberinfo__img">
-            {memberId === 1 ? (
-              <img src="/images/lookbook/lookbook_jennie_main.png" alt="JENNIE" />
-            ) : (
-              <></>
-            )}
-            {memberId === 2 ? (
-              <img src="/images/lookbook/lookbook_rose_main.png" alt="ROSE" />
-            ) : (
-              <></>
-            )}
-            {memberId === 3 ? (
-              <img src="/images/lookbook/lookbook_jisoo_main.png" alt="JISOO" />
-            ) : (
-              <></>
-            )}
-            {memberId === 4 ? (
-              <img src="/images/lookbook/lookbook_lisa_main.png" alt="LISA" />
-            ) : (
-              <></>
-            )}
+            {memberId === 1 && <img src="/images/lookbook/lookbook_jennie_main.png" alt="JENNIE" />}
+            {memberId === 2 && <img src="/images/lookbook/lookbook_rose_main.png" alt="ROSE" />}
+            {memberId === 3 && <img src="/images/lookbook/lookbook_jisoo_main.png" alt="JISOO" />}
+            {memberId === 4 && <img src="/images/lookbook/lookbook_lisa_main.png" alt="LISA" />}
           </div>
           <div className="memberinfo__dsc">
-            {memberId === 1 ? (
+            {memberId === 1 && (
               <>
                 <h2>JENNIE</h2>
                 <p>
@@ -41,10 +25,8 @@ const MemberInfo = ({ memberId }) => {
                   확인해보세요.
                 </p>
               </>
-            ) : (
-              <></>
             )}
-            {memberId === 2 ? (
+            {memberId === 2 && (
               <>
                 <h2>ROSE</h2>
                 <p>
@@ -56,10 +38,8 @@ const MemberInfo = ({ memberId }) => {
                   블랙핑크의 비단결 목소리 로제의 룩을 확인해보세요.
                 </p>
               </>
-            ) : (
-              <></>
             )}
-            {memberId === 3 ? (
+            {memberId === 3 && (
               <>
                 <h2>JISOO</h2>
                 <p>
@@ -70,10 +50,8 @@ const MemberInfo = ({ memberId }) => {
                   <br /> 블랙핑크의 사랑스러운 막내 지수의 룩을 확인해보세요.
                 </p>
               </>
-            ) : (
-              <></>
             )}
-            {memberId === 4 ? (
+            {memberId === 4 && (
               <>
                 <h2>LISA</h2>
                 <p>
@@ -84,8 +62,6 @@ const MemberInfo = ({ memberId }) => {
                   시작을 앞두고 있습니다. 블랙핑크의 비율 끝판왕 리사의 룩을 확인해보세요.
                 </p>
               </>
-            ) : (
-              <></>
             )}
           </div>
         </div>
