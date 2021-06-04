@@ -76,7 +76,7 @@
 /* QUESTIONS TITLE */
 .questions__inner h2 {
   margin-bottom: 20%;
-  font-size: 48px;
+  font-size: 36px;
   text-align: center;
 }
 
@@ -85,17 +85,17 @@
   display: flex;
   margin: auto;
   margin-bottom: 20%;
-  flex-direction: column;
 }
 .questions__tab__content {
   margin-right: 0;
   width: 100%;
+  height: 100%;
 }
 .questions__tab__content:nth-child(1) {
   margin-bottom: 10%;
 }
 .questions__tab__content h3 {
-  font-size: 22px;
+  font-size: 17px;
   text-align: center;
 }
 
@@ -109,9 +109,9 @@
   margin-bottom: 50px;
 }
 .questions__question p:nth-child(1) {
-  font-size: 26px;
+  font-size: 17px;
 }
 .questions__question p:nth-child(2) {
-  font-size: 22px;
+  font-size: 15px;
 }
 }
