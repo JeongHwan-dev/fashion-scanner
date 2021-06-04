@@ -5,7 +5,7 @@ import { useMediaQuery } from 'react-responsive';
 const Navigation = () => {
   const isMobile = useMediaQuery({ maxWidth: 375 });
   const [korean, setKorean] = useState(true);
-  const [menu, setMenu ] = useState(false);
+  const [menu, setMenu] = useState(false);
 
   return (
     <>
