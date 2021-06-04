@@ -36,7 +36,7 @@ header .link-group {
   display: flex;
   position: absolute;
   top: 10px;
-  right: 200px;
+  right: 160px;
   font-family: 'Spoqa Han Sans Neo', 'sans-serif';
 }
 header .link-group ul.link {
