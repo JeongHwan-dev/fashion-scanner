@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Navigation from 'components/commonComponents/Navigation';
 import MemberCard from 'components/matchingComponents/MemberCard';
+import InfoCard from 'components/matchingComponents/InfoCard';
 import Footer from 'components/commonComponents/Footer';
+
 import 'routes/css/Result.css';
 
 const Result = () => {
@@ -46,16 +48,30 @@ const Result = () => {
     });
   };
 
+  const [isClicked, setIsClicked] = useState(false);
+
+  const onCardClickHandler = () => {
+    setIsClicked(!isClicked);
+    console.log('clicked');
+  };
+
   return (
     <>
       <div className="result">
         <Navigation />
         <div className="result__inner">
-          <div className="guide">
+          <div className={`guide ${isClicked ? 'clicked' : ''}`}>
             <p>아래의 카드에 마우스를 올려주세요.</p>
             <span className="material-icons">arrow_drop_down</span>
           </div>
-          <MemberCard memberObj={result.memberObj} />
+          <div className="cards">
+            <MemberCard
+              memberObj={result.memberObj}
+              isClicked={isClicked}
+              onCardClickHandler={onCardClickHandler}
+            />
+            <InfoCard memberObj={result.memberObj} imgObj={result.imgObj} isClicked={isClicked} />
+          </div>
         </div>
         <Footer />
       </div>
