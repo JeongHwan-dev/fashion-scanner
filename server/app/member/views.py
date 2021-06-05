@@ -1,16 +1,56 @@
-from django.http import Http404
-from django.shortcuts import get_object_or_404
+import os
 from rest_framework import status
 from rest_framework.views import APIView
 from rest_framework.response import Response
+from rest_framework.exceptions import NotFound
+from djangorestframework_camel_case.render import CamelCaseJSONRenderer
 from member.models import BlackpinkMember
 from clothes.models import LookbookClothes
-from clothes_style.models import ClothesCategory, ClothesAttribute, Color
 import json
 
 
-class MemberLookbookListAPIView(APIView):
-    """멤버의 Lookbook 리스트를 조회하는 API 구현 클래스"""
+def find_lookbooks_by_member(pk):
+    return (
+        LookbookClothes.objects.select_related("color")
+        .select_related("category")
+        .prefetch_related("shop_clothes")
+        .prefetch_related("attributes")
+        .prefetch_related("attributes")
+        .filter(member=pk)
+    )
+
+
+def make_lookbook_data(lookbooks):
+    BASE_URL = os.environ.get("BASE_URL")
+
+    result = dict()
+    result["lookbook_data"] = []
+
+    for lookbook in lookbooks:
+        data = dict()
+        data["lookbook_id"] = lookbook.id
+        data["lookbook_image"] = BASE_URL + lookbook.image.url
+        data["color"] = lookbook.color.hex_code
+        data["category"] = lookbook.category.name_kr
+        data["attributes"] = [attr.name_kr for attr in lookbook.attributes.all()]
+        data["similar_images"] = json.dumps(
+            [
+                {
+                    "image": BASE_URL + clothes.image.url,
+                    "link": clothes.webpage_url,
+                }
+                for clothes in lookbook.shop_clothes.all()
+            ]
+        )
+        result["lookbook_data"].append(data)
+
+    return result
+
+
+class MemberLookbookAPIView(APIView):
+    """멤버의 Lookbook 리스트를 조회하는 API 클래스"""
+
+    renderer_classes = [CamelCaseJSONRenderer]
 
     def get_object(self, pk):
         """pk에 해당하는 멤버를 반환합니다.
@@ -21,10 +61,7 @@ class MemberLookbookListAPIView(APIView):
         Returns:
             멤버 인스턴스
         """
-        try:
-            return BlackpinkMember.objects.select_related("color").get(pk=pk)
-        except BlackpinkMember.DoesNotExist:
-            return Http404
+        return BlackpinkMember.objects.select_related("color").get(pk=pk)
 
     def get(self, request, pk, format=None):
         """pk에 해당하는 멤버의 Lookbook 리스트와 상징색을 반환합니다.
@@ -36,47 +73,35 @@ class MemberLookbookListAPIView(APIView):
 
         Returns:
             JSON 문자열:
-                lookbookData:
+                lookbook_data:
                     lookbook id,
                     lookbook 이미지,
                     의류 색상,
                     의류 카테고리,
                     의류 속성 리스트,
                     비슷한 의류 리스트
-                symbolColor:
+                symbol_color:
                     멤버 상징색
-                status:
+                status_code:
                     상태 코드
         """
-        base_url = (
-            "http://elice-kdt-ai-track-vm-ai-13.koreacentral.cloudapp.azure.com:8000"
-        )
+        if not (1 <= pk <= 4):
+            raise NotFound({"message": "멤버가 존재하지 않습니다."})
+
         member = self.get_object(pk)
-        symbol_color = member.color.hex_code
-        lookbook_list = (
-            LookbookClothes.objects.select_related("color")
-            .select_related("category")
-            .prefetch_related("shop_clothes")
-            .prefetch_related("attributes")
-            .filter(member=pk)
-        )
+        member_color = member.color
 
-        result = []
-        for lookbook in lookbook_list:
-            data = dict()
-            data["lookbookId"] = lookbook.id
-            data["lookbookImage"] = base_url + lookbook.image.url
-            data["color"] = lookbook.color.hex_code
-            data["category"] = lookbook.category.name_kr
-            data["attributes"] = [attr.name_kr for attr in lookbook.attributes.all()]
-            data["similarImages"] = json.dumps(
-                [
-                    {"image": base_url + clothes.image.url, "link": clothes.webpage_url}
-                    for clothes in lookbook.shop_clothes.all()
-                ]
-            )
-            result.append(data)
+        if member_color is None:
+            raise NotFound({"message": "색상이 존재하지 않습니다."})
 
-        result = json.dumps(result[:10])
+        lookbooks = find_lookbooks_by_member(pk)
+
+        if lookbooks is None:
+            raise NotFound({"message": "Lookbook이 존재하지 않습니다."})
+
+        result = make_lookbook_data(lookbooks)
+
+        result["symbol_color"] = member_color.hex_code
+        result["status_code"] = status.HTTP_200_OK
 
         return Response(result)

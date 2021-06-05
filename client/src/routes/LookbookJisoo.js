@@ -13,6 +13,7 @@ import MobileOthers from 'components/lookbookComponents/MobileOthers';
 const LookbookJisoo = () => {
   // jennie: 1, rose: 2, jisoo: 3, lisa: 4
   const memberId = 3;
+  const lookbookApi = `/api/members/3/lookbook`;
   const [member, setMemeber] = useState([]);
   const [memberColor, setMemberColor] = useState('');
   const isMobile = useMediaQuery({ maxWidth: 375 });

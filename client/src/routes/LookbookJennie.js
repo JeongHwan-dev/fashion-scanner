@@ -13,6 +13,8 @@ import MobileOthers from 'components/lookbookComponents/MobileOthers';
 const LookbookJennie = () => {
   // jennie:1, rose:2, jisoo:3, lisa:4
   const memberId = 1;
+  // const lookbookApi = `http://elice-kdt-ai-track-vm-ai-13.koreacentral.cloudapp.azure.com:8000/api/members/1/lookbook`;
+  const lookbookApi = `/api/members/1/lookbook`;
   const [member, setMemeber] = useState([]);
   const [memberColor, setMemberColor] = useState('');
   const isMobile = useMediaQuery({ maxWidth: 375 });
