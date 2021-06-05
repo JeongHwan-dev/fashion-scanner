@@ -15,7 +15,7 @@ const Navigation = () => {
             <img src="/images/common/fs_s3_logo.png" alt="FASHION SCANNER" />
           </a>
           <span
-            class="material-icons"
+            className="material-icons"
             onClick={() => {
               setMenu(!menu);
             }}
