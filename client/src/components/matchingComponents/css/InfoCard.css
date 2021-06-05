@@ -1,0 +1,92 @@
+/* INFO CARD */
+.infoCard {
+  display: none;
+  opacity: 0;
+  width: 422.4px;
+  min-width: 422.4px;
+  height: 563.2px;
+  margin: 0 auto;
+  padding: 90px 35px;
+  box-sizing: border-box;
+  box-shadow: 5px 5px 15px #6b6b6b;
+  border-radius: 12px;
+  background-color: #f3f3f3;
+}
+.infoCard.clicked {
+  display: block;
+  animation: fade-in 5.8s;
+  animation-fill-mode: forwards;
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* INFO CARD DSC */
+.infoCard .infoCard__dsc {
+  margin-bottom: 30px;
+  padding: 0 20px;
+}
+.infoCard .infoCard__dsc p {
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.8;
+  color: #d97e9f;
+}
+
+/* INFO CARD IMG OBJECT */
+.infoCard__imgObj {
+  margin-bottom: 30px;
+}
+
+/* IMG OBJECT TABLE */
+.infoCard__imgObj table {
+  overflow: hidden;
+  margin: 0 auto;
+  border: 1px solid #000;
+  border-radius: 12px;
+  border-collapse: collapse;
+  color: #1b1b1b;
+}
+.infoCard__imgObj th,
+.infoCard__imgObj td {
+  width: 200px;
+  padding: 5px;
+  background: #ddd;
+  border: 2px solid #fff;
+  text-align: center;
+}
+.infoCard__imgObj tr:first-child td {
+  font-weight: 500;
+}
+.infoCard__imgObj tr td:first-child {
+  width: 100px;
+  color: #1b1b1b;
+}
+.infoCard__imgObj tr td:nth-child(2) {
+  width: 250px;
+  color: #565656;
+}
+
+/* INFO CARD BUTTON */
+.infoCard__btn {
+  display: flex;
+  justify-content: center;
+}
+.infoCard__btn a {
+  padding: 10px 20px;
+  border: 2px solid #d97e9f;
+  border-radius: 6px;
+  font-size: 18px;
+  color: #d97e9f;
+  transition: 0.3s;
+}
+.infoCard__btn a:hover {
+  background-color: #d97e9f;
+  color: #fff;
+}

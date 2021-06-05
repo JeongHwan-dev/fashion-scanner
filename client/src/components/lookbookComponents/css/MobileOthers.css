@@ -1,0 +1,35 @@
+/* MOBILE OTHERS SECTION */
+.m-others {
+  display: flex;
+  height: 600px;
+  background-color: rgb(252, 252, 252);
+}
+.m-others__inner {
+  width: 330px;
+  height: 550px;
+  margin: auto;
+}
+
+/* MOBILE OTHERS TITLE */
+.m-others__title {
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+.m-others__title h2 {
+  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+  font-size: 26px;
+  color: #f2a7bb;;
+}
+
+/* MOBILE OTHERS MEMBER IMAGE */
+.m-others .m-others__inner .m-others__others {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.m-others .m-others__inner .m-others__others img {
+  display: inline-block;
+  width: 150px;
+  height: auto;
+  margin: 5px;
+}

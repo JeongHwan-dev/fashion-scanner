@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Navigation from 'components/commonComponents/Navigation';
 import DevTeamTitle from 'components/devTeamComponents/DevTeamTitle';
 import DevTeamSub from 'components/devTeamComponents/DevTeamSub';
@@ -7,10 +7,6 @@ import Footer from 'components/commonComponents/Footer';
 import 'routes/css/DevTeam.css';
 
 const DevTeam = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
   return (
     <>
       <div className="devTeam">

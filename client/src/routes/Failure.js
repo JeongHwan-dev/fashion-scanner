@@ -9,9 +9,7 @@ const Failure = () => {
     <>
       <div className="failure">
         <Navigation />
-        <div className="failure__inner">
-          <FailCard />
-        </div>
+        <FailCard />
         <Footer />
       </div>
     </>

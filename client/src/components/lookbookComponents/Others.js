@@ -1,52 +1,50 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useRef } from 'react';
+import useOnScreen from 'hooks/useOnScreen';
 import 'components/lookbookComponents/css/Others.css';
 
 const Others = () => {
+  const imageRef = useRef(null);
+  const isVisible = useOnScreen(imageRef);
+
   return (
     <>
       <section className="others">
-        <img
-          className="inner__bg"
-          src={require('images/member_select_bg.png').default}
-          alt="BLACKPINK BACKGROUND"
-        />
         <div className="others__inner">
           <div className="others__title">
             <h2>CHECK OUT THE OTHER MEMBERS</h2>
           </div>
-          <div className="others__img">
+          <div className="others__img" ref={imageRef}>
             <div className="img__line1">
-              <Link to="/">
+              <a href="/lookbook/jisoo">
                 <img
-                  className="img1"
-                  src={require('images/lookbook_members_jisoo.png').default}
-                  alt="jisoo"
+                  className={`img1 ${isVisible ? 'scroll' : ''}`}
+                  src="/images/lookbooks/lookbook_members_jisoo.png"
+                  alt="JISOO"
                 />
-              </Link>
-              <Link to="/">
+              </a>
+              <a href="/lookbook/lisa">
                 <img
-                  className="img2"
-                  src={require('images/lookbook_members_lisa.png').default}
-                  alt="lisa"
+                  className={`img2 ${isVisible ? 'scroll' : ''}`}
+                  src="/images/lookbooks/lookbook_members_lisa.png"
+                  alt="LISA"
                 />
-              </Link>
+              </a>
             </div>
             <div className="img__line2">
-              <Link to="/">
+              <a href="/lookbook/jennie">
                 <img
-                  className="img3"
-                  src={require('images/lookbook_members_jennie.png').default}
-                  alt="jennie"
+                  className={`img3 ${isVisible ? 'scroll' : ''}`}
+                  src="/images/lookbooks/lookbook_members_jennie.png"
+                  alt="JENNIE"
                 />
-              </Link>
-              <Link to="/">
+              </a>
+              <a href="/lookbook/rose">
                 <img
-                  className="img4"
-                  src={require('images/lookbook_members_rose.png').default}
-                  alt="rose"
+                  className={`img4 ${isVisible ? 'scroll' : ''}`}
+                  src="/images/lookbooks/lookbook_members_rose.png"
+                  alt="ROSE"
                 />
-              </Link>
+              </a>
             </div>
           </div>
         </div>

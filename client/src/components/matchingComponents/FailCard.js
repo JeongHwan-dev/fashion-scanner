@@ -1,33 +1,21 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
 import 'components/matchingComponents/css/FailCard.css';
 
 const FailCard = () => {
-  const history = useHistory();
-
-  // 매칭 페이지 이동 핸들러
-  const onMoveMatching = () => {
-    history.push({
-      pathname: '/matching',
-    });
-  };
   return (
     <>
-      <div className="failCard">
-        <div className="failCard__bg">
-          <img src="/images/failure_group_photo.jpg" alt="Failure" />
-          <div className="failCard__dsc">
-            <p>매칭에 실패하였습니다.</p>
-            <p>다시 한번 시도해 주세요</p>
-            <p>매칭이 계속 실패하신다면 다른 사진을 활용해 주세요.</p>
-          </div>
+      <div className="failCard__inner">
+        <div className="failCard__img">
+          <img src="/images/matching/failure_group_photo.jpg" alt="Failure" />
+        </div>
+        <div className="failCard__text">
+          <p>잠시 후 다시 시도해주세요.</p>
+          <p>같은 문제가 계속 되신다면 다른 이미지를 활용해주세요.</p>
         </div>
         <div className="failCard__btn">
-          <button onClick={onMoveMatching}>
-            <label className="material-icons">
-              reply <span>이전으로 돌아가기</span>
-            </label>
-          </button>
+          <a href="/matching">
+            <label>이전으로 돌아가기</label>
+          </a>
         </div>
       </div>
     </>

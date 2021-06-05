@@ -6,8 +6,8 @@ const MatchingTitle = () => {
     <>
       <section className="matchingTitle">
         <div className="matchingTitle__inner">
-          <img src={require('images/members_photo.jpg').default} alt="Members Photo" />
-          <img src={require('images/matching_logo3.png').default} alt="WHICH MEMBER ARE YOU?" />
+          <img src="/images/matching/matching_blackpink_photo.jpg" alt="Members Photo" />
+          <img src="/images/matching/matching_logo3.png" alt="WHICH MEMBER ARE YOU?" />
           <a className="material-icons" href="#section__picture">
             expand_more
           </a>

@@ -1,14 +1,9 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
+import { useMediaQuery } from 'react-responsive';
 import 'components/homeComponents/css/MemberMatching.css';
 
 const MemberMatching = () => {
-  const history = useHistory();
-
-  // Matching 페이지 이동 핸들러
-  const onMoveMatching = () => {
-    history.push('/matching');
-  };
+  const isMobile = useMediaQuery({ maxWidth: 375 });
 
   return (
     <>
@@ -16,8 +11,8 @@ const MemberMatching = () => {
         <div className="memberMatching__inner">
           <div className="memberMatching__contents">
             <div className="contents__title">
-              <img src={require('images/matching_logo1.png').default} alt="WHICH MEMBER" />
-              <img src={require('images/matching_logo2.png').default} alt="ARE YOU?" />
+              <img src="/images/home/matching_logo1.png" alt="WHICH MEMBER" />
+              <img src="/images/home/matching_logo2.png" alt="ARE YOU?" />
             </div>
             <div className="contents__dsc">
               <p>
@@ -26,13 +21,24 @@ const MemberMatching = () => {
                 AI가 어떤 멤버와 패션 성향이 가장 비슷한지 알려드립니다.
               </p>
             </div>
-            <div className="contents__btn">
-              <button onClick={onMoveMatching}>바로가기</button>
-            </div>
+            {!isMobile && (
+              <>
+                <div className="contents__btn">
+                  <a href="/matching">바로가기</a>
+                </div>
+              </>
+            )}
           </div>
           <div className="memberMatching__img">
-            <img src={require('images/group_photo.png').default} alt="GROUP Photo" />
+            <img src="/images/home/matching_group_photo.png" alt="GROUP Photo" />
           </div>
+          {isMobile && (
+            <>
+              <div className="contents__btn">
+                <a href="/matching">바로가기</a>
+              </div>
+            </>
+          )}
         </div>
       </section>
     </>

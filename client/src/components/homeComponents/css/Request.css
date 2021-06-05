@@ -1,9 +1,10 @@
 /* REQUEST */
 .request {
-  padding: 100px 0 250px;
+  padding: 150px 0 250px;
 }
 .request__inner {
-  width: 1400px;
+  position: relative;
+  width: 1100px;
   margin: 0 auto;
   font-family: 'Spoqa Han Sans Neo', 'sans-serif';
 }
@@ -13,12 +14,12 @@
   text-align: center;
 }
 .request__title h2 {
-  margin-bottom: 20px;
-  font-size: 60px;
+  margin-bottom: 15px;
+  font-size: 58px;
   font-weight: 600;
 }
 .request__title p {
-  margin-bottom: 80px;
+  margin-bottom: 50px;
 }
 .request__title p span {
   margin: 0 5px;
@@ -41,11 +42,11 @@
 
 /* REQUEST BODY IMAGE */
 .request__body .body__image {
-  margin-right: 50px;
+  margin: 0 auto;
 }
 .request__body .body__image .image__preview img {
-  width: 450px;
-  height: 450px;
+  width: 420px;
+  height: 420px;
 }
 .request__body .body__image label {
   display: flex;
@@ -59,7 +60,7 @@
   background-color: #414141;
   font-size: 24px;
   text-align: center;
-  color: #dcdcdc;
+  color: #fff;
   cursor: pointer;
   transition: 0.3s;
 }
@@ -78,42 +79,44 @@
   margin-bottom: 10px;
   font-size: 18px;
   line-height: 1.8;
+  color: #f3f3f3;
 }
 .request__body .body__info span {
   font-size: 16px;
   color: #b0b8c1;
 }
 .request__body .body__info .info__input {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
-.request__body .body__info input[type='text'] {
+.request__body .body__info input[type='email'] {
   width: 450px;
   height: 48px;
   box-sizing: border-box;
-  margin: 40px 0 10px;
+  margin: 30px 0 10px;
   padding: 0 18px;
   border: none;
   border-radius: 6px;
   background-color: #343434;
-  color: #fff;
   font-size: 16px;
+  color: #fff;
   transition: 0.2s;
 }
-.request__body .body__info input[type='text']:hover {
+.request__body .body__info input[type='email']:hover {
   outline: none;
   box-shadow: 0 0 0 2px #f2a7bb;
 }
-.request__body .body__info input[type='text']:focus {
+.request__body .body__info input[type='email']:focus {
   outline: none;
   box-shadow: 0 0 0 2px #d97e9f;
 }
 .request__body .body__info .info__agree {
   margin-bottom: 10px;
-  color: #b0b8c1;
   font-size: 16px;
+  color: #b0b8c1;
 }
 .request__body .body__info label {
   font-size: 16px;
+  color: #f3f3f3;
 }
 .request__body .body__info input[type='checkbox'] {
   width: 16px;
@@ -127,9 +130,9 @@
   box-shadow: 0 0 0 1px #f2a7bb;
 }
 .request__body .body__info button {
+  box-sizing: border-box;
   width: 450px;
   height: 48px;
-  box-sizing: border-box;
   border: none;
   border-radius: 6px;
   background-color: #f2a7bb;
@@ -141,4 +144,82 @@
 }
 .request__body .body__info button:hover {
   background-color: #d97e9f;
+}
+
+/* MEDIA */
+@media screen and (max-width: 375px) {
+  .request {
+    padding: 100px 0 200px;
+  }
+  .request__inner {
+    width: 375px;
+    height: auto;
+  }
+
+  /* REQUEST TITLE */
+  .request__title h2 {
+    font-size: 36px;
+  }
+  .request__title p {
+    margin-bottom: 25px;
+  }
+  .request__title p span {
+    font-size: 22px;
+  }
+
+  /* REQUEST BODY */
+  .request__body {
+    display: inline;
+    width: 375px;
+    height: auto;
+  }
+  .request__body .body__image .image__preview img {
+    width: 300px;
+    height: auto;
+    margin: 0 auto;
+  }
+  .request__body .body__image label {
+    width: 150px;
+    height: 45px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+
+  /* REQUEST BODY INFO */
+  .request__body .body__info {
+    width: 300px;
+    margin: 0 auto;
+  }
+  .request__body .body__info p {
+    width: 300px;
+    margin: 0 auto 5px;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  .request__body .body__info span {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .request__body .body__info input[type='email'] {
+    width: 300px;
+    height: 40px;
+    font-size: 15px;
+  }
+  .request__body .body__info .info__agree {
+    margin-bottom: 5px;
+    font-size: 15px;
+  }
+  .request__body .body__info label {
+    font-size: 15px;
+  }
+  .request__body .body__info input[type='checkbox'] {
+    width: 15px;
+    height: 15px;
+  }
+  .request__body .body__info button {
+    width: 300px;
+    height: 40px;
+    font-size: 15px;
+  }
 }

@@ -1,18 +1,20 @@
 import React from 'react';
 import 'components/faqComponents/css/MainImage.css';
+import { useMediaQuery } from 'react-responsive';
 
-const MainImage = ({ blackpink }) => {
+const MainImage = ({ blackpink, isMobile }) => {
   return (
     <section className="faqmain" id="section__faq">
       <div className="faqmain__inner">
         <div className="fagmain__inner__wrapper">
-          {!blackpink ? (
+          {!blackpink && !isMobile ? (
             <>
               <div className="faqmain__team__img">
-                <img src={require('images/faq_main_team.png').default} alt="team" />
+                <img src="/images/devTeam/devTeam_photo1.jpg" alt="team" />
               </div>
             </>
           ) : (
+            // 모바일 버전에서는 블랙핑크 이미지만 보이게 함
             <>
               <div className="faqmain__inner__bg">
                 <h2>FASHION</h2>
@@ -21,7 +23,7 @@ const MainImage = ({ blackpink }) => {
                 <h2>PINK</h2>
                 <div className="faqmain__img__bg"></div>
                 <div className="faqmain__img">
-                  <img src={require('images/faq_main.png').default} alt="main image" />
+                  <img src="/images/faq/faq_main_blackpink.png" alt="main image" />
                 </div>
               </div>
             </>

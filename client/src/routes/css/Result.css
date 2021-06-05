@@ -3,16 +3,17 @@
   background-color: #fff;
 }
 .result__inner {
-  width: 80%;
-  height: 1000px;
+  width: 1100px;
   margin: 0 auto;
-  padding: 110px 0 300px;
+  padding: 125px 0 300px;
   color: black;
 }
 
 /* RESULT GUIDE */
 .result__inner .guide {
   color: #f2a7bb;
+  transform: 0.5s;
+  margin-bottom: 25px;
 }
 .result__inner .guide p {
   font-size: 20px;
@@ -22,6 +23,30 @@
 .result__inner .guide span {
   display: block;
   width: 60px;
-  margin: 0 auto 6px;
+  margin: 0 auto;
   font-size: 60px;
+}
+
+.result__inner .result__title {
+  width: auto;
+  height: 88px;
+  margin: 0 auto 25px;
+}
+/* .result__inner .guide.clicked {
+  animation: fade-out 1s;
+  animation-fill-mode: forwards;
+  background-color: #fff;
+}
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+} */
+
+/* RESULT CARDS */
+.result__inner .cards {
+  display: flex;
 }
