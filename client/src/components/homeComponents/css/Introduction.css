@@ -104,9 +104,6 @@
 .introduction__logos div img {
   width: 120px;
   height: 120px;
-  /* animation: target_image 8s;
-  animation-iteration-count: infinite;
-  transform-origin: 50% 50%; */
 }
 @keyframes target_image {
   0% {
@@ -137,6 +134,7 @@
   color: #b0b8c1;
 }
 
+/* FADEIN BOTTOM */
 @keyframes fadeinBottom {
   from {
     transform: translate(0px, 100px);

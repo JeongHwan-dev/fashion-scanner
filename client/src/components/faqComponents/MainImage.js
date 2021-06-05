@@ -2,7 +2,7 @@ import React from 'react';
 import 'components/faqComponents/css/MainImage.css';
 import { useMediaQuery } from 'react-responsive';
 
-const MainImage = ({ blackpink, isMobile}) => {
+const MainImage = ({ blackpink, isMobile }) => {
   // console.log(isMobile); // true
 
   return (
@@ -12,7 +12,7 @@ const MainImage = ({ blackpink, isMobile}) => {
           {!blackpink && !isMobile ? (
             <>
               <div className="faqmain__team__img">
-                <img src="/images/faq/faq_main_team.png" alt="team" />
+                <img src="/images/devTeam/devTeam_photo1.jpg" alt="team" />
               </div>
             </>
           ) : (

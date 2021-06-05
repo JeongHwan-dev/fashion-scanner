@@ -61,9 +61,24 @@ const Result = () => {
         <Navigation />
         <div className="result__inner">
           <div className={`guide ${isClicked ? 'clicked' : ''}`}>
-            <p>아래의 카드에 마우스를 올려주세요.</p>
-            <span className="material-icons">arrow_drop_down</span>
+            {!isClicked ? (
+              <>
+                <p>아래의 카드에 마우스를 올려주세요.</p>
+                <span className="material-icons">arrow_drop_down</span>
+              </>
+            ) : (
+              <>
+                <img
+                  className={`result__title`}
+                  src="/images/matching/matching_result_logo.png"
+                  alt="Which member are you?"
+                />
+              </>
+            )}
+            {/* <p>아래의 카드에 마우스를 올려주세요.</p>
+            <span className="material-icons">arrow_drop_down</span> */}
           </div>
+
           <div className="cards">
             <MemberCard
               memberObj={result.memberObj}
