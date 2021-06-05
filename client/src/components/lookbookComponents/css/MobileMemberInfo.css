@@ -1,0 +1,51 @@
+/* MOBILE LOOKBOOK SECTION */
+.m-memberInfo {
+  height: 600px;
+  background-color: rgb(252, 252, 252);
+}
+.m-memberInfo__inner {
+  position: relative;
+  overflow: hidden;
+  width: inherit;
+  height: 500px;
+}
+
+/* MOBILE LOOKBOOK MEMBER IMAGE */
+.m-memberInfo .m-memberInfo__inner .m-memberInfo__member {
+  position: relative;
+}
+.m-memberInfo .m-memberInfo__inner .m-memberInfo__member .m-memberInfo__member__img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 350px;
+  z-index: 2;
+}
+.m-memberInfo .m-memberInfo__inner .m-memberInfo__member .m-memberInfo__member__img img {
+  display: inline-block;
+  width: 180px;
+  height: 180px;
+  z-index: 2;
+}
+.m-memberInfo .m-memberInfo__inner .m-memberInfo__inner__bg{
+  position: absolute;
+  top: 150px;
+  right: -130px;
+  width: 350px;
+  height: 350px;
+  background-color: #1B1B1B;
+  border-radius: 50%;
+}
+
+/* MOBILE MEMBER INFO DSC */
+.m-memberInfo__dsc {
+  display: flex;
+  justify-content: center;
+}
+h2 {
+  font-family: 'BLACK PINK', 'sans-serif';
+  font-size: 40px;
+  font-weight: bold;
+  color: #FBBCBC;
+  z-index: 2;
+}
