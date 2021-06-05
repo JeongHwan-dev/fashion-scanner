@@ -4,7 +4,6 @@ import Navigation from 'components/commonComponents/Navigation';
 import MemberCard from 'components/matchingComponents/MemberCard';
 import InfoCard from 'components/matchingComponents/InfoCard';
 import Footer from 'components/commonComponents/Footer';
-
 import 'routes/css/Result.css';
 
 const Result = () => {
