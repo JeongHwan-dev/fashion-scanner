@@ -176,6 +176,5 @@
 .lookbookmain__thumbswiper .swiper-wrapper .swiper-slide.swiper-slide-thumb-active {
   opacity: 1;
   z-index: 1;
-  transform: scaleX(1.25);
   filter: drop-shadow(1px 1px 3px rgba(32, 32, 32, 0.568));
 }
