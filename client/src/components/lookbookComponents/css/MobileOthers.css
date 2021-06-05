@@ -12,6 +12,7 @@
 
 /* MOBILE OTHERS TITLE */
 .m-others__title {
+  margin-left: 10px;
   margin-bottom: 20px;
 }
 .m-others__title h2 {

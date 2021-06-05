@@ -48,7 +48,7 @@ const LookbookRose = () => {
       {!isMobile ? (
         <LookbookMain member={member} memberColor={memberColor} />
       ) : (
-        <MobileLookbookMain member={member} memberColor={memberColor} />
+        <MobileLookbookMain member={member} />
       )}
       {/* 다른 멤버 확인하기 */}
       {!isMobile ? <Others /> : <MobileOthers />}

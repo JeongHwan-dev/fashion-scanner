@@ -1,6 +1,6 @@
 /* MOBILE LOOKBOOK SECTION */
 .m-memberInfo {
-  height: 600px;
+  height: 550px;
   background-color: rgb(252, 252, 252);
 }
 .m-memberInfo__inner {
@@ -42,7 +42,7 @@
   display: flex;
   justify-content: center;
 }
-h2 {
+.m-memberInfo__dsc h2 {
   font-family: 'BLACK PINK', 'sans-serif';
   font-size: 40px;
   font-weight: bold;
