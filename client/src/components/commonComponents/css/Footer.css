@@ -87,7 +87,8 @@ footer .copyright .material-icons {
     bottom: 0;
   }
   footer .inner {
-    width: inherit;
+    box-sizing: border-box;
+    width: 375px;
     padding: 50px 20px;
     font-size: 15px;
   }
@@ -97,7 +98,7 @@ footer .copyright .material-icons {
 
   /* FOOTER INFO CONTACT */
   footer .info .info__contact {
-    position: static;
+    position: relative;
   }
   footer .info .info__contact li:first-child img {
     width: 250px;

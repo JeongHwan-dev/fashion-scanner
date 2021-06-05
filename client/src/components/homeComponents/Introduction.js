@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import { useMediaQuery } from 'react-responsive';
 import useOnScreen from 'hooks/useOnScreen';
 import 'components/homeComponents/css/Introduction.css';
 import intro from 'videos/intro.mp4';
@@ -6,6 +7,7 @@ import intro from 'videos/intro.mp4';
 const Introduction = () => {
   const imageRef = useRef(null);
   const isVisible = useOnScreen(imageRef);
+  const isMobile = useMediaQuery({ maxWidth: 375 });
 
   return (
     <>
@@ -19,10 +21,22 @@ const Introduction = () => {
               <h2>케이팝 스타들의 패션을 스캔합니다</h2>
             </li>
             <li className={`introduction__keyword ${isVisible ? 'scroll' : ''}`}>
-              <span>#AI</span>
-              <span>#IMAGE_SCANNING</span>
-              <span>#FASHION</span>
-              <span>#K-POP_STAR</span>
+              {!isMobile ? (
+                <>
+                  <span>#AI</span>
+                  <span>#IMAGE_SCANNING</span>
+                  <span>#FASHION</span>
+                  <span>#K-POP_STAR</span>
+                </>
+              ) : (
+                <>
+                  <span>#AI</span>
+                  <span>#IMAGE_SCANNING</span>
+                  <br />
+                  <span>#FASHION</span>
+                  <span>#K-POP_STAR</span>
+                </>
+              )}
             </li>
             <li className={`introduction__logos ${isVisible ? 'scroll' : ''}`}>
               <div>
@@ -39,11 +53,23 @@ const Introduction = () => {
               </div>
             </li>
             <li className={`introduction__dsc ${isVisible ? 'scroll' : ''}`}>
-              <p>
-                패션 스캐너는 업계에서 가장 HOT 한 케이팝 스타들의 패션을 분석합니다.
-                <br />
-                패션 전문 인공지능과 함께 새로운 패션 트렌드를 확인해보세요.
-              </p>
+              {!isMobile ? (
+                <>
+                  <p>
+                    패션 스캐너는 업계에서 가장 HOT 한 케이팝 스타들의 패션을 분석합니다.
+                    <br />
+                    패션 전문 인공지능과 함께 새로운 패션 트렌드를 확인해보세요.
+                  </p>
+                </>
+              ) : (
+                <>
+                  <p>
+                    패션 스캐너는 업계에서 가장 HOT한
+                    <br />
+                    케이팝 스타들의 패션을 분석합니다.
+                  </p>
+                </>
+              )}
             </li>
           </ul>
           <a className={`material-icons ${isVisible ? 'scroll' : ''}`} href="#section__magazine">

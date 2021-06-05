@@ -1,7 +1,10 @@
 import React from 'react';
+import { useMediaQuery } from 'react-responsive';
 import 'components/homeComponents/css/MemberMatching.css';
 
 const MemberMatching = () => {
+  const isMobile = useMediaQuery({ maxWidth: 375 });
+
   return (
     <>
       <section className="memberMatching" id="section__memberMatching">
@@ -18,13 +21,24 @@ const MemberMatching = () => {
                 AI가 어떤 멤버와 패션 성향이 가장 비슷한지 알려드립니다.
               </p>
             </div>
-            <div className="contents__btn">
-              <a href="/matching">바로가기</a>
-            </div>
+            {!isMobile && (
+              <>
+                <div className="contents__btn">
+                  <a href="/matching">바로가기</a>
+                </div>
+              </>
+            )}
           </div>
           <div className="memberMatching__img">
             <img src="/images/home/matching_group_photo.png" alt="GROUP Photo" />
           </div>
+          {isMobile && (
+            <>
+              <div className="contents__btn">
+                <a href="/matching">바로가기</a>
+              </div>
+            </>
+          )}
         </div>
       </section>
     </>

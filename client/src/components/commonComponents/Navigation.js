@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import 'components/commonComponents/css/Navigation.css';
 import { useMediaQuery } from 'react-responsive';
+import 'components/commonComponents/css/Navigation.css';
 
 const Navigation = () => {
   const isMobile = useMediaQuery({ maxWidth: 375 });
@@ -15,7 +15,7 @@ const Navigation = () => {
             <img src="/images/common/fs_s3_logo.png" alt="FASHION SCANNER" />
           </a>
           <span
-            class="material-icons"
+            className="material-icons"
             onClick={() => {
               setMenu(!menu);
             }}
@@ -43,11 +43,11 @@ const Navigation = () => {
               {!isMobile ? (
                 <>
                   <li>
-                    <a href="#">KOR</a>
+                    <a href="/">KOR</a>
                   </li>
                   <span>|</span>
                   <li>
-                    <a href="#">ENG</a>
+                    <a href="/">ENG</a>
                   </li>
                 </>
               ) : (

@@ -41,3 +41,55 @@
   transform: skewX(-8deg) scale(1.1);
   filter: none;
 }
+
+/* MEDIA */
+@media screen and (max-width: 375px) {
+  .lookbook {
+    padding: 100px 0;
+  }
+  .lookbook__inner {
+    width: 375px;
+    height: 900px;
+  }
+
+  /* LOOKBOOK TITLE */
+  .lookbook__title img {
+    width: auto;
+    height: 32px;
+    margin-bottom: 10px;
+  }
+  .lookbook__title img:nth-child(2) {
+    margin-bottom: 15px;
+  }
+  .lookbook__title span {
+    margin-bottom: 15px;
+    font-size: 14px;
+  }
+
+  /* LOOKBOOK MEMBERS */
+  .lookbook__members {
+    display: inline;
+    width: 360px;
+    height: auto;
+    margin: 15px;
+  }
+  .lookbook__members .members__inner {
+    width: 320px;
+    height: auto;
+    margin: 0 auto;
+  }
+  .lookbook__members a {
+    width: 200px;
+  }
+  .lookbook__members a .member {
+    width: 320px;
+    height: 180px;
+    margin: 5px 0;
+    transform: skewX(0deg);
+    filter: none;
+  }
+  .lookbook__members a .member:hover {
+    transform: skewX(0deg);
+    filter: none;
+  }
+}

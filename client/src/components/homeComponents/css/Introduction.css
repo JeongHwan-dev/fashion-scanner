@@ -1,6 +1,6 @@
 /* INTRODUCTION SECTION */
 .introduction {
-  padding: 200px 0 200px;
+  padding: 200px 0;
   overflow: hidden;
 }
 .introduction__inner {
@@ -20,6 +20,7 @@
 .introduction__inner video.scroll {
   animation: 1s zoomIn linear;
 }
+
 @keyframes zoomIn {
   from {
     transform: scale(1);
@@ -104,9 +105,6 @@
 .introduction__logos div img {
   width: 120px;
   height: 120px;
-  /* animation: target_image 8s;
-  animation-iteration-count: infinite;
-  transform-origin: 50% 50%; */
 }
 @keyframes target_image {
   0% {
@@ -137,6 +135,7 @@
   color: #b0b8c1;
 }
 
+/* FADEIN BOTTOM */
 @keyframes fadeinBottom {
   from {
     transform: translate(0px, 100px);
@@ -145,5 +144,80 @@
   to {
     transform: translate(0, 0);
     opacity: 1;
+  }
+}
+
+/* MEDIA */
+@media screen and (max-width: 375px) {
+  .introduction {
+    padding: 50px 0;
+  }
+  .introduction__inner {
+    position: relative;
+    width: 375px;
+    padding: 0px 0;
+  }
+
+  /* INTRODUCTION VIDEO */
+  .introduction__inner video {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    transform: scale(2.5);
+  }
+  .introduction__inner video.scroll {
+    animation: 1s zoomIn linear;
+  }
+  @keyframes zoomIn {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(2.5);
+    }
+  }
+
+  /* INTRODUCTION TITLE */
+  .introduction__title {
+    margin-bottom: 10px;
+  }
+  .introduction__title h2 {
+    padding: 0 40px;
+    font-size: 38px;
+  }
+
+  /* INTRODUCTION KEYWORD */
+  .introduction__keyword {
+    margin-bottom: 30px;
+  }
+  .introduction__keyword span {
+    font-size: 18px;
+  }
+  .introduction__keyword span:nth-child(4) {
+    color: #f2a7bb;
+  }
+  .introduction__keyword span:nth-child(5) {
+    color: #d97e9f;
+  }
+
+  /* INTRODUCTION LOGOS */
+  .introduction__logos {
+    margin-bottom: 20px;
+  }
+  .introduction__logos div {
+    margin: 0 15px;
+  }
+  .introduction__logos div img {
+    width: 60px;
+    height: auto;
+  }
+  .introduction__logos div p {
+    font-size: 14px;
+  }
+
+  /* INTRODUCTION DSC */
+  .introduction__dsc p {
+    margin-bottom: 0;
+    font-size: 16px;
   }
 }
