@@ -95,7 +95,8 @@
   /* MAIN IMAGE SECTION */
   .faqmain {
     padding: 0;
-    width: 100%;
+    width: 360px;
+    margin: auto;
   }
   .faqmain__inner {
     width: inherit;
@@ -108,8 +109,8 @@
   }
   .faqmain__inner__bg {
     position: relative;
-    width: 90%;
-    height: 600px;
+    width: 324px;
+    height: 500px;
     margin: auto;
     margin-top: 70px;
   }
@@ -121,14 +122,14 @@
   .faqmain__img {
     position: static;
     display: flex;
-    width: 90%;
+    width: 291px;
     margin: auto;
     top: 0;
     left: 0;
   }
   .faqmain__img img {
     display: inline-block;
-    width: 100%;
+    width: 291px;
     height: auto;
     top: 0;
   }
@@ -146,19 +147,19 @@
     color: #6b3f4c;
   }
   .faqmain__inner__bg h2:nth-child(1) {
-    top: 10%;
-    left: 11%;
+    top: 70px;
+    left: 30px;
   }
   .faqmain__inner__bg h2:nth-child(2) {
-    top: 20%;
-    left: 9%;
+    top: 120px;
+    left: 20px;
   }
   .faqmain__inner__bg h2:nth-child(3) {
-    bottom: 20%;
-    right: 20%;
+    bottom: 120px;
+    right: 65px;
   }
   .faqmain__inner__bg h2:nth-child(4) {
-    bottom: 10%;
-    right: 30%;
+    bottom: 70px;
+    right: 90px;
   }
 }

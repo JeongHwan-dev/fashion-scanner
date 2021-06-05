@@ -5,12 +5,17 @@ import Footer from 'components/commonComponents/Footer';
 import MemberInfo from 'components/lookbookComponents/MemberInfo';
 import LookbookMain from 'components/lookbookComponents/LookbookMain';
 import Others from 'components/lookbookComponents/Others';
+import { useMediaQuery } from 'react-responsive';
+import MobileMemberInfo from 'components/lookbookComponents/MobileMemberInfo';
+import MobileLookbookMain from 'components/lookbookComponents/MobileLookbookMain';
+import MobileOthers from 'components/lookbookComponents/MobileOthers';
 
 const LookbookRose = () => {
   // jennie:1, rose:2, jisoo:3, lisa:4
   const memberId = 2;
   const [member, setMemeber] = useState([]);
   const [memberColor, setMemberColor] = useState('');
+  const isMobile = useMediaQuery({ maxWidth: 375 });
 
   useEffect(() => {
     const getLookbookData = async () => {
@@ -34,11 +39,19 @@ const LookbookRose = () => {
       {/* HEADER */}
       <Navigation />
       {/* 멤버 소개 */}
-      <MemberInfo memberId={memberId} />
+      {!isMobile ? (
+        <MemberInfo memberId={memberId} />
+      ) : (
+        <MobileMemberInfo memberId={memberId} memberColor={memberColor} />
+      )}
       {/* 룩북 메인 */}
-      <LookbookMain member={member} memberColor={memberColor} />
+      {!isMobile ? (
+        <LookbookMain member={member} memberColor={memberColor} />
+      ) : (
+        <MobileLookbookMain member={member} />
+      )}
       {/* 다른 멤버 확인하기 */}
-      <Others />
+      {!isMobile ? <Others /> : <MobileOthers />}
       {/* footer */}
       <Footer />
     </>

@@ -54,7 +54,7 @@
 @media screen and (max-width:375px){
   /* NOT FOUND SECTION */
   .notfound {
-    width: 100%;
+    width: 375px;
   }
   .notfound .notfound__inner {
     width: inherit;
@@ -72,13 +72,14 @@
   }
   
   /* NOT FOUND DSC */
-  .notfound .notfound__inner .notfound__dsc{
+  .notfound .notfound__inner .notfound__dsc h2 {
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
     font-size: 22px;
   }
   .notfound .notfound__inner .notfound__dsc span{
     display: inline-block;
     font-size: 16px;
-    margin-bottom: 30px;
+    margin-bottom: 0;
   }
   .notfound .notfound__inner .notfound__dsc a{
     display: inline-block;
