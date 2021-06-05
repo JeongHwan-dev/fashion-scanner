@@ -33,3 +33,29 @@
   width: 1100px;
   min-width: 100%;
 }
+
+@media screen and (max-width: 375px) {
+  .title {
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    width: 375px;
+    height: 812px;
+    box-sizing: border-box;
+  }
+  .title__inner {
+    overflow: hidden;
+    width: 375px;
+    padding: 0;
+  }
+  .title__inner img {
+    width: auto;
+    height: 46px;
+  }
+  .title__inner h2 {
+    font-size: 20px;
+  }
+  .title #bg-video {
+    height: 812px;
+  }
+}

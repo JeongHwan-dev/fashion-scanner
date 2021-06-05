@@ -19,17 +19,17 @@ const Home = () => {
         {/* 01: TITLE */}
         <Title />
         {/* 02: INTRODUCTION */}
-        <Introduction />
+        {/* <Introduction /> */}
         {/* 03: MAGAZINE */}
-        <Magazine />
+        {/* <Magazine /> */}
         {/* 04: BLACKPINK VIDEO */}
-        <BpVideo />
+        {/* <BpVideo /> */}
         {/* 05: LOOKBOOK */}
-        <Lookbook />
+        {/* <Lookbook /> */}
         {/* 06: MEMBERMATCHING */}
-        <MemberMatching />
+        {/* <MemberMatching /> */}
         {/* 07: REQUEST */}
-        <Request />
+        {/* <Request /> */}
         {/* FOOTER */}
         <Footer />
       </div>

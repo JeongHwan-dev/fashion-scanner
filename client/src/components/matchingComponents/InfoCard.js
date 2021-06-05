@@ -35,7 +35,7 @@ const InfoCard = ({ memberObj, imgObj, isClicked }) => {
           </table>
         </div>
         <div className="infoCard__btn">
-          <a href={`/lookbook/${memberObj.name}`}>룩북 바로가기</a>
+          <a href={`/lookbook/${memberObj.name}`}>지수 룩북 바로가기</a>
         </div>
       </div>
     </>
