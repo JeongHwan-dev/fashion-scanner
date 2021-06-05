@@ -9,15 +9,15 @@
   font-family: 'Spoqa Han Sans Neo', 'sans-serif';
 }
 
-/* MAGAZINE INFORMATION */
-.magazine__info {
-  display: flex;
-}
-
 /* MAGAZINE TITLE */
 .magazine__title img {
   width: 600px;
   margin: 0 auto 100px;
+}
+
+/* MAGAZINE INFORMATION */
+.magazine__info {
+  display: flex;
 }
 
 /* MAGAZINE VIDEO */
@@ -47,4 +47,40 @@
   text-align: center;
   line-height: 1.8;
   color: #b0b8c1;
+}
+
+/* MEDIA */
+@media screen and (max-width: 375px) {
+  .magazine {
+    padding: 200px 0 100px;
+  }
+  .magazine__inner {
+    width: 375px;
+  }
+
+  /* MAGAZINE TITLE */
+  .magazine__title img {
+    width: 200px;
+    margin-bottom: 25px;
+  }
+
+  /* MAGAZINE INFORMATION */
+  .magazine__info {
+    display: inline;
+  }
+
+  /* MAGAZINE VIDEO */
+  .magazine__video {
+    width: 375px;
+    margin-bottom: 25px;
+  }
+
+  /* MAGAZINE DSC */
+  .magazine__dsc {
+    width: 375px;
+    padding: 0 20px;
+  }
+  .magazine__dsc p {
+    font-size: 15px;
+  }
 }

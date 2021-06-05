@@ -87,7 +87,7 @@ footer .copyright .material-icons {
     bottom: 0;
   }
   footer .inner {
-    width: inherit;
+    width: 375px;
     padding: 50px 20px;
     font-size: 15px;
   }

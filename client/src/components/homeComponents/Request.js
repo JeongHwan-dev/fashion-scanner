@@ -133,7 +133,7 @@ const Request = () => {
         <div className="request__inner">
           <div className="request__title">
             <h2>
-              패션스캐너를 즐기는
+              패션 스캐너를 즐기는
               <br />또 다른 방법
             </h2>
             <p>

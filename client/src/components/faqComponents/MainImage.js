@@ -3,8 +3,6 @@ import 'components/faqComponents/css/MainImage.css';
 import { useMediaQuery } from 'react-responsive';
 
 const MainImage = ({ blackpink, isMobile }) => {
-  // console.log(isMobile); // true
-
   return (
     <section className="faqmain" id="section__faq">
       <div className="faqmain__inner">

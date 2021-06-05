@@ -2,3 +2,10 @@
 .bpVideo {
   padding: 150px 0 100px;
 }
+
+/* MEDIA */
+@media screen and (max-width: 375px) {
+  .bpVideo {
+    padding: 100px 0;
+  }
+}

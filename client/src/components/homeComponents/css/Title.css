@@ -34,6 +34,7 @@
   min-width: 100%;
 }
 
+/* MEDIA */
 @media screen and (max-width: 375px) {
   .title {
     display: flex;
@@ -41,7 +42,8 @@
     align-items: center;
     width: 375px;
     height: 812px;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
+    padding-bottom: 50px;
   }
   .title__inner {
     overflow: hidden;
@@ -50,12 +52,12 @@
   }
   .title__inner img {
     width: auto;
-    height: 46px;
+    height: 48px;
   }
   .title__inner h2 {
-    font-size: 20px;
+    font-size: 22px;
   }
   .title #bg-video {
-    height: 812px;
+    height: 800px;
   }
 }

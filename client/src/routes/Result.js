@@ -9,6 +9,7 @@ import 'routes/css/Result.css';
 
 const Result = () => {
   const url = `http://elice-kdt-ai-track-vm-ai-13.koreacentral.cloudapp.azure.com:8000`;
+  const [isClicked, setIsClicked] = useState(false);
   const [result, setResult] = useState({
     memberObj: {
       name: '',
@@ -29,12 +30,14 @@ const Result = () => {
         name: 'jisoo',
         photo: '/images/matching/jisoo_card.jpg',
         sign: '/images/matching/jisoo_sign.png',
-        comment: '당신의 패션은 블랙 컬러로 포인트를 주는 지수와 매칭됩니다.',
+        title: '당신은 패완얼의 정석 지수',
+        comment1: '남다른 패션센스를 자랑하지만 가끔 얼굴때문에 그 센스가 묻히는군요.',
+        comment2: '지수의 룩북을 참고해보세요!',
         btnLabel: '지수 룩북 바로가기',
       },
       imgObj: {
-        type: '',
-        feature: '',
+        type: '티셔츠',
+        feature: '반팔, 하프넥, 스트라이프 패턴',
       },
     });
     // 추후 API 불러오기로 수정
@@ -48,11 +51,9 @@ const Result = () => {
     });
   };
 
-  const [isClicked, setIsClicked] = useState(false);
-
+  // 클릭 여부 확인 핸들러
   const onCardClickHandler = () => {
     setIsClicked(!isClicked);
-    console.log('clicked');
   };
 
   return (
@@ -75,10 +76,7 @@ const Result = () => {
                 />
               </>
             )}
-            {/* <p>아래의 카드에 마우스를 올려주세요.</p>
-            <span className="material-icons">arrow_drop_down</span> */}
           </div>
-
           <div className="cards">
             <MemberCard
               memberObj={result.memberObj}
