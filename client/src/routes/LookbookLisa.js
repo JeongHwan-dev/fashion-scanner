@@ -39,9 +39,17 @@ const LookbookLisa = () => {
       {/* HEADER */}
       <Navigation />
       {/* 멤버 소개 */}
-      {!isMobile ? <MemberInfo memberId={memberId} /> : <MobileMemberInfo memberId={memberId} memberColor={memberColor} />}
+      {!isMobile ? (
+        <MemberInfo memberId={memberId} />
+      ) : (
+        <MobileMemberInfo memberId={memberId} memberColor={memberColor} />
+      )}
       {/* 룩북 메인 */}
-      {!isMobile ? <LookbookMain member={member} memberColor={memberColor} /> : <MobileLookbookMain member={member} memberColor={memberColor} />}
+      {!isMobile ? (
+        <LookbookMain member={member} memberColor={memberColor} />
+      ) : (
+        <MobileLookbookMain member={member} memberColor={memberColor} />
+      )}
       {/* 다른 멤버 확인하기 */}
       {!isMobile ? <Others /> : <MobileOthers />}
       {/* footer */}
