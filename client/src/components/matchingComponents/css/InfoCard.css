@@ -3,12 +3,13 @@
   display: none;
   opacity: 0;
   width: 422.4px;
-  min-width: 422.4px;
   height: 563.2px;
-  margin: 0 auto;
-  padding: 90px 35px;
+  min-width: 330px;
+  min-height: 440px;
   box-sizing: border-box;
   box-shadow: 5px 5px 15px #6b6b6b;
+  margin: 0 auto;
+  padding: 90px 35px;
   border-radius: 12px;
   background-color: #f3f3f3;
 }
@@ -89,4 +90,31 @@
 .infoCard__btn a:hover {
   background-color: #d97e9f;
   color: #fff;
+}
+
+@media screen and (max-width: 375px) {
+  /* INFO CARD */
+  .infoCard {
+    width: 330px;
+    height: 440px;
+    box-shadow: 5px 5px 10px #6b6b6b;
+    padding: 50px 15px;
+  }
+
+  /* INFO CARD DSC */
+  .infoCard .infoCard__dsc p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  /* IMG OBJECT TABLE */
+  .infoCard__imgObj table {
+    font-size: 15px;
+  }
+
+  /* INFO CARD BUTTON */
+  .infoCard__btn a {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
 }

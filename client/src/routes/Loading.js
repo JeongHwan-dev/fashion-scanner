@@ -7,14 +7,13 @@ import { useMediaQuery } from 'react-responsive';
 
 const Loading = () => {
   const isMobile = useMediaQuery({
-    query: '(max-width: 375px)'
+    query: '(max-width: 375px)',
   });
-  // console.log(isMobile);
 
   return (
     <>
       {/* HEADER */}
-      {/* <Navigation /> */}
+      <Navigation />
       {!isMobile ? <Navigation /> : null}
       {/* LOADING PAGE */}
       <div className="loading">
