@@ -2,7 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://elice-kdt-ai-track-vm-ai-13.koreacentral.cloudapp.azure.com:8000/",
+  "proxy": "http://elice-kdt-ai-track-vm-distribute-13.koreacentral.cloudapp.azure.com:8001",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-brands-svg-icons": "^5.15.3",

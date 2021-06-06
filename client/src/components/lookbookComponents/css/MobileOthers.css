@@ -26,6 +26,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  width: 330px;
+  height: 365px;
 }
 .m-others .m-others__inner .m-others__others img {
   display: inline-block;
