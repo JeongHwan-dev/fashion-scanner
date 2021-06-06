@@ -151,8 +151,14 @@ header .language-group ul.language span {
 
   /* NAVIGATION LANGUAGE GROUP */
   header .language-group {
-    top: 6px;
+    top: 3px;
     right: 10px;
-    padding: 10px;
+    padding: 0;
+  }
+  header .language-group .language .lang {
+    display: none;
+  }
+  header .language-group .language .lang.active {
+    display: block;
   }
 }
