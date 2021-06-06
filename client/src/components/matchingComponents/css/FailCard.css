@@ -68,3 +68,33 @@
 .failCard__btn a label {
   cursor: pointer;
 }
+
+@media screen and (max-width: 375px) {
+  /* FAIL CARD */
+.failCard__inner {
+  width: 350px;
+  height: 350px;
+}
+
+/* FAIL CARD IMAGE */
+.failCard__img img {
+  width: 200px;
+}
+
+/* FAIL CARD TEXT */
+.failCard__text {
+  width: 250px;
+}
+.failCard__text p:nth-child(1) {
+  font-size: 18px;
+  border-radius: 5px;
+}
+.failCard__text p:nth-child(2) {
+  font-size: 14px;
+}
+
+/* FAIL BUTTON */
+.failCard__btn a {
+  font-size: 16px;
+}
+}
