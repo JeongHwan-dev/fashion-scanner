@@ -109,17 +109,19 @@ header .language-group ul.language span {
     z-index: 3;
   }
   header .inner {
-    width: inherit;
-    margin: 0 auto;
+    width: 375px;
   }
 
   /* NAVIGATION LOGO */
   header .logo {
-    left: 115px;
+    right: 0;
+    left: 0;
+    width: 180px;
   }
   header img {
-    width: 150px;
+    width: 180px;
     height: auto;
+    margin: 0 auto;
   }
 
   /* HAMBURGER ICON */
@@ -133,9 +135,10 @@ header .language-group ul.language span {
     overflow: hidden;
     top: 58px;
     right: 0;
+    z-index: 3;
     width: inherit;
     height: 0;
-    background-color: rgba(0, 0, 0, 0.664);
+    background-color: rgba(0, 0, 0, 0.85);
     transition: height 0.4s;
   }
   header .link-group.active {
@@ -152,13 +155,15 @@ header .language-group ul.language span {
   /* NAVIGATION LANGUAGE GROUP */
   header .language-group {
     top: 3px;
-    right: 10px;
-    padding: 0;
+    right: 0px;
+    padding: 0px;
   }
   header .language-group .language .lang {
     display: none;
   }
   header .language-group .language .lang.active {
     display: block;
+    right: 0;
+    padding: 15px;
   }
 }
