@@ -89,7 +89,8 @@ footer .copyright .material-icons {
   footer .inner {
     box-sizing: border-box;
     width: 375px;
-    padding: 50px 20px;
+    height: 530px;
+    padding: 50px 20px 15px;
     font-size: 15px;
   }
   footer .info {
