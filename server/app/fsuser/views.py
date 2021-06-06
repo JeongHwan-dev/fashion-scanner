@@ -23,6 +23,7 @@ class UserRequestImageAPIView(APIView):
             result = dict()
             result["user_image"] = user_image.data
             result["email"] = request.data.get("email")
+            result["statusCode"] = status.HTTP_201_CREATED
             return Response(result)
 
         except:
