@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Navigation, Pagination, Thumbs } from 'swiper';
+import SwiperCore, { Navigation, Thumbs } from 'swiper';
 import 'components/lookbookComponents/css/LookbookMain.css';
 import 'swiper/swiper-bundle.css';
 
-SwiperCore.use([Navigation, Pagination, Thumbs]);
+SwiperCore.use([Navigation, Thumbs]);
 
 const LookbookMain = ({ member, memberColor }) => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
@@ -98,7 +98,6 @@ const LookbookMain = ({ member, memberColor }) => {
             id="main"
             className="lookbookmain__mainswiper"
             navigation
-            pagination
             spaceBetween={0}
             slidesPerView={1}
             thumbs={{ swiper: thumbsSwiper }}
