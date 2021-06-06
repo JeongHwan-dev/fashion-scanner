@@ -12,7 +12,7 @@
 
 /* LOOKBOOK SWIPER 1 */
 .lookbookmain__mainswiper {
-  height: 800px;
+  height: 700px;
 }
 .lookbookmain__swiper1 {
   position: relative;
@@ -163,6 +163,7 @@
 .lookbookmain__swiper2 img {
   width: 80px;
   height: 80px;
+  object-fit: cover;
   cursor: pointer;
 }
 
@@ -176,6 +177,5 @@
 .lookbookmain__thumbswiper .swiper-wrapper .swiper-slide.swiper-slide-thumb-active {
   opacity: 1;
   z-index: 1;
-  transform: scaleX(1.25);
   filter: drop-shadow(1px 1px 3px rgba(32, 32, 32, 0.568));
 }
