@@ -1,0 +1,10 @@
+/* DEV TEAM */
+.devTeam {
+  background-color: #fff;
+}
+.devTeam__inner {
+  width: 1100px;
+  margin: 0 auto;
+  padding-top: 150px;
+  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+}

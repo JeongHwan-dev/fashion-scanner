@@ -1,0 +1,45 @@
+/* COMMON */
+body {
+  overflow-x: hidden;
+  height: 100%;
+  /* background-color: #101010; */
+  background-color: #000;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+  line-height: 1.4;
+  color: white;
+}
+html {
+  scroll-behavior: smooth;
+}
+img {
+  display: block;
+}
+a {
+  text-decoration: none;
+}
+.inner {
+  position: relative;
+  width: 1100px;
+  margin: 0 auto;
+}
+video {
+  width: 100%;
+}
+
+/* SWEET ALERT */
+.swal-modal .swal-button-container {
+  display: flex;
+}
+.swal-modal .swal-button-container button {
+  width: 120px;
+  margin: 0 auto;
+  border-radius: 6px;
+  background-color: #f2a7bb;
+  box-shadow: 0 0 0 0;
+  transition: 0.3s;
+}
+.swal-modal .swal-button-container button:hover {
+  background-color: #d97e9f;
+}

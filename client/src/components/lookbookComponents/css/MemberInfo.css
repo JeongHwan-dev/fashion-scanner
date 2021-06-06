@@ -1,0 +1,64 @@
+/* MEMBERINFO SECTION */
+.memberinfo {
+  padding-top: 150px;
+}
+.memberinfo__inner {
+  display: flex;
+  position: relative;
+  width: 1100px;
+  height: 450px;
+  margin: 0 auto;
+}
+.memberinfo__inner p {
+  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+  text-align: justify;
+}
+
+/* MEMBERINFO DSC */
+.memberinfo__img {
+  width: 550px;
+}
+.memberinfo__img img {
+  object-fit: cover;
+  width: 450px;
+  height: 450px;
+  margin-left: 20px;
+  margin-right: 80px;
+}
+.memberinfo__dsc {
+  width: 550px;
+  padding-top: 50px;
+}
+.memberinfo__dsc h2 {
+  opacity: 0;
+  margin-bottom: 35px;
+  font-size: 85px;
+  font-weight: 600;
+  color: #f2a7bb;
+  animation: toTheRight 1s 16 linear;
+  animation-iteration-count: 1;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+}
+.memberinfo__dsc p {
+  opacity: 0;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #b0b8c1;
+  animation: toTheRight 1s 16 linear;
+  animation-iteration-count: 1;
+  animation-delay: 0.6s;
+  animation-fill-mode: forwards;
+}
+
+/* MEMBERINFO ANIMATION */
+@keyframes toTheRight {
+  from {
+    transform: translate(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0px);
+    opacity: 1;
+  }
+}

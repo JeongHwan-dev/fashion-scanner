@@ -1,0 +1,30 @@
+/* DEV TEAM SUB */
+.devTeam__sub {
+  margin-bottom: 200px;
+  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+}
+
+/* TITLE IMG */
+.sub__logo {
+  margin-bottom: 120px;
+}
+.sub__logo img {
+  width: auto;
+  height: 60px;
+  margin: 0 auto 30px;
+}
+
+.sub__dsc h2 {
+  margin-bottom: 36px;
+  font-size: 42px;
+  font-weight: 600;
+  text-align: center;
+  color: #000;
+}
+.sub__dsc p {
+  padding: 0 260px;
+  font-size: 18px;
+  text-align: center;
+  line-height: 32px;
+  color: #333;
+}

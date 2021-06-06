@@ -3,11 +3,11 @@ from .models import ClothesCategory, ClothesAttribute, Color
 
 
 class ClothesCategoryAdmin(admin.ModelAdmin):
-    list_display = ("id", "category_name_en", "category_name_kr")
+    list_display = ("id", "name_en", "name_kr")
 
 
 class ClothesAttributeAdmin(admin.ModelAdmin):
-    list_display = ("id", "attribute_name_en", "attribute_name_kr")
+    list_display = ("id", "name_en", "name_kr")
 
 
 class ColorAdmin(admin.ModelAdmin):

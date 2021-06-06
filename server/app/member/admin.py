@@ -3,7 +3,7 @@ from .models import BlackpinkMember
 
 
 class BlackpinkMemberAdmin(admin.ModelAdmin):
-    list_display = ("member_name", "color_id")
+    list_display = ("name", "color")
 
 
 admin.site.register(BlackpinkMember, BlackpinkMemberAdmin)
