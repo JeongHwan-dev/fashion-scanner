@@ -74,12 +74,8 @@ header .language-group ul {
   display: flex;
 }
 header .language-group ul.language li {
-  position: relative;
-  width: auto;
-  height: 100%;
-}
-header .language-group ul.language li a {
   display: block;
+  position: relative;
   width: auto;
   height: 100%;
   box-sizing: border-box;
@@ -89,7 +85,8 @@ header .language-group ul.language li a {
   cursor: pointer;
   transition: 0.1s;
 }
-header .language-group ul.language li a:hover {
+
+header .language-group ul.language li:hover {
   color: #d1d6db;
 }
 header .language-group ul.language span {
@@ -154,8 +151,14 @@ header .language-group ul.language span {
 
   /* NAVIGATION LANGUAGE GROUP */
   header .language-group {
-    top: 6px;
+    top: 3px;
     right: 10px;
-    padding: 10px;
+    padding: 0;
+  }
+  header .language-group .language .lang {
+    display: none;
+  }
+  header .language-group .language .lang.active {
+    display: block;
   }
 }

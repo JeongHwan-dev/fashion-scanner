@@ -2,8 +2,11 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import 'components/commonComponents/css/Footer.css';
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
+  const { t } = useTranslation('footer');
+
   return (
     <>
       <footer>
@@ -17,13 +20,13 @@ const Footer = () => {
                 <li>
                   <p>
                     <span className="material-icons">place</span>
-                    강남구 선릉로 433 세방빌딩 6층
+                    {t('address')}
                   </p>
                 </li>
                 <li>
                   <p>
                     <span className="material-icons">phone</span>
-                    02-5986-8861
+                    {t('call')}
                   </p>
                 </li>
                 <li>
@@ -42,7 +45,7 @@ const Footer = () => {
                       <a href="/devTeam">ABOUT US</a>
                     </li>
                     <li>
-                      <a href="/faq">자주 묻는 질문</a>
+                      <a href="/faq">{t('faq')}</a>
                     </li>
                   </ul>
                 </li>
