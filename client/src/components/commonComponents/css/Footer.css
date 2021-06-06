@@ -109,6 +109,7 @@ footer .copyright .material-icons {
   footer .info .info__team {
     top: 250px;
     left: 20px;
+    margin-top: 25px;
   }
   footer .inner .copyright {
     width: 330px;
