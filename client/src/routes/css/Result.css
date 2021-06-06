@@ -14,6 +14,7 @@
   color: #f2a7bb;
   transform: 0.5s;
   margin-bottom: 25px;
+  animation: 1.3s fadein linear;
 }
 .result__inner .guide p {
   font-size: 20px;
@@ -27,26 +28,53 @@
   font-size: 60px;
 }
 
+/* RESULT TITLE */
 .result__inner .result__title {
   width: auto;
   height: 88px;
   margin: 0 auto 25px;
 }
-/* .result__inner .guide.clicked {
-  animation: fade-out 1s;
-  animation-fill-mode: forwards;
-  background-color: #fff;
-}
-@keyframes fade-out {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-} */
 
 /* RESULT CARDS */
 .result__inner .cards {
   display: flex;
+}
+
+/* FADEIN */
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  /* RESULT */
+  .result__inner {
+    width: 375px;
+    padding: 100px 0 150px;
+  }
+
+  /* RESULT GUIDE */
+  .result__inner .guide {
+    height: 88px;
+    margin-bottom: 15px;
+  }
+  .result__inner .guide span {
+    width: 50px;
+    font-size: 50px;
+  }
+
+  /* RESULT TITLE */
+  .result__inner .result__title {
+    height: 38px;
+    padding-top: 20px;
+  }
+
+  /* RESULT CARDS */
+  .result__inner .cards {
+    display: inline;
+  }
 }
