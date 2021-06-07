@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import swal from 'sweetalert';
 import 'components/homeComponents/css/Request.css';
 import axios from 'axios';
+import { LangContext } from 'context/LanguageContext';
+import { useTranslation } from 'react-i18next';
 
 const Request = () => {
   const url = `http://elice-kdt-ai-track-vm-ai-13.koreacentral.cloudapp.azure.com:8000`;
@@ -9,6 +11,8 @@ const Request = () => {
   const [requestImg, setRequestImg] = useState('');
   const [email, setEmail] = useState('');
   const [isChecked, setIsChecked] = useState(false);
+  const { currentLang, setEng, setKor } = useContext(LangContext); 
+  const { t } = useTranslation('request');
 
   // [요청 사진] 업로드 핸들러
   const onFileChange = (event) => {
@@ -133,12 +137,12 @@ const Request = () => {
         <div className="request__inner">
           <div className="request__title">
             <h2>
-              패션 스캐너를 즐기는
-              <br />또 다른 방법
+              {t('request__title1')}
+              <br />{t('request__title2')}
             </h2>
             <p>
               <span>#FASHIONSCANNER</span>
-              <span>#요청하기</span>
+              <span>{t('request__title__hashtag')}</span>
             </p>
           </div>
           <div className="request__body">
@@ -148,7 +152,7 @@ const Request = () => {
               </div>
               <div className="image__upload">
                 <label className="material-icons" htmlFor="reqeust-file">
-                  upload_file<span>사진 업로드</span>
+                  upload_file<span>{t('image__upload')}</span>
                 </label>
                 <input
                   type="file"
@@ -161,30 +165,29 @@ const Request = () => {
             </div>
             <div className="body__info">
               <p>
-                룩북에 추가하고 싶은 사진이 있으신가요?
+                {t('body__info1')}
                 <br />
-                블랙핑크 멤버가 입은 옷과 비슷한 옷을 한 번에 찾고 싶으신가요? 그럼 사진을 공유해
-                주세요!
+                {t('body__info2')}
                 <br />
-                요청해 주신 사진은 패션 스캐너의 인공지능 시스템을 거쳐 룩북에 추가될 예정입니다.
+                {t('body__info3')}
               </p>
-              <span>&#8251; 이메일 입력 시 요청 사진이 업로드되면 알림 메일을 보내드립니다.</span>
+              <span>&#8251; {t('body__info4')}</span>
               <form>
                 <div className="info__input">
                   <input
                     type="email"
                     onChange={onEmailHandler}
                     value={email}
-                    placeholder="이메일"
+                    placeholder={`${currentLang === 'ko' ? "이메일": "e-mail"}`}
                   />
-                  <p className="info__agree">&nbsp;&nbsp;* 이메일 입력은 선택사항입니다.</p>
+                  <p className="info__agree">&nbsp;&nbsp;* {t('info__agree')}</p>
                   <label>
                     <input type="checkbox" checked={isChecked} onChange={onCheckHandler} />
-                    이메일 수집 및 이용에 대한 동의
+                    {t('info__agree__box')}
                   </label>
                 </div>
               </form>
-              <button onClick={onRequestHanlder}>요청하기</button>
+              <button onClick={onRequestHanlder}>{t('button')}</button>
             </div>
           </div>
         </div>

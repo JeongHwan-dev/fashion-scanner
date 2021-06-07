@@ -8,7 +8,7 @@ import { useMediaQuery } from 'react-responsive';
 const Footer = () => {
   const { t } = useTranslation('footer');
   const isMobile = useMediaQuery({ maxWidth: 375 });
-  console.log(isMobile);
+  // console.log(isMobile);
 
   return (
     <>
@@ -23,7 +23,8 @@ const Footer = () => {
                 <li>
                   <p>
                     <span className="material-icons">place</span>
-                    {!isMobile ? (t('pcAddress')) : (t('mobileAddress'))}                  </p>
+                    {!isMobile ? t('pcAddress') : t('mobileAddress')}{' '}
+                  </p>
                 </li>
                 <li>
                   <p>
