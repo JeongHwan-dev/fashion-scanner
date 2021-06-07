@@ -8,7 +8,7 @@ const Questions = ({ blackpink, setBlackpink }) => {
   return (
     <section className="questions" id="section__questions">
       <div className="questions__inner">
-        <h2>{t('FAQ')}</h2>
+        <h2>{t('faq')}</h2>
         <div className="questions__tab">
           <div
             className={`questions__tab__content ${!blackpink ? 'active' : ''}`}
