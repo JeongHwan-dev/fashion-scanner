@@ -1,5 +1,5 @@
 {
-  "somethingWentWrong": "페이지를 찾을 수 없습니다.",
-  "tryAgain": "입력하신 주소를 다시 한 번 확인해주세요.",
-  "goBackToMain": "메인페이지 바로가기"
+  "something_went_wrong": "페이지를 찾을 수 없습니다.",
+  "try_again": "입력하신 주소를 다시 한 번 확인해주세요.",
+  "go_back_to_main": "메인페이지 바로가기"
 }

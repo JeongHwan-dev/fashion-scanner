@@ -1,5 +1,5 @@
 {
-  "somethingWentWrong": "Can't reach this page",
-  "tryAgain": "Make sure you've got the right web address",
-  "goBackToMain": "Go to Main page"
+  "something_went_wrong": "Can't reach this page",
+  "try_again": "Make sure you've got the right web address",
+  "go_back_to_main": "Go to Main page"
 }

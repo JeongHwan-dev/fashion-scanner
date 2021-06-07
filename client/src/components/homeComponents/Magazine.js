@@ -26,27 +26,27 @@ const Magazine = () => {
               {!isMobile ? (
                 <>
                   <p>
-                    {t('magazine__dsc1')}
+                    {t('magazine_dsc1')}
                     <br />
-                    {t('magazine__dsc2')}
+                    {t('magazine_dsc2')}
                     <br />
-                    {t('magazine__dsc3')}
+                    {t('magazine_dsc3')}
                     <br />
                     "Never wear the same outfits"
                     <br />
-                    {t('magazine__dsc4')}
+                    {t('magazine_dsc4')}
                   </p>
                 </>
               ) : (
                 <>
                   <p>
-                    {t('m-magazine__dsc1')}
+                    {t('m-magazine_dsc1')}
                     <br />
-                    {t('m-magazine__dsc2')}
+                    {t('m-magazine_dsc2')}
                     <br />
                     "Never wear the same outfits"
                     <br />
-                    {t('m-magazine__dsc3')}
+                    {t('m-magazine_dsc3')}
                   </p>
                 </>
               )}
