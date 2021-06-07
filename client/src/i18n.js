@@ -15,7 +15,7 @@ i18n
     fallbackLng: "ko",
     debug: false,
 //  string or array of namespaces to load
-    ns: ["navigation", "footer"],
+    ns: ["navigation", "footer", "memberInfo", "notFound", "questions"],
 //  default namespace used if not passed to 'translation function'
     defaultNS: "navigation",
 
