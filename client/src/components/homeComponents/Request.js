@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import swal from 'sweetalert';
 import 'components/homeComponents/css/Request.css';
 import axios from 'axios';
+import { LangContext } from 'context/LanguageContext';
 
 const Request = () => {
   const url = `http://elice-kdt-ai-track-vm-ai-13.koreacentral.cloudapp.azure.com:8000`;
@@ -9,6 +10,7 @@ const Request = () => {
   const [requestImg, setRequestImg] = useState('');
   const [email, setEmail] = useState('');
   const [isChecked, setIsChecked] = useState(false);
+  const { currentLang, setEng, setKor } = useContext(LangContext); 
 
   // [요청 사진] 업로드 핸들러
   const onFileChange = (event) => {
@@ -175,7 +177,7 @@ const Request = () => {
                     type="email"
                     onChange={onEmailHandler}
                     value={email}
-                    placeholder="이메일"
+                    placeholder={`${currentLang === 'ko' ? "이메일": "e-mail"}`}
                   />
                   <p className="info__agree">&nbsp;&nbsp;* 이메일 입력은 선택사항입니다.</p>
                   <label>
