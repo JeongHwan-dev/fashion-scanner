@@ -17,10 +17,8 @@ services:
     container_name: db
     volumes:
       - postgres_data:/var/lib/postgresql/data/
-    environment:
-      - POSTGRES_USER=fsuser
-      - POSTGRES_PASSWORD=fsblackpink
-      - POSTGRES_DB=fashion_scanner
-    
+    env_file:
+      - ./.env.dev.db
+
 volumes:
   postgres_data:
