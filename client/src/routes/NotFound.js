@@ -16,9 +16,9 @@ const NotFound = () => {
           </div>
           <div className="notfound__dsc">
             <h2>Oops!</h2>
-            <h2>{t('somethingWentWrong')}</h2>
-            <span>{t('tryAgain')}</span>
-            <a href="/">{t('goBackToMain')}</a>
+            <h2>{t('something_went_wrong')}</h2>
+            <span>{t('try_again')}</span>
+            <a href="/">{t('go_back_to_main')}</a>
           </div>
         </div>
       </div>

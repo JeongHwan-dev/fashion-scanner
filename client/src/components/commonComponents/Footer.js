@@ -23,7 +23,7 @@ const Footer = () => {
                 <li>
                   <p>
                     <span className="material-icons">place</span>
-                    {!isMobile ? t('pcAddress') : t('mobileAddress')}{' '}
+                    {!isMobile ? t('pc_address') : t('mobile_address')}{' '}
                   </p>
                 </li>
                 <li>
