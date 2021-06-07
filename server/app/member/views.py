@@ -31,8 +31,8 @@ def make_lookbook_data(lookbooks):
         data["lookbook_id"] = lookbook.id
         data["lookbook_image"] = BASE_URL + lookbook.image.url
         data["color"] = lookbook.color.hex_code
-        data["category"] = lookbook.category.name_kr
-        data["attributes"] = [attr.name_kr for attr in lookbook.attributes.all()]
+        data["category"] = lookbook.category.name_ko
+        data["attributes"] = [attr.name_ko for attr in lookbook.attributes.all()]
         data["similar_images"] = json.dumps(
             [
                 {
