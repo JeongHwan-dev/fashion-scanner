@@ -81,13 +81,13 @@ header .language-group ul.language li {
   box-sizing: border-box;
   padding: 12px 10px;
   font-size: 15px;
-  color: #fff;
+  color: #d1d6db;
   cursor: pointer;
   transition: 0.1s;
 }
 
-header .language-group ul.language li:hover {
-  color: #d1d6db;
+header .language-group ul.language li.active {
+  color: #ffffff;
 }
 header .language-group ul.language span {
   display: block;

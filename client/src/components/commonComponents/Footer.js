@@ -3,9 +3,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import 'components/commonComponents/css/Footer.css';
 import { useTranslation } from 'react-i18next';
+import { useMediaQuery } from 'react-responsive';
 
 const Footer = () => {
   const { t } = useTranslation('footer');
+  const isMobile = useMediaQuery({ maxWidth: 375 });
+  console.log(isMobile);
 
   return (
     <>
@@ -20,8 +23,7 @@ const Footer = () => {
                 <li>
                   <p>
                     <span className="material-icons">place</span>
-                    {t('address')}
-                  </p>
+                    {!isMobile ? (t('pcAddress')) : (t('mobileAddress'))}                  </p>
                 </li>
                 <li>
                   <p>
