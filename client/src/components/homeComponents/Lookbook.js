@@ -1,9 +1,11 @@
 import React from 'react';
 import { useMediaQuery } from 'react-responsive';
 import 'components/homeComponents/css/Lookbook.css';
+import { useTranslation } from 'react-i18next';
 
 const Lookbook = () => {
   const isMobile = useMediaQuery({ maxWidth: 375 });
+  const { t } = useTranslation('lookbook');
 
   return (
     <>
@@ -21,7 +23,7 @@ const Lookbook = () => {
                 <img src="/images/home/m_lookbook_logo2.png" alt="BLACKPINK LOOKBOOK" />
               </>
             )}
-            <span>멤버들을 클릭하여 룩북을 확인해보세요. CHECK!</span>
+            <span>{t('lookbook__title')}</span>
           </div>
           <div className="lookbook__members">
             {!isMobile ? (
