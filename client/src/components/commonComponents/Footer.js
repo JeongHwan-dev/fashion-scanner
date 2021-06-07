@@ -45,7 +45,7 @@ const Footer = () => {
                 <li className="team__dev">
                   <ul>
                     <li>
-                      <a href="/devTeam">ABOUT US</a>
+                      <a href="/devTeam">{t('culture')}</a>
                     </li>
                     <li>
                       <a href="/faq">{t('faq')}</a>
