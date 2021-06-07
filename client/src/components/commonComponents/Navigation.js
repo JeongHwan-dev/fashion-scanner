@@ -50,9 +50,9 @@ const Navigation = () => {
               {!isMobile ? (
                 // pc 화면일 때 나오는 다국어
                 <>
-                  <li onClick={setKor}>KOR</li>
+                  <li className={`lang ${currentLang === 'ko' ? 'active' : ''}`} onClick={setKor}>KOR</li>
                   <span>|</span>
-                  <li onClick={setEng}>ENG</li>
+                  <li className={`lang ${currentLang === 'en' ? 'active' : ''}`} onClick={setEng}>ENG</li>
                 </>
               ) : (
                 // 모바일 버전에서 나오는 다국어
@@ -61,13 +61,13 @@ const Navigation = () => {
                     className={`lang ${currentLang === 'ko' ? 'active' : ''}`}
                     onClick={setEng}
                   >
-                    ENG
+                    KOR
                   </li>
                   <li
                     className={`lang ${currentLang === 'en' ? 'active' : ''}`}
                     onClick={setKor}
                   >
-                    KOR
+                    ENG
                   </li>
                 </>
               )}
