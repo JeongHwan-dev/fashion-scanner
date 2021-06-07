@@ -23,7 +23,7 @@ const Lookbook = () => {
                 <img src="/images/home/m_lookbook_logo2.png" alt="BLACKPINK LOOKBOOK" />
               </>
             )}
-            <span>{t('lookbook__title')}</span>
+            <span>{t('lookbook_title')}</span>
           </div>
           <div className="lookbook__members">
             {!isMobile ? (

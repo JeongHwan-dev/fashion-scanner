@@ -137,12 +137,12 @@ const Request = () => {
         <div className="request__inner">
           <div className="request__title">
             <h2>
-              {t('request__title1')}
-              <br />{t('request__title2')}
+              {t('request_title1')}
+              <br />{t('request_title2')}
             </h2>
             <p>
               <span>#FASHIONSCANNER</span>
-              <span>{t('request__title__hashtag')}</span>
+              <span>{t('request_title_hashtag')}</span>
             </p>
           </div>
           <div className="request__body">
@@ -152,7 +152,7 @@ const Request = () => {
               </div>
               <div className="image__upload">
                 <label className="material-icons" htmlFor="reqeust-file">
-                  upload_file<span>{t('image__upload')}</span>
+                  upload_file<span>{t('image_upload')}</span>
                 </label>
                 <input
                   type="file"
@@ -165,13 +165,13 @@ const Request = () => {
             </div>
             <div className="body__info">
               <p>
-                {t('body__info1')}
+                {t('body_info1')}
                 <br />
-                {t('body__info2')}
+                {t('body_info2')}
                 <br />
-                {t('body__info3')}
+                {t('body_info3')}
               </p>
-              <span>&#8251; {t('body__info4')}</span>
+              <span>&#8251; {t('body_info4')}</span>
               <form>
                 <div className="info__input">
                   <input
@@ -180,10 +180,10 @@ const Request = () => {
                     value={email}
                     placeholder={`${currentLang === 'ko' ? "이메일": "e-mail"}`}
                   />
-                  <p className="info__agree">&nbsp;&nbsp;* {t('info__agree')}</p>
+                  <p className="info__agree">&nbsp;&nbsp;* {t('info_agree')}</p>
                   <label>
                     <input type="checkbox" checked={isChecked} onChange={onCheckHandler} />
-                    {t('info__agree__box')}
+                    {t('info_agree_box')}
                   </label>
                 </div>
               </form>

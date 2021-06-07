@@ -20,7 +20,7 @@ const Introduction = () => {
           </video>
           <ul>
             <li className={`introduction__title ${isVisible ? 'scroll' : ''}`}>
-              <h2>{t('introduction__title')}</h2>
+              <h2>{t('introduction_title')}</h2>
             </li>
             <li className={`introduction__keyword ${isVisible ? 'scroll' : ''}`}>
               {!isMobile ? (
@@ -58,17 +58,17 @@ const Introduction = () => {
               {!isMobile ? (
                 <>
                   <p>
-                    {t('introduction__dsc1')}
+                    {t('introduction_dsc1')}
                     <br />
-                    {t('introduction__dsc2')}
+                    {t('introduction_dsc2')}
                   </p>
                 </>
               ) : (
                 <>
                   <p>
-                    {t('m-introduction__dsc1')}
+                    {t('m-introduction_dsc1')}
                     <br />
-                    {t('m-introduction__dsc2')}
+                    {t('m-introduction_dsc2')}
                   </p>
                 </>
               )}
