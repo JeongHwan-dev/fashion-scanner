@@ -149,8 +149,9 @@
 
 /* MEDIA */
 @media screen and (max-width: 375px) {
+  /* INTRODUCTION */
   .introduction {
-    padding: 50px 0;
+    padding: 150px 0;
   }
   .introduction__inner {
     position: relative;
