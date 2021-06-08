@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import CultureCard from 'components/devTeamComponents/CultureCard';
 import culture1 from 'videos/vod_culture1.mp4';
 import culture2 from 'videos/vod_culture2.mp4';
@@ -6,8 +6,11 @@ import culture3 from 'videos/vod_culture3.mp4';
 import culture4 from 'videos/vod_culture4.mp4';
 import culture5 from 'videos/vod_culture5.mp4';
 import 'components/devTeamComponents/css/Cultures.css';
+import { LangContext } from 'context/LanguageContext';
+
 
 const Cultures = () => {
+  const { currentLang } = useContext(LangContext); 
   const members = [
     {
       id: 1,
@@ -93,18 +96,100 @@ const Cultures = () => {
     },
   ];
 
+  const membersEn = [
+    {
+      id: 1,
+      title: {
+        t1: 'Trendy people gathred',
+        t2: 'to lead the Trend',
+      },
+      position: 'PM & AI Sihyun Cha',
+      content: `Fashion Scanner crew reads trend and creates trendy services. Instead of blindly chasing the trend, we think of it as a 'changing value' that users prefer. We will consistantly think about services that users can satisfy, and our ultimate goal is to provide a web service that people who want to know the trend always visit.`,
+      hashtag: {
+        h1: '#Reading Trend',
+        h2: '#Leading Trend',
+      },
+      vod: culture1,
+    },
+    {
+      id: 2,
+      title: {
+        t1: 'Make the World',
+        t2: 'a Better Place',
+      },
+      position: 'AI  Chan Mi Lee',
+      content: `We are passionate about making the world a better place with our technologies. We provide helpful services for users' daily lives. We always consider the effect of our services on people and society and strive to make a positive impact. `,
+      hashtag: {
+        h1: '#BetterLife',
+        h2: '#BetterWorld',
+      },
+      vod: culture5,
+    },
+    {
+      id: 3,
+      title: {
+        t1: 'We make better performance',
+        t2: 'with communication and teamwork.',
+      },
+      position: 'Front-end Suyeon Kim',
+      content: `No one can make value that a team can create when a perfect individual is responsible for everything. We work together, knowing what our team goal is in areas we expertise. We hear each other's opinions, give some feedbacks positively and make better performance.`,
+      hashtag: {
+        h1: '#the_best_welfare_is_colleagues',
+        h2: '#trust_to_trust',
+      },
+      vod: culture3,
+    },
+    {
+      id: 4,
+      title: {
+        t1: 'Through the Code refactoring',
+        t2: 'Achieve clean code.',
+      },
+      position: 'Front-end Jeong Hwan Park',
+      content: `"What code is this? which logic are you trying to implement?" If fellow developers often asks this question, the code may be in the wrong way. We think that good code is code that can be read smoothly as if reading a book no matter who the reader is. To this end, we try to improve the code through refactoring.`,
+      hashtag: {
+        h1: '#Collaboration Skills',
+        h2: '#Clean Code',
+      },
+      vod: culture2,
+    },
+    {
+      id: 5,
+      title: {
+        t1: 'Contemplate valuable things',
+        t2: 'and constantly explore',
+      },
+      position: 'Back-end Borahm Lee',
+      content: `We think about the point where the value of service begins. Because value creates new opportunities. Continuously explore technology to discover value. If found, we study how to reveal value to the world. Every experience we get from learning and exploring is a valuable asset to us.`,
+      hashtag: {
+        h1: '#Value First In',
+        h2: '#Value First out',
+      },
+      vod: culture4,
+    },
+  ];
+
   // 개발 문화 카드 랜더링 메서드
   const rendering = () => {
     const result = [];
-    for (let i = 0; i < members.length; i++) {
+    for (let i = 0; i < membersEn.length; i++) {
       result.push(<CultureCard key={i} memberObj={members[i]} />);
+    }
+    return result;
+  };
+
+  const renderingEn = () => {
+    const result = [];
+    for (let i = 0; i < membersEn.length; i++) {
+      result.push(<CultureCard key={i} memberObj={membersEn[i]} />);
     }
     return result;
   };
 
   return (
     <>
-      <div className="devTeam__cultures">{rendering()}</div>
+      {/* <div className="devTeam__cultures">{rendering()}</div> */}
+      <div className="devTeam__cultures">{currentLang === 'ko' ? rendering() : renderingEn()}</div>
     </>
   );
 };
