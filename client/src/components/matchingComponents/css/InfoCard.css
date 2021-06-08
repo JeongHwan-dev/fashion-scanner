@@ -6,10 +6,10 @@
   height: 563.2px;
   min-width: 330px;
   min-height: 440px;
-  box-sizing: border-box;
-  box-shadow: 5px 5px 15px #6b6b6b;
   margin: 0 auto;
   padding: 40px 35px;
+  box-sizing: border-box;
+  box-shadow: 5px 5px 15px #6b6b6b;
   border-radius: 12px;
   background-color: #f3f3f3;
 }
@@ -61,8 +61,8 @@
 .infoCard__imgObj td {
   width: 200px;
   padding: 5px;
-  background: #ddd;
   border: 2px solid #fff;
+  background: #ddd;
   text-align: center;
 }
 .infoCard__imgObj tr:first-child td {
@@ -133,8 +133,8 @@
 .sharing__btn {
   width: inherit;
   height: inherit;
-  box-sizing: border-box;
   border: none;
+  box-sizing: border-box;
   background-color: transparent;
   cursor: pointer;
 }
@@ -149,8 +149,8 @@
   .infoCard {
     width: 330px;
     height: 440px;
-    box-shadow: 5px 5px 10px #6b6b6b;
     padding: 30px 15px;
+    box-shadow: 5px 5px 10px #6b6b6b;
   }
 
   /* INFO CARD DSC */

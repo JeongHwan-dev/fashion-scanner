@@ -4,16 +4,16 @@
   width: 1056px;
   margin: 0 auto 120px;
   border-radius: 12px;
-  box-shadow: 5px 5px 10px gray;
+  box-shadow: 5px 5px 10px #919191;
 }
 
 /* CULUTRE CARD CONT */
 .culture__card .card__cont {
   width: 528px;
   height: 619px;
-  box-sizing: border-box;
   padding: 60px;
   border-radius: 12px 0 0 12px;
+  box-sizing: border-box;
   background-color: #fff;
   font-family: 'Spoqa Han Sans Neo', 'sans-serif';
   color: black;
@@ -72,9 +72,9 @@
     backface-visibility: hidden;
     width: inherit;
     height: inherit;
+    border-radius: 12px;
     box-sizing: border-box;
     box-shadow: 5px 5px 10px gray;
-    border-radius: 12px;
     background-color: #fff;
     transition: 1.3s;
   }
@@ -117,14 +117,13 @@
 
   /* DEV CARD BACK */
   .culture__card .devCard.back {
-    box-shadow: 5px 5px 10px gray;
+    box-shadow: 5px 5px 10px #919191;
     padding: 50px 24px 20px;
     transform: rotateY(180deg);
   }
   .culture__card.clicked .devCard.back {
     transform: rotateY(0deg);
   }
-
   .culture__card .devCard.back h2 {
     margin-bottom: 20px;
     font-size: 26px;
@@ -144,7 +143,6 @@
     margin-right: 4px;
     font-size: 14px;
   }
-
   .culture__card .devCard.back button {
     position: absolute;
     bottom: 0;

@@ -93,8 +93,8 @@ const Cultures = () => {
     },
   ];
 
-  // 개발 문화 카드 랜더링 메서드
-  const rendering = () => {
+  // 개발 문화 카드 랜더링
+  const cardRendering = () => {
     const result = [];
     for (let i = 0; i < members.length; i++) {
       result.push(<CultureCard key={i} memberObj={members[i]} />);
@@ -104,7 +104,7 @@ const Cultures = () => {
 
   return (
     <>
-      <div className="devTeam__cultures">{rendering()}</div>
+      <div className="devTeam__cultures">{cardRendering()}</div>
     </>
   );
 };

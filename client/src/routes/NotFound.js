@@ -1,6 +1,6 @@
 import React from 'react';
-import 'routes/css/NotFound.css';
 import { useTranslation } from 'react-i18next';
+import 'routes/css/NotFound.css';
 
 const NotFound = () => {
   const { t } = useTranslation('notFound');

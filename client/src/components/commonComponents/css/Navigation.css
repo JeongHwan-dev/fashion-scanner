@@ -6,7 +6,7 @@ header {
   width: 100%;
   height: 58px;
   background-color: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(30px);
+  backdrop-filter: blur(50px);
 }
 header nav {
   position: relative;
@@ -51,12 +51,12 @@ header .link-group ul.link li a {
   display: block;
   width: auto;
   height: 100%;
-  box-sizing: border-box;
   padding: 12px 10px;
+  box-sizing: border-box;
   font-size: 15px;
   color: #fff;
   cursor: pointer;
-  transition: 0.1s;
+  transition: 0.2s;
 }
 header .link-group ul.link li a:hover {
   color: #d1d6db;
@@ -78,28 +78,31 @@ header .language-group ul.language li {
   position: relative;
   width: auto;
   height: 100%;
-  box-sizing: border-box;
   padding: 12px 10px;
+  box-sizing: border-box;
   font-size: 15px;
-  color: #d1d6db;
+  color: #e0e0e0;
   cursor: pointer;
-  transition: 0.1s;
+  transition: 0.2s;
 }
-
+header .language-group ul.language li:hover {
+  color: #fff;
+}
 header .language-group ul.language li.active {
-  color: #ffffff;
+  color: #fff;
 }
 header .language-group ul.language span {
   display: block;
   width: auto;
   height: 100%;
-  box-sizing: border-box;
   padding: 12px 10px;
+  box-sizing: border-box;
   font-size: 15px;
   color: #fff;
-  transition: 0.1s;
+  transition: 0.2s;
 }
 
+/* MEDIA */
 @media screen and (max-width: 375px) {
   /* NAVIGATION */
   header {
@@ -142,14 +145,14 @@ header .language-group ul.language span {
     transition: height 0.4s;
   }
   header .link-group.active {
-    height: 180px;
+    height: 280px;
   }
   header .link-group ul.link {
     flex-direction: column;
     width: inherit;
   }
   header .link-group ul.link li a {
-    padding: 12px 20px;
+    padding: 18px 20px;
   }
 
   /* NAVIGATION LANGUAGE GROUP */
@@ -165,5 +168,18 @@ header .language-group ul.language span {
     display: block;
     right: 0;
     padding: 15px;
+  }
+  header .link-group.active ul.link .lang__a {
+    display: flex;
+  }
+  header .link-group.active ul.link .lang__a a {
+    color: #e0e0e0;
+  }
+  header .link-group.active ul.link .lang__a a.active {
+    color: #fff;
+  }
+  header .link-group.active ul.link .lang__a span {
+    align-items: center;
+    margin: auto 10px;
   }
 }

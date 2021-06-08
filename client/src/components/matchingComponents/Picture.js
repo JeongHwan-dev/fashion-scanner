@@ -124,7 +124,12 @@ const Picture = () => {
               첨부된 사진은 목적 달성 후 내부 방침 및 기타 관련 법령에 따라 일정기간 저장됩니다.
             </p>
             <label>
-              <input type="checkbox" checked={isChecked} onChange={onCheckHandler} />
+              <input
+                type="checkbox"
+                disabled={!requestImg}
+                checked={isChecked}
+                onChange={onCheckHandler}
+              />
               동의합니다.
             </label>
           </div>

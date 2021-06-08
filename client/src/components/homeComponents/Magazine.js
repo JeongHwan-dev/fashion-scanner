@@ -1,9 +1,8 @@
 import React from 'react';
 import { useMediaQuery } from 'react-responsive';
+import { useTranslation } from 'react-i18next';
 import magazine from 'videos/magazine.mp4';
 import 'components/homeComponents/css/Magazine.css';
-import { faRProject } from '@fortawesome/free-brands-svg-icons';
-import { useTranslation } from 'react-i18next';
 
 const Magazine = () => {
   const isMobile = useMediaQuery({ maxWidth: 375 });

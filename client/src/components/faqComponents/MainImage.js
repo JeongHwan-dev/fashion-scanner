@@ -1,6 +1,5 @@
 import React from 'react';
 import 'components/faqComponents/css/MainImage.css';
-import { useMediaQuery } from 'react-responsive';
 
 const MainImage = ({ blackpink, isMobile }) => {
   return (
@@ -14,7 +13,7 @@ const MainImage = ({ blackpink, isMobile }) => {
               </div>
             </>
           ) : (
-            // 모바일 버전에서는 블랙핑크 이미지만 보이게 함
+            // 모바일 버전에서는 블랙핑크 이미지만 출력
             <>
               <div className="faqmain__inner__bg">
                 <h2>FASHION</h2>

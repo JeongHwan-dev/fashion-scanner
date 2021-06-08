@@ -1,9 +1,9 @@
 import React, { useRef } from 'react';
 import { useMediaQuery } from 'react-responsive';
-import useOnScreen from 'hooks/useOnScreen';
-import 'components/homeComponents/css/Introduction.css';
-import intro from 'videos/intro.mp4';
 import { useTranslation } from 'react-i18next';
+import useOnScreen from 'hooks/useOnScreen';
+import intro from 'videos/intro.mp4';
+import 'components/homeComponents/css/Introduction.css';
 
 const Introduction = () => {
   const imageRef = useRef(null);

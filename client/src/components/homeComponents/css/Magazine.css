@@ -39,8 +39,8 @@
 .magazine__dsc {
   display: flex;
   align-items: center;
-  box-sizing: border-box;
   padding-left: 20px;
+  box-sizing: border-box;
 }
 .magazine__dsc p {
   font-size: 20px;
@@ -60,7 +60,7 @@
 
   /* MAGAZINE TITLE */
   .magazine__title img {
-    width: 200px;
+    width: 280px;
     margin-bottom: 25px;
   }
 

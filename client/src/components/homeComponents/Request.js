@@ -1,9 +1,9 @@
 import React, { useContext, useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { LangContext } from 'context/LanguageContext';
+import axios from 'axios';
 import swal from 'sweetalert';
 import 'components/homeComponents/css/Request.css';
-import axios from 'axios';
-import { LangContext } from 'context/LanguageContext';
-import { useTranslation } from 'react-i18next';
 
 const Request = () => {
   const url = `http://elice-kdt-ai-track-vm-ai-13.koreacentral.cloudapp.azure.com:8000`;
@@ -11,7 +11,7 @@ const Request = () => {
   const [requestImg, setRequestImg] = useState('');
   const [email, setEmail] = useState('');
   const [isChecked, setIsChecked] = useState(false);
-  const { currentLang, setEng, setKor } = useContext(LangContext); 
+  const { currentLang, setEng, setKor } = useContext(LangContext);
   const { t } = useTranslation('request');
 
   // [요청 사진] 업로드 핸들러
@@ -54,7 +54,7 @@ const Request = () => {
 
   // [요청 사진] 제출 핸들러
   const onRequestHanlder = async () => {
-    if (previewImg !== 'images/request_sample.jpg') {
+    if (requestImg) {
       if (email) {
         if (isChecked == true) {
           // 사진 업로드, 이메일 작성, 정보 제공 동의 체크 모두 완료 시
@@ -138,7 +138,8 @@ const Request = () => {
           <div className="request__title">
             <h2>
               {t('request_title1')}
-              <br />{t('request_title2')}
+              <br />
+              {t('request_title2')}
             </h2>
             <p>
               <span>#FASHIONSCANNER</span>
@@ -178,11 +179,16 @@ const Request = () => {
                     type="email"
                     onChange={onEmailHandler}
                     value={email}
-                    placeholder={`${currentLang === 'ko' ? "이메일": "e-mail"}`}
+                    placeholder={`${currentLang === 'ko' ? '이메일' : 'e-mail'}`}
                   />
                   <p className="info__agree">&nbsp;&nbsp;* {t('info_agree')}</p>
                   <label>
-                    <input type="checkbox" checked={isChecked} onChange={onCheckHandler} />
+                    <input
+                      type="checkbox"
+                      disabled={!email}
+                      checked={isChecked}
+                      onChange={onCheckHandler}
+                    />
                     {t('info_agree_box')}
                   </label>
                 </div>

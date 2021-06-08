@@ -1,6 +1,6 @@
 import React from 'react';
-import 'components/faqComponents/css/Questions.css';
 import { useTranslation } from 'react-i18next';
+import 'components/faqComponents/css/Questions.css';
 
 const Questions = ({ blackpink, setBlackpink }) => {
   const { t } = useTranslation('questions');

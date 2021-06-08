@@ -1,7 +1,7 @@
 import React from 'react';
 import { useMediaQuery } from 'react-responsive';
-import 'components/homeComponents/css/MemberMatching.css';
 import { useTranslation } from 'react-i18next';
+import 'components/homeComponents/css/MemberMatching.css';
 
 const MemberMatching = () => {
   const isMobile = useMediaQuery({ maxWidth: 375 });

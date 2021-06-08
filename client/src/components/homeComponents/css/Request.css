@@ -91,11 +91,11 @@
 .request__body .body__info input[type='email'] {
   width: 450px;
   height: 48px;
-  box-sizing: border-box;
   margin: 30px 0 10px;
   padding: 0 18px;
   border: none;
   border-radius: 6px;
+  box-sizing: border-box;
   background-color: #343434;
   font-size: 16px;
   color: #fff;
@@ -203,7 +203,7 @@
   }
   .request__body .body__info input[type='email'] {
     width: 300px;
-    height: 40px;
+    height: 45px;
     font-size: 15px;
   }
   .request__body .body__info .info__agree {
@@ -219,7 +219,7 @@
   }
   .request__body .body__info button {
     width: 300px;
-    height: 40px;
+    height: 45px;
     font-size: 15px;
   }
 }

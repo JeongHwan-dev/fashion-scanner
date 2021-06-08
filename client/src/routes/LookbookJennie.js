@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
+import { useMediaQuery } from 'react-responsive';
 import axios from 'axios';
 import Navigation from 'components/commonComponents/Navigation';
-import Footer from 'components/commonComponents/Footer';
 import MemberInfo from 'components/lookbookComponents/MemberInfo';
-import LookbookMain from 'components/lookbookComponents/LookbookMain';
-import Others from 'components/lookbookComponents/Others';
-import { useMediaQuery } from 'react-responsive';
 import MobileMemberInfo from 'components/lookbookComponents/MobileMemberInfo';
+import LookbookMain from 'components/lookbookComponents/LookbookMain';
 import MobileLookbookMain from 'components/lookbookComponents/MobileLookbookMain';
+import Others from 'components/lookbookComponents/Others';
 import MobileOthers from 'components/lookbookComponents/MobileOthers';
+import Footer from 'components/commonComponents/Footer';
 
 const LookbookJennie = () => {
   // jennie:1, rose:2, jisoo:3, lisa:4
@@ -36,23 +36,21 @@ const LookbookJennie = () => {
 
   return (
     <>
-      {/* HEADER */}
       <Navigation />
-      {/* 멤버 소개 */}
+      {/* 01 : MEMBER INFORMATION */}
       {!isMobile ? (
         <MemberInfo memberId={memberId} />
       ) : (
         <MobileMemberInfo memberId={memberId} memberColor={memberColor} />
       )}
-      {/* 룩북 메인 */}
+      {/* 02 : LOOKBOOK MAIN */}
       {!isMobile ? (
         <LookbookMain member={member} memberColor={memberColor} />
       ) : (
         <MobileLookbookMain member={member} />
       )}
-      {/* 다른 멤버 확인하기 */}
+      {/* 03 : OTHER MEMBERS CHECK */}
       {!isMobile ? <Others /> : <MobileOthers />}
-      {/* footer */}
       <Footer />
     </>
   );

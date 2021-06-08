@@ -4,8 +4,6 @@ import 'components/lookbookComponents/css/MobileMemberInfo.css';
 const MobileMemberInfo = ({ memberId, memberColor }) => {
   // jennie:1, rose:2, jisoo:3, lisa:4
   const symbolColor = `#${memberColor}`;
-  // console.log(memberId, memberColor); // 1, 101010
-  // console.log(symbolColor); // #101010
   const symbolBox = {
     position: 'absolute',
     top: '90px',

@@ -42,17 +42,19 @@
 }
 .loading__video video {
   width: 400px;
+  border-radius: 12px;
 }
 
-@media screen and (max-width:375px){
+@media screen and (max-width: 375px) {
   /* LOADING BACKGROUND */
-.loading {
-  width: 375px;
-  height: 700px;
-}
+  .loading {
+    width: 375px;
+    height: 700px;
+  }
 
-/* LOADING VIDEO */
-.loading__video video {
-  width: 200px;
-}
+  /* LOADING VIDEO */
+  .loading__video video {
+    width: 280px;
+    height: 280px;
+  }
 }

@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
-import 'components/lookbookComponents/css/MobileLookbookMain.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation, Thumbs } from 'swiper';
+import 'components/lookbookComponents/css/MobileLookbookMain.css';
 import 'swiper/swiper-bundle.css';
 
 SwiperCore.use([Navigation, Thumbs]);
 
 const MobileLookbookMain = ({ member }) => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
-  // console.log(member);
   const mobileThumbnails = member.map(({ lookbookId, lookbookImage }) => {
     return (
       <SwiperSlide key={lookbookId}>

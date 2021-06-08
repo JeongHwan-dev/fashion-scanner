@@ -25,11 +25,11 @@
   text-align: center;
 }
 .upload__btn label {
-  box-sizing: border-box;
   margin: 0 auto;
   padding: 10px 60px;
   border: 3px solid #d97e9f;
   border-radius: 30px;
+  box-sizing: border-box;
   font-size: 24px;
   color: #d97e9f;
   cursor: pointer;
@@ -69,6 +69,16 @@
   font-size: 16px;
   text-align: center;
   color: #646464;
+}
+.picture__agree input[type='checkbox'] {
+  width: 16px;
+  height: 16px;
+  border: none;
+  border-radius: 6px;
+}
+.picture__agree input[type='checkbox']:hover {
+  outline: none;
+  box-shadow: 0 0 0 1px #f2a7bb;
 }
 
 /* PICTURE SUBMIT */
@@ -110,11 +120,10 @@
     width: 375px;
   }
 
+  /* UPLOAD  */
   .picture__upload {
     margin-bottom: 25px;
   }
-
-  /* UPLOAD TITLE */
   .upload__title {
     margin-bottom: 20px;
   }
