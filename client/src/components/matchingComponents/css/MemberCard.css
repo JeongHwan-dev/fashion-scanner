@@ -6,7 +6,7 @@
   min-width: 330px;
   min-height: 440px;
   margin: 0 auto;
-  animation: 1.3s fadeinBottom linear;
+  animation: 1.2s fadeinBottom linear;
 }
 /* FADEIN BOTTOM */
 @keyframes fadeinBottom {
@@ -31,7 +31,7 @@
   box-shadow: 5px 5px 15px #6b6b6b;
   border: 8px solid #242424;
   border-radius: 12px;
-  transition: 2s;
+  transition: 1.5s;
 }
 
 /* CARD FRONT */
