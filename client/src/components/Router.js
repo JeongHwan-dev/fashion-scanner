@@ -13,6 +13,7 @@ import LookbookLisa from 'routes/LookbookLisa';
 import LookbookJisoo from 'routes/LookbookJisoo';
 import NotFound from 'routes/NotFound';
 import LangProvider from 'context/LanguageContext';
+import SharingJIsoo from 'routes/SharingJIsoo';
 
 const AppRouter = () => {
   return (
@@ -28,9 +29,9 @@ const AppRouter = () => {
           <Route exact path="/matching/loading" component={Loading} />
           <Route exact path="/matching/failure" component={Failure} />
           <Route exact path="/matching/result" component={Result} />
+          <Route exact path="/matching/sharing/jisoo" component={SharingJIsoo} />
           <Route exact path="/devteam" component={DevTeam} />
           <Route exact path="/faq" component={FAQ} />
-          <Route exact path="/matching/loading" component={Loading} />
           <Route component={NotFound} />
         </Switch>
       </Router>
