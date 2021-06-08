@@ -35,10 +35,12 @@ def make_lookbook_data(lookbooks):
         data["attributes"] = [attr.name_ko for attr in lookbook.attributes.all()]
         data["similar_images"] = json.dumps(
             [
-                json.dumps({
-                    "image": BASE_URL + clothes.image.url,
-                    "link": clothes.webpage_url,
-                })
+                json.dumps(
+                    {
+                        "image": BASE_URL + clothes.image.url,
+                        "link": clothes.webpage_url,
+                    }
+                )
                 for clothes in lookbook.shop_clothes.all()
             ]
         )
