@@ -9,13 +9,13 @@
   box-sizing: border-box;
   box-shadow: 5px 5px 15px #6b6b6b;
   margin: 0 auto;
-  padding: 90px 35px;
+  padding: 40px 35px;
   border-radius: 12px;
   background-color: #f3f3f3;
 }
 .infoCard.clicked {
   display: block;
-  animation: fade-in 5.8s;
+  animation: fade-in 3s;
   animation-fill-mode: forwards;
 }
 @keyframes fade-in {
@@ -26,10 +26,13 @@
     opacity: 1;
   }
 }
+.infoCard.shared {
+  padding: 90px 35px;
+}
 
 /* INFO CARD DSC */
 .infoCard .infoCard__dsc {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   padding: 0 20px;
 }
 .infoCard .infoCard__dsc p {
@@ -42,7 +45,7 @@
 
 /* INFO CARD IMG OBJECT */
 .infoCard__imgObj {
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 /* IMG OBJECT TABLE */
@@ -78,6 +81,7 @@
 .infoCard__btn {
   display: flex;
   justify-content: center;
+  margin-bottom: 25px;
 }
 .infoCard__btn a {
   padding: 10px 20px;
@@ -90,6 +94,54 @@
 .infoCard__btn a:hover {
   background-color: #d97e9f;
   color: #fff;
+}
+
+/* INFO CARD SHARING BOX */
+.sharing__box {
+  width: 280px;
+  margin: 0 auto;
+  padding: 10px 0;
+  border: none;
+  border-radius: 25px;
+  background-color: #e8e8e8;
+}
+.sharing__title {
+  margin: 0 auto 10px;
+  text-align: center;
+  font-size: 18px;
+  color: #1b1b1b;
+}
+.sharing__btns {
+  display: flex;
+  width: 220px;
+  margin: 0 auto;
+}
+.sharing__btns div {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+}
+.sharing__a {
+  display: flex;
+  justify-content: center;
+  width: inherit;
+  height: inherit;
+  box-sizing: border-box;
+  padding-top: 5px;
+  text-align: center;
+}
+.sharing__btn {
+  width: inherit;
+  height: inherit;
+  box-sizing: border-box;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.sharing__btns img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
 }
 
 @media screen and (max-width: 375px) {
