@@ -8,7 +8,7 @@ import 'routes/css/Result.css';
 
 const Result = () => {
   const url = `http://elice-kdt-ai-track-vm-ai-13.koreacentral.cloudapp.azure.com:8000`;
-  const [isShared, setIsShared] = useState(false);
+  const isShared = false;
   const [isClicked, setIsClicked] = useState(false);
   const [result, setResult] = useState({
     memberObj: {
@@ -42,10 +42,13 @@ const Result = () => {
     // getResult();
   }, []);
 
-  // 매칭 결과값 불러오기 함수
+  // 매칭 결과값 불러오기 API
   const getResult = async () => {
     await axios.get(url + '/matching/result').then((response) => {
       console.log(response);
+      if (response.status === 200) {
+        // setResult(response);
+      }
     });
   };
 

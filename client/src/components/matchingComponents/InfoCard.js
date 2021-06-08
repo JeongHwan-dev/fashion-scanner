@@ -6,32 +6,42 @@ const InfoCard = ({ memberObj, imgObj, isShared, isClicked }) => {
     createKakaoButton();
   }, []);
 
+  // 카카오톡 공유하기
   const createKakaoButton = () => {
     if (window.Kakao) {
       const kakao = window.Kakao;
+      let sharingUrl = '';
       if (!kakao.isInitialized()) {
         kakao.init(process.env.REACT_APP_KAKAO_INIT_KEY);
       }
+      if (memberObj.name === 'jisoo') {
+        sharingUrl = `https://www.facebook.com/sharer/sharer.php?u=http://elice-kdt-ai-track-vm-distribute-13.koreacentral.cloudapp.azure.com/`;
+      } else if (memberObj.name === 'jennie') {
+        sharingUrl = `https://www.facebook.com/sharer/sharer.php?u=http://elice-kdt-ai-track-vm-distribute-13.koreacentral.cloudapp.azure.com/`;
+      } else if (memberObj.name === 'lisa') {
+        sharingUrl = `https://www.facebook.com/sharer/sharer.php?u=http://elice-kdt-ai-track-vm-distribute-13.koreacentral.cloudapp.azure.com/`;
+      } else {
+        sharingUrl = `https://www.facebook.com/sharer/sharer.php?u=http://elice-kdt-ai-track-vm-distribute-13.koreacentral.cloudapp.azure.com/`;
+      }
+
       window.Kakao.Link.createDefaultButton({
         container: '#create-kakao-link-btn',
         objectType: 'feed',
         content: {
           title: 'FASHION SCANNER',
           description: '#AI #FASHION #SCANNING #BLACKPINK #MATCHING',
-          imageUrl: `http://elice-kdt-ai-track-vm-distribute-13.koreacentral.cloudapp.azure.com/images/home/matching_group_photo.png`,
+          imageUrl: sharingUrl,
           link: {
-            mobileWebUrl:
-              'http://elice-kdt-ai-track-vm-distribute-13.koreacentral.cloudapp.azure.com',
-            webUrl: 'http://elice-kdt-ai-track-vm-distribute-13.koreacentral.cloudapp.azure.com/',
+            mobileWebUrl: sharingUrl,
+            webUrl: sharingUrl,
           },
         },
         buttons: [
           {
             title: '매칭 결과 보기',
             link: {
-              mobileWebUrl:
-                'http://elice-kdt-ai-track-vm-distribute-13.koreacentral.cloudapp.azure.com/',
-              webUrl: 'http://elice-kdt-ai-track-vm-distribute-13.koreacentral.cloudapp.azure.com/',
+              mobileWebUrl: sharingUrl,
+              webUrl: sharingUrl,
             },
           },
         ],

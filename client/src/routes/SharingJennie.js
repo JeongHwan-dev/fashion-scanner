@@ -5,16 +5,16 @@ import InfoCard from 'components/matchingComponents/InfoCard';
 import Footer from 'components/commonComponents/Footer';
 import 'routes/css/Result.css';
 
-const SharingJisoo = () => {
+const SharingJennie = () => {
   const isShared = true;
   const [isClicked, setIsClicked] = useState(false);
   const result = {
     memberObj: {
       name: 'jisoo',
-      title: '당신은 패완얼의 정석 지수',
-      comment1: '남다른 패션센스를 자랑하지만 가끔 얼굴때문에 그 센스가 묻히는군요.',
-      comment2: '지수의 룩북을 참고해보세요!',
-      btnLabel: '지수 룩북 바로가기',
+      title: '당신은 인간명품 제니',
+      comment1: '캐쥬얼과 화려함 사이를 오고가는 변신의 귀재이시군요.',
+      comment2: '제니의 룩북을 참고해보세요!',
+      btnLabel: '제니 룩북 바로가기',
     },
     imgObj: {
       type: '',
@@ -68,4 +68,4 @@ const SharingJisoo = () => {
   );
 };
 
-export default SharingJisoo;
+export default SharingJennie;
