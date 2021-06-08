@@ -8,13 +8,14 @@ import 'routes/css/Result.css';
 
 const Result = () => {
   const url = `http://elice-kdt-ai-track-vm-ai-13.koreacentral.cloudapp.azure.com:8000`;
+  const isShared = false;
   const [isClicked, setIsClicked] = useState(false);
   const [result, setResult] = useState({
     memberObj: {
       name: '',
-      photo: '',
-      sign: '',
-      comment: '',
+      title: '',
+      comment1: '',
+      comment2: '',
       btnLabel: '',
     },
     imgObj: {
@@ -27,8 +28,6 @@ const Result = () => {
     setResult({
       memberObj: {
         name: 'jisoo',
-        photo: '/images/matching/jisoo_card.jpg',
-        sign: '/images/matching/jisoo_sign.png',
         title: '당신은 패완얼의 정석 지수',
         comment1: '남다른 패션센스를 자랑하지만 가끔 얼굴때문에 그 센스가 묻히는군요.',
         comment2: '지수의 룩북을 참고해보세요!',
@@ -43,10 +42,13 @@ const Result = () => {
     // getResult();
   }, []);
 
-  // 매칭 결과값 불러오기 함수
+  // 매칭 결과값 불러오기 API
   const getResult = async () => {
     await axios.get(url + '/matching/result').then((response) => {
       console.log(response);
+      if (response.status === 200) {
+        // setResult(response);
+      }
     });
   };
 
@@ -82,7 +84,12 @@ const Result = () => {
               isClicked={isClicked}
               onCardClickHandler={onCardClickHandler}
             />
-            <InfoCard memberObj={result.memberObj} imgObj={result.imgObj} isClicked={isClicked} />
+            <InfoCard
+              memberObj={result.memberObj}
+              imgObj={result.imgObj}
+              isShared={isShared}
+              isClicked={isClicked}
+            />
           </div>
         </div>
         <Footer />

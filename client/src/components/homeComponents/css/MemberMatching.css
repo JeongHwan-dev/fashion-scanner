@@ -106,7 +106,7 @@
   /* MEMBER MATCHING IMAGE */
   .memberMatching__img {
     width: 375px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
   .memberMatching__img img {
     width: 300px;
@@ -121,7 +121,7 @@
   .memberMatching__inner .contents__btn a {
     display: flex;
     justify-content: center;
-    padding: 5px 10px;
+    padding: 10px 20px;
     border: 2px solid #d97e9f;
     border-radius: 6px;
     background-color: #101010;

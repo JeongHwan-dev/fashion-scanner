@@ -8,8 +8,8 @@
   margin-bottom: 200px;
 }
 .title__photo .swiper-container {
-  width: 100%;
-  height: 600px;
+  width: 1000px;
+  height: 500px;
   border-radius: 12px !important;
   overflow: hidden;
 }
@@ -28,7 +28,6 @@
   align-items: center;
   background: #fff;
   text-align: center;
-  font-size: 18px;
 }
 .title__photo .swiper-slide img {
   display: block;
@@ -36,4 +35,21 @@
   width: 100%;
   height: 100%;
   border-radius: 12px;
+}
+
+/* MEDIA */
+@media screen and (max-width: 375px) {
+  /* DEV TEAM TITLE */
+  .devTeam__title {
+    margin-bottom: 150px;
+  }
+
+  /* TITLE PHOTO */
+  .title__photo {
+    margin-bottom: 0px;
+  }
+  .title__photo .swiper-container {
+    width: 350px;
+    height: 200px;
+  }
 }

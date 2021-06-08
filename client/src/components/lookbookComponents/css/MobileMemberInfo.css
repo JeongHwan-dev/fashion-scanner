@@ -1,11 +1,11 @@
 /* MOBILE LOOKBOOK SECTION */
 .m-memberInfo {
-  height: 550px;
+  height: 600px;
   background-color: rgb(252, 252, 252);
 }
 .m-memberInfo__inner {
-  position: relative;
   overflow: hidden;
+  position: relative;
   width: inherit;
   height: 500px;
 }
@@ -27,13 +27,13 @@
   height: 180px;
   z-index: 2;
 }
-.m-memberInfo .m-memberInfo__inner .m-memberInfo__inner__bg{
+.m-memberInfo .m-memberInfo__inner .m-memberInfo__inner__bg {
   position: absolute;
   top: 150px;
   right: -130px;
   width: 350px;
   height: 350px;
-  background-color: #1B1B1B;
+  background-color: #1b1b1b;
   border-radius: 50%;
 }
 
@@ -43,9 +43,9 @@
   justify-content: center;
 }
 .m-memberInfo__dsc h2 {
-  font-family: 'BLACK PINK', 'sans-serif';
+  z-index: 2;
   font-size: 40px;
   font-weight: bold;
-  color: #FBBCBC;
-  z-index: 2;
+  font-family: 'BLACK PINK', 'sans-serif';
+  color: #fbbcbc;
 }

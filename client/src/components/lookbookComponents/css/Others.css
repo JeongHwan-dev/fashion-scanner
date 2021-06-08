@@ -2,6 +2,7 @@
 .others {
   overflow: hidden;
   background-image: url('images/member_select_bg.png');
+  background-repeat: no-repeat;
 }
 .others .inner__bg {
   opacity: 0.6;

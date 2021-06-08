@@ -9,6 +9,7 @@ const Failure = () => {
     <>
       <div className="failure">
         <Navigation />
+        {/* 01: FAIL CARD */}
         <FailCard />
         <Footer />
       </div>

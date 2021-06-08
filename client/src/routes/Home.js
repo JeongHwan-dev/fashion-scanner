@@ -13,9 +13,7 @@ const Home = () => {
   return (
     <>
       <div className="home">
-        {/* HEADER */}
         <Navigation />
-        {/* SECTIONS */}
         {/* 01: TITLE */}
         <Title />
         {/* 02: INTRODUCTION */}
@@ -30,7 +28,6 @@ const Home = () => {
         <MemberMatching />
         {/* 07: REQUEST */}
         <Request />
-        {/* FOOTER */}
         <Footer />
       </div>
     </>

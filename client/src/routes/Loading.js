@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import Navigation from 'components/commonComponents/Navigation';
 import Footer from 'components/commonComponents/Footer';
 import loadingVideo from 'videos/Loading.mov';
@@ -6,17 +7,38 @@ import 'routes/css/Loading.css';
 import { useMediaQuery } from 'react-responsive';
 
 const Loading = () => {
+  const url = `http://elice-kdt-ai-track-vm-ai-13.koreacentral.cloudapp.azure.com:8000`;
+  const [status, setStatus] = useState(false);
   const isMobile = useMediaQuery({
-    query: '(max-width: 375px)'
+    query: '(max-width: 375px)',
   });
-  // console.log(isMobile);
+
+  // useEffect(() => {
+  //   setInterval(() => {
+  //     getStatus();
+  //   }, 2000);
+
+  //   if (status === 201) {
+  //     console.log('pass');
+  //   } else {
+  //     console.log('wait');
+  //   }
+  // }, []);
+
+  const getStatus = async () => {
+    await axios.get(url + '/matching/loading').then((response) => {
+      console.log(response);
+      if (response.status === 200) {
+        console.log('ok!');
+      }
+    });
+  };
 
   return (
     <>
-      {/* HEADER */}
-      {/* <Navigation /> */}
+      <Navigation />
       {!isMobile ? <Navigation /> : null}
-      {/* LOADING PAGE */}
+      {/* 01: LOADING PAGE */}
       <div className="loading">
         <div className="loading__title">
           <h3>Loading</h3>
@@ -30,7 +52,6 @@ const Loading = () => {
           </video>
         </div>
       </div>
-      {/* FOOTER */}
       <Footer />
     </>
   );

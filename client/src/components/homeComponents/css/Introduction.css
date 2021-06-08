@@ -1,7 +1,7 @@
 /* INTRODUCTION SECTION */
 .introduction {
-  padding: 200px 0;
   overflow: hidden;
+  padding: 200px 0;
 }
 .introduction__inner {
   position: relative;
@@ -11,16 +11,15 @@
 }
 .introduction__inner video {
   opacity: 0.8;
-  width: 100%;
   position: absolute;
-  z-index: -1;
   top: -300px;
+  z-index: -1;
+  width: 100%;
   transform: scale(2.5);
 }
 .introduction__inner video.scroll {
   animation: 1s zoomIn linear;
 }
-
 @keyframes zoomIn {
   from {
     transform: scale(1);
@@ -58,7 +57,7 @@
   background: linear-gradient(to right, #f2a7bb, #b3d4ff);
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 72px;
+  font-size: 68px;
   font-weight: 600;
   text-align: center;
   color: #ffffff;
@@ -106,14 +105,6 @@
   width: 120px;
   height: 120px;
 }
-@keyframes target_image {
-  0% {
-    transform: rotateY(0deg);
-  }
-  100% {
-    transform: rotateY(360deg);
-  }
-}
 .introduction__logos div p {
   margin-top: 12px;
   font-size: 22px;
@@ -149,8 +140,9 @@
 
 /* MEDIA */
 @media screen and (max-width: 375px) {
+  /* INTRODUCTION */
   .introduction {
-    padding: 50px 0;
+    padding: 150px 0;
   }
   .introduction__inner {
     position: relative;

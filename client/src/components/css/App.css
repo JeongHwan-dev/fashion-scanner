@@ -2,7 +2,6 @@
 body {
   overflow-x: hidden;
   height: 100%;
-  /* background-color: #101010; */
   background-color: #000;
   font-size: 16px;
   font-weight: 400;
@@ -36,8 +35,8 @@ video {
   width: 120px;
   margin: 0 auto;
   border-radius: 6px;
-  background-color: #f2a7bb;
   box-shadow: 0 0 0 0;
+  background-color: #f2a7bb;
   transition: 0.3s;
 }
 .swal-modal .swal-button-container button:hover {
