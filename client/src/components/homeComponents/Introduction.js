@@ -3,11 +3,13 @@ import { useMediaQuery } from 'react-responsive';
 import useOnScreen from 'hooks/useOnScreen';
 import 'components/homeComponents/css/Introduction.css';
 import intro from 'videos/intro.mp4';
+import { useTranslation } from 'react-i18next';
 
 const Introduction = () => {
   const imageRef = useRef(null);
   const isVisible = useOnScreen(imageRef);
   const isMobile = useMediaQuery({ maxWidth: 375 });
+  const { t } = useTranslation('introduction');
 
   return (
     <>
@@ -18,7 +20,7 @@ const Introduction = () => {
           </video>
           <ul>
             <li className={`introduction__title ${isVisible ? 'scroll' : ''}`}>
-              <h2>케이팝 스타들의 패션을 스캔합니다</h2>
+              <h2>{t('introduction_title')}</h2>
             </li>
             <li className={`introduction__keyword ${isVisible ? 'scroll' : ''}`}>
               {!isMobile ? (
@@ -56,17 +58,17 @@ const Introduction = () => {
               {!isMobile ? (
                 <>
                   <p>
-                    패션 스캐너는 업계에서 가장 HOT 한 케이팝 스타들의 패션을 분석합니다.
+                    {t('introduction_dsc1')}
                     <br />
-                    패션 전문 인공지능과 함께 새로운 패션 트렌드를 확인해보세요.
+                    {t('introduction_dsc2')}
                   </p>
                 </>
               ) : (
                 <>
                   <p>
-                    패션 스캐너는 업계에서 가장 HOT한
+                    {t('m-introduction_dsc1')}
                     <br />
-                    케이팝 스타들의 패션을 분석합니다.
+                    {t('m-introduction_dsc2')}
                   </p>
                 </>
               )}

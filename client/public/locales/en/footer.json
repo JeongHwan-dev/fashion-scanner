@@ -1,5 +1,7 @@
 {
-  "address": "6F, 433, Seolleung-ro, Gangnam-gu, Seoul",
+  "pc_address": "6F, 433, Seolleung-ro, Gangnam-gu, Seoul, Republic of Korea",
+  "mobile_address": "6F, 433, Seolleung-ro, Gangnam-gu, Seoul",
   "call": "82-2-5986-8861",
+  "culture": "About Us",
   "faq": "FAQ"
 }
