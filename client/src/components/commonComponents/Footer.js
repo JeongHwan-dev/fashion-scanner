@@ -59,7 +59,9 @@ const Footer = () => {
                     </li>
                     <li>
                       <FontAwesomeIcon icon={faFacebook} className="sns__icon" />
-                      <FontAwesomeIcon icon={faInstagram} className="sns__icon" />
+                      <a href="https://www.instagram.com/fashion__scanner">
+                        <FontAwesomeIcon icon={faInstagram} className="sns__icon" />
+                      </a>
                       <FontAwesomeIcon icon={faTwitter} className="sns__icon" />
                     </li>
                   </ul>
