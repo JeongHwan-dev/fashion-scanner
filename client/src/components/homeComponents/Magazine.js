@@ -5,7 +5,7 @@ import magazine from 'videos/magazine.mp4';
 import 'components/homeComponents/css/Magazine.css';
 
 const Magazine = () => {
-  const isMobile = useMediaQuery({ maxWidth: 375 });
+  const isMobile = useMediaQuery({ maxWidth: 390 });
   const { t } = useTranslation('magazine');
 
   return (

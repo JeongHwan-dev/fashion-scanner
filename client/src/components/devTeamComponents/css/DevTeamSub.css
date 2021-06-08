@@ -34,6 +34,44 @@
 }
 
 /* MEDIA */
+@media screen and (max-width: 390px) {
+  /* DEV TEAM SUB */
+  .devTeam__sub {
+    margin-bottom: 200px;
+  }
+
+  /* TITLE IMG */
+  .sub__logo {
+    margin-bottom: 60px;
+  }
+  .sub__logo img {
+    width: auto;
+    height: 26px;
+    margin: 0 auto;
+  }
+  .sub__logo img:first-child {
+    margin-bottom: 15px;
+  }
+
+  /* SUB DSC */
+  .sub__dsc h2 {
+    margin-bottom: 36px;
+    font-size: 34px;
+    font-weight: 600;
+    text-align: center;
+    color: #000;
+  }
+  .sub__dsc p {
+    width: 275px;
+    margin: 0 auto;
+    padding: 0;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: center;
+    color: #333;
+  }
+}
+
 @media screen and (max-width: 375px) {
   /* DEV TEAM SUB */
   .devTeam__sub {

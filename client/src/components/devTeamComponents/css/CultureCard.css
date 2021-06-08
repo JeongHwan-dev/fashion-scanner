@@ -31,7 +31,7 @@
   color: #919191;
 }
 .culture__card .card__cont .cont__dsc {
-  margin-top: 120px;
+  margin-top: 100px;
 }
 .culture__card .card__cont .cont__dsc p {
   margin-bottom: 18px;
@@ -54,6 +54,112 @@
 }
 
 /* MEDIA */
+@media screen and (max-width: 390px) {
+  /* CULUTRE CARD */
+  .culture__card {
+    perspective: 1500px;
+    width: 327px;
+    height: 630px;
+    box-sizing: border-box;
+    box-shadow: 0 0 0 #fff;
+    margin: 0 auto 70px;
+  }
+
+  /* DEV CARD */
+  .culture__card .devCard {
+    overflow: hidden;
+    position: relative;
+    backface-visibility: hidden;
+    width: inherit;
+    height: inherit;
+    border-radius: 12px;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 10px gray;
+    background-color: #fff;
+    transition: 1.3s;
+  }
+
+  /* DEV CARD FRONT */
+  .culture__card .devCard.front {
+    position: absolute;
+    transform: rotateY(0deg);
+  }
+  .culture__card.clicked .devCard.front {
+    transform: rotateY(-180deg);
+  }
+  .culture__card .devCard.front p {
+    padding: 24px 58px 0 24px;
+  }
+  .culture__card .devCard.front .front__title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #000;
+  }
+  .culture__card .devCard.front .front__position {
+    font-size: 18px;
+    color: #919191;
+  }
+  .culture__card .devCard.front button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 36px;
+    height: 36px;
+    margin: 20px;
+    padding: 0;
+    border: none;
+    background-color: #fff;
+  }
+  .culture__card .devCard.front button label {
+    font-size: 36px;
+    color: #d2d2d2;
+  }
+
+  /* DEV CARD BACK */
+  .culture__card .devCard.back {
+    box-shadow: 5px 5px 10px #919191;
+    padding: 50px 24px 20px;
+    transform: rotateY(180deg);
+  }
+  .culture__card.clicked .devCard.back {
+    transform: rotateY(0deg);
+  }
+  .culture__card .devCard.back h2 {
+    margin-bottom: 20px;
+    font-size: 26px;
+    font-weight: 600;
+    color: #000;
+  }
+  .culture__card .devCard.back span {
+    color: #919191;
+  }
+  .culture__card .devCard.back .cont__dsc p {
+    margin: 48px 0 24px;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #000;
+  }
+  .culture__card .devCard.back .cont__dsc span {
+    margin-right: 4px;
+    font-size: 14px;
+  }
+  .culture__card .devCard.back button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 36px;
+    height: 36px;
+    margin: 20px;
+    padding: 0;
+    border: none;
+    background-color: #fff;
+  }
+  .culture__card .devCard.back button label {
+    font-size: 36px;
+    color: #d2d2d2;
+  }
+}
+
 @media screen and (max-width: 375px) {
   /* CULUTRE CARD */
   .culture__card {

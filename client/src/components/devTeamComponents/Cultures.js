@@ -100,7 +100,7 @@ const Cultures = () => {
       id: 1,
       title: {
         t1: 'Trendy people gathred',
-        t2: 'to lead the Trend',
+        t2: 'to lead the Trend.',
       },
       position: 'PM & AI Sihyun Cha',
       content: `Fashion Scanner crew reads trend and creates trendy services. Instead of blindly chasing the trend, we think of it as a 'changing value' that users prefer. We will consistantly think about services that users can satisfy, and our ultimate goal is to provide a web service that people who want to know the trend always visit.`,
@@ -114,7 +114,7 @@ const Cultures = () => {
       id: 2,
       title: {
         t1: 'Make the World',
-        t2: 'a Better Place',
+        t2: 'a Better Place.',
       },
       position: 'AI  Chan Mi Lee',
       content: `We are passionate about making the world a better place with our technologies. We provide helpful services for users' daily lives. We always consider the effect of our services on people and society and strive to make a positive impact. `,
@@ -155,8 +155,8 @@ const Cultures = () => {
     {
       id: 5,
       title: {
-        t1: 'Contemplate valuable things',
-        t2: 'and constantly explore',
+        t1: 'Contemplate valuable things and constantly',
+        t2: 'explore.',
       },
       position: 'Back-end Borahm Lee',
       content: `We think about the point where the value of service begins. Because value creates new opportunities. Continuously explore technology to discover value. If found, we study how to reveal value to the world. Every experience we get from learning and exploring is a valuable asset to us.`,

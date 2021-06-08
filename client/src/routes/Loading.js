@@ -9,9 +9,7 @@ import { useMediaQuery } from 'react-responsive';
 const Loading = () => {
   const url = `http://elice-kdt-ai-track-vm-ai-13.koreacentral.cloudapp.azure.com:8000`;
   const [status, setStatus] = useState(false);
-  const isMobile = useMediaQuery({
-    query: '(max-width: 375px)',
-  });
+  const isMobile = useMediaQuery({ maxWidth: 390 });
 
   // useEffect(() => {
   //   setInterval(() => {

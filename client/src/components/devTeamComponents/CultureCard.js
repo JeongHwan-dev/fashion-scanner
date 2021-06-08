@@ -3,7 +3,7 @@ import { useMediaQuery } from 'react-responsive';
 import 'components/devTeamComponents/css/CultureCard.css';
 
 const CultureCard = ({ memberObj }) => {
-  const isMobile = useMediaQuery({ maxWidth: 375 });
+  const isMobile = useMediaQuery({ maxWidth: 390 });
   const [isClicked, setIsClicked] = useState(false);
 
   // 클릭 여부 확인 핸들러

@@ -112,6 +112,56 @@
 }
 
 /* MEDIA */
+@media screen and (max-width: 390px) {
+  .picture {
+    padding: 100px 0;
+  }
+  .picture__inner {
+    width: 390px;
+  }
+
+  /* UPLOAD  */
+  .picture__upload {
+    margin-bottom: 25px;
+  }
+  .upload__title {
+    margin-bottom: 20px;
+  }
+  .upload__title h1 {
+    font-size: 22px;
+  }
+
+  /* UPLOAD BUTTON */
+  .upload__btn label {
+    padding: 10px 45px;
+    font-size: 18px;
+  }
+
+  /* UPLOAD PREVIEW */
+  .upload__preview img {
+    width: 270px;
+    height: 360px;
+    margin: 0 auto 10px;
+  }
+
+  /* PICTURE AGREE */
+  .picture__agree {
+    width: 300px;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  /* PICTURE SUBMIT */
+  .picture__submit {
+    width: 300px;
+  }
+  .picture__submit button {
+    width: 180px;
+    height: 45px;
+    font-size: 18px;
+  }
+}
+
 @media screen and (max-width: 375px) {
   .picture {
     padding: 100px 0;

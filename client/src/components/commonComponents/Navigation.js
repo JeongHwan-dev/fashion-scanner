@@ -5,7 +5,7 @@ import { LangContext } from 'context/LanguageContext';
 import { useTranslation } from 'react-i18next';
 
 const Navigation = () => {
-  const isMobile = useMediaQuery({ maxWidth: 375 });
+  const isMobile = useMediaQuery({ maxWidth: 390 });
   const [menu, setMenu] = useState(false); // 햄버거 버튼
   const { currentLang, setEng, setKor } = useContext(LangContext); // 전역으로 상태 관리: 현재 언어, 영어로 지정, 한국어로 지정
   const { t } = useTranslation();

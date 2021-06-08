@@ -8,7 +8,7 @@ import 'components/homeComponents/css/Introduction.css';
 const Introduction = () => {
   const imageRef = useRef(null);
   const isVisible = useOnScreen(imageRef);
-  const isMobile = useMediaQuery({ maxWidth: 375 });
+  const isMobile = useMediaQuery({ maxWidth: 390 });
   const { t } = useTranslation('introduction');
 
   return (

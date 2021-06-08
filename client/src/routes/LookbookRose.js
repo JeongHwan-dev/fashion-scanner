@@ -18,7 +18,7 @@ const LookbookRose = () => {
   const [member, setMemeber] = useState([]);
   const [memberEn, setMemberEn] = useState([]);
   const [memberColor, setMemberColor] = useState('');
-  const isMobile = useMediaQuery({ maxWidth: 375 });
+  const isMobile = useMediaQuery({ maxWidth: 390 });
 
   useEffect(() => {
     const getLookbookData = async () => {

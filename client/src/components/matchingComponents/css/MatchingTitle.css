@@ -35,6 +35,24 @@
 }
 
 /* MEDIA */
+@media screen and (max-width: 390px) {
+  .matchingTitle {
+    height: 800px;
+    padding: 200px 0 100px;
+    box-sizing: border-box;
+  }
+  .matchingTitle__inner {
+    width: 390px;
+    padding: 0;
+  }
+  .matchingTitle__inner img:nth-child(1) {
+    width: 350px;
+  }
+  .matchingTitle__inner img:nth-child(2) {
+    width: 340px;
+  }
+}
+
 @media screen and (max-width: 375px) {
   .matchingTitle {
     height: 800px;

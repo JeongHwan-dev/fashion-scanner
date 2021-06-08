@@ -10,6 +10,13 @@
 }
 
 /* MEDIA */
+@media screen and (max-width: 390px) {
+  .devTeam__inner {
+    width: 390px;
+    padding-top: 120px;
+  }
+}
+
 @media screen and (max-width: 375px) {
   .devTeam__inner {
     width: 375px;

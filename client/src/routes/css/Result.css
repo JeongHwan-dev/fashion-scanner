@@ -50,6 +50,36 @@
   }
 }
 
+/* MEDIA */
+@media screen and (max-width: 390px) {
+  /* RESULT */
+  .result__inner {
+    width: 390px;
+    padding: 100px 0 150px;
+  }
+
+  /* RESULT GUIDE */
+  .result__inner .guide {
+    height: 88px;
+    margin-bottom: 15px;
+  }
+  .result__inner .guide span {
+    width: 50px;
+    font-size: 50px;
+  }
+
+  /* RESULT TITLE */
+  .result__inner .result__title {
+    height: 38px;
+    padding-top: 20px;
+  }
+
+  /* RESULT CARDS */
+  .result__inner .cards {
+    display: inline;
+  }
+}
+
 @media screen and (max-width: 375px) {
   /* RESULT */
   .result__inner {

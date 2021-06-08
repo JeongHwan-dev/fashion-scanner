@@ -144,6 +144,65 @@
   border-radius: 50%;
 }
 
+/* MEDIA */
+@media screen and (max-width: 390px) {
+  /* INFO CARD */
+  .infoCard {
+    width: 330px;
+    height: 440px;
+    padding: 30px 15px;
+    box-shadow: 5px 5px 10px #6b6b6b;
+  }
+
+  /* INFO CARD DSC */
+  .infoCard .infoCard__dsc {
+    margin-bottom: 10px;
+  }
+  .infoCard .infoCard__dsc p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  /* IMG OBJECT TABLE */
+  .infoCard__imgObj {
+    margin-bottom: 15px;
+  }
+  .infoCard__imgObj table {
+    font-size: 15px;
+  }
+
+  /* INFO CARD BUTTON */
+  .infoCard__btn {
+    margin-bottom: 15px;
+  }
+  .infoCard__btn a {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  /* INFO CARD SHARING BOX */
+  .sharing__box {
+    width: 240px;
+    padding: 6px 0;
+  }
+  .sharing__title {
+    font-size: 16px;
+  }
+  .sharing__btns {
+    width: 200px;
+  }
+  .sharing__btns div {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+  }
+  .sharing__btns img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+}
+
 @media screen and (max-width: 375px) {
   /* INFO CARD */
   .infoCard {

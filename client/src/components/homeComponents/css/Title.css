@@ -35,6 +35,32 @@
 }
 
 /* MEDIA */
+@media screen and (max-width: 390px) {
+  .title {
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    width: 390px;
+    height: 812px;
+    padding-bottom: 50px;
+  }
+  .title__inner {
+    overflow: hidden;
+    width: 390px;
+    padding: 0;
+  }
+  .title__inner img {
+    width: auto;
+    height: 48px;
+  }
+  .title__inner h2 {
+    font-size: 22px;
+  }
+  .title #bg-video {
+    height: 800px;
+  }
+}
+
 @media screen and (max-width: 375px) {
   .title {
     display: flex;

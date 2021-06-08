@@ -45,6 +45,21 @@
   border-radius: 12px;
 }
 
+/* MEDIA */
+@media screen and (max-width: 390px) {
+  /* LOADING BACKGROUND */
+  .loading {
+    width: 390px;
+    height: 700px;
+  }
+
+  /* LOADING VIDEO */
+  .loading__video video {
+    width: 280px;
+    height: 280px;
+  }
+}
+
 @media screen and (max-width: 375px) {
   /* LOADING BACKGROUND */
   .loading {
