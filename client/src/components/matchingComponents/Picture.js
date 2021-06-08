@@ -4,6 +4,7 @@ import axios from 'axios';
 import swal from 'sweetalert';
 import Example from 'components/matchingComponents/Example';
 import 'components/matchingComponents/css/Picture.css';
+import { useTranslation } from 'react-i18next';
 
 const Picture = () => {
   const url = `http://elice-kdt-ai-track-vm-ai-13.koreacentral.cloudapp.azure.com:8000`;
@@ -11,6 +12,7 @@ const Picture = () => {
   const [previewImg, setPreviewImg] = useState('');
   const [requestImg, setRequestImg] = useState('');
   const [isChecked, setIsChecked] = useState(false);
+  const { t } = useTranslation('picture');
 
   // [매칭 요청 사진] 업로드 핸들러
   const onFileChange = (event) => {
@@ -94,7 +96,7 @@ const Picture = () => {
           <div className="picture__upload">
             <ul>
               <li className="upload__title">
-                <h1>가장 자주 입는 옷 사진을 올려주세요.</h1>
+                <h1>{t('upload_title')}</h1>
               </li>
               <li className="upload__btn">
                 <label className="material-icons" for="input-file">
@@ -121,16 +123,16 @@ const Picture = () => {
           <Example />
           <div className="picture__agree">
             <p>
-              첨부된 사진은 목적 달성 후 내부 방침 및 기타 관련 법령에 따라 일정기간 저장됩니다.
+              {t('picture_agree')}
             </p>
             <label>
               <input type="checkbox" checked={isChecked} onChange={onCheckHandler} />
-              동의합니다.
+              {t('picture_agree_box')}
             </label>
           </div>
           <div className="picture__submit">
             <button disabled={!isChecked} onClick={onSubmit}>
-              결과보기
+              {t('picture_submit')}
             </button>
           </div>
         </div>
