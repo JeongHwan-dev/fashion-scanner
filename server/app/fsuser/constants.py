@@ -4,28 +4,28 @@ MEMBER_DESCRIPTIONS_EN = {
         "title": "You got Jisoo!",
         "comment1": "You have such great fashion sense.",
         "comment2": "See the LOOKBOOK of JIsoo.",
-        "btnLabel": "Lookbook",
+        "btnLabel": "LOOKBOOK",
     },
     "jennie": {
         "name": "jennie",
         "title": "You got Jennie!",
         "comment1": "You pull off not only casual but also fancy outfits.",
         "comment2": "See the LOOKBOOK of Jennie.",
-        "btnLabel": "Lookbook",
+        "btnLabel": "LOOKBOOK",
     },
     "lisa": {
         "name": "lisa",
         "title": "You got Lisa!",
         "comment1": "Every outfit looks good on you.",
         "comment2": "See the LOOKBOOK of Lisa.",
-        "btnLabel": "Lookbook",
+        "btnLabel": "LOOKBOOK",
     },
     "rose": {
         "name": "rose",
         "title": "You got Rose!",
         "comment1": "You dress effortlessly chic.",
         "comment2": "See the LOOKBOOK of Rose.",
-        "btnLabel": "Lookbook",
+        "btnLabel": "LOOKBOOK",
     },
 }
 
