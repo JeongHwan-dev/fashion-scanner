@@ -1,5 +1,5 @@
 {
-  "failCard_text1": "잠시 후 다시 시도해주세요.",
-  "failCard_text2": "같은 문제가 계속 되신다면 다른 이미지를 활용해주세요.",
-  "failCard_btn": "이전으로 돌아가기"
+  "failCard_text1": "Please try again later.",
+  "failCard_text2": "If the same problem occurs, use another image.",
+  "failCard_btn": "Back"
 }

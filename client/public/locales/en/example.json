@@ -1,12 +1,12 @@
 {
-  "good_dsc1": "좋은 예",
-  "good_dsc2": "배경색은 흰색에 가까울 수록 좋습니다.",
-  "good_dsc3": "정면을 보고 바르게 선 자세로 찍은 사진일 수록 분석의 정확도가 높아집니다.",
-  "good_dsc4": "거울셀카보다는 다른 사람이 찍어준 사진을 활용해보세요.",
-  "good_dsc5": "평소 즐겨입는 의류판매처의 제품사진을 활용하셔도 좋습니다.",
-  "bad_dsc1": "나쁜 예",
-  "bad_dsc2": "여러명이 함께 찍은 사진은 분석할 수가 없습니다.",
-  "bad_dsc3": "배경색이 다양할수록 분석의 정확도가 떨어집니다.",
-  "bad_dsc4": "흑백사진은 분석 시 정확한 결과를 얻기가 힘듭니다.",
-  "bad_dsc5": "옷의 일부만 보이는 사진은 제대로 분석 할 수 없습니다."
+  "good_dsc1": "Good Examples",
+  "good_dsc2": "A picture with white background.",
+  "good_dsc3": "A picture of standing posture.",
+  "good_dsc4": "A picture taken by others rather than a selfie.",
+  "good_dsc5": "You may upload a picture of clothes of shops.",
+  "bad_dsc1": "Bad Examples",
+  "bad_dsc2": "A picture of a group of people.",
+  "bad_dsc3": "A picture with complicated background.",
+  "bad_dsc4": "A black and white picture.",
+  "bad_dsc5": "A picture showing limited part of clothes."
 }
