@@ -21,19 +21,24 @@ def find_lookbooks_by_member(pk):
 
 
 def make_lookbook_data(lookbooks):
+    if lookbooks is None:
+        return None
+
     BASE_URL = os.environ.get("BASE_URL")
 
     result = dict()
-    result["lookbook_data"] = []
+    result["lookbook_data_en"] = []
+    result["lookbook_data_ko"] = []
 
     for lookbook in lookbooks:
-        data = dict()
-        data["lookbook_id"] = lookbook.id
-        data["lookbook_image"] = BASE_URL + lookbook.image.url
-        data["color"] = lookbook.color.hex_code
-        data["category"] = lookbook.category.name_ko
-        data["attributes"] = [attr.name_ko for attr in lookbook.attributes.all()]
-        data["similar_images"] = json.dumps(
+        data_en, data_ko = dict(), dict()
+
+        data_en["lookbook_id"] = lookbook.id
+        data_en["lookbook_image"] = BASE_URL + lookbook.image.url
+        data_en["color"] = lookbook.color.hex_code
+        data_en["category"] = lookbook.category.name_en
+        data_en["attributes"] = [attr.name_en for attr in lookbook.attributes.all()]
+        data_en["similar_images"] = json.dumps(
             [
                 json.dumps(
                     {
@@ -44,15 +49,22 @@ def make_lookbook_data(lookbooks):
                 for clothes in lookbook.shop_clothes.all()
             ]
         )
-        result["lookbook_data"].append(data)
+
+        data_ko["lookbook_id"] = data_en["lookbook_id"]
+        data_ko["lookbook_image"] = data_en["lookbook_image"]
+        data_ko["color"] = data_en["color"]
+        data_ko["category"] = lookbook.category.name_ko
+        data_ko["attributes"] = [attr.name_ko for attr in lookbook.attributes.all()]
+        data_ko["similar_images"] = data_en["similar_images"]
+
+        result["lookbook_data_en"].append(data_en)
+        result["lookbook_data_ko"].append(data_ko)
 
     return result
 
 
 class MemberLookbookAPIView(APIView):
     """멤버의 Lookbook 리스트를 조회하는 API 클래스"""
-
-    renderer_classes = [CamelCaseJSONRenderer]
 
     def get_object(self, pk):
         """pk에 해당하는 멤버를 반환합니다.
@@ -93,17 +105,14 @@ class MemberLookbookAPIView(APIView):
         member = self.get_object(pk)
         member_color = member.color
 
-        if member_color is None:
-            raise NotFound({"message": "색상이 존재하지 않습니다."})
-
         lookbooks = find_lookbooks_by_member(pk)
 
-        if lookbooks is None:
-            raise NotFound({"message": "Lookbook이 존재하지 않습니다."})
+        if member_color is not None:
+            member_color = member_color.hex_code
 
         result = make_lookbook_data(lookbooks)
 
-        result["symbol_color"] = member_color.hex_code
+        result["symbol_color"] = member_color
         result["status_code"] = status.HTTP_200_OK
 
         return Response(result)
