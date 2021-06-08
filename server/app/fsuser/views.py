@@ -4,11 +4,12 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.serializers import ValidationError
 from clothes.models import UserUploadClothes
+from fsuser.models import Fsuser
 from clothes.serializers import UserUploadClothesSerializer
 from clothes_style.models import ClothesCategory, ClothesAttribute
+from clothes_style.constants import CLOTHES_CATEGORIES_EN_KO, CLOTHES_ATTRIBUTES_EN_KO
 from ai.mmfashion.member_matching import match_to_member
 from .constants import MEMBER_DESCRIPTIONS_EN, MEMBER_DESCRIPTIONS_KO
-from clothes_style.constants import CLOTHES_CATEGORIES_EN_KO, CLOTHES_ATTRIBUTES_EN_KO
 
 
 class UserMemberMatchingAPIView(APIView):
@@ -62,22 +63,31 @@ class UserMemberMatchingAPIView(APIView):
 
 
 class UserRequestImageAPIView(APIView):
-    """사용자가 추가적으로 요청한 이미지를 저장하는 API 클래스"""
+    """사용자가 추가적으로 요청한 의류 이미지를 저장하는 API 클래스"""
 
     def post(self, request):
-        """사용자가 요청한 이미지를 저장합니다."""
+        """사용자가 요청한 의류 이미지를 저장합니다."""
+
         try:
-            user_image = UserUploadClothes.objects.create(
+            request_image = UserUploadClothes.objects.create(
                 image=request.FILES.get("user_image"),
             )
 
-            user_image = UserUploadClothesSerializer(user_image)
+            _email = request.data.get("email")
+            _user = Fsuser.objects.get(email=_email)
 
-            result = dict()
-            result["user_image"] = user_image.data
-            result["email"] = request.data.get("email")
-            result["statusCode"] = status.HTTP_201_CREATED
-            return Response(result)
+        except Fsuser.DoesNotExist:
+            _user = Fsuser.objects.create(email=_email)
 
         except:
             raise ValidationError({"user_image": "업로드한 이미지가 없습니다."})
+
+        request_image.user = _user
+        request_image = UserUploadClothesSerializer(request_image)
+
+        result = dict()
+        result["email"] = _email
+        result["user_request_image_id"] = request_image.data.get("id")
+        result["statusCode"] = status.HTTP_201_CREATED
+
+        return Response(result)

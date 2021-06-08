@@ -116,11 +116,6 @@ class UserUploadClothes(models.Model):
         verbose_name="룩북 의류",
     )
 
-    def save(self, *args, **kwargs):
-        # self.full_clean()
-
-        super().save(*args, **kwargs)
-
     def __str__(self):
         return f"사용자 요청 의류({self.id})"
 
