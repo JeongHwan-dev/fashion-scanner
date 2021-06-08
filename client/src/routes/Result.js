@@ -5,6 +5,7 @@ import MemberCard from 'components/matchingComponents/MemberCard';
 import InfoCard from 'components/matchingComponents/InfoCard';
 import Footer from 'components/commonComponents/Footer';
 import 'routes/css/Result.css';
+import { useTranslation } from 'react-i18next';
 
 const Result = () => {
   const url = `http://elice-kdt-ai-track-vm-ai-13.koreacentral.cloudapp.azure.com:8000`;
@@ -23,6 +24,7 @@ const Result = () => {
       feature: '',
     },
   });
+  const { t } = useTranslation('result');
 
   useEffect(() => {
     setResult({
@@ -65,7 +67,7 @@ const Result = () => {
           <div className={`guide ${isClicked ? 'clicked' : ''}`}>
             {!isClicked ? (
               <>
-                <p>아래의 카드에 마우스를 올려주세요.</p>
+                <p>{t('guide')}</p>
                 <span className="material-icons">arrow_drop_down</span>
               </>
             ) : (

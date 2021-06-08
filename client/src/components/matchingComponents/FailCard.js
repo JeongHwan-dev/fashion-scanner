@@ -1,7 +1,10 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import 'components/matchingComponents/css/FailCard.css';
 
 const FailCard = () => {
+  const { t } = useTranslation('failCard');
+
   return (
     <>
       <div className="failCard__inner">
@@ -9,12 +12,12 @@ const FailCard = () => {
           <img src="/images/matching/failure_group_photo.jpg" alt="Failure" />
         </div>
         <div className="failCard__text">
-          <p>잠시 후 다시 시도해주세요.</p>
-          <p>같은 문제가 계속 되신다면 다른 이미지를 활용해주세요.</p>
+          <p>{t('failCard_text1')}</p>
+          <p>{t('failCard_text2')}</p>
         </div>
         <div className="failCard__btn">
           <a href="/matching">
-            <label>이전으로 돌아가기</label>
+            <label>{t('failCard_btn')}</label>
           </a>
         </div>
       </div>

@@ -1,7 +1,10 @@
 import React, { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import 'components/matchingComponents/css/InfoCard.css';
 
 const InfoCard = ({ memberObj, imgObj, isShared, isClicked }) => {
+  const { t } = useTranslation('infoCard');
+
   useEffect(() => {
     createKakaoButton();
   }, []);
@@ -81,7 +84,7 @@ const InfoCard = ({ memberObj, imgObj, isShared, isClicked }) => {
           <>
             <div className="infoCard__imgObj">
               <table>
-                <th colspan="2">업로드한 이미지 정보</th>
+                <th colspan="2">{t('infoCard_imgObj')}</th>
                 <tr>
                   <td>Type</td>
                   <td>{imgObj.type}</td>
@@ -98,7 +101,7 @@ const InfoCard = ({ memberObj, imgObj, isShared, isClicked }) => {
           <a href={`/lookbook/${memberObj.name}`}>{memberObj.btnLabel}</a>
         </div>
         <div className="sharing__box">
-          <p className="sharing__title">공유하기</p>
+          <p className="sharing__title">{t('sharing_title')}</p>
           <div className="sharing__btns">
             <div className="sharing__kakaotalk">
               <a className="sharing__a" id="create-kakao-link-btn" href="javascript:;">

@@ -133,9 +133,11 @@
 
   /* UPLOAD BUTTON */
   .upload__btn label {
-    padding: 5px 45px;
+    padding: 10px 45px;
     font-size: 18px;
   }
+
+  /* UPLOAD PREVIEW */
   .upload__preview img {
     width: 270px;
     height: 360px;
@@ -149,12 +151,13 @@
     line-height: 1.6;
   }
 
+  /* PICTURE SUBMIT */
   .picture__submit {
     width: 300px;
   }
   .picture__submit button {
     width: 180px;
-    height: 40px;
+    height: 45px;
     font-size: 18px;
   }
 }

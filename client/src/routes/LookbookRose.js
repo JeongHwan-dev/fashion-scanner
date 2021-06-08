@@ -13,17 +13,21 @@ import Footer from 'components/commonComponents/Footer';
 const LookbookRose = () => {
   // jennie:1, rose:2, jisoo:3, lisa:4
   const memberId = 2;
+  const testUrl =
+    'https://544e9fbe-33cf-4453-9271-9c0992dcef4a.mock.pstmn.io/api/members/1/lookbook';
   const [member, setMemeber] = useState([]);
+  const [memberEn, setMemberEn] = useState([]);
   const [memberColor, setMemberColor] = useState('');
   const isMobile = useMediaQuery({ maxWidth: 375 });
 
   useEffect(() => {
     const getLookbookData = async () => {
       await axios
-        .get(`/api/members/${memberId}/lookbook`)
+        .get(testUrl)
         // 응답(성공)
         .then((response) => {
-          setMemeber(response.data.lookbookData);
+          setMemberEn(response.data.lookbookDataEn);
+          setMemeber(response.data.lookbookDataKo);
           setMemberColor(response.data.symbolColor);
         })
         // 응답(실패)
@@ -45,9 +49,9 @@ const LookbookRose = () => {
       )}
       {/* 02 : LOOKBOOK MAIN */}
       {!isMobile ? (
-        <LookbookMain member={member} memberColor={memberColor} />
+        <LookbookMain member={member} memberEn={memberEn} memberColor={memberColor} />
       ) : (
-        <MobileLookbookMain member={member} />
+        <MobileLookbookMain member={member} memberEn={memberEn} />
       )}
       {/* 03 : OTHER MEMBERS CHECK */}
       {!isMobile ? <Others /> : <MobileOthers />}
