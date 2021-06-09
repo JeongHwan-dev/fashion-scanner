@@ -35,7 +35,10 @@ class UserMemberMatchingAPIView(APIView):
             attribute2_ko = CLOTHES_ATTRIBUTES_EN_KO[attributes[1]]
             attribute3_ko = CLOTHES_ATTRIBUTES_EN_KO[attributes[2]]
 
-            img_obj_en = {"category": category, "attributes": [attr.replace("_", " ") for attr in attributes]}
+            img_obj_en = {
+                "category": category,
+                "attributes": [attr.replace("_", " ") for attr in attributes],
+            }
 
             img_obj_ko = {
                 "category": CLOTHES_CATEGORIES_EN_KO[match_result["category"]],
