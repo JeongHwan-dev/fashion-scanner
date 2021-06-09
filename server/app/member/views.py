@@ -75,7 +75,11 @@ class MemberLookbookAPIView(APIView):
         Returns:
             멤버 인스턴스
         """
-        return BlackpinkMember.objects.select_related("color").get(pk=pk)
+        try:
+            return BlackpinkMember.objects.select_related("color").get(pk=pk)
+
+        except BlackpinkMember.DoesNotExist:
+            raise NotFound({"message": "멤버가 존재하지 않습니다."})
 
     def get(self, request, pk, format=None):
         """pk에 해당하는 멤버의 Lookbook 리스트와 상징색을 반환합니다.
