@@ -14,7 +14,7 @@ const LookbookRose = () => {
   // jennie:1, rose:2, jisoo:3, lisa:4
   const memberId = 2;
   const testUrl =
-    'https://544e9fbe-33cf-4453-9271-9c0992dcef4a.mock.pstmn.io/api/members/1/lookbook';
+    `http://elice-kdt-ai-track-vm-distribute-13.koreacentral.cloudapp.azure.com:8001/api/members/${memberId}/lookbook`;
   const [member, setMemeber] = useState([]);
   const [memberEn, setMemberEn] = useState([]);
   const [memberColor, setMemberColor] = useState('');

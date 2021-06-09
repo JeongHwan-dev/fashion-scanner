@@ -9,6 +9,7 @@ const Navigation = () => {
   const [menu, setMenu] = useState(false); // 햄버거 버튼
   const { currentLang, setEng, setKor } = useContext(LangContext); // 전역으로 상태 관리: 현재 언어, 영어로 지정, 한국어로 지정
   const { t } = useTranslation();
+  
 
   return (
     <>
@@ -42,11 +43,11 @@ const Navigation = () => {
               {isMobile && (
                 <>
                   <li className="lang__a">
-                    <a className={`lang ${currentLang === 'ko' ? 'active' : ''}`} onClick={setKor}>
+                    <a className={`lang ${localStorage.i18nextLng === 'ko' ? 'active' : ''}`} onClick={setKor}>
                       KOR
                     </a>
                     <span>|</span>
-                    <a className={`lang ${currentLang === 'en' ? 'active' : ''}`} onClick={setEng}>
+                    <a className={`lang ${localStorage.i18nextLng === 'en' ? 'active' : ''}`} onClick={setEng}>
                       ENG
                     </a>
                   </li>
@@ -59,11 +60,11 @@ const Navigation = () => {
               {!isMobile && (
                 // pc 화면일 때 나오는 다국어
                 <>
-                  <li className={`lang ${currentLang === 'ko' ? 'active' : ''}`} onClick={setKor}>
+                  <li className={`lang ${localStorage.i18nextLng === 'ko' ? 'active' : ''}`} onClick={setKor}>
                     KOR
                   </li>
                   <span>|</span>
-                  <li className={`lang ${currentLang === 'en' ? 'active' : ''}`} onClick={setEng}>
+                  <li className={`lang ${localStorage.i18nextLng === 'en' ? 'active' : ''}`} onClick={setEng}>
                     ENG
                   </li>
                 </>
