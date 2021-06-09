@@ -10,7 +10,7 @@ import Matching from 'routes/Matching';
 import Loading from 'routes/Loading';
 import Failure from 'routes/Failure';
 import Result from 'routes/Result';
-import SharingJisoo from 'routes/SharingJIsoo';
+import SharingJisoo from 'routes/SharingJisoo';
 import SharingJennie from 'routes/SharingJennie';
 import SharingLisa from 'routes/SharingLisa';
 import SharingRose from 'routes/SharingRose';
