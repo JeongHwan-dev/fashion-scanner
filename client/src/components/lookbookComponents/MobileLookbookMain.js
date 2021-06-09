@@ -42,6 +42,10 @@ const MobileLookbookMain = ({ member, memberEn }) => {
         backgroundColor: `${colorbox}`,
       };
       let similars = JSON.parse(similarImages);
+      let similarList = [];
+      for (let similar of similars) {
+        similarList.push(JSON.parse(similar));
+      }
 
       return (
         <SwiperSlide key={lookbookId}>
@@ -65,7 +69,8 @@ const MobileLookbookMain = ({ member, memberEn }) => {
           <div className="m-lookbookmain__recomm">
             <h3>룩북과 비슷한 옷 보기</h3>
             <div className="m-lookbookmain__recomm__inner">
-              {similars.map((similar) => {
+              {similarList.map((similar) => {
+                // console.log(similar.image)
                 return (
                   <div>
                     <a target="_blank" href={similar.link}>
@@ -92,6 +97,10 @@ const MobileLookbookMain = ({ member, memberEn }) => {
         backgroundColor: `${colorbox}`,
       };
       let similars = JSON.parse(similarImages);
+      let similarList = [];
+      for (let similar of similars) {
+        similarList.push(JSON.parse(similar));
+      }
 
       return (
         <SwiperSlide key={lookbookId}>
@@ -115,7 +124,7 @@ const MobileLookbookMain = ({ member, memberEn }) => {
           <div className="m-lookbookmain__recomm">
             <h3>You may like these...</h3>
             <div className="m-lookbookmain__recomm__inner">
-              {similars.map((similar) => {
+              {similarList.map((similar) => {
                 return (
                   <div>
                     <a target="_blank" href={similar.link}>
@@ -143,7 +152,7 @@ const MobileLookbookMain = ({ member, memberEn }) => {
             slidesPerView={3}
             loop={true}
           >
-            {currentLang === 'ko' ? mobileThumbnailsKo : mobileThumbnailsEn}
+            {localStorage.i18nextLng === 'ko' ? mobileThumbnailsKo : mobileThumbnailsEn}
           </Swiper>
           <Swiper
             className="m-lookbookmain__main"
@@ -153,7 +162,7 @@ const MobileLookbookMain = ({ member, memberEn }) => {
             thumbs={{ swiper: thumbsSwiper }}
             loop={true}
           >
-            {currentLang === 'ko' ? mobileSlidesKo : mobileSlidesEn}
+            {localStorage.i18nextLng === 'ko' ? mobileSlidesKo : mobileSlidesEn}
           </Swiper>
         </div>
       </section>
