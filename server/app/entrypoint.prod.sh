@@ -14,7 +14,7 @@ fi
 python manage.py flush --no-input
 python manage.py makemigrations
 python manage.py migrate
-python data_setting.py
+python data_setup.py
 python manage.py collectstatic --no-input --clear
 
 exec "$@"
