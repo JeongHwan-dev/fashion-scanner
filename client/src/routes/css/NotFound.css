@@ -1,6 +1,9 @@
 /* NOT FOUND SECTION */
 .notfound {
-  height: 900px;
+  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 1000px;
   background-color: white;
 }
 .notfound .notfound__inner {
@@ -36,22 +39,59 @@
   text-align: center;
   color: #de989c;
 }
-.notfound .notfound__inner .notfound__dsc span{
+.notfound .notfound__inner .notfound__dsc span {
   display: block;
   font-size: 20px;
   margin-bottom: 30px;
 }
-.notfound .notfound__inner .notfound__dsc a{
+.notfound .notfound__inner .notfound__dsc a {
   display: inline-block;
-  padding: 10px 20px;
-  background: black;
+  padding: 15px 40px;
+  background: #333;
   border-radius: 20px;
+  box-shadow: 0px 5px 5px #d2d2d2;
   font-size: 18px;
   color: #ffffff;
-  box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
 }
 
-@media screen and (max-width:375px){
+/* MEDIA */
+@media screen and (max-width: 390px) {
+  /* NOT FOUND SECTION */
+  .notfound {
+    width: 390px;
+  }
+  .notfound .notfound__inner {
+    width: inherit;
+  }
+
+  /* NOT FOUND IMAGE */
+  .notfound__img {
+    margin: 200px 0 20px;
+  }
+  .notfound .notfound__inner .notfound__img img:nth-child(1) {
+    width: 30px;
+  }
+  .notfound .notfound__inner .notfound__img img:nth-child(2) {
+    width: 200px;
+  }
+
+  /* NOT FOUND DSC */
+  .notfound .notfound__inner .notfound__dsc h2 {
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    font-size: 22px;
+  }
+  .notfound .notfound__inner .notfound__dsc span {
+    display: inline-block;
+    margin-bottom: 0;
+    font-size: 16px;
+  }
+  .notfound .notfound__inner .notfound__dsc a {
+    display: inline-block;
+    padding: 10px 15px;
+  }
+}
+
+@media screen and (max-width: 375px) {
   /* NOT FOUND SECTION */
   .notfound {
     width: 375px;
@@ -61,27 +101,27 @@
   }
 
   /* NOT FOUND IMAGE */
-  .notfound__img{
+  .notfound__img {
     margin: 200px 0 20px;
   }
-  .notfound .notfound__inner .notfound__img img:nth-child(1){
+  .notfound .notfound__inner .notfound__img img:nth-child(1) {
     width: 30px;
   }
-  .notfound .notfound__inner .notfound__img img:nth-child(2){
+  .notfound .notfound__inner .notfound__img img:nth-child(2) {
     width: 200px;
   }
-  
+
   /* NOT FOUND DSC */
   .notfound .notfound__inner .notfound__dsc h2 {
     font-family: 'Spoqa Han Sans Neo', 'sans-serif';
     font-size: 22px;
   }
-  .notfound .notfound__inner .notfound__dsc span{
+  .notfound .notfound__inner .notfound__dsc span {
     display: inline-block;
-    font-size: 16px;
     margin-bottom: 0;
+    font-size: 16px;
   }
-  .notfound .notfound__inner .notfound__dsc a{
+  .notfound .notfound__inner .notfound__dsc a {
     display: inline-block;
     padding: 10px 15px;
   }

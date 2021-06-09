@@ -15,10 +15,10 @@ const MemberCard = ({ memberObj, isClicked, onCardClickHandler }) => {
         </div>
         <div className="card back">
           <div className="card__photo">
-            <img src={memberObj.photo} alt={memberObj.name} />
+            <img src={`/images/matching/${memberObj.name}_card.jpg`} alt={memberObj.name} />
           </div>
           <div className="card__sign">
-            <img src={memberObj.sign} alt={memberObj.name} />
+            <img src={`/images/matching/${memberObj.name}_sign.png`} alt={memberObj.name} />
           </div>
         </div>
       </div>

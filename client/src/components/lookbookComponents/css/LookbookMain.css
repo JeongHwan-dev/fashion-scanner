@@ -37,10 +37,10 @@
 /* LOOBOOK SWIEPR 1 - MAIN IMAGE */
 .lookbookmain__img {
   position: absolute;
-  margin: 10px;
   top: 60px;
   left: 75px;
   z-index: 1;
+  margin: 10px;
 }
 .lookbookmain__img img {
   object-fit: cover;
@@ -115,9 +115,9 @@
 }
 .lookbookmain__recommimg {
   display: flex;
-  position: relative;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 /* LOOKBOOK SWIPER 1 - INFO BOX - RECOMMEND EFFECT */
@@ -163,6 +163,7 @@
 .lookbookmain__swiper2 img {
   width: 80px;
   height: 80px;
+  object-fit: cover;
   cursor: pointer;
 }
 

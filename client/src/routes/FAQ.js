@@ -7,17 +7,15 @@ import { useMediaQuery } from 'react-responsive';
 
 const FAQ = () => {
   const [blackpink, setBlackpink] = useState(false);
-  const isMobile = useMediaQuery({ maxWidth: 375 });
+  const isMobile = useMediaQuery({ maxWidth: 390 });
 
   return (
     <>
-      {/* HEADER */}
       <Navigation />
-      {/* MAIN IMAGE */}
+      {/* 01 : MAIN IMAGE */}
       <MainImage blackpink={blackpink} isMobile={isMobile} />
-      {/* QUESTIONS */}
+      {/* 02 : QUESTIONS */}
       <Questions blackpink={blackpink} setBlackpink={setBlackpink} />
-      {/* FOOTER */}
       <Footer />
     </>
   );

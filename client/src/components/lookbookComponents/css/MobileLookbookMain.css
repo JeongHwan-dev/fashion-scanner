@@ -50,7 +50,7 @@
 }
 .m-lookbookmain__maincont div span {
   font-size: 14px;
-  color: #7E7E7E;
+  color: #7e7e7e;
 }
 .m-lookbookmain__maincont .m-lookbookmain__line2 .m-lookbookmain__colorbox {
   width: 18px;
@@ -71,9 +71,9 @@
 }
 .m-lookbookmain__recomm .m-lookbookmain__recomm__inner {
   display: flex;
-  height: 80%;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  height: 80%;
 }
 .m-lookbookmain__recomm .m-lookbookmain__recomm__inner div {
   position: relative;
@@ -83,12 +83,14 @@
 }
 
 /* SWIPER CORE NAVIGATION BUTTON */
-.swiper-button-prev, .swiper-container-rtl .swiper-button-next {
-  left: -1px;
+.swiper-button-prev,
+.swiper-container-rtl .swiper-button-next {
   top: 300px;
   right: auto;
+  left: -1px;
 }
-.swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+.swiper-button-next,
+.swiper-container-rtl .swiper-button-prev {
   top: 300px;
   right: -2px;
   left: auto;

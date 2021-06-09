@@ -1,9 +1,14 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
+import { useMediaQuery } from 'react-responsive';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import 'components/commonComponents/css/Footer.css';
 
 const Footer = () => {
+  const isMobile = useMediaQuery({ maxWidth: 390 });
+  const { t } = useTranslation('footer');
+
   return (
     <>
       <footer>
@@ -17,13 +22,13 @@ const Footer = () => {
                 <li>
                   <p>
                     <span className="material-icons">place</span>
-                    강남구 선릉로 433 세방빌딩 6층
+                    {!isMobile ? t('pc_address') : t('mobile_address')}{' '}
                   </p>
                 </li>
                 <li>
                   <p>
                     <span className="material-icons">phone</span>
-                    02-5986-8861
+                    {t('call')}
                   </p>
                 </li>
                 <li>
@@ -39,10 +44,10 @@ const Footer = () => {
                 <li className="team__dev">
                   <ul>
                     <li>
-                      <a href="/devTeam">ABOUT US</a>
+                      <a href="/devTeam">{t('culture')}</a>
                     </li>
                     <li>
-                      <a href="/faq">자주 묻는 질문</a>
+                      <a href="/faq">{t('faq')}</a>
                     </li>
                   </ul>
                 </li>
@@ -53,7 +58,9 @@ const Footer = () => {
                     </li>
                     <li>
                       <FontAwesomeIcon icon={faFacebook} className="sns__icon" />
-                      <FontAwesomeIcon icon={faInstagram} className="sns__icon" />
+                      <a href="https://www.instagram.com/fashion__scanner">
+                        <FontAwesomeIcon icon={faInstagram} className="sns__icon" />
+                      </a>
                       <FontAwesomeIcon icon={faTwitter} className="sns__icon" />
                     </li>
                   </ul>

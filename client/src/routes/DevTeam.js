@@ -12,8 +12,11 @@ const DevTeam = () => {
       <div className="devTeam">
         <Navigation />
         <div className="devTeam__inner">
+          {/* 01: DEV TEAM TITLE */}
           <DevTeamTitle />
+          {/* 02: DEV TEAM SUB */}
           <DevTeamSub />
+          {/* 03: MEMBERS'S CULTURES */}
           <Cultures />
         </div>
         <Footer />

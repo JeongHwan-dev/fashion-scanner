@@ -49,9 +49,9 @@
 }
 .faqmain__img img {
   display: inline-block;
+  top: 20px;
   width: auto;
   height: 350px;
-  top: 20px;
   border-radius: 200px;
 }
 
@@ -91,12 +91,13 @@
   z-index: 1;
 }
 
-@media screen and (max-width: 375px) {
+/* MEDIA */
+@media screen and (max-width: 390px) {
   /* MAIN IMAGE SECTION */
   .faqmain {
-    padding: 0;
     width: 360px;
     margin: auto;
+    padding: 0;
   }
   .faqmain__inner {
     width: inherit;
@@ -120,25 +121,25 @@
     display: none;
   }
   .faqmain__img {
-    position: static;
     display: flex;
-    width: 291px;
-    margin: auto;
+    position: static;
     top: 0;
     left: 0;
+    width: 291px;
+    margin: auto;
   }
   .faqmain__img img {
     display: inline-block;
+    top: 0;
     width: 291px;
     height: auto;
-    top: 0;
   }
 
   /* MAIN IMAGE TITLE */
   .faqmain__inner__bg {
-    position: relative;
     display: flex;
     flex-direction: column;
+    position: relative;
   }
   .faqmain__inner__bg h2 {
     display: inline-block;
@@ -155,11 +156,84 @@
     left: 20px;
   }
   .faqmain__inner__bg h2:nth-child(3) {
-    bottom: 80px;
     right: 65px;
+    bottom: 80px;
   }
   .faqmain__inner__bg h2:nth-child(4) {
-    bottom: 30px;
     right: 90px;
+    bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  /* MAIN IMAGE SECTION */
+  .faqmain {
+    width: 360px;
+    margin: auto;
+    padding: 0;
+  }
+  .faqmain__inner {
+    width: inherit;
+  }
+
+  /* MAIN IMAGE BACKGROUND */
+  .fagmain__inner__wrapper {
+    width: inherit;
+    height: auto;
+  }
+  .faqmain__inner__bg {
+    position: relative;
+    width: 324px;
+    height: 500px;
+    margin: auto;
+    margin-top: 70px;
+  }
+
+  /* MAIN IMAGE BLACKPINK */
+  .faqmain__img__bg {
+    display: none;
+  }
+  .faqmain__img {
+    display: flex;
+    position: static;
+    top: 0;
+    left: 0;
+    width: 291px;
+    margin: auto;
+  }
+  .faqmain__img img {
+    display: inline-block;
+    top: 0;
+    width: 291px;
+    height: auto;
+  }
+
+  /* MAIN IMAGE TITLE */
+  .faqmain__inner__bg {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  .faqmain__inner__bg h2 {
+    display: inline-block;
+    font-size: 60px;
+    font-weight: bold;
+    color: #6b3f4c;
+  }
+  .faqmain__inner__bg h2:nth-child(1) {
+    top: 50px;
+    left: 30px;
+  }
+  .faqmain__inner__bg h2:nth-child(2) {
+    top: 100px;
+    left: 20px;
+  }
+  .faqmain__inner__bg h2:nth-child(3) {
+    right: 65px;
+    bottom: 80px;
+  }
+  .faqmain__inner__bg h2:nth-child(4) {
+    right: 90px;
+    bottom: 30px;
   }
 }

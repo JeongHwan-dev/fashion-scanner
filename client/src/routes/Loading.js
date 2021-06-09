@@ -1,22 +1,31 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useHistory, useLocation } from 'react-router-dom';
 import Navigation from 'components/commonComponents/Navigation';
 import Footer from 'components/commonComponents/Footer';
 import loadingVideo from 'videos/Loading.mov';
 import 'routes/css/Loading.css';
-import { useMediaQuery } from 'react-responsive';
 
 const Loading = () => {
-  const isMobile = useMediaQuery({
-    query: '(max-width: 375px)'
-  });
-  // console.log(isMobile);
+  const history = useHistory();
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    setInterval(() => {
+      history.push({
+        pathname: '/matching/result',
+        state: {
+          matchingResultKo: location.state.matchingResultKo,
+          matchingResultEn: location.state.matchingResultEn,
+        },
+      });
+    }, 5000);
+  }, []);
 
   return (
     <>
-      {/* HEADER */}
-      {/* <Navigation /> */}
-      {!isMobile ? <Navigation /> : null}
-      {/* LOADING PAGE */}
+      <Navigation />
+      {/* 01: LOADING PAGE */}
       <div className="loading">
         <div className="loading__title">
           <h3>Loading</h3>
@@ -30,7 +39,6 @@ const Loading = () => {
           </video>
         </div>
       </div>
-      {/* FOOTER */}
       <Footer />
     </>
   );

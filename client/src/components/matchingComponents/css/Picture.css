@@ -25,11 +25,11 @@
   text-align: center;
 }
 .upload__btn label {
-  box-sizing: border-box;
   margin: 0 auto;
   padding: 10px 60px;
   border: 3px solid #d97e9f;
   border-radius: 30px;
+  box-sizing: border-box;
   font-size: 24px;
   color: #d97e9f;
   cursor: pointer;
@@ -70,6 +70,16 @@
   text-align: center;
   color: #646464;
 }
+.picture__agree input[type='checkbox'] {
+  width: 16px;
+  height: 16px;
+  border: none;
+  border-radius: 6px;
+}
+.picture__agree input[type='checkbox']:hover {
+  outline: none;
+  box-shadow: 0 0 0 1px #f2a7bb;
+}
 
 /* PICTURE SUBMIT */
 .picture__submit {
@@ -102,19 +112,18 @@
 }
 
 /* MEDIA */
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 390px) {
   .picture {
     padding: 100px 0;
   }
   .picture__inner {
-    width: 375px;
+    width: 390px;
   }
 
+  /* UPLOAD  */
   .picture__upload {
     margin-bottom: 25px;
   }
-
-  /* UPLOAD TITLE */
   .upload__title {
     margin-bottom: 20px;
   }
@@ -124,9 +133,11 @@
 
   /* UPLOAD BUTTON */
   .upload__btn label {
-    padding: 5px 45px;
+    padding: 10px 45px;
     font-size: 18px;
   }
+
+  /* UPLOAD PREVIEW */
   .upload__preview img {
     width: 270px;
     height: 360px;
@@ -140,12 +151,63 @@
     line-height: 1.6;
   }
 
+  /* PICTURE SUBMIT */
   .picture__submit {
     width: 300px;
   }
   .picture__submit button {
     width: 180px;
-    height: 40px;
+    height: 45px;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .picture {
+    padding: 100px 0;
+  }
+  .picture__inner {
+    width: 375px;
+  }
+
+  /* UPLOAD  */
+  .picture__upload {
+    margin-bottom: 25px;
+  }
+  .upload__title {
+    margin-bottom: 20px;
+  }
+  .upload__title h1 {
+    font-size: 22px;
+  }
+
+  /* UPLOAD BUTTON */
+  .upload__btn label {
+    padding: 10px 45px;
+    font-size: 18px;
+  }
+
+  /* UPLOAD PREVIEW */
+  .upload__preview img {
+    width: 270px;
+    height: 360px;
+    margin: 0 auto 10px;
+  }
+
+  /* PICTURE AGREE */
+  .picture__agree {
+    width: 300px;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  /* PICTURE SUBMIT */
+  .picture__submit {
+    width: 300px;
+  }
+  .picture__submit button {
+    width: 180px;
+    height: 45px;
     font-size: 18px;
   }
 }

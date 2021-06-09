@@ -22,8 +22,8 @@
   object-fit: cover;
   width: 450px;
   height: 450px;
-  margin-left: 20px;
   margin-right: 80px;
+  margin-left: 20px;
 }
 .memberinfo__dsc {
   width: 550px;

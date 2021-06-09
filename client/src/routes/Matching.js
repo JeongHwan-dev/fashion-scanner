@@ -9,14 +9,11 @@ const Matching = () => {
   return (
     <>
       <div className="matching">
-        {/* HEADER */}
         <Navigation />
-        {/* SECTIONS */}
         {/* 01: MATCHING TITLE */}
         <MatchingTitle />
         {/* 02: PICTURE */}
         <Picture />
-        {/* FOOTER */}
         <Footer />
       </div>
     </>

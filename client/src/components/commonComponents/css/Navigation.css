@@ -6,7 +6,7 @@ header {
   width: 100%;
   height: 58px;
   background-color: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(30px);
+  backdrop-filter: blur(50px);
 }
 header nav {
   position: relative;
@@ -51,12 +51,12 @@ header .link-group ul.link li a {
   display: block;
   width: auto;
   height: 100%;
-  box-sizing: border-box;
   padding: 12px 10px;
+  box-sizing: border-box;
   font-size: 15px;
   color: #fff;
   cursor: pointer;
-  transition: 0.1s;
+  transition: 0.2s;
 }
 header .link-group ul.link li a:hover {
   color: #d1d6db;
@@ -74,55 +74,57 @@ header .language-group ul {
   display: flex;
 }
 header .language-group ul.language li {
+  display: block;
   position: relative;
   width: auto;
   height: 100%;
-}
-header .language-group ul.language li a {
-  display: block;
-  width: auto;
-  height: 100%;
-  box-sizing: border-box;
   padding: 12px 10px;
+  box-sizing: border-box;
   font-size: 15px;
-  color: #fff;
+  color: #e0e0e0;
   cursor: pointer;
-  transition: 0.1s;
+  transition: 0.2s;
 }
-header .language-group ul.language li a:hover {
-  color: #d1d6db;
+header .language-group ul.language li:hover {
+  color: #fff;
+}
+header .language-group ul.language li.active {
+  color: #fff;
 }
 header .language-group ul.language span {
   display: block;
   width: auto;
   height: 100%;
-  box-sizing: border-box;
   padding: 12px 10px;
+  box-sizing: border-box;
   font-size: 15px;
   color: #fff;
-  transition: 0.1s;
+  transition: 0.2s;
 }
 
-@media screen and (max-width: 375px) {
+/* MEDIA */
+@media screen and (max-width: 390px) {
   /* NAVIGATION */
   header {
     position: fixed !important;
     top: 0;
-    width: 375px;
+    width: 390px;
     z-index: 3;
   }
   header .inner {
-    width: inherit;
-    margin: 0 auto;
+    width: 390px;
   }
 
   /* NAVIGATION LOGO */
   header .logo {
-    left: 115px;
+    right: 0;
+    left: 0;
+    width: 180px;
   }
   header img {
-    width: 150px;
+    width: 180px;
     height: auto;
+    margin: 0 auto;
   }
 
   /* HAMBURGER ICON */
@@ -136,26 +138,129 @@ header .language-group ul.language span {
     overflow: hidden;
     top: 58px;
     right: 0;
+    z-index: 3;
     width: inherit;
     height: 0;
-    background-color: rgba(0, 0, 0, 0.664);
+    background-color: rgba(0, 0, 0, 0.85);
     transition: height 0.4s;
   }
   header .link-group.active {
-    height: 180px;
+    height: 280px;
   }
   header .link-group ul.link {
     flex-direction: column;
     width: inherit;
   }
   header .link-group ul.link li a {
-    padding: 12px 20px;
+    padding: 18px 20px;
   }
 
   /* NAVIGATION LANGUAGE GROUP */
   header .language-group {
-    top: 6px;
-    right: 10px;
-    padding: 10px;
+    top: 3px;
+    right: 0px;
+    padding: 0px;
+  }
+  header .language-group .language .lang {
+    display: none;
+  }
+  header .language-group .language .lang.active {
+    display: block;
+    right: 0;
+    padding: 15px;
+  }
+  header .link-group.active ul.link .lang__a {
+    display: flex;
+  }
+  header .link-group.active ul.link .lang__a a {
+    color: #e0e0e0;
+  }
+  header .link-group.active ul.link .lang__a a.active {
+    color: #fff;
+  }
+  header .link-group.active ul.link .lang__a span {
+    align-items: center;
+    margin: auto 10px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  /* NAVIGATION */
+  header {
+    position: fixed !important;
+    top: 0;
+    width: 375px;
+    z-index: 3;
+  }
+  header .inner {
+    width: 375px;
+  }
+
+  /* NAVIGATION LOGO */
+  header .logo {
+    right: 0;
+    left: 0;
+    width: 180px;
+  }
+  header img {
+    width: 180px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  /* HAMBURGER ICON */
+  header .inner .material-icons {
+    display: inline-block;
+    padding: 15px;
+  }
+
+  /* NAVIGATION LINK GROUP */
+  header .link-group {
+    overflow: hidden;
+    top: 58px;
+    right: 0;
+    z-index: 3;
+    width: inherit;
+    height: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    transition: height 0.4s;
+  }
+  header .link-group.active {
+    height: 280px;
+  }
+  header .link-group ul.link {
+    flex-direction: column;
+    width: inherit;
+  }
+  header .link-group ul.link li a {
+    padding: 18px 20px;
+  }
+
+  /* NAVIGATION LANGUAGE GROUP */
+  header .language-group {
+    top: 3px;
+    right: 0px;
+    padding: 0px;
+  }
+  header .language-group .language .lang {
+    display: none;
+  }
+  header .language-group .language .lang.active {
+    display: block;
+    right: 0;
+    padding: 15px;
+  }
+  header .link-group.active ul.link .lang__a {
+    display: flex;
+  }
+  header .link-group.active ul.link .lang__a a {
+    color: #e0e0e0;
+  }
+  header .link-group.active ul.link .lang__a a.active {
+    color: #fff;
+  }
+  header .link-group.active ul.link .lang__a span {
+    align-items: center;
+    margin: auto 10px;
   }
 }
