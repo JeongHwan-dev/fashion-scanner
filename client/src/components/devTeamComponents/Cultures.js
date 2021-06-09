@@ -167,7 +167,7 @@ const Cultures = () => {
   // 개발 문화 카드 랜더링 메서드
   const rendering = () => {
     const result = [];
-    for (let i = 0; i < membersEn.length; i++) {
+    for (let i = 0; i < members.length; i++) {
       result.push(<CultureCard key={i} memberObj={members[i]} />);
     }
     return result;
