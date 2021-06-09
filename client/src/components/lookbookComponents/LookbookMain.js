@@ -187,7 +187,7 @@ const LookbookMain = ({ member, memberEn, memberColor }) => {
             thumbs={{ swiper: thumbsSwiper }}
             loop={true}
           >
-            {currentLang === 'ko' ? slidesKo : slidesEn}
+            {localStorage.i18nextLng === 'ko' ? slidesKo : slidesEn}
           </Swiper>
           <Swiper
             id="thumbs"
@@ -196,7 +196,7 @@ const LookbookMain = ({ member, memberEn, memberColor }) => {
             spaceBetween={20}
             slidesPerView={10}
           >
-            {currentLang === 'ko' ? thumbnailsKo : thumbnailsEn}
+            {localStorage.i18nextLng === 'ko' ? thumbnailsKo : thumbnailsEn}
           </Swiper>
         </div>
       </section>
