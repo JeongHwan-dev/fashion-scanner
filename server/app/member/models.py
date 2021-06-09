@@ -2,9 +2,7 @@ from django.db import models
 
 
 class BlackpinkMember(models.Model):
-    name = models.CharField(
-        max_length=32, blank=False, null=False, verbose_name="멤버 이름"
-    )
+    name = models.CharField(max_length=32, verbose_name="멤버 이름")
     color = models.OneToOneField(
         "clothes_style.Color",
         related_name="member",
