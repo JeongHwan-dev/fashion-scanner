@@ -10,7 +10,7 @@ SwiperCore.use([Navigation, Thumbs]);
 const MobileLookbookMain = ({ member, memberEn }) => {
   const { currentLang } = useContext(LangContext);
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
-  // console.log(member);
+
   const mobileThumbnailsKo = member.map(({ lookbookId, lookbookImage }) => {
     return (
       <SwiperSlide key={lookbookId}>
@@ -69,10 +69,10 @@ const MobileLookbookMain = ({ member, memberEn }) => {
           <div className="m-lookbookmain__recomm">
             <h3>룩북과 비슷한 옷 보기</h3>
             <div className="m-lookbookmain__recomm__inner">
-              {similarList.map((similar) => {
+              {similarList.map((similar, idx) => {
                 // console.log(similar.image)
                 return (
-                  <div>
+                  <div key={idx}>
                     <a target="_blank" href={similar.link}>
                       <img src={similar.image} alt="recommend image" />
                     </a>
@@ -124,9 +124,9 @@ const MobileLookbookMain = ({ member, memberEn }) => {
           <div className="m-lookbookmain__recomm">
             <h3>You may like these...</h3>
             <div className="m-lookbookmain__recomm__inner">
-              {similarList.map((similar) => {
+              {similarList.map((similar, idx) => {
                 return (
-                  <div>
+                  <div key={idx}>
                     <a target="_blank" href={similar.link}>
                       <img src={similar.image} alt="recommend image" />
                     </a>

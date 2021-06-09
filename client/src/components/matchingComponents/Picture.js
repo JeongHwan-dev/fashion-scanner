@@ -59,7 +59,6 @@ const Picture = () => {
               icon: 'success',
               button: '확인',
             });
-            console.log(response);
 
             history.push({
               pathname: '/matching/loading',
@@ -110,7 +109,6 @@ const Picture = () => {
               icon: 'success',
               button: 'Confirm',
             });
-            console.log(response);
 
             history.push({
               pathname: '/matching/loading',

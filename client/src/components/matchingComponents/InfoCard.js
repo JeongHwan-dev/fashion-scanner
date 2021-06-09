@@ -117,11 +117,7 @@ const InfoCard = ({ memberObj, imgObj, isShared, isClicked }) => {
           <p className="sharing__title">{t('sharing_title')}</p>
           <div className="sharing__btns">
             <div className="sharing__kakaotalk">
-              <a
-                className="sharing__a"
-                id="create-kakao-link-btn"
-                href="javascript:createKakaoButton()"
-              >
+              <a className="sharing__a" id="create-kakao-link-btn" href="#">
                 <img src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png" />
               </a>
             </div>
