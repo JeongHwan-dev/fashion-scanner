@@ -16,7 +16,7 @@ const SharingLisa = () => {
         name: 'lisa',
         title: '당신은 비율 천재 리사!',
         comment1: '남다른 각선미로 어떤 옷이던 자기 옷처럼 만드는 남다른 소화력을 지니셨군요.',
-        comment2: '리사의 룩북을 참고해보세요!',
+        comment2: '리사의 룩북을 참고해보세요.',
         btnLabel: '리사 룩북 바로가기',
       },
     },
@@ -26,7 +26,7 @@ const SharingLisa = () => {
         title: 'You got Lisa!',
         comment1: 'Every outfit looks good on you.',
         comment2: 'See the LOOKBOOK of Lisa.',
-        btnLabel: 'Lisa LOOKBOOK',
+        btnLabel: 'LOOKBOOK',
       },
     },
   };

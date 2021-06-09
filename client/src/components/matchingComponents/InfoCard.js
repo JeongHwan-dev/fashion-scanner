@@ -13,18 +13,8 @@ const InfoCard = ({ memberObj, imgObj, isShared, isClicked }) => {
   const createKakaoButton = () => {
     if (window.Kakao) {
       const kakao = window.Kakao;
-      let sharingUrl = '';
       if (!kakao.isInitialized()) {
         kakao.init(process.env.REACT_APP_KAKAO_INIT_KEY);
-      }
-      if (memberObj.name === 'jisoo') {
-        sharingUrl = `https://www.facebook.com/sharer/sharer.php?u=http://elice-kdt-ai-track-vm-distribute-13.koreacentral.cloudapp.azure.com/`;
-      } else if (memberObj.name === 'jennie') {
-        sharingUrl = `https://www.facebook.com/sharer/sharer.php?u=http://elice-kdt-ai-track-vm-distribute-13.koreacentral.cloudapp.azure.com/`;
-      } else if (memberObj.name === 'lisa') {
-        sharingUrl = `https://www.facebook.com/sharer/sharer.php?u=http://elice-kdt-ai-track-vm-distribute-13.koreacentral.cloudapp.azure.com/`;
-      } else {
-        sharingUrl = `https://www.facebook.com/sharer/sharer.php?u=http://elice-kdt-ai-track-vm-distribute-13.koreacentral.cloudapp.azure.com/`;
       }
 
       window.Kakao.Link.createDefaultButton({
@@ -33,18 +23,18 @@ const InfoCard = ({ memberObj, imgObj, isShared, isClicked }) => {
         content: {
           title: 'FASHION SCANNER',
           description: '#AI #FASHION #SCANNING #BLACKPINK #MATCHING',
-          imageUrl: sharingUrl,
+          imageUrl: 'https://blackpink.fashion-scanner.site/images/home/matching_group_photo.png',
           link: {
-            mobileWebUrl: sharingUrl,
-            webUrl: sharingUrl,
+            mobileWebUrl: `https://blackpink.fashion-scanner.site/matching/sharing/${memberObj.name}`,
+            webUrl: `https://blackpink.fashion-scanner.site/matching/sharing/${memberObj.name}`,
           },
         },
         buttons: [
           {
             title: '매칭 결과 보기',
             link: {
-              mobileWebUrl: sharingUrl,
-              webUrl: sharingUrl,
+              mobileWebUrl: `https://blackpink.fashion-scanner.site/matching/sharing/${memberObj.name}`,
+              webUrl: `https://blackpink.fashion-scanner.site/matching/sharing/${memberObj.name}`,
             },
           },
         ],
@@ -55,14 +45,14 @@ const InfoCard = ({ memberObj, imgObj, isShared, isClicked }) => {
   // 페이스북 공유하기 핸들러
   const onSharingFacebook = () => {
     window.open(
-      'https://www.facebook.com/sharer/sharer.php?u=http://elice-kdt-ai-track-vm-distribute-13.koreacentral.cloudapp.azure.com/',
+      `https://www.facebook.com/sharer/sharer.php?u=https://blackpink.fashion-scanner.site/matching/sharing/${memberObj.name}`,
     );
   };
 
   // 트위터 공유하기 핸들러
   const onSharingTwitter = () => {
     window.open(
-      'https://www.twitter.com/intent/tweet?&url=http://elice-kdt-ai-track-vm-distribute-13.koreacentral.cloudapp.azure.com/',
+      `https://www.twitter.com/intent/tweet?&url=https://blackpink.fashion-scanner.site/matching/sharing/${memberObj.name}`,
     );
   };
 
@@ -84,26 +74,38 @@ const InfoCard = ({ memberObj, imgObj, isShared, isClicked }) => {
           <>
             <div className="infoCard__imgObj">
               <table>
-                <th colSpan="2">{t('infoCard_imgObj')}</th>
-                <tr>
-                  <td>Type</td>
-                  <td>
-                    <span className="imgObj__data">#{imgObj.category}</span>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Feature</td>
-                  <td>
-                    {imgObj.attributes.map((attribute, idx) => {
-                      return (
-                        <span key={idx} className="imgObj__data">
-                          #{attribute}
-                        </span>
-                      );
-                    })}
-                    {/* {imgObj.attributes} */}
-                  </td>
-                </tr>
+                <thead>
+                  <tr>
+                    <th colSpan="2">{t('infoCard_imgObj')}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Type</td>
+                    <td>
+                      <span className="imgObj__data">#{imgObj.category}</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Feature</td>
+                    <td>
+                      {localStorage.i18nextLng === 'ko' ? (
+                        <>
+                          <span className="imgObj__data">#{imgObj.attributes[0]}</span>
+                          <span className="imgObj__data">#{imgObj.attributes[1]}</span>
+                          <span className="imgObj__data">#{imgObj.attributes[2]}</span>
+                        </>
+                      ) : (
+                        <>
+                          <span className="imgObj__data">#{imgObj.attributes[0]}</span>
+                          <span className="imgObj__data">#{imgObj.attributes[1]}</span>
+                          <br />
+                          <span className="imgObj__data">#{imgObj.attributes[2]}</span>
+                        </>
+                      )}
+                    </td>
+                  </tr>
+                </tbody>
               </table>
             </div>
           </>
@@ -115,7 +117,11 @@ const InfoCard = ({ memberObj, imgObj, isShared, isClicked }) => {
           <p className="sharing__title">{t('sharing_title')}</p>
           <div className="sharing__btns">
             <div className="sharing__kakaotalk">
-              <a className="sharing__a" id="create-kakao-link-btn" href="javascript:;">
+              <a
+                className="sharing__a"
+                id="create-kakao-link-btn"
+                href="javascript:createKakaoButton()"
+              >
                 <img src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png" />
               </a>
             </div>

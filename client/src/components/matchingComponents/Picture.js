@@ -37,8 +37,8 @@ const Picture = () => {
     setPreviewImg('');
   };
 
-  // [매칭 요청 사진] 제출 핸들러
-  const onSubmit = async () => {
+  // [매칭 요청 사진] 제출 핸들러 (KOR)
+  const onSubmitKo = async () => {
     if (requestImg) {
       const formData = new FormData();
       const config = {
@@ -84,6 +84,57 @@ const Picture = () => {
         text: '업로드한 이미지 파일이 없습니다.',
         icon: 'error',
         button: '확인',
+      });
+    }
+  };
+
+  // [매칭 요청 사진] 제출 핸들러 (ENG)
+  const onSubmitEn = async () => {
+    if (requestImg) {
+      const formData = new FormData();
+      const config = {
+        headers: {
+          'content-type': 'multipart/form-data',
+        },
+      };
+
+      formData.append('userImage', requestImg);
+
+      await axios
+        .post(url + '/api/user/matching', formData, config)
+        .then((response) => {
+          if (response.status === 200) {
+            swal({
+              title: 'Photo transfer complete',
+              text: '',
+              icon: 'success',
+              button: 'Confirm',
+            });
+            console.log(response);
+
+            history.push({
+              pathname: '/matching/loading',
+              state: {
+                matchingResultKo: response.data.matchingResultKo,
+                matchingResultEn: response.data.matchingResultEn,
+              },
+            });
+          }
+        })
+        .catch(() => {
+          swal({
+            title: 'Failed to send Photo',
+            text: 'error',
+            icon: 'warning',
+            button: 'Confirm',
+          });
+        });
+    } else {
+      swal({
+        title: 'Scanning Failed',
+        text: 'There is no image file uploaded.',
+        icon: 'error',
+        button: 'Confirm',
       });
     }
   };
@@ -138,9 +189,19 @@ const Picture = () => {
             </label>
           </div>
           <div className="picture__submit">
-            <button disabled={!isChecked} onClick={onSubmit}>
-              {t('picture_submit')}
-            </button>
+            {localStorage.i18nextLng === 'ko' ? (
+              <>
+                <button disabled={!isChecked} onClick={onSubmitKo}>
+                  {t('picture_submit')}
+                </button>
+              </>
+            ) : (
+              <>
+                <button disabled={!isChecked} onClick={onSubmitEn}>
+                  {t('picture_submit')}
+                </button>
+              </>
+            )}
           </div>
         </div>
       </section>

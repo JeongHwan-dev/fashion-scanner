@@ -52,8 +52,8 @@ const Request = () => {
     setIsChecked(!isChecked);
   };
 
-  // [요청 사진] 제출 핸들러
-  const onRequestHanlder = async () => {
+  // [요청 사진] 제출 핸들러 (KOR)
+  const onRequestKoHanlder = async () => {
     if (requestImg) {
       if (email) {
         if (isChecked == true) {
@@ -83,7 +83,6 @@ const Request = () => {
                 alert('error');
               }
             });
-
             swal({
               title: '요청 완료',
               text: '1주일 이내로 알람 메일을 보내드립니다.',
@@ -127,6 +126,84 @@ const Request = () => {
         text: '업로드한 이미지 파일이 없습니다.',
         icon: 'error',
         button: '확인',
+      });
+    }
+  };
+
+  // [요청 사진] 제출 핸들러 (ENG)
+  const onRequestEnHanlder = async () => {
+    if (requestImg) {
+      if (email) {
+        if (isChecked == true) {
+          // 사진 업로드, 이메일 작성, 정보 제공 동의 체크 모두 완료 시
+          if (isEmail(email)) {
+            // 유효한 이메일 형식일 경우
+            const formData = new FormData();
+            const config = {
+              headers: {
+                'content-type': 'multipart/form-data',
+              },
+            };
+
+            formData.append('userImage', requestImg);
+            formData.append('email', email);
+            console.log(formData);
+
+            await axios.post(url + '/api/user/request', formData, config).then((response) => {
+              console.log(response);
+
+              if (response.status === 200) {
+                setPreviewImg('images/request_sample.jpg');
+                setRequestImg('');
+                setEmail('');
+                setIsChecked('');
+              } else {
+                alert('error');
+              }
+            });
+            swal({
+              title: 'Request completed',
+              text: 'We will send you an email notification within 1 week.',
+              icon: 'success',
+              button: 'Confirm',
+            });
+          } else {
+            // 유효 하지 않은 이메일 형식일 경우
+            setEmail('');
+            setIsChecked('');
+
+            swal({
+              title: 'Request Failed',
+              text: 'The email format does not match.',
+              icon: 'warning',
+              button: 'Confirm',
+            });
+          }
+        } else {
+          // 이메일 체크 미완료 시
+          swal({
+            title: 'Request Failed',
+            text: 'Please agree to collect and use e-mail.',
+            icon: 'warning',
+            button: 'Confirm',
+          });
+        }
+      } else {
+        // 사진 업로드(이메일 미입력) 완료 시
+        swal({
+          title: 'Request completed',
+          text: 'The photo update you requested will take about a week.',
+          icon: 'success',
+          button: 'Confirm',
+        });
+      }
+    } else {
+      // 사진 업로드 미완료 시
+      swal({
+        title: 'Request Failed',
+        text: 'There is no image file uploaded.',
+        icon: 'error',
+        button: 'Confirm',
       });
     }
   };
@@ -193,7 +270,15 @@ const Request = () => {
                   </label>
                 </div>
               </form>
-              <button onClick={onRequestHanlder}>{t('button')}</button>
+              {localStorage.i18nextLng === 'ko' ? (
+                <>
+                  <button onClick={onRequestKoHanlder}>{t('button')}</button>
+                </>
+              ) : (
+                <>
+                  <button onClick={onRequestEnHanlder}>{t('button')}</button>
+                </>
+              )}
             </div>
           </div>
         </div>

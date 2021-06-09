@@ -45,7 +45,7 @@
 
 /* INFO CARD IMG OBJECT */
 .infoCard__imgObj {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 /* IMG OBJECT TABLE */
@@ -58,32 +58,39 @@
   border-collapse: collapse;
   font-size: 15px;
   color: #1b1b1b;
+  word-break: keep-all;
 }
-.infoCard__imgObj th,
-.infoCard__imgObj td {
+.infoCard__imgObj table thead {
+  background-color: #fff;
+}
+.infoCard__imgObj tbody th,
+.infoCard__imgObj tbody td {
   width: 200px;
   padding: 5px;
   border: 2px solid #fff;
   background: #ddd;
   text-align: center;
+  white-space: normal;
+  word-break: keep-all;
 }
-.infoCard__imgObj tr:first-child td {
+.infoCard__imgObj thead tr:first-child td {
   font-weight: 500;
   display: inline-block;
 }
-.infoCard__imgObj tr td:first-child {
+.infoCard__imgObj tbody tr td:first-child {
   width: 100px;
   color: #1b1b1b;
 }
-.infoCard__imgObj tr td:nth-child(2) {
+.infoCard__imgObj tbody tr td:nth-child(2) {
   width: 250px;
+  line-height: 1.6;
   color: #565656;
 }
 
 /* INFO CARD IMG OBJECT DATA */
 .infoCard__imgObj .imgObj__data {
   margin: 0 5px;
-  padding: 0 5px;
+  padding: 0 6px;
   border-radius: 25px;
   background-color: #f2a7bb;
   color: #fff;
@@ -118,7 +125,7 @@
   background-color: #e8e8e8;
 }
 .sharing__title {
-  margin: 0 auto 10px;
+  margin: 0 auto 5px;
   text-align: center;
   font-size: 18px;
   color: #1b1b1b;
@@ -162,7 +169,7 @@
   .infoCard {
     width: 330px;
     height: 440px;
-    padding: 30px 15px;
+    padding: 20px 15px;
     box-shadow: 5px 5px 10px #6b6b6b;
   }
 
@@ -230,7 +237,7 @@
   .infoCard {
     width: 330px;
     height: 440px;
-    padding: 30px 15px;
+    padding: 20px 15px;
     box-shadow: 5px 5px 10px #6b6b6b;
   }
 
