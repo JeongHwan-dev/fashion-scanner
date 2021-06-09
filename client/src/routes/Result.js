@@ -8,7 +8,7 @@ import 'routes/css/Result.css';
 import { useTranslation } from 'react-i18next';
 
 const Result = () => {
-  const url = `http://elice-kdt-ai-track-vm-ai-13.koreacentral.cloudapp.azure.com:8000`;
+  const url = `http://elice-kdt-ai-track-vm-ai-13.koreacentral.cloudapp.azure.com:8001`;
   const isShared = false;
   const [isClicked, setIsClicked] = useState(false);
   const [result, setResult] = useState({

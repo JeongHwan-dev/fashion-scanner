@@ -5,7 +5,7 @@ export const LangContext = createContext();
 
 export default ({ children }) => {
   const { i18n } = useTranslation();
-  const [currentLang, setCurrentLang] = useState('ko');
+  const [currentLang, setCurrentLang] = useState('');
 
   const setEng = () => {
     i18n.changeLanguage('en');
