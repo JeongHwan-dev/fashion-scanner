@@ -13,8 +13,7 @@ import Footer from 'components/commonComponents/Footer';
 const LookbookJisoo = () => {
   // jennie: 1, rose: 2, jisoo: 3, lisa: 4
   const memberId = 3;
-  const testUrl =
-    `http://elice-kdt-ai-track-vm-distribute-13.koreacentral.cloudapp.azure.com:8001/api/members/${memberId}/lookbook`;
+  const testUrl = `http://elice-kdt-ai-track-vm-distribute-13.koreacentral.cloudapp.azure.com:8001/api/members/${memberId}/lookbook`;
   const [member, setMemeber] = useState([]);
   const [memberEn, setMemberEn] = useState([]);
   const [memberColor, setMemberColor] = useState('');

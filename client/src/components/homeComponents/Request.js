@@ -6,7 +6,7 @@ import swal from 'sweetalert';
 import 'components/homeComponents/css/Request.css';
 
 const Request = () => {
-  const url = `http://elice-kdt-ai-track-vm-ai-13.koreacentral.cloudapp.azure.com:8000`;
+  const url = `http://elice-kdt-ai-track-vm-distribute-13.koreacentral.cloudapp.azure.com:8001`;
   const [previewImg, setPreviewImg] = useState('/images/request_sample.jpg');
   const [requestImg, setRequestImg] = useState('');
   const [email, setEmail] = useState('');

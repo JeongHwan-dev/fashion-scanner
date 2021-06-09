@@ -1,41 +1,30 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React, { useEffect } from 'react';
+import { useHistory, useLocation } from 'react-router-dom';
 import Navigation from 'components/commonComponents/Navigation';
 import Footer from 'components/commonComponents/Footer';
 import loadingVideo from 'videos/Loading.mov';
 import 'routes/css/Loading.css';
-import { useMediaQuery } from 'react-responsive';
 
 const Loading = () => {
-  const url = `http://elice-kdt-ai-track-vm-ai-13.koreacentral.cloudapp.azure.com:8000`;
-  const [status, setStatus] = useState(false);
-  const isMobile = useMediaQuery({ maxWidth: 390 });
+  const history = useHistory();
+  const location = useLocation();
 
-  // useEffect(() => {
-  //   setInterval(() => {
-  //     getStatus();
-  //   }, 2000);
-
-  //   if (status === 201) {
-  //     console.log('pass');
-  //   } else {
-  //     console.log('wait');
-  //   }
-  // }, []);
-
-  const getStatus = async () => {
-    await axios.get(url + '/matching/loading').then((response) => {
-      console.log(response);
-      if (response.status === 200) {
-        console.log('ok!');
-      }
-    });
-  };
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    setInterval(() => {
+      history.push({
+        pathname: '/matching/result',
+        state: {
+          matchingResultKo: location.state.matchingResultKo,
+          matchingResultEn: location.state.matchingResultEn,
+        },
+      });
+    }, 5000);
+  }, []);
 
   return (
     <>
       <Navigation />
-      {!isMobile ? <Navigation /> : null}
       {/* 01: LOADING PAGE */}
       <div className="loading">
         <div className="loading__title">

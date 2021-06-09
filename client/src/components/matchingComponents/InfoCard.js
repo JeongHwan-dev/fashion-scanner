@@ -84,14 +84,25 @@ const InfoCard = ({ memberObj, imgObj, isShared, isClicked }) => {
           <>
             <div className="infoCard__imgObj">
               <table>
-                <th colspan="2">{t('infoCard_imgObj')}</th>
+                <th colSpan="2">{t('infoCard_imgObj')}</th>
                 <tr>
                   <td>Type</td>
-                  <td>{imgObj.type}</td>
+                  <td>
+                    <span className="imgObj__data">#{imgObj.category}</span>
+                  </td>
                 </tr>
                 <tr>
                   <td>Feature</td>
-                  <td>{imgObj.feature}</td>
+                  <td>
+                    {imgObj.attributes.map((attribute, idx) => {
+                      return (
+                        <span key={idx} className="imgObj__data">
+                          #{attribute}
+                        </span>
+                      );
+                    })}
+                    {/* {imgObj.attributes} */}
+                  </td>
                 </tr>
               </table>
             </div>

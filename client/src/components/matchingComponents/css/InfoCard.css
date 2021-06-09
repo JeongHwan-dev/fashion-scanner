@@ -51,10 +51,12 @@
 /* IMG OBJECT TABLE */
 .infoCard__imgObj table {
   overflow: hidden;
+  width: 352px;
   margin: 0 auto;
   border: 1px solid #000;
   border-radius: 12px;
   border-collapse: collapse;
+  font-size: 15px;
   color: #1b1b1b;
 }
 .infoCard__imgObj th,
@@ -67,6 +69,7 @@
 }
 .infoCard__imgObj tr:first-child td {
   font-weight: 500;
+  display: inline-block;
 }
 .infoCard__imgObj tr td:first-child {
   width: 100px;
@@ -75,6 +78,15 @@
 .infoCard__imgObj tr td:nth-child(2) {
   width: 250px;
   color: #565656;
+}
+
+/* INFO CARD IMG OBJECT DATA */
+.infoCard__imgObj .imgObj__data {
+  margin: 0 5px;
+  padding: 0 5px;
+  border-radius: 25px;
+  background-color: #f2a7bb;
+  color: #fff;
 }
 
 /* INFO CARD BUTTON */
@@ -168,7 +180,17 @@
     margin-bottom: 15px;
   }
   .infoCard__imgObj table {
-    font-size: 15px;
+    font-size: 13px;
+    width: 300px;
+  }
+
+  /* INFO CARD IMG OBJECT DATA */
+  .infoCard__imgObj .imgObj__data {
+    margin: 0 3px;
+    padding: 0 4px;
+    border-radius: 25px;
+    background-color: #f2a7bb;
+    color: #fff;
   }
 
   /* INFO CARD BUTTON */
@@ -226,7 +248,17 @@
     margin-bottom: 15px;
   }
   .infoCard__imgObj table {
-    font-size: 15px;
+    font-size: 13px;
+    width: 290px;
+  }
+
+  /* INFO CARD IMG OBJECT DATA */
+  .infoCard__imgObj .imgObj__data {
+    margin: 0 3px;
+    padding: 0 4px;
+    border-radius: 25px;
+    background-color: #f2a7bb;
+    color: #fff;
   }
 
   /* INFO CARD BUTTON */

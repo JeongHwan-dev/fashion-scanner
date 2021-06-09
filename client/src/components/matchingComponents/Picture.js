@@ -7,7 +7,7 @@ import Example from 'components/matchingComponents/Example';
 import 'components/matchingComponents/css/Picture.css';
 
 const Picture = () => {
-  const url = `http://elice-kdt-ai-track-vm-ai-13.koreacentral.cloudapp.azure.com:8000`;
+  const url = `http://elice-kdt-ai-track-vm-distribute-13.koreacentral.cloudapp.azure.com:8001`;
   const history = useHistory();
   const [previewImg, setPreviewImg] = useState('');
   const [requestImg, setRequestImg] = useState('');
@@ -48,7 +48,6 @@ const Picture = () => {
       };
 
       formData.append('userImage', requestImg);
-      console.log(formData);
 
       await axios
         .post(url + '/api/user/matching', formData, config)
@@ -60,9 +59,14 @@ const Picture = () => {
               icon: 'success',
               button: '확인',
             });
+            console.log(response);
 
             history.push({
               pathname: '/matching/loading',
+              state: {
+                matchingResultKo: response.data.matchingResultKo,
+                matchingResultEn: response.data.matchingResultEn,
+              },
             });
           }
         })
