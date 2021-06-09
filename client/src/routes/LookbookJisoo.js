@@ -23,7 +23,7 @@ const LookbookJisoo = () => {
   useEffect(() => {
     const getLookbookData = async () => {
       await axios
-        .get(testUrl)
+        .get(`/api/members/${memberId}/lookbook`)
         // 응답(성공)
         .then((response) => {
           setMemberEn(response.data.lookbookDataEn);

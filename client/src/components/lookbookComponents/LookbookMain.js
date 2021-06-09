@@ -24,7 +24,7 @@ const LookbookMain = ({ member, memberEn, memberColor }) => {
 
       return (
         <SwiperSlide key={lookbookId}>
-          <div className="lookbookmain__swiper1">
+          <div className="lookbookmain__swiper1" key={lookbookId}>
             <div className="lookbookmain__img">
               <img src={lookbookImage} alt="lookbook" />
             </div>
@@ -61,9 +61,9 @@ const LookbookMain = ({ member, memberEn, memberColor }) => {
                 </div>
                 <div className="lookbookmain__recomm">
                   <div className="lookbookmain__recomminner">
-                    {similarList.map((similar) => {
+                    {similarList.map((similar, idx) => {
                       return (
-                        <div className="lookbookmain__recommimg">
+                        <div className="lookbookmain__recommimg" key={idx}>
                           <a target="_blank" href={similar.link}>
                             <div className="lookbookmain__gotomall">
                               <span>링크로 이동하기</span>
@@ -95,7 +95,7 @@ const LookbookMain = ({ member, memberEn, memberColor }) => {
 
       return (
         <SwiperSlide key={lookbookId}>
-          <div className="lookbookmain__swiper1">
+          <div className="lookbookmain__swiper1" key={lookbookId}>
             <div className="lookbookmain__img">
               <img src={lookbookImage} alt="lookbook" />
             </div>
@@ -132,12 +132,12 @@ const LookbookMain = ({ member, memberEn, memberColor }) => {
                 </div>
                 <div className="lookbookmain__recomm">
                   <div className="lookbookmain__recomminner">
-                    {similarList.map((similar) => {
+                    {similarList.map((similar, idx) => {
                       return (
-                        <div className="lookbookmain__recommimg">
+                        <div className="lookbookmain__recommimg" key={idx}>
                           <a target="_blank" href={similar.link}>
                             <div className="lookbookmain__gotomall">
-                              <span>링크로 이동하기</span>
+                              <span>go to the mall</span>
                             </div>
                             <img src={similar.image} alt="recommend image" />
                           </a>
