@@ -31,15 +31,15 @@ class UserMemberMatchingAPIView(APIView):
             category = match_result["category"]
             attributes = match_result["attributes"]
 
-            img_obj_en = {"category": category, "attributes": attributes}
+            attribute1_ko = CLOTHES_ATTRIBUTES_EN_KO[attributes[0]]
+            attribute2_ko = CLOTHES_ATTRIBUTES_EN_KO[attributes[1]]
+            attribute3_ko = CLOTHES_ATTRIBUTES_EN_KO[attributes[2]]
 
-            attribute1 = CLOTHES_ATTRIBUTES_EN_KO[attributes[0]]
-            attribute2 = CLOTHES_ATTRIBUTES_EN_KO[attributes[1]]
-            attribute3 = CLOTHES_ATTRIBUTES_EN_KO[attributes[2]]
+            img_obj_en = {"category": category, "attributes": [attr.replace("_", " ") for attr in attributes]}
 
             img_obj_ko = {
                 "category": CLOTHES_CATEGORIES_EN_KO[match_result["category"]],
-                "attributes": [attribute1, attribute2, attribute3],
+                "attributes": [attribute1_ko, attribute2_ko, attribute3_ko],
             }
 
             result = dict()
