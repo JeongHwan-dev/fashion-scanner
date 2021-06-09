@@ -179,7 +179,7 @@ const Request = () => {
                     type="email"
                     onChange={onEmailHandler}
                     value={email}
-                    placeholder={`${currentLang === 'ko' ? '이메일' : 'e-mail'}`}
+                    placeholder={`${localStorage.i18nextLng === 'ko' ? '이메일' : 'e-mail'}`}
                   />
                   <p className="info__agree">&nbsp;&nbsp;* {t('info_agree')}</p>
                   <label>
