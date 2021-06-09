@@ -1,4 +1,5 @@
-import React, { useContext } from 'react';
+import React from 'react';
+import { useTranslation } from 'react-i18next';
 import CultureCard from 'components/devTeamComponents/CultureCard';
 import culture1 from 'videos/vod_culture1.mp4';
 import culture2 from 'videos/vod_culture2.mp4';
@@ -8,7 +9,8 @@ import culture5 from 'videos/vod_culture5.mp4';
 import 'components/devTeamComponents/css/Cultures.css';
 
 const Cultures = () => {
-  const members = [
+  const { t } = useTranslation('');
+  const membersKo = [
     {
       id: 1,
       title: {
@@ -165,7 +167,7 @@ const Cultures = () => {
   ];
 
   // 개발 문화 카드 랜더링 메서드
-  const rendering = () => {
+  const rendering = (members) => {
     const result = [];
     for (let i = 0; i < members.length; i++) {
       result.push(<CultureCard key={i} memberObj={members[i]} />);
@@ -173,18 +175,10 @@ const Cultures = () => {
     return result;
   };
 
-  const renderingEn = () => {
-    const result = [];
-    for (let i = 0; i < membersEn.length; i++) {
-      result.push(<CultureCard key={i} memberObj={membersEn[i]} />);
-    }
-    return result;
-  };
-
   return (
     <>
       <div className="devTeam__cultures">
-        {localStorage.i18nextLng === 'ko' ? rendering() : renderingEn()}
+        {localStorage.i18nextLng === 'ko' ? rendering(membersKo) : rendering(membersEn)}
       </div>
     </>
   );

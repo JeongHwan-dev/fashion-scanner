@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import Navigation from 'components/commonComponents/Navigation';
 import MemberCard from 'components/matchingComponents/MemberCard';
 import InfoCard from 'components/matchingComponents/InfoCard';
@@ -7,18 +8,26 @@ import 'routes/css/Result.css';
 
 const SharingRose = () => {
   const isShared = true;
+  const { t } = useTranslation('sharingRose');
   const [isClicked, setIsClicked] = useState(false);
   const result = {
-    memberObj: {
-      name: 'jisoo',
-      title: '당신은 분위기 여신 로제',
-      comment1: '편안한 룩을 즐기지만 항상 컬러로 포인트를 주는 꾸안꾸의 정석이시군요.',
-      comment2: '로제의 룩북을 참고해보세요!',
-      btnLabel: '로제 룩북 바로가기',
+    matchingResultKo: {
+      memberObj: {
+        name: 'rose',
+        title: '당신은 분위기 여신 로제!',
+        comment1: '편안한 룩을 즐기지만 항상 컬러로 포인트를 주는 꾸안꾸의 정석이시군요.',
+        comment2: '로제의 룩북을 참고해보세요!',
+        btnLabel: '로제 룩북 바로가기',
+      },
     },
-    imgObj: {
-      type: '',
-      feature: '',
+    matchingResultEn: {
+      memberObj: {
+        name: 'rose',
+        title: 'You got Rose!',
+        comment1: 'You dress effortlessly chic.',
+        comment2: 'See the LOOKBOOK of Rose.',
+        btnLabel: 'Rose LOOKBOOK',
+      },
     },
   };
 
@@ -35,7 +44,7 @@ const SharingRose = () => {
           <div className={`guide ${isClicked ? 'clicked' : ''}`}>
             {!isClicked ? (
               <>
-                <p>아래의 카드에 마우스를 올려주세요.</p>
+                <p>{t('guide')}</p>
                 <span className="material-icons">arrow_drop_down</span>
               </>
             ) : (
@@ -49,17 +58,33 @@ const SharingRose = () => {
             )}
           </div>
           <div className="cards">
-            <MemberCard
-              memberObj={result.memberObj}
-              isClicked={isClicked}
-              onCardClickHandler={onCardClickHandler}
-            />
-            <InfoCard
-              memberObj={result.memberObj}
-              imgObj={result.imgObj}
-              isShared={isShared}
-              isClicked={isClicked}
-            />
+            {localStorage.i18nextLng === 'ko' ? (
+              <>
+                <MemberCard
+                  memberObj={result.matchingResultKo.memberObj}
+                  isClicked={isClicked}
+                  onCardClickHandler={onCardClickHandler}
+                />
+                <InfoCard
+                  memberObj={result.matchingResultKo.memberObj}
+                  isShared={isShared}
+                  isClicked={isClicked}
+                />
+              </>
+            ) : (
+              <>
+                <MemberCard
+                  memberObj={result.matchingResultEn.memberObj}
+                  isClicked={isClicked}
+                  onCardClickHandler={onCardClickHandler}
+                />
+                <InfoCard
+                  memberObj={result.matchingResultEn.memberObj}
+                  isShared={isShared}
+                  isClicked={isClicked}
+                />
+              </>
+            )}
           </div>
         </div>
         <Footer />
