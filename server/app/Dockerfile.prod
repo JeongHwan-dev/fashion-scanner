@@ -1,21 +1,25 @@
-FROM pytorch/pytorch
+FROM python:3.8-slim-buster
 
 WORKDIR /usr/src/app
 
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
-RUN apt-get update \
-    && apt-get install netcat libpq-dev postgresql postgresql-contrib -y \
-    && apt-get install libjpeg-dev zlib1g-dev libgl1-mesa-glx libglib2.0-0 -y
+RUN apt-get update && apt-get install --no-install-recommends -y \
+    libgl1-mesa-glx \
+    libglib2.0-0 \
+    libjpeg-dev \
+    libpq-dev \
+    netcat \
+    postgresql \
+    zlib1g-dev \
+    && rm -rf /var/lib/apt/lists/*
 
-RUN pip install -U pip
 COPY ./requirements.txt .
-RUN pip install --ignore-installed ruamel-yaml
-RUN pip install -r requirements.txt
-
-
-COPY ./entrypoint.sh .
+RUN pip install -U pip \
+    --ignore-installed ruamel-yaml \
+    -r requirements.txt \
+    torch==1.8.1+cpu torchvision==0.9.1+cpu -f https://download.pytorch.org/whl/torch_stable.html
 
 COPY ai/mmfashion .
 RUN python setup.py install
