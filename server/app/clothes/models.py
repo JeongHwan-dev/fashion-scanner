@@ -69,7 +69,7 @@ class ShopClothes(models.Model):
         default=f"{UPLOAD_PATH}/data.png",
         verbose_name="쇼핑몰 의류 이미지",
     )
-    webpage_url = models.TextField(blank=False, null=False, verbose_name="웹 페이지 URL")
+    webpage_url = models.TextField(verbose_name="웹 페이지 URL")
     lookbook_clothes = models.ForeignKey(
         "LookbookClothes",
         related_name="shop_clothes",
