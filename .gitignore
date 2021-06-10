@@ -1,6 +1,7 @@
 server/.env.dev
 server/.env.dev.db
 server/.env.prod
+server/.env.dev.db
 server/.env.prod.db
 server/app/postgres
 server/app/django.db.backends.sqlite3
@@ -14,6 +15,7 @@ lookbook
 user-upload
 static
 media
-data_setup.py
 ai
+pytorch
 .vscode
+data_setup.py
