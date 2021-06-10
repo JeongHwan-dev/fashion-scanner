@@ -57,8 +57,8 @@
   /* LOOKBOOK TITLE */
   .lookbook__title img {
     width: auto;
-    height: 43px;
-    margin-bottom: 10px;
+    height: 40px;
+    margin-bottom: 12px;
   }
   .lookbook__title img:nth-child(2) {
     margin-bottom: 18px;

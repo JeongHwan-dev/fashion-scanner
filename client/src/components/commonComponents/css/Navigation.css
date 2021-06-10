@@ -99,6 +99,7 @@ header .language-group ul.language span {
   box-sizing: border-box;
   font-size: 15px;
   color: #fff;
+  cursor: pointer;
   transition: 0.2s;
 }
 
@@ -119,12 +120,15 @@ header .language-group ul.language span {
   header .logo {
     right: 0;
     left: 0;
-    width: 180px;
+    width: 240px;
   }
   header img {
-    width: 200px;
+    width: 240px;
     height: auto;
     margin: 0 auto;
+  }
+  header span {
+    cursor: pointer;
   }
 
   /* HAMBURGER ICON */
@@ -145,14 +149,14 @@ header .language-group ul.language span {
     transition: height 0.4s;
   }
   header .link-group.active {
-    height: 280px;
+    height: 340px;
   }
   header .link-group ul.link {
     flex-direction: column;
     width: inherit;
   }
   header .link-group ul.link li a {
-    padding: 18px 20px;
+    padding: 24px 24px;
   }
 
   /* NAVIGATION LANGUAGE GROUP */
@@ -200,10 +204,10 @@ header .language-group ul.language span {
   header .logo {
     right: 0;
     left: 0;
-    width: 180px;
+    width: 210px;
   }
   header img {
-    width: 200px;
+    width: 210px;
     height: auto;
     margin: 0 auto;
   }
@@ -281,7 +285,7 @@ header .language-group ul.language span {
   header .logo {
     right: 0;
     left: 0;
-    width: 180px;
+    width: 200px;
   }
   header img {
     width: 200px;
@@ -362,7 +366,7 @@ header .language-group ul.language span {
   header .logo {
     right: 0;
     left: 0;
-    width: 180px;
+    width: 200px;
   }
   header img {
     width: 200px;

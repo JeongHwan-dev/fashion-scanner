@@ -71,13 +71,13 @@
 
   /* MAGAZINE VIDEO */
   .magazine__video {
-    width: 500px;
+    width: 480px;
     margin-bottom: 30px;
   }
 
   /* MAGAZINE DSC */
   .magazine__dsc {
-    width: 500px;
+    width: 470px;
     padding: 0 8px;
   }
   .magazine__dsc p {
