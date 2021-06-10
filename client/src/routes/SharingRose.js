@@ -58,15 +58,15 @@ const SharingRose = () => {
             )}
           </div>
           <div className="cards">
-            {localStorage.i18nextLng === 'ko' ? (
+            {localStorage.i18nextLng === 'en' ? (
               <>
                 <MemberCard
-                  memberObj={result.matchingResultKo.memberObj}
+                  memberObj={result.matchingResultEn.memberObj}
                   isClicked={isClicked}
                   onCardClickHandler={onCardClickHandler}
                 />
                 <InfoCard
-                  memberObj={result.matchingResultKo.memberObj}
+                  memberObj={result.matchingResultEn.memberObj}
                   isShared={isShared}
                   isClicked={isClicked}
                 />
@@ -74,12 +74,12 @@ const SharingRose = () => {
             ) : (
               <>
                 <MemberCard
-                  memberObj={result.matchingResultEn.memberObj}
+                  memberObj={result.matchingResultKo.memberObj}
                   isClicked={isClicked}
                   onCardClickHandler={onCardClickHandler}
                 />
                 <InfoCard
-                  memberObj={result.matchingResultEn.memberObj}
+                  memberObj={result.matchingResultKo.memberObj}
                   isShared={isShared}
                   isClicked={isClicked}
                 />

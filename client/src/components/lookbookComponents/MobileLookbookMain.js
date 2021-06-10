@@ -1,14 +1,14 @@
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation, Thumbs } from 'swiper';
-import { LangContext } from 'context/LanguageContext';
 import 'components/lookbookComponents/css/MobileLookbookMain.css';
 import 'swiper/swiper-bundle.css';
 
 SwiperCore.use([Navigation, Thumbs]);
 
 const MobileLookbookMain = ({ member, memberEn }) => {
-  const { currentLang } = useContext(LangContext);
+  const { t } = useTranslation('');
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   const mobileThumbnailsKo = member.map(({ lookbookId, lookbookImage }) => {
@@ -70,7 +70,6 @@ const MobileLookbookMain = ({ member, memberEn }) => {
             <h3>룩북과 비슷한 옷 보기</h3>
             <div className="m-lookbookmain__recomm__inner">
               {similarList.map((similar, idx) => {
-                // console.log(similar.image)
                 return (
                   <div key={idx}>
                     <a target="_blank" href={similar.link}>
@@ -152,7 +151,7 @@ const MobileLookbookMain = ({ member, memberEn }) => {
             slidesPerView={3}
             loop={true}
           >
-            {localStorage.i18nextLng === 'ko' ? mobileThumbnailsKo : mobileThumbnailsEn}
+            {localStorage.i18nextLng === 'en' ? mobileThumbnailsEn : mobileThumbnailsKo}
           </Swiper>
           <Swiper
             className="m-lookbookmain__main"
@@ -162,7 +161,7 @@ const MobileLookbookMain = ({ member, memberEn }) => {
             thumbs={{ swiper: thumbsSwiper }}
             loop={true}
           >
-            {localStorage.i18nextLng === 'ko' ? mobileSlidesKo : mobileSlidesEn}
+            {localStorage.i18nextLng === 'en' ? mobileSlidesEn : mobileSlidesKo}
           </Swiper>
         </div>
       </section>

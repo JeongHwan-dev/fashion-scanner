@@ -22,7 +22,7 @@ const Title = () => {
             </>
           )}
         </div>
-        <video autoPlay muted loop id="bg-video">
+        <video muted autoPlay loop placeinline="true" id="bg-video">
           <source src={background} type="video/mp4" />
         </video>
       </section>

@@ -12,11 +12,11 @@ import Footer from 'components/commonComponents/Footer';
 
 const LookbookJisoo = () => {
   // jennie: 1, rose: 2, jisoo: 3, lisa: 4
+  const isMobile = useMediaQuery({ maxWidth: 390 });
   const memberId = 3;
   const [member, setMemeber] = useState([]);
   const [memberEn, setMemberEn] = useState([]);
   const [memberColor, setMemberColor] = useState('');
-  const isMobile = useMediaQuery({ maxWidth: 390 });
 
   useEffect(() => {
     const getLookbookData = async () => {

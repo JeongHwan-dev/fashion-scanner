@@ -50,7 +50,7 @@ const Cultures = () => {
       position: 'Front-end 김수연',
       content: `완벽한 한 개인이 조직의 모든 일을 책임진다는 건 
       협업하는 팀만이 창출할 수 있는 가치를 포기한다는 것을 의미합니다. 
-      팀 '마지막처럼'은 개개인이 각자 전문성을 가진 분야에서 팀 공동의 목표를 인지하며 함께 일합니다. 
+      '패션 스캐너'는 개개인이 각자 전문성을 가진 분야에서 팀 공동의 목표를 인지하며 함께 일합니다. 
       타인의 의견을 귀 기울여 듣고 긍정적으로 피드백하며 더 나은 성과를 만들어 갑니다.`,
       hashtag: {
         h1: '#최고의복지는동료',
@@ -178,7 +178,7 @@ const Cultures = () => {
   return (
     <>
       <div className="devTeam__cultures">
-        {localStorage.i18nextLng === 'ko' ? rendering(membersKo) : rendering(membersEn)}
+        {localStorage.i18nextLng === 'en' ? rendering(membersEn) : rendering(membersKo)}
       </div>
     </>
   );

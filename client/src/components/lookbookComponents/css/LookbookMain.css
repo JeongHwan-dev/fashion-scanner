@@ -104,9 +104,9 @@
 .lookbookmain__recomminner {
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
   vertical-align: middle;
   height: 100%;
-  align-items: center;
 }
 .lookbookmain__recomminner img {
   width: 140px;

@@ -34,4 +34,10 @@
   width: 150px;
   height: auto;
   margin: 5px;
+  box-sizing: content-box;
+  transition: 0.2s;
+}
+.m-others .m-others__inner .m-others__others img:hover {
+  border: 2px solid #f2a7bb;
+  box-sizing: content-box;
 }

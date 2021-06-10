@@ -31,6 +31,7 @@
   float: left;
   width: 200px;
   margin: 12px;
+  box-sizing: content-box;
   cursor: pointer;
   transform: skewX(-8deg);
   transition: transform 0.2s, filter 0.6s;
@@ -38,6 +39,7 @@
 }
 .lookbook__members a .member:hover {
   z-index: 1;
+  box-sizing: content-box;
   transform: skewX(-8deg) scale(1.1);
   filter: none;
 }
@@ -91,6 +93,8 @@
   .lookbook__members a .member:hover {
     transform: skewX(0deg);
     filter: none;
+    border: 2px solid #d97e9f;
+    box-sizing: content-box;
   }
 }
 
@@ -142,5 +146,7 @@
   .lookbook__members a .member:hover {
     transform: skewX(0deg);
     filter: none;
+    border: 2px solid #d97e9f;
+    box-sizing: content-box;
   }
 }

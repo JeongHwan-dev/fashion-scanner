@@ -15,7 +15,13 @@ const Introduction = () => {
     <>
       <section className="introduction" id="section__introduction" ref={imageRef}>
         <div className="introduction__inner">
-          <video autoPlay muted loop className={`introduction__bg ${isVisible ? 'scroll' : ''}`}>
+          <video
+            muted
+            autoPlay
+            loop
+            placeinline="true"
+            className={`introduction__bg ${isVisible ? 'scroll' : ''}`}
+          >
             <source src={intro} type="video/mp4"></source>
           </video>
           <ul>

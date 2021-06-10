@@ -1,18 +1,16 @@
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { LangContext } from 'context/LanguageContext';
 import axios from 'axios';
 import swal from 'sweetalert';
 import 'components/homeComponents/css/Request.css';
 
 const Request = () => {
   const url = `http://elice-kdt-ai-track-vm-distribute-13.koreacentral.cloudapp.azure.com:8001`;
+  const { t } = useTranslation('request');
   const [previewImg, setPreviewImg] = useState('/images/request_sample.jpg');
   const [requestImg, setRequestImg] = useState('');
   const [email, setEmail] = useState('');
   const [isChecked, setIsChecked] = useState(false);
-  const { currentLang, setEng, setKor } = useContext(LangContext);
-  const { t } = useTranslation('request');
 
   // [요청 사진] 업로드 핸들러
   const onFileChange = (event) => {
@@ -42,8 +40,7 @@ const Request = () => {
 
   // [이메일] 유효성 검사
   const isEmail = (inputEmail) => {
-    var regExp =
-      /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
+    var regExp = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
     return regExp.test(inputEmail);
   };
 
@@ -56,7 +53,7 @@ const Request = () => {
   const onRequestKoHanlder = async () => {
     if (requestImg) {
       if (email) {
-        if (isChecked == true) {
+        if (isChecked === true) {
           // 사진 업로드, 이메일 작성, 정보 제공 동의 체크 모두 완료 시
           if (isEmail(email)) {
             // 유효한 이메일 형식일 경우
@@ -134,7 +131,7 @@ const Request = () => {
   const onRequestEnHanlder = async () => {
     if (requestImg) {
       if (email) {
-        if (isChecked == true) {
+        if (isChecked === true) {
           // 사진 업로드, 이메일 작성, 정보 제공 동의 체크 모두 완료 시
           if (isEmail(email)) {
             // 유효한 이메일 형식일 경우
@@ -270,13 +267,13 @@ const Request = () => {
                   </label>
                 </div>
               </form>
-              {localStorage.i18nextLng === 'ko' ? (
+              {localStorage.i18nextLng === 'en' ? (
                 <>
-                  <button onClick={onRequestKoHanlder}>{t('button')}</button>
+                  <button onClick={onRequestEnHanlder}>{t('button')}</button>
                 </>
               ) : (
                 <>
-                  <button onClick={onRequestEnHanlder}>{t('button')}</button>
+                  <button onClick={onRequestKoHanlder}>{t('button')}</button>
                 </>
               )}
             </div>
