@@ -4,13 +4,7 @@
 }
 
 /* MEDIA */
-@media screen and (max-width: 390px) {
-  .bpVideo {
-    padding: 100px 0;
-  }
-}
-
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 414px) {
   .bpVideo {
     padding: 100px 0;
   }

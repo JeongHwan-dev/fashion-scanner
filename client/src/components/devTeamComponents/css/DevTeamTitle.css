@@ -38,6 +38,22 @@
 }
 
 /* MEDIA */
+@media screen and (max-width: 414px) {
+  /* DEV TEAM TITLE */
+  .devTeam__title {
+    margin-bottom: 150px;
+  }
+
+  /* TITLE PHOTO */
+  .title__photo {
+    margin-bottom: 0px;
+  }
+  .title__photo .swiper-container {
+    width: 350px;
+    height: 200px;
+  }
+}
+
 @media screen and (max-width: 390px) {
   /* DEV TEAM TITLE */
   .devTeam__title {

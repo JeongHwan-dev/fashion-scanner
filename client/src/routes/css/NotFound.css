@@ -55,10 +55,82 @@
 }
 
 /* MEDIA */
+@media screen and (max-width: 414px) {
+  /* NOT FOUND SECTION */
+  .notfound {
+    width: 414px;
+  }
+  .notfound .notfound__inner {
+    width: inherit;
+  }
+
+  /* NOT FOUND IMAGE */
+  .notfound__img {
+    margin: 200px 0 20px;
+  }
+  .notfound .notfound__inner .notfound__img img:nth-child(1) {
+    width: 35px;
+  }
+  .notfound .notfound__inner .notfound__img img:nth-child(2) {
+    width: 300px;
+  }
+
+  /* NOT FOUND DSC */
+  .notfound .notfound__inner .notfound__dsc h2 {
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    font-size: 24px;
+  }
+  .notfound .notfound__inner .notfound__dsc span {
+    display: inline-block;
+    margin-bottom: 0;
+    font-size: 18px;
+  }
+  .notfound .notfound__inner .notfound__dsc a {
+    display: inline-block;
+    padding: 10px 15px;
+  }
+}
+
 @media screen and (max-width: 390px) {
   /* NOT FOUND SECTION */
   .notfound {
     width: 390px;
+  }
+  .notfound .notfound__inner {
+    width: inherit;
+  }
+
+  /* NOT FOUND IMAGE */
+  .notfound__img {
+    margin: 200px 0 20px;
+  }
+  .notfound .notfound__inner .notfound__img img:nth-child(1) {
+    width: 30px;
+  }
+  .notfound .notfound__inner .notfound__img img:nth-child(2) {
+    width: 280px;
+  }
+
+  /* NOT FOUND DSC */
+  .notfound .notfound__inner .notfound__dsc h2 {
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    font-size: 23px;
+  }
+  .notfound .notfound__inner .notfound__dsc span {
+    display: inline-block;
+    margin-bottom: 0;
+    font-size: 17px;
+  }
+  .notfound .notfound__inner .notfound__dsc a {
+    display: inline-block;
+    padding: 10px 15px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  /* NOT FOUND SECTION */
+  .notfound {
+    width: 375px;
   }
   .notfound .notfound__inner {
     width: inherit;
@@ -91,10 +163,10 @@
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 360px) {
   /* NOT FOUND SECTION */
   .notfound {
-    width: 375px;
+    width: 360px;
   }
   .notfound .notfound__inner {
     width: inherit;

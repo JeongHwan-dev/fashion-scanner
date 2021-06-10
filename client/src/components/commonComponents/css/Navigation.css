@@ -103,6 +103,87 @@ header .language-group ul.language span {
 }
 
 /* MEDIA */
+@media screen and (max-width: 414px) {
+  /* NAVIGATION */
+  header {
+    position: fixed !important;
+    top: 0;
+    width: 414px;
+    z-index: 3;
+  }
+  header .inner {
+    width: 414px;
+  }
+
+  /* NAVIGATION LOGO */
+  header .logo {
+    right: 0;
+    left: 0;
+    width: 180px;
+  }
+  header img {
+    width: 200px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  /* HAMBURGER ICON */
+  header .inner .material-icons {
+    display: inline-block;
+    padding: 15px;
+  }
+
+  /* NAVIGATION LINK GROUP */
+  header .link-group {
+    overflow: hidden;
+    top: 58px;
+    right: 0;
+    z-index: 3;
+    width: inherit;
+    height: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    transition: height 0.4s;
+  }
+  header .link-group.active {
+    height: 280px;
+  }
+  header .link-group ul.link {
+    flex-direction: column;
+    width: inherit;
+  }
+  header .link-group ul.link li a {
+    padding: 18px 20px;
+  }
+
+  /* NAVIGATION LANGUAGE GROUP */
+  header .language-group {
+    top: 3px;
+    right: 0px;
+    padding: 0px;
+  }
+  header .language-group .language .lang {
+    display: none;
+  }
+  header .language-group .language .lang.active {
+    display: block;
+    right: 0;
+    padding: 15px;
+  }
+  header .link-group.active ul.link .lang__a {
+    display: flex;
+  }
+  header .link-group.active ul.link .lang__a a {
+    color: #e0e0e0;
+  }
+  header .link-group.active ul.link .lang__a a.active {
+    color: #fff;
+  }
+  header .link-group.active ul.link .lang__a span {
+    align-items: center;
+    margin: auto 10px;
+  }
+}
+
 @media screen and (max-width: 390px) {
   /* NAVIGATION */
   header {
@@ -194,6 +275,87 @@ header .language-group ul.language span {
   }
   header .inner {
     width: 375px;
+  }
+
+  /* NAVIGATION LOGO */
+  header .logo {
+    right: 0;
+    left: 0;
+    width: 180px;
+  }
+  header img {
+    width: 180px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  /* HAMBURGER ICON */
+  header .inner .material-icons {
+    display: inline-block;
+    padding: 15px;
+  }
+
+  /* NAVIGATION LINK GROUP */
+  header .link-group {
+    overflow: hidden;
+    top: 58px;
+    right: 0;
+    z-index: 3;
+    width: inherit;
+    height: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    transition: height 0.4s;
+  }
+  header .link-group.active {
+    height: 280px;
+  }
+  header .link-group ul.link {
+    flex-direction: column;
+    width: inherit;
+  }
+  header .link-group ul.link li a {
+    padding: 18px 20px;
+  }
+
+  /* NAVIGATION LANGUAGE GROUP */
+  header .language-group {
+    top: 3px;
+    right: 0px;
+    padding: 0px;
+  }
+  header .language-group .language .lang {
+    display: none;
+  }
+  header .language-group .language .lang.active {
+    display: block;
+    right: 0;
+    padding: 15px;
+  }
+  header .link-group.active ul.link .lang__a {
+    display: flex;
+  }
+  header .link-group.active ul.link .lang__a a {
+    color: #e0e0e0;
+  }
+  header .link-group.active ul.link .lang__a a.active {
+    color: #fff;
+  }
+  header .link-group.active ul.link .lang__a span {
+    align-items: center;
+    margin: auto 10px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  /* NAVIGATION */
+  header {
+    position: fixed !important;
+    top: 0;
+    width: 360px;
+    z-index: 3;
+  }
+  header .inner {
+    width: 360px;
   }
 
   /* NAVIGATION LOGO */

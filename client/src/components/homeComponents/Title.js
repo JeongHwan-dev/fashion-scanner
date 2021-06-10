@@ -4,7 +4,7 @@ import background from 'videos/background.mp4';
 import 'components/homeComponents/css/Title.css';
 
 const Title = () => {
-  const isMobile = useMediaQuery({ maxWidth: 390 });
+  const isMobile = useMediaQuery({ maxWidth: 414 });
   return (
     <>
       <section className="title" id="section__title">

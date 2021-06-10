@@ -61,6 +61,38 @@
 }
 
 /* MEDIA */
+@media screen and (max-width: 414px) {
+  /* QUESTIONS SECTION */
+  .questions {
+    padding-bottom: 0;
+    margin-bottom: 150px;
+  }
+  .questions__inner {
+    position: relative;
+    box-sizing: border-box;
+    width: 340px;
+    min-width: 0;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 0;
+  }
+
+  /* QUESTIONS TITLE */
+  .questions__inner h2 {
+    margin-bottom: 50px;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+
+  /* QUESTIONS TAB */
+  .questions__tab {
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+}
+
 @media screen and (max-width: 390px) {
   /* QUESTIONS SECTION */
   .questions {

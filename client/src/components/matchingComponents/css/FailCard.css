@@ -70,6 +70,36 @@
 }
 
 /* MEDIA */
+@media screen and (max-width: 414px) {
+  /* FAIL CARD */
+  .failCard__inner {
+    width: 414px;
+    height: 350px;
+  }
+
+  /* FAIL CARD IMAGE */
+  .failCard__img img {
+    width: 240px;
+  }
+
+  /* FAIL CARD TEXT */
+  .failCard__text {
+    width: 270px;
+  }
+  .failCard__text p:nth-child(1) {
+    font-size: 19px;
+    border-radius: 5px;
+  }
+  .failCard__text p:nth-child(2) {
+    font-size: 16px;
+  }
+
+  /* FAIL BUTTON */
+  .failCard__btn a {
+    font-size: 16px;
+  }
+}
+
 @media screen and (max-width: 390px) {
   /* FAIL CARD */
   .failCard__inner {

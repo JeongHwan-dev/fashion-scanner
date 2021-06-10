@@ -6,9 +6,9 @@ import intro from 'videos/intro.mp4';
 import 'components/homeComponents/css/Introduction.css';
 
 const Introduction = () => {
+  const isMobile = useMediaQuery({ maxWidth: 414 });
   const imageRef = useRef(null);
   const isVisible = useOnScreen(imageRef);
-  const isMobile = useMediaQuery({ maxWidth: 390 });
   const { t } = useTranslation('introduction');
 
   return (

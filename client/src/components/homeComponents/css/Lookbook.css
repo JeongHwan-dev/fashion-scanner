@@ -45,6 +45,59 @@
 }
 
 /* MEDIA */
+@media screen and (max-width: 414px) {
+  .lookbook {
+    padding: 100px 0;
+  }
+  .lookbook__inner {
+    width: 414px;
+    height: 900px;
+  }
+
+  /* LOOKBOOK TITLE */
+  .lookbook__title img {
+    width: auto;
+    height: 34px;
+    margin-bottom: 10px;
+  }
+  .lookbook__title img:nth-child(2) {
+    margin-bottom: 18px;
+  }
+  .lookbook__title span {
+    margin-bottom: 15px;
+    font-size: 16px;
+  }
+
+  /* LOOKBOOK MEMBERS */
+  .lookbook__members {
+    display: inline;
+    width: 360px;
+    height: auto;
+    margin: 15px;
+  }
+  .lookbook__members .members__inner {
+    width: 320px;
+    height: auto;
+    margin: 0 auto;
+  }
+  .lookbook__members a {
+    width: 200px;
+  }
+  .lookbook__members a .member {
+    width: 320px;
+    height: 180px;
+    margin: 8px 0;
+    transform: skewX(0deg);
+    filter: none;
+  }
+  .lookbook__members a .member:hover {
+    transform: skewX(0deg);
+    filter: none;
+    border: 2px solid #d97e9f;
+    box-sizing: content-box;
+  }
+}
+
 @media screen and (max-width: 390px) {
   .lookbook {
     padding: 100px 0;
@@ -125,6 +178,59 @@
   .lookbook__members {
     display: inline;
     width: 360px;
+    height: auto;
+    margin: 15px;
+  }
+  .lookbook__members .members__inner {
+    width: 320px;
+    height: auto;
+    margin: 0 auto;
+  }
+  .lookbook__members a {
+    width: 200px;
+  }
+  .lookbook__members a .member {
+    width: 320px;
+    height: 180px;
+    margin: 5px 0;
+    transform: skewX(0deg);
+    filter: none;
+  }
+  .lookbook__members a .member:hover {
+    transform: skewX(0deg);
+    filter: none;
+    border: 2px solid #d97e9f;
+    box-sizing: content-box;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .lookbook {
+    padding: 100px 0;
+  }
+  .lookbook__inner {
+    width: 360px;
+    height: 900px;
+  }
+
+  /* LOOKBOOK TITLE */
+  .lookbook__title img {
+    width: auto;
+    height: 32px;
+    margin-bottom: 10px;
+  }
+  .lookbook__title img:nth-child(2) {
+    margin-bottom: 15px;
+  }
+  .lookbook__title span {
+    margin-bottom: 15px;
+    font-size: 14px;
+  }
+
+  /* LOOKBOOK MEMBERS */
+  .lookbook__members {
+    display: inline;
+    width: 340px;
     height: auto;
     margin: 15px;
   }

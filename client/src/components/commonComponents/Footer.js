@@ -6,7 +6,7 @@ import { faFacebook, faInstagram, faTwitter } from '@fortawesome/free-brands-svg
 import 'components/commonComponents/css/Footer.css';
 
 const Footer = () => {
-  const isMobile = useMediaQuery({ maxWidth: 390 });
+  const isMobile = useMediaQuery({ maxWidth: 414 });
   const { t } = useTranslation('footer');
 
   return (

@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import 'components/homeComponents/css/MemberMatching.css';
 
 const MemberMatching = () => {
-  const isMobile = useMediaQuery({ maxWidth: 390 });
+  const isMobile = useMediaQuery({ maxWidth: 414 });
   const { t } = useTranslation('memberMatching');
 
   return (
