@@ -12,7 +12,7 @@ const DevTeamSub = () => {
           <img src="/images/devTeam/dev_team_logo1.png" alt="FASHION SCANNER TEAM" />
           <img src="/images/devTeam/dev_team_logo2.png" alt="FASHION SCANNER TEAM" />
         </div>
-        <dev className="sub__dsc">
+        <div className="sub__dsc">
           <h2>{t('sub_dsc1')}</h2>
           <p>
             {t('sub_dsc2')}
@@ -22,7 +22,7 @@ const DevTeamSub = () => {
             {t('sub_dsc5')}
             <br /> {t('sub_dsc6')}
           </p>
-        </dev>
+        </div>
       </div>
     </>
   );

@@ -17,6 +17,7 @@
 .title__inner img {
   width: 1050px;
   margin: 0 auto 20px;
+  animation: 2s fadeinTitle linear;
 }
 .title__inner h2 {
   margin: 0;
@@ -24,6 +25,7 @@
   font-weight: 600;
   text-align: center;
   color: #ababab;
+  animation: 3.5s fadeinTitle linear;
 }
 .title #bg-video {
   opacity: 0.4;
@@ -34,7 +36,122 @@
   min-width: 100%;
 }
 
+/* FADEIN BOTTOM */
+@keyframes fadeinTitle {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 /* MEDIA */
+@media screen and (max-width: 500px) {
+  .title {
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    width: 500px;
+    height: 812px;
+    padding-bottom: 50px;
+  }
+  .title__inner {
+    overflow: hidden;
+    width: 490px;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .title__inner img {
+    width: auto;
+    height: 62px;
+  }
+  .title__inner h2 {
+    font-size: 27px;
+  }
+  .title #bg-video {
+    height: 800px;
+  }
+}
+
+@media screen and (max-width: 428px) {
+  .title {
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    width: 428px;
+    height: 812px;
+    padding-bottom: 50px;
+  }
+  .title__inner {
+    overflow: hidden;
+    width: 428px;
+    padding: 0;
+  }
+  .title__inner img {
+    width: auto;
+    height: 56px;
+  }
+  .title__inner h2 {
+    font-size: 25px;
+  }
+  .title #bg-video {
+    height: 800px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .title {
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    width: 414px;
+    height: 812px;
+    padding-bottom: 50px;
+  }
+  .title__inner {
+    overflow: hidden;
+    width: 414px;
+    padding: 0;
+  }
+  .title__inner img {
+    width: auto;
+    height: 54px;
+  }
+  .title__inner h2 {
+    font-size: 24px;
+  }
+  .title #bg-video {
+    height: 800px;
+  }
+}
+
+@media screen and (max-width: 412px) {
+  .title {
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    width: 412px;
+    height: 812px;
+    padding-bottom: 50px;
+  }
+  .title__inner {
+    overflow: hidden;
+    width: 412px;
+    padding: 0;
+  }
+  .title__inner img {
+    width: auto;
+    height: 54px;
+  }
+  .title__inner h2 {
+    font-size: 24px;
+  }
+  .title #bg-video {
+    height: 800px;
+  }
+}
+
 @media screen and (max-width: 390px) {
   .title {
     display: flex;
@@ -73,6 +190,32 @@
   .title__inner {
     overflow: hidden;
     width: 375px;
+    padding: 0;
+  }
+  .title__inner img {
+    width: auto;
+    height: 48px;
+  }
+  .title__inner h2 {
+    font-size: 22px;
+  }
+  .title #bg-video {
+    height: 800px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .title {
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    width: 360px;
+    height: 812px;
+    padding-bottom: 50px;
+  }
+  .title__inner {
+    overflow: hidden;
+    width: 360px;
     padding: 0;
   }
   .title__inner img {

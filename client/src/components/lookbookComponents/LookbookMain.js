@@ -1,16 +1,16 @@
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation, Thumbs } from 'swiper';
-import { LangContext } from 'context/LanguageContext';
 import 'components/lookbookComponents/css/LookbookMain.css';
 import 'swiper/swiper-bundle.css';
 
 SwiperCore.use([Navigation, Thumbs]);
 
 const LookbookMain = ({ member, memberEn, memberColor }) => {
+  const { t } = useTranslation('');
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const symbolColor = `#${memberColor}`;
-  const { currentLang } = useContext(LangContext);
 
   const slidesKo = member.map(
     ({ lookbookId, lookbookImage, category, color, attributes, similarImages }) => {
@@ -187,7 +187,7 @@ const LookbookMain = ({ member, memberEn, memberColor }) => {
             thumbs={{ swiper: thumbsSwiper }}
             loop={true}
           >
-            {localStorage.i18nextLng === 'ko' ? slidesKo : slidesEn}
+            {localStorage.i18nextLng === 'en' ? slidesEn : slidesKo}
           </Swiper>
           <Swiper
             id="thumbs"
@@ -196,7 +196,7 @@ const LookbookMain = ({ member, memberEn, memberColor }) => {
             spaceBetween={20}
             slidesPerView={10}
           >
-            {localStorage.i18nextLng === 'ko' ? thumbnailsKo : thumbnailsEn}
+            {localStorage.i18nextLng === 'en' ? thumbnailsEn : thumbnailsKo}
           </Swiper>
         </div>
       </section>

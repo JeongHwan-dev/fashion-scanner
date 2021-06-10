@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import 'components/lookbookComponents/css/MemberInfo.css';
 
 const MemberInfo = ({ memberId }) => {
-  // jennie:1, rose:2, jisoo:3, lisa:4
+  // jennie: 1, rose: 2, jisoo: 3, lisa: 4
   const { t } = useTranslation('memberInfo');
 
   return (

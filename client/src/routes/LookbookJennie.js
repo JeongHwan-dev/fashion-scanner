@@ -11,18 +11,12 @@ import MobileOthers from 'components/lookbookComponents/MobileOthers';
 import Footer from 'components/commonComponents/Footer';
 
 const LookbookJennie = () => {
-  // jennie:1, rose:2, jisoo:3, lisa:4
+  // jennie: 1, rose: 2, jisoo: 3, lisa: 4
+  const isMobile = useMediaQuery({ maxWidth: 500 });
   const memberId = 1;
-<<<<<<< HEAD
-  // const lookbookApi = `http://elice-kdt-ai-track-vm-ai-13.koreacentral.cloudapp.azure.com:8000/api/members/1/lookbook`;
-  const lookbookApi = `/api/members/1/lookbook`;
-=======
-  const testUrl = `http://elice-kdt-ai-track-vm-distribute-13.koreacentral.cloudapp.azure.com:8001/api/members/${memberId}/lookbook`;
->>>>>>> dev/frontend
   const [member, setMemeber] = useState([]);
   const [memberEn, setMemberEn] = useState([]);
   const [memberColor, setMemberColor] = useState('');
-  const isMobile = useMediaQuery({ maxWidth: 390 });
 
   useEffect(() => {
     const getLookbookData = async () => {

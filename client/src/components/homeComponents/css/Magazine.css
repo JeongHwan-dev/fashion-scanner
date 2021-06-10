@@ -50,6 +50,148 @@
 }
 
 /* MEDIA */
+@media screen and (max-width: 500px) {
+  .magazine {
+    width: 500px;
+    padding: 200px 0 100px;
+  }
+  .magazine__inner {
+    width: 480px;
+    margin: 0 auto;
+  }
+
+  /* MAGAZINE TITLE */
+  .magazine__title img {
+    width: 380px;
+    margin-bottom: 30px;
+  }
+
+  /* MAGAZINE INFORMATION */
+  .magazine__info {
+    display: inline;
+  }
+
+  /* MAGAZINE VIDEO */
+  .magazine__video {
+    width: 480px;
+    margin-bottom: 30px;
+  }
+
+  /* MAGAZINE DSC */
+  .magazine__dsc {
+    width: 470px;
+    padding: 0 8px;
+  }
+  .magazine__dsc p {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 428px) {
+  .magazine {
+    padding: 200px 0 100px;
+  }
+  .magazine__inner {
+    width: 428px;
+  }
+
+  /* MAGAZINE TITLE */
+  .magazine__title img {
+    width: 300px;
+    margin-bottom: 25px;
+  }
+
+  /* MAGAZINE INFORMATION */
+  .magazine__info {
+    display: inline;
+  }
+
+  /* MAGAZINE VIDEO */
+  .magazine__video {
+    width: 428px;
+    margin-bottom: 25px;
+  }
+
+  /* MAGAZINE DSC */
+  .magazine__dsc {
+    width: 428px;
+    padding: 0 20px;
+  }
+  .magazine__dsc p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .magazine {
+    padding: 200px 0 100px;
+  }
+  .magazine__inner {
+    width: 414px;
+  }
+
+  /* MAGAZINE TITLE */
+  .magazine__title img {
+    width: 300px;
+    margin-bottom: 25px;
+  }
+
+  /* MAGAZINE INFORMATION */
+  .magazine__info {
+    display: inline;
+  }
+
+  /* MAGAZINE VIDEO */
+  .magazine__video {
+    width: 414px;
+    margin-bottom: 25px;
+  }
+
+  /* MAGAZINE DSC */
+  .magazine__dsc {
+    width: 414px;
+    padding: 0 20px;
+  }
+  .magazine__dsc p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 412px) {
+  .magazine {
+    padding: 200px 0 100px;
+  }
+  .magazine__inner {
+    width: 412px;
+  }
+
+  /* MAGAZINE TITLE */
+  .magazine__title img {
+    width: 300px;
+    margin-bottom: 25px;
+  }
+
+  /* MAGAZINE INFORMATION */
+  .magazine__info {
+    display: inline;
+  }
+
+  /* MAGAZINE VIDEO */
+  .magazine__video {
+    width: 412px;
+    margin-bottom: 25px;
+  }
+
+  /* MAGAZINE DSC */
+  .magazine__dsc {
+    width: 412px;
+    padding: 0 20px;
+  }
+  .magazine__dsc p {
+    font-size: 16px;
+  }
+}
+
 @media screen and (max-width: 390px) {
   .magazine {
     padding: 200px 0 100px;
@@ -113,6 +255,41 @@
   /* MAGAZINE DSC */
   .magazine__dsc {
     width: 375px;
+    padding: 0 20px;
+  }
+  .magazine__dsc p {
+    font-size: 14.5px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .magazine {
+    padding: 200px 0 100px;
+  }
+  .magazine__inner {
+    width: 360px;
+  }
+
+  /* MAGAZINE TITLE */
+  .magazine__title img {
+    width: 280px;
+    margin-bottom: 25px;
+  }
+
+  /* MAGAZINE INFORMATION */
+  .magazine__info {
+    display: inline;
+  }
+
+  /* MAGAZINE VIDEO */
+  .magazine__video {
+    width: 360px;
+    margin-bottom: 25px;
+  }
+
+  /* MAGAZINE DSC */
+  .magazine__dsc {
+    width: 360px;
     padding: 0 20px;
   }
   .magazine__dsc p {

@@ -4,7 +4,7 @@ import background from 'videos/background.mp4';
 import 'components/homeComponents/css/Title.css';
 
 const Title = () => {
-  const isMobile = useMediaQuery({ maxWidth: 390 });
+  const isMobile = useMediaQuery({ maxWidth: 500 });
   return (
     <>
       <section className="title" id="section__title">
@@ -22,7 +22,7 @@ const Title = () => {
             </>
           )}
         </div>
-        <video autoPlay muted loop id="bg-video">
+        <video muted autoPlay loop placeinline="true" id="bg-video">
           <source src={background} type="video/mp4" />
         </video>
       </section>

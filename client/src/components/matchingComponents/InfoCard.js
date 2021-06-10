@@ -23,18 +23,18 @@ const InfoCard = ({ memberObj, imgObj, isShared, isClicked }) => {
         content: {
           title: 'FASHION SCANNER',
           description: '#AI #FASHION #SCANNING #BLACKPINK #MATCHING',
-          imageUrl: 'https://blackpink.fashion-scanner.site/images/home/matching_group_photo.png',
+          imageUrl: 'http://www.fashion-scanner.site/images/common/fs_sharing_logo.png',
           link: {
-            mobileWebUrl: `https://blackpink.fashion-scanner.site/matching/sharing/${memberObj.name}`,
-            webUrl: `https://blackpink.fashion-scanner.site/matching/sharing/${memberObj.name}`,
+            mobileWebUrl: `http://www.fashion-scanner.site/matching/sharing/${memberObj.name}`,
+            webUrl: `http://www.fashion-scanner.site/matching/sharing/${memberObj.name}`,
           },
         },
         buttons: [
           {
             title: '매칭 결과 보기',
             link: {
-              mobileWebUrl: `https://blackpink.fashion-scanner.site/matching/sharing/${memberObj.name}`,
-              webUrl: `https://blackpink.fashion-scanner.site/matching/sharing/${memberObj.name}`,
+              mobileWebUrl: `http://www.fashion-scanner.site/matching/sharing/${memberObj.name}`,
+              webUrl: `http://www.fashion-scanner.site/matching/sharing/${memberObj.name}`,
             },
           },
         ],
@@ -45,14 +45,14 @@ const InfoCard = ({ memberObj, imgObj, isShared, isClicked }) => {
   // 페이스북 공유하기 핸들러
   const onSharingFacebook = () => {
     window.open(
-      `https://www.facebook.com/sharer/sharer.php?u=https://blackpink.fashion-scanner.site/matching/sharing/${memberObj.name}`,
+      `https://www.facebook.com/sharer/sharer.php?u=http://www.fashion-scanner.site/matching/sharing/${memberObj.name}`,
     );
   };
 
   // 트위터 공유하기 핸들러
   const onSharingTwitter = () => {
     window.open(
-      `https://www.twitter.com/intent/tweet?&url=https://blackpink.fashion-scanner.site/matching/sharing/${memberObj.name}`,
+      `https://www.twitter.com/intent/tweet?&url=http://www.fashion-scanner.site/matching/sharing/${memberObj.name}`,
     );
   };
 
@@ -117,11 +117,7 @@ const InfoCard = ({ memberObj, imgObj, isShared, isClicked }) => {
           <p className="sharing__title">{t('sharing_title')}</p>
           <div className="sharing__btns">
             <div className="sharing__kakaotalk">
-              <a
-                className="sharing__a"
-                id="create-kakao-link-btn"
-                href="javascript:createKakaoButton()"
-              >
+              <a className="sharing__a" id="create-kakao-link-btn" href="#">
                 <img src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png" />
               </a>
             </div>

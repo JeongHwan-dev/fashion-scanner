@@ -42,3 +42,53 @@ video {
 .swal-modal .swal-button-container button:hover {
   background-color: #d97e9f;
 }
+
+/* MEDIA */
+@media screen and (max-width: 500px) {
+  .swal-modal {
+    width: 410px;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 428px) {
+  .swal-modal {
+    width: 360px;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .swal-modal {
+    width: 350px;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 412px) {
+  .swal-modal {
+    width: 348px;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .swal-modal {
+    width: 340px;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .swal-modal {
+    width: 330px;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .swal-modal {
+    width: 325px;
+    height: auto;
+  }
+}

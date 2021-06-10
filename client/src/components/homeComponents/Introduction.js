@@ -6,16 +6,22 @@ import intro from 'videos/intro.mp4';
 import 'components/homeComponents/css/Introduction.css';
 
 const Introduction = () => {
+  const isMobile = useMediaQuery({ maxWidth: 500 });
   const imageRef = useRef(null);
   const isVisible = useOnScreen(imageRef);
-  const isMobile = useMediaQuery({ maxWidth: 390 });
   const { t } = useTranslation('introduction');
 
   return (
     <>
       <section className="introduction" id="section__introduction" ref={imageRef}>
         <div className="introduction__inner">
-          <video autoPlay muted loop className={`introduction__bg ${isVisible ? 'scroll' : ''}`}>
+          <video
+            muted
+            autoPlay
+            loop
+            placeinline="true"
+            className={`introduction__bg ${isVisible ? 'scroll' : ''}`}
+          >
             <source src={intro} type="video/mp4"></source>
           </video>
           <ul>

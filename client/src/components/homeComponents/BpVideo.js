@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import fashionIcon from 'videos/fashionIcon.mp4';
 import 'components/homeComponents/css/BpVideo.css';
 
@@ -7,7 +7,7 @@ const BpVideo = () => {
     <>
       <section className="bpVideo" id="section__bpVideo">
         <div className="bpVideo__inner">
-          <video controls autoPlay loop muted>
+          <video controls muted autoPlay loop placeinline="true">
             <source src={fashionIcon} type="video/mp4" />
           </video>
         </div>

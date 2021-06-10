@@ -104,9 +104,9 @@
 .lookbookmain__recomminner {
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
   vertical-align: middle;
   height: 100%;
-  align-items: center;
 }
 .lookbookmain__recomminner img {
   width: 140px;
@@ -128,6 +128,7 @@
   height: 200px;
   background-color: rgba(200, 200, 200, 0.5);
   color: #222222;
+  transition: 0.3s;
 }
 .lookbookmain__gotomall span {
   position: absolute;

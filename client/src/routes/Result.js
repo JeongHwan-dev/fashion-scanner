@@ -44,21 +44,7 @@ const Result = () => {
             )}
           </div>
           <div className="cards">
-            {localStorage.i18nextLng === 'ko' ? (
-              <>
-                <MemberCard
-                  memberObj={result.matchingResultKo.memberObj}
-                  isClicked={isClicked}
-                  onCardClickHandler={onCardClickHandler}
-                />
-                <InfoCard
-                  memberObj={result.matchingResultKo.memberObj}
-                  imgObj={result.matchingResultKo.imgObj}
-                  isShared={isShared}
-                  isClicked={isClicked}
-                />
-              </>
-            ) : (
+            {localStorage.i18nextLng === 'en' ? (
               <>
                 <MemberCard
                   memberObj={result.matchingResultEn.memberObj}
@@ -68,6 +54,20 @@ const Result = () => {
                 <InfoCard
                   memberObj={result.matchingResultEn.memberObj}
                   imgObj={result.matchingResultEn.imgObj}
+                  isShared={isShared}
+                  isClicked={isClicked}
+                />
+              </>
+            ) : (
+              <>
+                <MemberCard
+                  memberObj={result.matchingResultKo.memberObj}
+                  isClicked={isClicked}
+                  onCardClickHandler={onCardClickHandler}
+                />
+                <InfoCard
+                  memberObj={result.matchingResultKo.memberObj}
+                  imgObj={result.matchingResultKo.imgObj}
                   isShared={isShared}
                   isClicked={isClicked}
                 />

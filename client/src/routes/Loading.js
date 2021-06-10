@@ -34,7 +34,7 @@ const Loading = () => {
           <span>.</span>
         </div>
         <div className="loading__video">
-          <video autoPlay loop muted>
+          <video muted autoPlay loop placeinline="true">
             <source src={loadingVideo} type="video/mp4" />
           </video>
         </div>

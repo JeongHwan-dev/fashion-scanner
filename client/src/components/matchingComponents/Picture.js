@@ -59,7 +59,6 @@ const Picture = () => {
               icon: 'success',
               button: '확인',
             });
-            console.log(response);
 
             history.push({
               pathname: '/matching/loading',
@@ -110,7 +109,6 @@ const Picture = () => {
               icon: 'success',
               button: 'Confirm',
             });
-            console.log(response);
 
             history.push({
               pathname: '/matching/loading',
@@ -189,15 +187,15 @@ const Picture = () => {
             </label>
           </div>
           <div className="picture__submit">
-            {localStorage.i18nextLng === 'ko' ? (
+            {localStorage.i18nextLng === 'en' ? (
               <>
-                <button disabled={!isChecked} onClick={onSubmitKo}>
+                <button disabled={!isChecked} onClick={onSubmitEn}>
                   {t('picture_submit')}
                 </button>
               </>
             ) : (
               <>
-                <button disabled={!isChecked} onClick={onSubmitEn}>
+                <button disabled={!isChecked} onClick={onSubmitKo}>
                   {t('picture_submit')}
                 </button>
               </>

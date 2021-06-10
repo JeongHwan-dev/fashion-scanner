@@ -70,6 +70,126 @@
 }
 
 /* MEDIA */
+@media screen and (max-width: 500px) {
+  /* FAIL CARD */
+  .failCard__inner {
+    width: 460px;
+    height: 380px;
+  }
+
+  /* FAIL CARD IMAGE */
+  .failCard__img img {
+    width: 300px;
+  }
+
+  /* FAIL CARD TEXT */
+  .failCard__text {
+    width: 320px;
+  }
+  .failCard__text p:nth-child(1) {
+    font-size: 24px;
+    border-radius: 5px;
+  }
+  .failCard__text p:nth-child(2) {
+    font-size: 18px;
+  }
+
+  /* FAIL BUTTON */
+  .failCard__btn a {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 428px) {
+  /* FAIL CARD */
+  .failCard__inner {
+    width: 428px;
+    height: 350px;
+  }
+
+  /* FAIL CARD IMAGE */
+  .failCard__img img {
+    width: 240px;
+  }
+
+  /* FAIL CARD TEXT */
+  .failCard__text {
+    width: 270px;
+  }
+  .failCard__text p:nth-child(1) {
+    font-size: 19px;
+    border-radius: 5px;
+  }
+  .failCard__text p:nth-child(2) {
+    font-size: 16px;
+  }
+
+  /* FAIL BUTTON */
+  .failCard__btn a {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  /* FAIL CARD */
+  .failCard__inner {
+    width: 414px;
+    height: 350px;
+  }
+
+  /* FAIL CARD IMAGE */
+  .failCard__img img {
+    width: 240px;
+  }
+
+  /* FAIL CARD TEXT */
+  .failCard__text {
+    width: 270px;
+  }
+  .failCard__text p:nth-child(1) {
+    font-size: 19px;
+    border-radius: 5px;
+  }
+  .failCard__text p:nth-child(2) {
+    font-size: 16px;
+  }
+
+  /* FAIL BUTTON */
+  .failCard__btn a {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 412px) {
+  /* FAIL CARD */
+  .failCard__inner {
+    width: 412px;
+    height: 350px;
+  }
+
+  /* FAIL CARD IMAGE */
+  .failCard__img img {
+    width: 240px;
+  }
+
+  /* FAIL CARD TEXT */
+  .failCard__text {
+    width: 270px;
+  }
+  .failCard__text p:nth-child(1) {
+    font-size: 19px;
+    border-radius: 5px;
+  }
+  .failCard__text p:nth-child(2) {
+    font-size: 16px;
+  }
+
+  /* FAIL BUTTON */
+  .failCard__btn a {
+    font-size: 16px;
+  }
+}
+
 @media screen and (max-width: 390px) {
   /* FAIL CARD */
   .failCard__inner {
@@ -101,6 +221,36 @@
 }
 
 @media screen and (max-width: 375px) {
+  /* FAIL CARD */
+  .failCard__inner {
+    width: 350px;
+    height: 350px;
+  }
+
+  /* FAIL CARD IMAGE */
+  .failCard__img img {
+    width: 220px;
+  }
+
+  /* FAIL CARD TEXT */
+  .failCard__text {
+    width: 260px;
+  }
+  .failCard__text p:nth-child(1) {
+    font-size: 18px;
+    border-radius: 5px;
+  }
+  .failCard__text p:nth-child(2) {
+    font-size: 14px;
+  }
+
+  /* FAIL BUTTON */
+  .failCard__btn a {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 360px) {
   /* FAIL CARD */
   .failCard__inner {
     width: 350px;

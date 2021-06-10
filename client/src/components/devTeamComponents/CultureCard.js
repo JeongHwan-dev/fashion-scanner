@@ -3,7 +3,7 @@ import { useMediaQuery } from 'react-responsive';
 import 'components/devTeamComponents/css/CultureCard.css';
 
 const CultureCard = ({ memberObj }) => {
-  const isMobile = useMediaQuery({ maxWidth: 390 });
+  const isMobile = useMediaQuery({ maxWidth: 500 });
   const [isClicked, setIsClicked] = useState(false);
 
   // 클릭 여부 확인 핸들러
@@ -40,7 +40,7 @@ const CultureCard = ({ memberObj }) => {
         <>
           <div className={`culture__card ${isClicked ? 'clicked' : ''}`}>
             <div className="devCard front">
-              <video autoPlay muted loop>
+              <video muted autoPlay loop placeinline="true">
                 <source src={memberObj.vod} type="video/mp4" />
               </video>
               <p className="front__title">
