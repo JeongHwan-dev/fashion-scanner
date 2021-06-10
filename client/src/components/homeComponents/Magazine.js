@@ -17,7 +17,7 @@ const Magazine = () => {
           </div>
           <div className="magazine__info">
             <div className="magazine__video">
-              <video autoPlay muted>
+              <video muted autoPlay playsInline>
                 <source src={magazine} type="video/mp4" />
               </video>
             </div>

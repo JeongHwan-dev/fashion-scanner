@@ -30,7 +30,7 @@ const CultureCard = ({ memberObj }) => {
               </div>
             </div>
             <div className="card__vod">
-              <video autoPlay muted loop>
+              <video autoPlay muted loop playsInline>
                 <source src={memberObj.vod} type="video/mp4" />
               </video>
             </div>
@@ -40,7 +40,7 @@ const CultureCard = ({ memberObj }) => {
         <>
           <div className={`culture__card ${isClicked ? 'clicked' : ''}`}>
             <div className="devCard front">
-              <video muted autoPlay loop placeinline="true">
+              <video muted autoPlay loop playsInline>
                 <source src={memberObj.vod} type="video/mp4" />
               </video>
               <p className="front__title">

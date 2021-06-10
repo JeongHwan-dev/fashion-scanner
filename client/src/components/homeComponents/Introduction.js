@@ -19,7 +19,7 @@ const Introduction = () => {
             muted
             autoPlay
             loop
-            placeinline="true"
+            playsInline
             className={`introduction__bg ${isVisible ? 'scroll' : ''}`}
           >
             <source src={intro} type="video/mp4"></source>
