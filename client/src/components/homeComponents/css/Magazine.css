@@ -52,7 +52,6 @@
 /* MEDIA */
 @media screen and (max-width: 500px) {
   .magazine {
-    width: 500px;
     padding: 200px 0 100px;
   }
   .magazine__inner {
