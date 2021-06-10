@@ -52,13 +52,13 @@
     display: flex;
     overflow: hidden;
     align-items: center;
-    width: 500px;
+    width: 490px;
     height: 812px;
     padding-bottom: 50px;
   }
   .title__inner {
     overflow: hidden;
-    width: 500px;
+    width: 490px;
     padding: 0;
   }
   .title__inner img {
