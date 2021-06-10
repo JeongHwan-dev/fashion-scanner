@@ -10,9 +10,30 @@
 }
 
 /* MEDIA */
+@media screen and (max-width: 500px) {
+  .devTeam__inner {
+    width: 500px;
+    padding-top: 120px;
+  }
+}
+
+@media screen and (max-width: 428px) {
+  .devTeam__inner {
+    width: 428px;
+    padding-top: 120px;
+  }
+}
+
 @media screen and (max-width: 414px) {
   .devTeam__inner {
     width: 414px;
+    padding-top: 120px;
+  }
+}
+
+@media screen and (max-width: 412px) {
+  .devTeam__inner {
+    width: 412px;
     padding-top: 120px;
   }
 }

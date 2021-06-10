@@ -44,9 +44,30 @@ video {
 }
 
 /* MEDIA */
+@media screen and (max-width: 500px) {
+  .swal-modal {
+    width: 410px;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 428px) {
+  .swal-modal {
+    width: 360px;
+    height: auto;
+  }
+}
+
 @media screen and (max-width: 414px) {
   .swal-modal {
     width: 350px;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 412px) {
+  .swal-modal {
+    width: 348px;
     height: auto;
   }
 }

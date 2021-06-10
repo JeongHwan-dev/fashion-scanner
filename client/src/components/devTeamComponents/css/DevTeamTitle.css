@@ -38,7 +38,55 @@
 }
 
 /* MEDIA */
+@media screen and (max-width: 500px) {
+  /* DEV TEAM TITLE */
+  .devTeam__title {
+    margin-bottom: 150px;
+  }
+
+  /* TITLE PHOTO */
+  .title__photo {
+    margin-bottom: 0px;
+  }
+  .title__photo .swiper-container {
+    width: 400px;
+    height: 255px;
+  }
+}
+
+@media screen and (max-width: 428px) {
+  /* DEV TEAM TITLE */
+  .devTeam__title {
+    margin-bottom: 150px;
+  }
+
+  /* TITLE PHOTO */
+  .title__photo {
+    margin-bottom: 0px;
+  }
+  .title__photo .swiper-container {
+    width: 390px;
+    height: 250px;
+  }
+}
+
 @media screen and (max-width: 414px) {
+  /* DEV TEAM TITLE */
+  .devTeam__title {
+    margin-bottom: 150px;
+  }
+
+  /* TITLE PHOTO */
+  .title__photo {
+    margin-bottom: 0px;
+  }
+  .title__photo .swiper-container {
+    width: 350px;
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 412px) {
   /* DEV TEAM TITLE */
   .devTeam__title {
     margin-bottom: 150px;
@@ -83,5 +131,21 @@
   .title__photo .swiper-container {
     width: 350px;
     height: 200px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  /* DEV TEAM TITLE */
+  .devTeam__title {
+    margin-bottom: 150px;
+  }
+
+  /* TITLE PHOTO */
+  .title__photo {
+    margin-bottom: 0px;
+  }
+  .title__photo .swiper-container {
+    width: 330px;
+    height: 190px;
   }
 }

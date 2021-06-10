@@ -112,12 +112,162 @@
 }
 
 /* MEDIA */
+@media screen and (max-width: 500px) {
+  .picture {
+    padding: 100px 0;
+  }
+  .picture__inner {
+    width: 500px;
+  }
+
+  /* UPLOAD  */
+  .picture__upload {
+    margin-bottom: 26px;
+  }
+  .upload__title {
+    margin-bottom: 24px;
+  }
+  .upload__title h1 {
+    font-size: 28px;
+  }
+
+  /* UPLOAD BUTTON */
+  .upload__btn label {
+    padding: 15px 75px;
+    font-size: 28px;
+  }
+
+  /* UPLOAD PREVIEW */
+  .upload__preview img {
+    width: 300px;
+    height: 400px;
+    margin: 0 auto 10px;
+  }
+
+  /* PICTURE AGREE */
+  .picture__agree {
+    width: 300px;
+    font-size: 18px;
+    line-height: 1.7;
+  }
+
+  /* PICTURE SUBMIT */
+  .picture__submit {
+    width: 300px;
+  }
+  .picture__submit button {
+    width: 240px;
+    height: 60px;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 428px) {
+  .picture {
+    padding: 100px 0;
+  }
+  .picture__inner {
+    width: 428px;
+  }
+
+  /* UPLOAD  */
+  .picture__upload {
+    margin-bottom: 26px;
+  }
+  .upload__title {
+    margin-bottom: 24px;
+  }
+  .upload__title h1 {
+    font-size: 24px;
+  }
+
+  /* UPLOAD BUTTON */
+  .upload__btn label {
+    padding: 10px 45px;
+    font-size: 18px;
+  }
+
+  /* UPLOAD PREVIEW */
+  .upload__preview img {
+    width: 270px;
+    height: 360px;
+    margin: 0 auto 10px;
+  }
+
+  /* PICTURE AGREE */
+  .picture__agree {
+    width: 300px;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  /* PICTURE SUBMIT */
+  .picture__submit {
+    width: 300px;
+  }
+  .picture__submit button {
+    width: 200px;
+    height: 50px;
+    font-size: 18px;
+  }
+}
+
 @media screen and (max-width: 414px) {
   .picture {
     padding: 100px 0;
   }
   .picture__inner {
     width: 414px;
+  }
+
+  /* UPLOAD  */
+  .picture__upload {
+    margin-bottom: 26px;
+  }
+  .upload__title {
+    margin-bottom: 24px;
+  }
+  .upload__title h1 {
+    font-size: 24px;
+  }
+
+  /* UPLOAD BUTTON */
+  .upload__btn label {
+    padding: 10px 45px;
+    font-size: 18px;
+  }
+
+  /* UPLOAD PREVIEW */
+  .upload__preview img {
+    width: 270px;
+    height: 360px;
+    margin: 0 auto 10px;
+  }
+
+  /* PICTURE AGREE */
+  .picture__agree {
+    width: 300px;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  /* PICTURE SUBMIT */
+  .picture__submit {
+    width: 300px;
+  }
+  .picture__submit button {
+    width: 180px;
+    height: 45px;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 412px) {
+  .picture {
+    padding: 100px 0;
+  }
+  .picture__inner {
+    width: 412px;
   }
 
   /* UPLOAD  */

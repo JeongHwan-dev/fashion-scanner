@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import 'components/matchingComponents/css/Example.css';
 
 const Example = () => {
-  const isMobile = useMediaQuery({ maxWidth: 414 });
+  const isMobile = useMediaQuery({ maxWidth: 500 });
   const { t } = useTranslation('example');
   return (
     <>

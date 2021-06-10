@@ -6,7 +6,7 @@ import React, { useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 
 const FAQ = () => {
-  const isMobile = useMediaQuery({ maxWidth: 414 });
+  const isMobile = useMediaQuery({ maxWidth: 500 });
   const [blackpink, setBlackpink] = useState(false);
 
   return (

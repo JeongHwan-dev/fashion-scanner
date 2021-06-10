@@ -12,7 +12,7 @@ import Footer from 'components/commonComponents/Footer';
 
 const LookbookRose = () => {
   // jennie: 1, rose: 2, jisoo: 3, lisa: 4
-  const isMobile = useMediaQuery({ maxWidth: 414 });
+  const isMobile = useMediaQuery({ maxWidth: 500 });
   const memberId = 2;
   const [member, setMemeber] = useState([]);
   const [memberEn, setMemberEn] = useState([]);
