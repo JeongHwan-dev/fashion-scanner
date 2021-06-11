@@ -99,7 +99,7 @@ const Picture = () => {
       formData.append('userImage', requestImg);
 
       await axios
-        .post(url + '/api/user/matching', formData, config)
+        .post('/api/user/matching', formData, config)
         .then((response) => {
           if (response.status === 200) {
             swal({
