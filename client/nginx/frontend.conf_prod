@@ -3,8 +3,6 @@ server {
     server_name blackpink.fashion-scanner.site www.fashion-scanner.site;
     charset utf-8;
 
-    client_max_body_size 50M;
-
     location / {
         return 307 https://blackpink.fashion-scanner.site$request_uri;
     }
