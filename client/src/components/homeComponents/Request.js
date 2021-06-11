@@ -5,7 +5,6 @@ import swal from 'sweetalert';
 import 'components/homeComponents/css/Request.css';
 
 const Request = () => {
-  const url = `http://elice-kdt-ai-track-vm-distribute-13.koreacentral.cloudapp.azure.com:8001`;
   const { t } = useTranslation('request');
   const [previewImg, setPreviewImg] = useState('/images/request_sample.jpg');
   const [requestImg, setRequestImg] = useState('');
@@ -68,7 +67,7 @@ const Request = () => {
             formData.append('email', email);
             console.log(formData);
 
-            await axios.post(url + '/api/user/request', formData, config).then((response) => {
+            await axios.post('/api/user/request', formData, config).then((response) => {
               console.log(response);
 
               if (response.status === 200) {

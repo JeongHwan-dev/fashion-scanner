@@ -7,7 +7,6 @@ import Example from 'components/matchingComponents/Example';
 import 'components/matchingComponents/css/Picture.css';
 
 const Picture = () => {
-  const url = `http://elice-kdt-ai-track-vm-distribute-13.koreacentral.cloudapp.azure.com:8001`;
   const history = useHistory();
   const [previewImg, setPreviewImg] = useState('');
   const [requestImg, setRequestImg] = useState('');
@@ -50,7 +49,7 @@ const Picture = () => {
       formData.append('userImage', requestImg);
 
       await axios
-        .post(url + '/api/user/matching', formData, config)
+        .post('/api/user/matching', formData, config)
         .then((response) => {
           if (response.status === 200) {
             swal({
