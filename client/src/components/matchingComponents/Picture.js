@@ -72,8 +72,8 @@ const Picture = () => {
         })
         .catch(() => {
           swal({
-            title: '사진 전송 오류',
-            text: 'error',
+            title: '허용 사진 용량을 초과',
+            text: '50MB 이하의 사진을 업로드해 주세요.',
             icon: 'warning',
             button: '확인',
           });
@@ -122,8 +122,8 @@ const Picture = () => {
         })
         .catch(() => {
           swal({
-            title: 'Failed to send Photo',
-            text: 'error',
+            title: 'Exceeds allowed photo capacity',
+            text: 'Please upload a picture under 50MB.',
             icon: 'warning',
             button: 'Confirm',
           });

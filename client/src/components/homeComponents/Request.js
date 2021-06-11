@@ -129,6 +129,13 @@ const Request = () => {
           text: '요청해 주신 사진 업데이트는 약 1주일 간의 시간이 소요됩니다.',
           icon: 'success',
           button: '확인',
+        }).catch(() => {
+          swal({
+            title: '허용 사진 용량을 초과',
+            text: '50MB 이하의 사진을 업로드해 주세요.',
+            icon: 'warning',
+            button: '확인',
+          });
         });
       }
     } else {
@@ -175,6 +182,13 @@ const Request = () => {
               text: 'We will send you an email notification within 1 week.',
               icon: 'success',
               button: 'Confirm',
+            }).catch(() => {
+              swal({
+                title: 'Exceeds allowed photo capacity',
+                text: 'Please upload a picture under 50MB.',
+                icon: 'warning',
+                button: 'Confirm',
+              });
             });
           } else {
             // 유효 하지 않은 이메일 형식일 경우
