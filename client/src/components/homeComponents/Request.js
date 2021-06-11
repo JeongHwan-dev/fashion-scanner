@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import { useMediaQuery } from 'react-responsive';
 import { useTranslation } from 'react-i18next';
 import axios from 'axios';
 import swal from 'sweetalert';
 import 'components/homeComponents/css/Request.css';
 
 const Request = () => {
+  const isMobile = useMediaQuery({ maxWidth: 500 });
   const { t } = useTranslation('request');
   const [previewImg, setPreviewImg] = useState('/images/request_sample.jpg');
   const [requestImg, setRequestImg] = useState('');
@@ -256,13 +258,27 @@ const Request = () => {
                 <label className="material-icons" htmlFor="reqeust-file">
                   upload_file<span>{t('image_upload')}</span>
                 </label>
-                <input
-                  type="file"
-                  id="reqeust-file"
-                  accept="image/png, image/jpeg, image/jpg"
-                  onChange={onFileChange}
-                  style={{ display: 'none' }}
-                />
+                {!isMobile ? (
+                  <>
+                    <input
+                      type="file"
+                      id="reqeust-file"
+                      accept="image/*"
+                      onChange={onFileChange}
+                      style={{ display: 'none' }}
+                    />
+                  </>
+                ) : (
+                  <>
+                    <input
+                      type="file"
+                      id="reqeust-file"
+                      accept="image/png, image/jpeg, image/jpg"
+                      onChange={onFileChange}
+                      style={{ display: 'none' }}
+                    />
+                  </>
+                )}
               </div>
             </div>
             <div className="body__info">

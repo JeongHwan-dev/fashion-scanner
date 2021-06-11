@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import { useMediaQuery } from 'react-responsive';
 import { useTranslation } from 'react-i18next';
 import axios from 'axios';
 import swal from 'sweetalert';
@@ -7,6 +8,7 @@ import Example from 'components/matchingComponents/Example';
 import 'components/matchingComponents/css/Picture.css';
 
 const Picture = () => {
+  const isMobile = useMediaQuery({ maxWidth: 500 });
   const history = useHistory();
   const [previewImg, setPreviewImg] = useState('');
   const [requestImg, setRequestImg] = useState('');
@@ -154,13 +156,27 @@ const Picture = () => {
                 <label className="material-icons" htmlFor="input-file">
                   add_a_photo
                 </label>
-                <input
-                  type="file"
-                  id="input-file"
-                  accept="image/png, image/jpeg, image/jpg;capture=camera"
-                  onChange={onFileChange}
-                  style={{ display: 'none' }}
-                />
+                {!isMobile ? (
+                  <>
+                    <input
+                      type="file"
+                      id="input-file"
+                      accept="image/*;capture=camera"
+                      onChange={onFileChange}
+                      style={{ display: 'none' }}
+                    />
+                  </>
+                ) : (
+                  <>
+                    <input
+                      type="file"
+                      id="input-file"
+                      accept="image/png, image/jpeg, image/jpg;capture=camera"
+                      onChange={onFileChange}
+                      style={{ display: 'none' }}
+                    />
+                  </>
+                )}
                 {previewImg && (
                   <div className="upload__preview">
                     <img src={previewImg} alt="첨부한 이미지" />
