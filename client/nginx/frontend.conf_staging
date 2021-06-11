@@ -1,6 +1,6 @@
 server {
     listen 80;
-    server_name elice-kdt-ai-track-vm-distribute-13.koreacentral.cloudapp.azure.com;
+    server_name blackpink.fashion-scanner.site www.fashion-scanner.site;
 
     location / {
         sub_filter_once on;
