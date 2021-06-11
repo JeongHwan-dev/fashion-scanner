@@ -1,0 +1,151 @@
+/* DEV TEAM TITLE */
+.devTeam__title {
+  margin-bottom: 150px;
+}
+
+/* TITLE PHOTO */
+.title__photo {
+  margin-bottom: 200px;
+}
+.title__photo .swiper-container {
+  width: 1000px;
+  height: 500px;
+  border-radius: 12px !important;
+  overflow: hidden;
+}
+.title__photo .swiper-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  background: #fff;
+  text-align: center;
+}
+.title__photo .swiper-slide img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
+
+/* MEDIA */
+@media screen and (max-width: 500px) {
+  /* DEV TEAM TITLE */
+  .devTeam__title {
+    margin-bottom: 150px;
+  }
+
+  /* TITLE PHOTO */
+  .title__photo {
+    margin-bottom: 0px;
+  }
+  .title__photo .swiper-container {
+    width: 400px;
+    height: 255px;
+  }
+}
+
+@media screen and (max-width: 428px) {
+  /* DEV TEAM TITLE */
+  .devTeam__title {
+    margin-bottom: 150px;
+  }
+
+  /* TITLE PHOTO */
+  .title__photo {
+    margin-bottom: 0px;
+  }
+  .title__photo .swiper-container {
+    width: 390px;
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  /* DEV TEAM TITLE */
+  .devTeam__title {
+    margin-bottom: 150px;
+  }
+
+  /* TITLE PHOTO */
+  .title__photo {
+    margin-bottom: 0px;
+  }
+  .title__photo .swiper-container {
+    width: 350px;
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 412px) {
+  /* DEV TEAM TITLE */
+  .devTeam__title {
+    margin-bottom: 150px;
+  }
+
+  /* TITLE PHOTO */
+  .title__photo {
+    margin-bottom: 0px;
+  }
+  .title__photo .swiper-container {
+    width: 350px;
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  /* DEV TEAM TITLE */
+  .devTeam__title {
+    margin-bottom: 150px;
+  }
+
+  /* TITLE PHOTO */
+  .title__photo {
+    margin-bottom: 0px;
+  }
+  .title__photo .swiper-container {
+    width: 350px;
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  /* DEV TEAM TITLE */
+  .devTeam__title {
+    margin-bottom: 150px;
+  }
+
+  /* TITLE PHOTO */
+  .title__photo {
+    margin-bottom: 0px;
+  }
+  .title__photo .swiper-container {
+    width: 350px;
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  /* DEV TEAM TITLE */
+  .devTeam__title {
+    margin-bottom: 150px;
+  }
+
+  /* TITLE PHOTO */
+  .title__photo {
+    margin-bottom: 0px;
+  }
+  .title__photo .swiper-container {
+    width: 330px;
+    height: 190px;
+  }
+}

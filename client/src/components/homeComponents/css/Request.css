@@ -1,0 +1,687 @@
+/* REQUEST */
+.request {
+  padding: 150px 0 250px;
+}
+.request__inner {
+  position: relative;
+  width: 1100px;
+  margin: 0 auto;
+  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+}
+
+/* REQUEST TITLE */
+.request__title {
+  text-align: center;
+}
+.request__title h2 {
+  margin-bottom: 15px;
+  font-size: 58px;
+  font-weight: 600;
+}
+.request__title p {
+  margin-bottom: 50px;
+}
+.request__title p span {
+  margin: 0 5px;
+  font-size: 30px;
+  font-weight: 500;
+}
+.request__title p span:nth-child(1) {
+  color: #f2a7bb;
+}
+.request__title p span:nth-child(2) {
+  color: #b17efc;
+}
+
+/* REQUEST BODY */
+.request__body {
+  display: flex;
+  width: 1000px;
+  margin: 0 auto;
+}
+
+/* REQUEST BODY IMAGE */
+.request__body .body__image {
+  margin: 0 auto;
+}
+.request__body .body__image .image__preview img {
+  width: 420px;
+  height: 420px;
+}
+.request__body .body__image label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 180px;
+  height: 48px;
+  margin: 20px auto 0;
+  border: none;
+  border-radius: 6px;
+  background-color: #414141;
+  font-size: 24px;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.request__body .body__image label:hover {
+  background-color: #333;
+}
+.request__body .body__image label span {
+  margin-left: 5px;
+  font-size: 16px;
+  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+}
+
+/* REQUEST BODY INFO */
+.request__body .body__info p {
+  width: 450px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #f3f3f3;
+}
+.request__body .body__info span {
+  font-size: 16px;
+  color: #b0b8c1;
+}
+.request__body .body__info .info__input {
+  margin-bottom: 30px;
+}
+.request__body .body__info input[type='email'] {
+  width: 450px;
+  height: 48px;
+  margin: 30px 0 10px;
+  padding: 0 18px;
+  border: none;
+  border-radius: 6px;
+  box-sizing: border-box;
+  background-color: #343434;
+  font-size: 16px;
+  color: #fff;
+  transition: 0.2s;
+}
+.request__body .body__info input[type='email']:hover {
+  outline: none;
+  box-shadow: 0 0 0 2px #f2a7bb;
+}
+.request__body .body__info input[type='email']:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #d97e9f;
+}
+.request__body .body__info .info__agree {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #b0b8c1;
+}
+.request__body .body__info label {
+  font-size: 16px;
+  color: #f3f3f3;
+}
+.request__body .body__info input[type='checkbox'] {
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 6px;
+}
+.request__body .body__info input[type='checkbox']:hover {
+  outline: none;
+  box-shadow: 0 0 0 1px #f2a7bb;
+}
+.request__body .body__info button {
+  box-sizing: border-box;
+  width: 450px;
+  height: 48px;
+  border: none;
+  border-radius: 6px;
+  background-color: #f2a7bb;
+  font-size: 16px;
+  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+  color: #fff;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.request__body .body__info button:hover {
+  background-color: #d97e9f;
+}
+
+/* MEDIA */
+@media screen and (max-width: 500px) {
+  .request {
+    padding: 100px 0 200px;
+  }
+  .request__inner {
+    width: 500px;
+    height: auto;
+  }
+
+  /* REQUEST TITLE */
+  .request__title h2 {
+    font-size: 50px;
+  }
+  .request__title p {
+    margin-bottom: 25px;
+  }
+  .request__title p span {
+    font-size: 28px;
+  }
+
+  /* REQUEST BODY */
+  .request__body {
+    display: inline;
+    width: 500px;
+    height: auto;
+  }
+  .request__body .body__image .image__preview img {
+    width: 380px;
+    height: 380px;
+    margin: 0 auto;
+  }
+  .request__body .body__image label {
+    width: 180px;
+    height: 55px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+
+  /* REQUEST BODY INFO */
+  .request__body .body__info {
+    width: 380px;
+    margin: 0 auto;
+  }
+  .request__body .body__info p {
+    width: 380px;
+    margin: 0 auto 5px;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  .request__body .body__info span {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  .request__body .body__info input[type='email'] {
+    width: 380px;
+    height: 60px;
+    font-size: 18px;
+  }
+  .request__body .body__info .info__agree {
+    margin-bottom: 5px;
+    font-size: 18px;
+  }
+  .request__body .body__info label {
+    font-size: 18px;
+  }
+  .request__body .body__info input[type='checkbox'] {
+    width: 15px;
+    height: 15px;
+  }
+  .request__body .body__info button {
+    width: 380px;
+    height: 60px;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 428px) {
+  .request {
+    padding: 100px 0 200px;
+  }
+  .request__inner {
+    width: 428px;
+    height: auto;
+  }
+
+  /* REQUEST TITLE */
+  .request__title h2 {
+    font-size: 42px;
+  }
+  .request__title p {
+    margin-bottom: 25px;
+  }
+  .request__title p span {
+    font-size: 25px;
+  }
+
+  /* REQUEST BODY */
+  .request__body {
+    display: inline;
+    width: 428px;
+    height: auto;
+  }
+  .request__body .body__image .image__preview img {
+    width: 330px;
+    height: 330px;
+    margin: 0 auto;
+  }
+  .request__body .body__image label {
+    width: 150px;
+    height: 45px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+
+  /* REQUEST BODY INFO */
+  .request__body .body__info {
+    width: 330px;
+    margin: 0 auto;
+  }
+  .request__body .body__info p {
+    width: 330px;
+    margin: 0 auto 5px;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  .request__body .body__info span {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .request__body .body__info input[type='email'] {
+    width: 330px;
+    height: 45px;
+    font-size: 16px;
+  }
+  .request__body .body__info .info__agree {
+    margin-bottom: 5px;
+    font-size: 16px;
+  }
+  .request__body .body__info label {
+    font-size: 16px;
+  }
+  .request__body .body__info input[type='checkbox'] {
+    width: 15px;
+    height: 15px;
+  }
+  .request__body .body__info button {
+    width: 330px;
+    height: 45px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .request {
+    padding: 100px 0 200px;
+  }
+  .request__inner {
+    width: 414px;
+    height: auto;
+  }
+
+  /* REQUEST TITLE */
+  .request__title h2 {
+    font-size: 38px;
+  }
+  .request__title p {
+    margin-bottom: 25px;
+  }
+  .request__title p span {
+    font-size: 24px;
+  }
+
+  /* REQUEST BODY */
+  .request__body {
+    display: inline;
+    width: 414px;
+    height: auto;
+  }
+  .request__body .body__image .image__preview img {
+    width: 320px;
+    height: 320px;
+    margin: 0 auto;
+  }
+  .request__body .body__image label {
+    width: 150px;
+    height: 45px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+
+  /* REQUEST BODY INFO */
+  .request__body .body__info {
+    width: 320px;
+    margin: 0 auto;
+  }
+  .request__body .body__info p {
+    width: 320px;
+    margin: 0 auto 5px;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  .request__body .body__info span {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .request__body .body__info input[type='email'] {
+    width: 320px;
+    height: 45px;
+    font-size: 15px;
+  }
+  .request__body .body__info .info__agree {
+    margin-bottom: 5px;
+    font-size: 15px;
+  }
+  .request__body .body__info label {
+    font-size: 15px;
+  }
+  .request__body .body__info input[type='checkbox'] {
+    width: 15px;
+    height: 15px;
+  }
+  .request__body .body__info button {
+    width: 320px;
+    height: 45px;
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 412px) {
+  .request {
+    padding: 100px 0 200px;
+  }
+  .request__inner {
+    width: 412px;
+    height: auto;
+  }
+
+  /* REQUEST TITLE */
+  .request__title h2 {
+    font-size: 38px;
+  }
+  .request__title p {
+    margin-bottom: 25px;
+  }
+  .request__title p span {
+    font-size: 24px;
+  }
+
+  /* REQUEST BODY */
+  .request__body {
+    display: inline;
+    width: 412px;
+    height: auto;
+  }
+  .request__body .body__image .image__preview img {
+    width: 320px;
+    height: 320px;
+    margin: 0 auto;
+  }
+  .request__body .body__image label {
+    width: 150px;
+    height: 45px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+
+  /* REQUEST BODY INFO */
+  .request__body .body__info {
+    width: 320px;
+    margin: 0 auto;
+  }
+  .request__body .body__info p {
+    width: 320px;
+    margin: 0 auto 5px;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  .request__body .body__info span {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .request__body .body__info input[type='email'] {
+    width: 320px;
+    height: 45px;
+    font-size: 15px;
+  }
+  .request__body .body__info .info__agree {
+    margin-bottom: 5px;
+    font-size: 15px;
+  }
+  .request__body .body__info label {
+    font-size: 15px;
+  }
+  .request__body .body__info input[type='checkbox'] {
+    width: 15px;
+    height: 15px;
+  }
+  .request__body .body__info button {
+    width: 320px;
+    height: 45px;
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .request {
+    padding: 100px 0 200px;
+  }
+  .request__inner {
+    width: 390px;
+    height: auto;
+  }
+
+  /* REQUEST TITLE */
+  .request__title h2 {
+    font-size: 36px;
+  }
+  .request__title p {
+    margin-bottom: 25px;
+  }
+  .request__title p span {
+    font-size: 22px;
+  }
+
+  /* REQUEST BODY */
+  .request__body {
+    display: inline;
+    width: 390px;
+    height: auto;
+  }
+  .request__body .body__image .image__preview img {
+    width: 310px;
+    height: 310px;
+    margin: 0 auto;
+  }
+  .request__body .body__image label {
+    width: 150px;
+    height: 45px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+
+  /* REQUEST BODY INFO */
+  .request__body .body__info {
+    width: 310px;
+    margin: 0 auto;
+  }
+  .request__body .body__info p {
+    width: 310px;
+    margin: 0 auto 5px;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  .request__body .body__info span {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .request__body .body__info input[type='email'] {
+    width: 310px;
+    height: 45px;
+    font-size: 15px;
+  }
+  .request__body .body__info .info__agree {
+    margin-bottom: 5px;
+    font-size: 15px;
+  }
+  .request__body .body__info label {
+    font-size: 15px;
+  }
+  .request__body .body__info input[type='checkbox'] {
+    width: 15px;
+    height: 15px;
+  }
+  .request__body .body__info button {
+    width: 310px;
+    height: 45px;
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .request {
+    padding: 100px 0 200px;
+  }
+  .request__inner {
+    width: 375px;
+    height: auto;
+  }
+
+  /* REQUEST TITLE */
+  .request__title h2 {
+    font-size: 36px;
+  }
+  .request__title p {
+    margin-bottom: 25px;
+  }
+  .request__title p span {
+    font-size: 22px;
+  }
+
+  /* REQUEST BODY */
+  .request__body {
+    display: inline;
+    width: 375px;
+    height: auto;
+  }
+  .request__body .body__image .image__preview img {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+  }
+  .request__body .body__image label {
+    width: 150px;
+    height: 45px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+
+  /* REQUEST BODY INFO */
+  .request__body .body__info {
+    width: 300px;
+    margin: 0 auto;
+  }
+  .request__body .body__info p {
+    width: 300px;
+    margin: 0 auto 5px;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  .request__body .body__info span {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .request__body .body__info input[type='email'] {
+    width: 300px;
+    height: 45px;
+    font-size: 15px;
+  }
+  .request__body .body__info .info__agree {
+    margin-bottom: 5px;
+    font-size: 15px;
+  }
+  .request__body .body__info label {
+    font-size: 15px;
+  }
+  .request__body .body__info input[type='checkbox'] {
+    width: 15px;
+    height: 15px;
+  }
+  .request__body .body__info button {
+    width: 300px;
+    height: 45px;
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .request {
+    padding: 100px 0 200px;
+  }
+  .request__inner {
+    width: 360px;
+    height: auto;
+  }
+
+  /* REQUEST TITLE */
+  .request__title h2 {
+    font-size: 36px;
+  }
+  .request__title p {
+    margin-bottom: 25px;
+  }
+  .request__title p span {
+    font-size: 22px;
+  }
+
+  /* REQUEST BODY */
+  .request__body {
+    display: inline;
+    width: 360px;
+    height: auto;
+  }
+  .request__body .body__image .image__preview img {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+  }
+  .request__body .body__image label {
+    width: 150px;
+    height: 45px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+
+  /* REQUEST BODY INFO */
+  .request__body .body__info {
+    width: 300px;
+    margin: 0 auto;
+  }
+  .request__body .body__info p {
+    width: 300px;
+    margin: 0 auto 5px;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  .request__body .body__info span {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .request__body .body__info input[type='email'] {
+    width: 300px;
+    height: 45px;
+    font-size: 15px;
+  }
+  .request__body .body__info .info__agree {
+    margin-bottom: 5px;
+    font-size: 15px;
+  }
+  .request__body .body__info label {
+    font-size: 15px;
+  }
+  .request__body .body__info input[type='checkbox'] {
+    width: 15px;
+    height: 15px;
+  }
+  .request__body .body__info button {
+    width: 300px;
+    height: 45px;
+    font-size: 15px;
+  }
+}

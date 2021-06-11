@@ -1,5 +1,7 @@
 server/.env.dev
+server/.env.dev.db
 server/.env.prod
+server/.env.dev.db
 server/.env.prod.db
 server/app/postgres
 server/app/django.db.backends.sqlite3
@@ -8,9 +10,12 @@ server/env
 migrations
 __pycache__
 data.png
-data_setting.py
 lookbook_data.csv
 lookbook
 user-upload
-client/
 static
+media
+ai
+pytorch
+.vscode
+data_setup.py
