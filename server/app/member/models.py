@@ -2,10 +2,8 @@ from django.db import models
 
 
 class BlackpinkMember(models.Model):
-    member_name = models.CharField(
-        max_length=32, blank=False, null=False, verbose_name="멤버 이름"
-    )
-    color_id = models.OneToOneField(
+    name = models.CharField(max_length=32, verbose_name="멤버 이름")
+    color = models.OneToOneField(
         "clothes_style.Color",
         related_name="member",
         on_delete=models.SET_NULL,
@@ -15,7 +13,7 @@ class BlackpinkMember(models.Model):
     )
 
     def __str__(self):
-        return f"{self.member_name}({self.id})"
+        return f"{self.name}({self.id})"
 
     class Meta:
         db_table = "blackpink_member"

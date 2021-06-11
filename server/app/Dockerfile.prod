@@ -1,30 +1,29 @@
-# Pull official base image
-FROM python:3.8.3-alpine
+FROM python:3.8-slim-buster
 
-# Set work directory
 WORKDIR /usr/src/app
 
-# Set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
-RUN apk update \
-    && apk add --no-cache postgresql-dev gcc python3-dev musl-dev
+RUN apt-get update && apt-get install --no-install-recommends -y \
+    libgl1-mesa-glx \
+    libglib2.0-0 \
+    libjpeg-dev \
+    libpq-dev \
+    netcat \
+    postgresql \
+    zlib1g-dev \
+    && rm -rf /var/lib/apt/lists/*
 
-RUN apk add --no-cache jpeg-dev zlib-dev
-RUN apk add --no-cache --virtual .build-deps build-base linux-headers
-
-
-# Install dependencies
-RUN pip install --upgrade pip
 COPY ./requirements.txt .
-RUN pip install -r requirements.txt
+RUN pip install -U pip \
+    --ignore-installed ruamel-yaml \
+    -r requirements.txt \
+    torch==1.8.1+cpu torchvision==0.9.1+cpu -f https://download.pytorch.org/whl/torch_stable.html
 
-# Copy entrypoint.sh
-COPY ./entrypoint.sh .
+COPY ai/mmfashion .
+RUN python setup.py install
 
-# Copy project
 COPY . .
 
-# Run entrypoint.sh
-ENTRYPOINT ["/usr/src/app/entrypoint.prod.sh"]
+ENTRYPOINT ["/usr/src/app/entrypoint.sh"]

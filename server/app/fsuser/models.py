@@ -8,9 +8,7 @@ class Fsuser(models.Model):
         STAFF = "Staff", _("Staff")
         SUPERUSER = "Superuser", _("Superuser")
 
-    email = models.EmailField(
-        unique=True, max_length=255, null=False, verbose_name="이메일"
-    )
+    email = models.EmailField(unique=True, max_length=255, verbose_name="사용자 이메일")
     password = models.CharField(max_length=128, verbose_name="비밀번호")
     registered_date = models.DateTimeField(auto_now_add=True, verbose_name="등록 날짜")
     role = models.CharField(
