@@ -35,10 +35,7 @@ class UserMemberMatchingAPIView(APIView):
             attribute2_ko = CLOTHES_ATTRIBUTES_EN_KO[attributes[1]]
             attribute3_ko = CLOTHES_ATTRIBUTES_EN_KO[attributes[2]]
 
-            img_obj_en = {
-                "category": category,
-                "attributes": [attr.replace("_", " ") for attr in attributes],
-            }
+            img_obj_en = {"category": category, "attributes": [attr.replace("_", " ") for attr in attributes]}
 
             img_obj_ko = {
                 "category": CLOTHES_CATEGORIES_EN_KO[match_result["category"]],
@@ -77,7 +74,12 @@ class UserRequestImageAPIView(APIView):
             )
 
             _email = request.data.get("email")
-            _user = Fsuser.objects.get(email=_email)
+            
+            if _email is None:
+                _user = None
+    
+            else:
+                _user = Fsuser.objects.get(email=_email)
 
         except Fsuser.DoesNotExist:
             _user = Fsuser.objects.create(email=_email)
