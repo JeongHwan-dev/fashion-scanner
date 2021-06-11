@@ -1,0 +1,182 @@
+/* LOOKBOOK SECTION */
+.lookbookmain {
+  padding: 150px 0 200px;
+  background-color: white;
+}
+.lookbookmain__inner {
+  display: block;
+  position: relative;
+  width: 1100px;
+  margin: 0 auto;
+}
+
+/* LOOKBOOK SWIPER 1 */
+.lookbookmain__mainswiper {
+  height: 700px;
+}
+.lookbookmain__swiper1 {
+  position: relative;
+  height: 800px;
+}
+
+/* LOOKBOOK SWIPER 1 - PREV, NEXT BUTTON (SWIPER JS CSS) */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  color: #9c9c9ca4;
+}
+
+/* LOOKBOOK SWIPER 1 - BULLET BUTTON (SWIPER JS CSS) */
+.swiper-pagination-bullet {
+  opacity: 0.5;
+  background-color: #9c9c9c;
+}
+.swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+/* LOOBOOK SWIEPR 1 - MAIN IMAGE */
+.lookbookmain__img {
+  position: absolute;
+  top: 60px;
+  left: 75px;
+  z-index: 1;
+  margin: 10px;
+}
+.lookbookmain__img img {
+  object-fit: cover;
+  width: 400px;
+  height: 500px;
+}
+
+.lookbookmain__bgbox {
+  position: absolute;
+  top: 40px;
+  left: 300px;
+  width: 300px;
+  height: 300px;
+}
+
+/* LOOKBOOK SWIPER 1 - INFO BOX */
+.lookbookmain__infobox {
+  position: absolute;
+  top: 200px;
+  right: 75px;
+  z-index: 1;
+  width: 500px;
+  height: 450px;
+  background-color: #e4e4e4;
+}
+
+/* LOOKBOOK SWIPER 1 - INFO BOX - TEXT CONTENT */
+.lookbookmain__infotxtwrapper {
+  display: flex;
+  justify-content: space-evenly;
+  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+}
+.lookbookmain__infotitle {
+  display: inline-block;
+  margin-top: 50px;
+  line-height: 2;
+}
+.lookbookmain__infotitle h3 {
+  font-weight: 500;
+  font-size: 18px;
+  color: #5f5f5f;
+}
+.lookbookmain__infocontent {
+  display: inline-block;
+  margin-top: 50px;
+  line-height: 2.28;
+}
+.lookbookmain__infocontent span {
+  color: #7e7e7e;
+}
+.lookbookmain__colorcontent {
+  display: block;
+}
+
+/* LOOKBOOK SWIPER 1 - INFO BOX - RECOMMEND IMAGE */
+.lookbookmain__recomm {
+  width: 450px;
+  height: 280px;
+  margin: auto;
+}
+.lookbookmain__recomminner {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  vertical-align: middle;
+  height: 100%;
+}
+.lookbookmain__recomminner img {
+  width: 140px;
+  height: 200px;
+  object-fit: cover;
+}
+.lookbookmain__recommimg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* LOOKBOOK SWIPER 1 - INFO BOX - RECOMMEND EFFECT */
+.lookbookmain__gotomall {
+  opacity: 0;
+  position: absolute;
+  width: 140px;
+  height: 200px;
+  background-color: rgba(200, 200, 200, 0.5);
+  color: #222222;
+  transition: 0.3s;
+}
+.lookbookmain__gotomall span {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  padding: 5px;
+  background-color: #d97e9f;
+  color: rgb(241, 241, 241);
+}
+.lookbookmain__gotomall:hover {
+  opacity: 1;
+}
+
+/* LOOKBOOK SWIPER 2 (THUMBNAILS) */
+.lookbookmain__thumbswiper {
+  width: 1100px;
+  margin-top: 20px;
+}
+.lookbookmain__thumbswiper .swiper-wrapper {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  box-sizing: content-box;
+  transition-property: transform;
+}
+
+/* LOOKBOOK SWIPER 2 - THUMBNAILS IMAGE */
+.lookbookmain__swiper2 {
+  display: inline-block;
+}
+.lookbookmain__swiper2 img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+/* LOOKBOOK SWIPER 2 - THUMBNAILS EFFECT */
+.lookbookmain__thumbswiper .swiper-wrapper .swiper-slide {
+  opacity: 0.5;
+  perspective: 300px;
+  width: 80px !important;
+  transition: 0.3s;
+}
+.lookbookmain__thumbswiper .swiper-wrapper .swiper-slide.swiper-slide-thumb-active {
+  opacity: 1;
+  z-index: 1;
+  filter: drop-shadow(1px 1px 3px rgba(32, 32, 32, 0.568));
+}

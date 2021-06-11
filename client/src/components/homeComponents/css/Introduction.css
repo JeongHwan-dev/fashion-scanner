@@ -1,0 +1,665 @@
+/* INTRODUCTION SECTION */
+.introduction {
+  overflow: hidden;
+  padding: 200px 0;
+}
+.introduction__inner {
+  position: relative;
+  width: 1100px;
+  margin: 0 auto;
+  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+}
+.introduction__inner video {
+  opacity: 0.8;
+  position: absolute;
+  top: -300px;
+  z-index: -1;
+  width: 100%;
+  transform: scale(2.5);
+}
+.introduction__inner video.scroll {
+  animation: 1s zoomIn linear;
+}
+@keyframes zoomIn {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(2.5);
+  }
+}
+
+.introduction__inner a {
+  display: flex;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+  font-size: 60px;
+  color: #fff;
+  cursor: pointer;
+}
+.introduction__inner a:hover {
+  color: #b0b8c1;
+}
+.introduction__inner a.scroll {
+  animation: 2s fadeinBottom linear;
+}
+
+/* INTRODUCTION TITLE */
+.introduction__title {
+  margin-bottom: 20px;
+}
+.introduction__title.scroll {
+  animation: 0.75s fadeinBottom linear;
+}
+.introduction__title h2 {
+  background: linear-gradient(to right, #f2a7bb, #b3d4ff);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 68px;
+  font-weight: 600;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* INTRODUCTION KEYWORD */
+.introduction__keyword {
+  margin-bottom: 65px;
+  text-align: center;
+}
+.introduction__keyword.scroll {
+  animation: 1s fadeinBottom linear;
+}
+.introduction__keyword span {
+  margin: 0 5px;
+  font-size: 32px;
+  font-weight: 500;
+}
+.introduction__keyword span:nth-child(1) {
+  color: #b3d4ff;
+}
+.introduction__keyword span:nth-child(2) {
+  color: #b17efc;
+}
+.introduction__keyword span:nth-child(3) {
+  color: #f2a7bb;
+}
+.introduction__keyword span:nth-child(4) {
+  color: #d97e9f;
+}
+
+/* INTRODUCTION LOGOS */
+.introduction__logos {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 65px;
+}
+.introduction__logos.scroll {
+  animation: 1.5s fadeinBottom linear;
+}
+.introduction__logos div {
+  margin: 0 50px;
+}
+.introduction__logos div img {
+  width: 120px;
+  height: 120px;
+}
+.introduction__logos div p {
+  margin-top: 12px;
+  font-size: 22px;
+  font-weight: 400;
+  text-align: center;
+  color: #b0b8c1;
+}
+
+/* INTRODUCTION DSC */
+.introduction__dsc.scroll {
+  animation: 2s fadeinBottom linear;
+}
+.introduction__dsc p {
+  margin-bottom: 50px;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.8;
+  text-align: center;
+  color: #b0b8c1;
+}
+
+/* FADEIN BOTTOM */
+@keyframes fadeinBottom {
+  from {
+    transform: translate(0px, 100px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+/* MEDIA */
+@media screen and (max-width: 500px) {
+  /* INTRODUCTION */
+  .introduction {
+    padding: 150px 0;
+  }
+  .introduction__inner {
+    position: relative;
+    width: 480px;
+    padding: 0px 0;
+  }
+
+  /* INTRODUCTION VIDEO */
+  .introduction__inner video {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    transform: scale(2.5);
+  }
+  .introduction__inner video.scroll {
+    animation: 1s zoomIn linear;
+  }
+  @keyframes zoomIn {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(2.5);
+    }
+  }
+
+  /* INTRODUCTION TITLE */
+  .introduction__title {
+    margin-bottom: 12px;
+  }
+  .introduction__title h2 {
+    padding: 0 20px;
+    font-size: 52px;
+  }
+
+  /* INTRODUCTION KEYWORD */
+  .introduction__keyword {
+    margin-bottom: 32px;
+  }
+  .introduction__keyword span {
+    font-size: 24px;
+  }
+  .introduction__keyword span:nth-child(4) {
+    color: #f2a7bb;
+  }
+  .introduction__keyword span:nth-child(5) {
+    color: #d97e9f;
+  }
+
+  /* INTRODUCTION LOGOS */
+  .introduction__logos {
+    margin-bottom: 22px;
+  }
+  .introduction__logos div {
+    margin: 0 15px;
+  }
+  .introduction__logos div img {
+    width: 85px;
+    height: auto;
+  }
+  .introduction__logos div p {
+    font-size: 18px;
+  }
+
+  /* INTRODUCTION DSC */
+  .introduction__dsc p {
+    margin-bottom: 10px;
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 428px) {
+  /* INTRODUCTION */
+  .introduction {
+    padding: 150px 0;
+  }
+  .introduction__inner {
+    position: relative;
+    width: 428px;
+    padding: 0px 0;
+  }
+
+  /* INTRODUCTION VIDEO */
+  .introduction__inner video {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    transform: scale(2.5);
+  }
+  .introduction__inner video.scroll {
+    animation: 1s zoomIn linear;
+  }
+  @keyframes zoomIn {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(2.5);
+    }
+  }
+
+  /* INTRODUCTION TITLE */
+  .introduction__title {
+    margin-bottom: 12px;
+  }
+  .introduction__title h2 {
+    padding: 0 40px;
+    font-size: 48px;
+  }
+
+  /* INTRODUCTION KEYWORD */
+  .introduction__keyword {
+    margin-bottom: 32px;
+  }
+  .introduction__keyword span {
+    font-size: 20px;
+  }
+  .introduction__keyword span:nth-child(4) {
+    color: #f2a7bb;
+  }
+  .introduction__keyword span:nth-child(5) {
+    color: #d97e9f;
+  }
+
+  /* INTRODUCTION LOGOS */
+  .introduction__logos {
+    margin-bottom: 22px;
+  }
+  .introduction__logos div {
+    margin: 0 15px;
+  }
+  .introduction__logos div img {
+    width: 70px;
+    height: auto;
+  }
+  .introduction__logos div p {
+    font-size: 16px;
+  }
+
+  /* INTRODUCTION DSC */
+  .introduction__dsc p {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  /* INTRODUCTION */
+  .introduction {
+    padding: 150px 0;
+  }
+  .introduction__inner {
+    position: relative;
+    width: 414px;
+    padding: 0px 0;
+  }
+
+  /* INTRODUCTION VIDEO */
+  .introduction__inner video {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    transform: scale(2.5);
+  }
+  .introduction__inner video.scroll {
+    animation: 1s zoomIn linear;
+  }
+  @keyframes zoomIn {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(2.5);
+    }
+  }
+
+  /* INTRODUCTION TITLE */
+  .introduction__title {
+    margin-bottom: 12px;
+  }
+  .introduction__title h2 {
+    padding: 0 40px;
+    font-size: 44px;
+  }
+
+  /* INTRODUCTION KEYWORD */
+  .introduction__keyword {
+    margin-bottom: 32px;
+  }
+  .introduction__keyword span {
+    font-size: 20px;
+  }
+  .introduction__keyword span:nth-child(4) {
+    color: #f2a7bb;
+  }
+  .introduction__keyword span:nth-child(5) {
+    color: #d97e9f;
+  }
+
+  /* INTRODUCTION LOGOS */
+  .introduction__logos {
+    margin-bottom: 22px;
+  }
+  .introduction__logos div {
+    margin: 0 15px;
+  }
+  .introduction__logos div img {
+    width: 70px;
+    height: auto;
+  }
+  .introduction__logos div p {
+    font-size: 16px;
+  }
+
+  /* INTRODUCTION DSC */
+  .introduction__dsc p {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 412px) {
+  /* INTRODUCTION */
+  .introduction {
+    padding: 150px 0;
+  }
+  .introduction__inner {
+    position: relative;
+    width: 412px;
+    padding: 0px 0;
+  }
+
+  /* INTRODUCTION VIDEO */
+  .introduction__inner video {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    transform: scale(2.5);
+  }
+  .introduction__inner video.scroll {
+    animation: 1s zoomIn linear;
+  }
+  @keyframes zoomIn {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(2.5);
+    }
+  }
+
+  /* INTRODUCTION TITLE */
+  .introduction__title {
+    margin-bottom: 12px;
+  }
+  .introduction__title h2 {
+    padding: 0 40px;
+    font-size: 44px;
+  }
+
+  /* INTRODUCTION KEYWORD */
+  .introduction__keyword {
+    margin-bottom: 32px;
+  }
+  .introduction__keyword span {
+    font-size: 20px;
+  }
+  .introduction__keyword span:nth-child(4) {
+    color: #f2a7bb;
+  }
+  .introduction__keyword span:nth-child(5) {
+    color: #d97e9f;
+  }
+
+  /* INTRODUCTION LOGOS */
+  .introduction__logos {
+    margin-bottom: 22px;
+  }
+  .introduction__logos div {
+    margin: 0 15px;
+  }
+  .introduction__logos div img {
+    width: 70px;
+    height: auto;
+  }
+  .introduction__logos div p {
+    font-size: 16px;
+  }
+
+  /* INTRODUCTION DSC */
+  .introduction__dsc p {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  /* INTRODUCTION */
+  .introduction {
+    padding: 150px 0;
+  }
+  .introduction__inner {
+    position: relative;
+    width: 390px;
+    padding: 0px 0;
+  }
+
+  /* INTRODUCTION VIDEO */
+  .introduction__inner video {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    transform: scale(2.5);
+  }
+  .introduction__inner video.scroll {
+    animation: 1s zoomIn linear;
+  }
+  @keyframes zoomIn {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(2.5);
+    }
+  }
+
+  /* INTRODUCTION TITLE */
+  .introduction__title {
+    margin-bottom: 10px;
+  }
+  .introduction__title h2 {
+    padding: 0 40px;
+    font-size: 38px;
+  }
+
+  /* INTRODUCTION KEYWORD */
+  .introduction__keyword {
+    margin-bottom: 30px;
+  }
+  .introduction__keyword span {
+    font-size: 18px;
+  }
+  .introduction__keyword span:nth-child(4) {
+    color: #f2a7bb;
+  }
+  .introduction__keyword span:nth-child(5) {
+    color: #d97e9f;
+  }
+
+  /* INTRODUCTION LOGOS */
+  .introduction__logos {
+    margin-bottom: 20px;
+  }
+  .introduction__logos div {
+    margin: 0 15px;
+  }
+  .introduction__logos div img {
+    width: 60px;
+    height: auto;
+  }
+  .introduction__logos div p {
+    font-size: 14px;
+  }
+
+  /* INTRODUCTION DSC */
+  .introduction__dsc p {
+    margin-bottom: 5px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  /* INTRODUCTION */
+  .introduction {
+    padding: 150px 0;
+  }
+  .introduction__inner {
+    position: relative;
+    width: 375px;
+    padding: 0px 0;
+  }
+
+  /* INTRODUCTION VIDEO */
+  .introduction__inner video {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    transform: scale(2.5);
+  }
+  .introduction__inner video.scroll {
+    animation: 1s zoomIn linear;
+  }
+  @keyframes zoomIn {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(2.5);
+    }
+  }
+
+  /* INTRODUCTION TITLE */
+  .introduction__title {
+    margin-bottom: 10px;
+  }
+  .introduction__title h2 {
+    padding: 0 40px;
+    font-size: 38px;
+  }
+
+  /* INTRODUCTION KEYWORD */
+  .introduction__keyword {
+    margin-bottom: 30px;
+  }
+  .introduction__keyword span {
+    font-size: 18px;
+  }
+  .introduction__keyword span:nth-child(4) {
+    color: #f2a7bb;
+  }
+  .introduction__keyword span:nth-child(5) {
+    color: #d97e9f;
+  }
+
+  /* INTRODUCTION LOGOS */
+  .introduction__logos {
+    margin-bottom: 20px;
+  }
+  .introduction__logos div {
+    margin: 0 15px;
+  }
+  .introduction__logos div img {
+    width: 60px;
+    height: auto;
+  }
+  .introduction__logos div p {
+    font-size: 14px;
+  }
+
+  /* INTRODUCTION DSC */
+  .introduction__dsc p {
+    margin-bottom: 2px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  /* INTRODUCTION */
+  .introduction {
+    padding: 150px 0;
+  }
+  .introduction__inner {
+    position: relative;
+    width: 360px;
+    padding: 0px 0;
+  }
+
+  /* INTRODUCTION VIDEO */
+  .introduction__inner video {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    transform: scale(2.5);
+  }
+  .introduction__inner video.scroll {
+    animation: 1s zoomIn linear;
+  }
+  @keyframes zoomIn {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(2.5);
+    }
+  }
+
+  /* INTRODUCTION TITLE */
+  .introduction__title {
+    margin-bottom: 10px;
+  }
+  .introduction__title h2 {
+    padding: 0 40px;
+    font-size: 38px;
+  }
+
+  /* INTRODUCTION KEYWORD */
+  .introduction__keyword {
+    margin-bottom: 30px;
+  }
+  .introduction__keyword span {
+    font-size: 18px;
+  }
+  .introduction__keyword span:nth-child(4) {
+    color: #f2a7bb;
+  }
+  .introduction__keyword span:nth-child(5) {
+    color: #d97e9f;
+  }
+
+  /* INTRODUCTION LOGOS */
+  .introduction__logos {
+    margin-bottom: 20px;
+  }
+  .introduction__logos div {
+    margin: 0 15px;
+  }
+  .introduction__logos div img {
+    width: 60px;
+    height: auto;
+  }
+  .introduction__logos div p {
+    font-size: 14px;
+  }
+
+  /* INTRODUCTION DSC */
+  .introduction__dsc p {
+    margin-bottom: 0;
+    font-size: 16px;
+  }
+}
