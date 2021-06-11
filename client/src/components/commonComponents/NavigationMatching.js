@@ -25,7 +25,7 @@ const NavigationMatching = () => {
           >
             menu
           </span>
-          <div className={`link-group ${menu === true ? 'active' : ''}`}>
+          <div className={`linkMatching-group ${menu === true ? 'active' : ''}`}>
             <ul className="link">
               {isMobile && (
                 <>
