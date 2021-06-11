@@ -1,0 +1,14 @@
+FROM node:16.2 as builder
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
+COPY . .
+RUN npm install
+ENV PATH /usr/src/app/node_modules/.bin:$PATH
+RUN npm run build
+
+FROM nginx:latest
+COPY nginx/nginx.conf /etc/nginx
+COPY nginx/frontend.conf_staging /etc/nginx/sites-available/frontend.conf
+RUN ln -s /etc/nginx/sites-available /etc/nginx/sites-enabled
+COPY --from=builder /usr/src/app/build /usr/src/app/build
+CMD ["nginx", "-g", "daemon off;"]

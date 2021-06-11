@@ -1,0 +1,118 @@
+/* OTHERS SECTION */
+.others {
+  overflow: hidden;
+  background-image: url('images/member_select_bg.png');
+  background-repeat: round;
+}
+.others__inner {
+  width: 1100px;
+  margin: 0 auto;
+  padding: 100px;
+}
+
+/* OTHERS DSC */
+.others__title {
+  margin-bottom: 120px;
+  text-align: center;
+}
+.others__title h2 {
+  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+  font-size: 64px;
+  font-weight: 600;
+  text-align: center;
+  color: #f2a7bb;
+}
+
+/* OTHERS IMG */
+.others__img {
+  width: 1100px;
+  margin: 0 auto;
+}
+.others__img img {
+  display: inline-block;
+  width: 450px;
+  margin: 0 50px;
+  filter: grayscale(100%);
+  transform: skewX(-8deg);
+  transition: transform 0.2s, filter 0.6s;
+}
+.others__img img:hover {
+  z-index: 1;
+  filter: none;
+}
+.others__img .img__line1 {
+  margin: 0 auto 100px;
+}
+.others__img .img__line2 {
+  margin: 0 auto;
+}
+.others__img .img__line1 .img1 {
+  transform: rotate(-15deg);
+}
+.others__img .img__line1 .img1.scroll {
+  animation: 1.2s moveJisoo ease;
+}
+.others__img .img__line1 .img1:hover {
+  transform: rotate(-15deg) scale(1.1);
+}
+.others__img .img__line1 .img2 {
+  transform: rotate(20deg);
+}
+.others__img .img__line1 .img2.scroll {
+  animation: 1.2s moveLisa ease;
+}
+.others__img .img__line1 .img2:hover {
+  transform: rotate(20deg) scale(1.1);
+}
+.others__img .img__line2 .img3 {
+  transform: rotate(-3deg);
+}
+.others__img .img__line2 .img3.scroll {
+  animation: 1.2s moveJennie ease;
+}
+.others__img .img__line2 .img3:hover {
+  transform: rotate(-3deg) scale(1.1);
+}
+.others__img .img__line2 .img4 {
+  transform: rotate(14deg);
+}
+.others__img .img__line2 .img4.scroll {
+  animation: 1.2s moveRose ease;
+}
+.others__img .img__line2 .img4:hover {
+  transform: rotate(14deg) scale(1.1);
+}
+
+/* OTHERS IMG ANIMATION */
+@keyframes moveJisoo {
+  from {
+    transform: translate(-200%, -100%) rotate(-15deg);
+  }
+  to {
+    transform: translate(0%, 0%) rotate(-15deg);
+  }
+}
+@keyframes moveLisa {
+  from {
+    transform: translate(300%, -200%) rotate(20deg);
+  }
+  to {
+    transform: translate(0%, 0%) rotate(20deg);
+  }
+}
+@keyframes moveJennie {
+  from {
+    transform: translate(-200%, 200%) rotate(-3deg);
+  }
+  to {
+    transform: translate(0%, 0%) rotate(-3deg);
+  }
+}
+@keyframes moveRose {
+  from {
+    transform: translate(400%, 200%) rotate(14deg);
+  }
+  to {
+    transform: translate(0%, 0%) rotate(14deg);
+  }
+}

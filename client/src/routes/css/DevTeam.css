@@ -1,0 +1,60 @@
+/* DEV TEAM */
+.devTeam {
+  background-color: #f3f3f3;
+}
+.devTeam__inner {
+  width: 1100px;
+  margin: 0 auto;
+  padding-top: 150px;
+  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+}
+
+/* MEDIA */
+@media screen and (max-width: 500px) {
+  .devTeam__inner {
+    width: 500px;
+    padding-top: 120px;
+  }
+}
+
+@media screen and (max-width: 428px) {
+  .devTeam__inner {
+    width: 428px;
+    padding-top: 120px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .devTeam__inner {
+    width: 414px;
+    padding-top: 120px;
+  }
+}
+
+@media screen and (max-width: 412px) {
+  .devTeam__inner {
+    width: 412px;
+    padding-top: 120px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .devTeam__inner {
+    width: 390px;
+    padding-top: 120px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .devTeam__inner {
+    width: 375px;
+    padding-top: 120px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .devTeam__inner {
+    width: 360px;
+    padding-top: 120px;
+  }
+}

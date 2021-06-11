@@ -1,0 +1,641 @@
+/* INFO CARD */
+.infoCard {
+  display: none;
+  opacity: 0;
+  width: 422.4px;
+  height: 563.2px;
+  min-width: 330px;
+  min-height: 440px;
+  margin: 0 auto;
+  padding: 40px 35px;
+  box-sizing: border-box;
+  box-shadow: 5px 5px 15px #6b6b6b;
+  border-radius: 12px;
+  background-color: #f3f3f3;
+}
+.infoCard.clicked {
+  display: block;
+  animation: fade-in 3s;
+  animation-fill-mode: forwards;
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.infoCard.shared {
+  padding: 80px 35px;
+}
+
+/* INFO CARD DSC */
+.infoCard .infoCard__dsc {
+  margin-bottom: 20px;
+  padding: 0 20px;
+}
+.infoCard .infoCard__dsc p {
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.8;
+  color: #d97e9f;
+}
+
+/* INFO CARD IMG OBJECT */
+.infoCard__imgObj {
+  margin-bottom: 20px;
+}
+
+/* IMG OBJECT TABLE */
+.infoCard__imgObj table {
+  overflow: hidden;
+  width: 352px;
+  margin: 0 auto;
+  border: 1px solid #000;
+  border-radius: 12px;
+  border-collapse: collapse;
+  font-size: 15px;
+  color: #1b1b1b;
+  word-break: keep-all;
+}
+.infoCard__imgObj table thead {
+  background-color: #fff;
+}
+.infoCard__imgObj tbody th,
+.infoCard__imgObj tbody td {
+  width: 200px;
+  padding: 5px;
+  border: 2px solid #fff;
+  background: #ddd;
+  text-align: center;
+  white-space: normal;
+  word-break: keep-all;
+}
+.infoCard__imgObj thead tr:first-child td {
+  font-weight: 500;
+  display: inline-block;
+}
+.infoCard__imgObj tbody tr td:first-child {
+  width: 100px;
+  color: #1b1b1b;
+}
+.infoCard__imgObj tbody tr td:nth-child(2) {
+  width: 250px;
+  line-height: 1.6;
+  color: #565656;
+}
+
+/* INFO CARD IMG OBJECT DATA */
+.infoCard__imgObj .imgObj__data {
+  margin: 0 5px;
+  padding: 0 6px;
+  border-radius: 25px;
+  background-color: #f2a7bb;
+  color: #fff;
+}
+
+/* INFO CARD BUTTON */
+.infoCard__btn {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+.infoCard__btn a {
+  padding: 10px 20px;
+  border: 2px solid #d97e9f;
+  border-radius: 6px;
+  font-size: 18px;
+  color: #d97e9f;
+  transition: 0.3s;
+}
+.infoCard__btn a:hover {
+  background-color: #d97e9f;
+  color: #fff;
+}
+
+/* INFO CARD SHARING BOX */
+.sharing__box {
+  width: 280px;
+  margin: 0 auto;
+  padding: 10px 0;
+  border: none;
+  border-radius: 25px;
+  background-color: #e8e8e8;
+}
+.sharing__title {
+  margin: 0 auto 5px;
+  text-align: center;
+  font-size: 18px;
+  color: #1b1b1b;
+}
+.sharing__btns {
+  display: flex;
+  width: 220px;
+  margin: 0 auto;
+}
+.sharing__btns div {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+}
+.sharing__a {
+  display: flex;
+  justify-content: center;
+  width: inherit;
+  height: inherit;
+  box-sizing: border-box;
+  padding-top: 5px;
+  text-align: center;
+}
+.sharing__btn {
+  width: inherit;
+  height: inherit;
+  border: none;
+  box-sizing: border-box;
+  background-color: transparent;
+  cursor: pointer;
+}
+.sharing__btns img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+/* MEDIA */
+@media screen and (max-width: 500px) {
+  /* INFO CARD */
+  .infoCard {
+    width: 396px;
+    height: 528px;
+    padding: 40px 15px;
+    box-shadow: 5px 5px 10px #6b6b6b;
+  }
+
+  /* INFO CARD DSC */
+  .infoCard .infoCard__dsc {
+    margin-bottom: 15px;
+  }
+  .infoCard .infoCard__dsc p {
+    font-size: 19px;
+    line-height: 1.8;
+  }
+
+  /* IMG OBJECT TABLE */
+  .infoCard__imgObj {
+    margin-bottom: 20px;
+  }
+  .infoCard__imgObj table {
+    font-size: 15px;
+    width: 300px;
+  }
+
+  /* INFO CARD IMG OBJECT DATA */
+  .infoCard__imgObj .imgObj__data {
+    margin: 0 3px;
+    padding: 0 4px;
+    border-radius: 25px;
+    background-color: #f2a7bb;
+    color: #fff;
+  }
+
+  /* INFO CARD BUTTON */
+  .infoCard__btn {
+    margin-bottom: 20px;
+  }
+  .infoCard__btn a {
+    padding: 10px 20px;
+    font-size: 18px;
+  }
+
+  /* INFO CARD SHARING BOX */
+  .sharing__box {
+    width: 260px;
+    padding: 6px 0;
+  }
+  .sharing__title {
+    font-size: 16px;
+  }
+  .sharing__btns {
+    width: 200px;
+  }
+  .sharing__btns div {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+  }
+  .sharing__btns img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+}
+
+@media screen and (max-width: 428px) {
+  /* INFO CARD */
+  .infoCard {
+    width: 330px;
+    height: 440px;
+    padding: 20px 15px;
+    box-shadow: 5px 5px 10px #6b6b6b;
+  }
+
+  /* INFO CARD DSC */
+  .infoCard .infoCard__dsc {
+    margin-bottom: 10px;
+  }
+  .infoCard .infoCard__dsc p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  /* IMG OBJECT TABLE */
+  .infoCard__imgObj {
+    margin-bottom: 15px;
+  }
+  .infoCard__imgObj table {
+    font-size: 13px;
+    width: 300px;
+  }
+
+  /* INFO CARD IMG OBJECT DATA */
+  .infoCard__imgObj .imgObj__data {
+    margin: 0 3px;
+    padding: 0 4px;
+    border-radius: 25px;
+    background-color: #f2a7bb;
+    color: #fff;
+  }
+
+  /* INFO CARD BUTTON */
+  .infoCard__btn {
+    margin-bottom: 15px;
+  }
+  .infoCard__btn a {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  /* INFO CARD SHARING BOX */
+  .sharing__box {
+    width: 240px;
+    padding: 6px 0;
+  }
+  .sharing__title {
+    font-size: 16px;
+  }
+  .sharing__btns {
+    width: 200px;
+  }
+  .sharing__btns div {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+  }
+  .sharing__btns img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  /* INFO CARD */
+  .infoCard {
+    width: 330px;
+    height: 440px;
+    padding: 20px 15px;
+    box-shadow: 5px 5px 10px #6b6b6b;
+  }
+
+  /* INFO CARD DSC */
+  .infoCard .infoCard__dsc {
+    margin-bottom: 10px;
+  }
+  .infoCard .infoCard__dsc p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  /* IMG OBJECT TABLE */
+  .infoCard__imgObj {
+    margin-bottom: 15px;
+  }
+  .infoCard__imgObj table {
+    font-size: 13px;
+    width: 300px;
+  }
+
+  /* INFO CARD IMG OBJECT DATA */
+  .infoCard__imgObj .imgObj__data {
+    margin: 0 3px;
+    padding: 0 4px;
+    border-radius: 25px;
+    background-color: #f2a7bb;
+    color: #fff;
+  }
+
+  /* INFO CARD BUTTON */
+  .infoCard__btn {
+    margin-bottom: 15px;
+  }
+  .infoCard__btn a {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  /* INFO CARD SHARING BOX */
+  .sharing__box {
+    width: 240px;
+    padding: 6px 0;
+  }
+  .sharing__title {
+    font-size: 16px;
+  }
+  .sharing__btns {
+    width: 200px;
+  }
+  .sharing__btns div {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+  }
+  .sharing__btns img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+}
+
+@media screen and (max-width: 412px) {
+  /* INFO CARD */
+  .infoCard {
+    width: 330px;
+    height: 440px;
+    padding: 20px 15px;
+    box-shadow: 5px 5px 10px #6b6b6b;
+  }
+
+  /* INFO CARD DSC */
+  .infoCard .infoCard__dsc {
+    margin-bottom: 10px;
+  }
+  .infoCard .infoCard__dsc p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  /* IMG OBJECT TABLE */
+  .infoCard__imgObj {
+    margin-bottom: 15px;
+  }
+  .infoCard__imgObj table {
+    font-size: 13px;
+    width: 300px;
+  }
+
+  /* INFO CARD IMG OBJECT DATA */
+  .infoCard__imgObj .imgObj__data {
+    margin: 0 3px;
+    padding: 0 4px;
+    border-radius: 25px;
+    background-color: #f2a7bb;
+    color: #fff;
+  }
+
+  /* INFO CARD BUTTON */
+  .infoCard__btn {
+    margin-bottom: 15px;
+  }
+  .infoCard__btn a {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  /* INFO CARD SHARING BOX */
+  .sharing__box {
+    width: 240px;
+    padding: 6px 0;
+  }
+  .sharing__title {
+    font-size: 16px;
+  }
+  .sharing__btns {
+    width: 200px;
+  }
+  .sharing__btns div {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+  }
+  .sharing__btns img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  /* INFO CARD */
+  .infoCard {
+    width: 330px;
+    height: 440px;
+    padding: 20px 15px;
+    box-shadow: 5px 5px 10px #6b6b6b;
+  }
+
+  /* INFO CARD DSC */
+  .infoCard .infoCard__dsc {
+    margin-bottom: 10px;
+  }
+  .infoCard .infoCard__dsc p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  /* IMG OBJECT TABLE */
+  .infoCard__imgObj {
+    margin-bottom: 15px;
+  }
+  .infoCard__imgObj table {
+    font-size: 13px;
+    width: 300px;
+  }
+
+  /* INFO CARD IMG OBJECT DATA */
+  .infoCard__imgObj .imgObj__data {
+    margin: 0 3px;
+    padding: 0 4px;
+    border-radius: 25px;
+    background-color: #f2a7bb;
+    color: #fff;
+  }
+
+  /* INFO CARD BUTTON */
+  .infoCard__btn {
+    margin-bottom: 15px;
+  }
+  .infoCard__btn a {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  /* INFO CARD SHARING BOX */
+  .sharing__box {
+    width: 240px;
+    padding: 6px 0;
+  }
+  .sharing__title {
+    font-size: 16px;
+  }
+  .sharing__btns {
+    width: 200px;
+  }
+  .sharing__btns div {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+  }
+  .sharing__btns img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  /* INFO CARD */
+  .infoCard {
+    width: 330px;
+    height: 440px;
+    padding: 20px 15px;
+    box-shadow: 5px 5px 10px #6b6b6b;
+  }
+
+  /* INFO CARD DSC */
+  .infoCard .infoCard__dsc {
+    margin-bottom: 10px;
+  }
+  .infoCard .infoCard__dsc p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  /* IMG OBJECT TABLE */
+  .infoCard__imgObj {
+    margin-bottom: 15px;
+  }
+  .infoCard__imgObj table {
+    font-size: 13px;
+    width: 290px;
+  }
+
+  /* INFO CARD IMG OBJECT DATA */
+  .infoCard__imgObj .imgObj__data {
+    margin: 0 3px;
+    padding: 0 4px;
+    border-radius: 25px;
+    background-color: #f2a7bb;
+    color: #fff;
+  }
+
+  /* INFO CARD BUTTON */
+  .infoCard__btn {
+    margin-bottom: 15px;
+  }
+  .infoCard__btn a {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  /* INFO CARD SHARING BOX */
+  .sharing__box {
+    width: 240px;
+    padding: 6px 0;
+  }
+  .sharing__title {
+    font-size: 16px;
+  }
+  .sharing__btns {
+    width: 200px;
+  }
+  .sharing__btns div {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+  }
+  .sharing__btns img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  /* INFO CARD */
+  .infoCard {
+    width: 330px;
+    height: 440px;
+    padding: 20px 15px;
+    box-shadow: 5px 5px 10px #6b6b6b;
+  }
+
+  /* INFO CARD DSC */
+  .infoCard .infoCard__dsc {
+    margin-bottom: 10px;
+  }
+  .infoCard .infoCard__dsc p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  /* IMG OBJECT TABLE */
+  .infoCard__imgObj {
+    margin-bottom: 15px;
+  }
+  .infoCard__imgObj table {
+    font-size: 13px;
+    width: 290px;
+  }
+
+  /* INFO CARD IMG OBJECT DATA */
+  .infoCard__imgObj .imgObj__data {
+    margin: 0 3px;
+    padding: 0 4px;
+    border-radius: 25px;
+    background-color: #f2a7bb;
+    color: #fff;
+  }
+
+  /* INFO CARD BUTTON */
+  .infoCard__btn {
+    margin-bottom: 15px;
+  }
+  .infoCard__btn a {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  /* INFO CARD SHARING BOX */
+  .sharing__box {
+    width: 240px;
+    padding: 6px 0;
+  }
+  .sharing__title {
+    font-size: 16px;
+  }
+  .sharing__btns {
+    width: 200px;
+  }
+  .sharing__btns div {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+  }
+  .sharing__btns img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+}
