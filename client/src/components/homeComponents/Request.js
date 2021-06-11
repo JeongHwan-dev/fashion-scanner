@@ -259,7 +259,7 @@ const Request = () => {
                 <input
                   type="file"
                   id="reqeust-file"
-                  accept="image/*"
+                  accept="image/png, image/jpeg, image/jpg"
                   onChange={onFileChange}
                   style={{ display: 'none' }}
                 />

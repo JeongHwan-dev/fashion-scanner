@@ -157,7 +157,7 @@ const Picture = () => {
                 <input
                   type="file"
                   id="input-file"
-                  accept="image/*;capture=camera"
+                  accept="image/png, image/jpeg, image/jpg;capture=camera"
                   onChange={onFileChange}
                   style={{ display: 'none' }}
                 />
