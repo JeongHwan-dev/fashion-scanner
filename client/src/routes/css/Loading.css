@@ -1,0 +1,145 @@
+/* LOADING BACKGROUND */
+.loading {
+  position: relative;
+  height: 850px;
+  background-color: white;
+}
+
+/* LOADING TITLE */
+.loading__title {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 200px;
+}
+.loading__title h3,
+.loading__title span {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 24px;
+  color: #515254;
+}
+@keyframes blink {
+  50% {
+    color: transparent;
+  }
+}
+.loading__title span {
+  animation: 1s blink infinite;
+}
+.loading__title span:nth-child(2) {
+  animation-delay: 250ms;
+}
+.loading__title span:nth-child(3) {
+  animation-delay: 500ms;
+}
+
+/* LOADING VIDEO */
+.loading__video {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.loading__video video {
+  width: 400px;
+  border-radius: 12px;
+}
+
+/* MEDIA */
+@media screen and (max-width: 500px) {
+  /* LOADING BACKGROUND */
+  .loading {
+    width: 500px;
+    height: 700px;
+  }
+
+  /* LOADING VIDEO */
+  .loading__video video {
+    width: 380px;
+    height: 380px;
+  }
+}
+
+@media screen and (max-width: 428px) {
+  /* LOADING BACKGROUND */
+  .loading {
+    width: 428px;
+    height: 700px;
+  }
+
+  /* LOADING VIDEO */
+  .loading__video video {
+    width: 310px;
+    height: 310px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  /* LOADING BACKGROUND */
+  .loading {
+    width: 414px;
+    height: 700px;
+  }
+
+  /* LOADING VIDEO */
+  .loading__video video {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 412px) {
+  /* LOADING BACKGROUND */
+  .loading {
+    width: 414px;
+    height: 700px;
+  }
+
+  /* LOADING VIDEO */
+  .loading__video video {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  /* LOADING BACKGROUND */
+  .loading {
+    width: 390px;
+    height: 700px;
+  }
+
+  /* LOADING VIDEO */
+  .loading__video video {
+    width: 285px;
+    height: 285px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  /* LOADING BACKGROUND */
+  .loading {
+    width: 375px;
+    height: 700px;
+  }
+
+  /* LOADING VIDEO */
+  .loading__video video {
+    width: 280px;
+    height: 280px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  /* LOADING BACKGROUND */
+  .loading {
+    width: 360px;
+    height: 700px;
+  }
+
+  /* LOADING VIDEO */
+  .loading__video video {
+    width: 280px;
+    height: 280px;
+  }
+}

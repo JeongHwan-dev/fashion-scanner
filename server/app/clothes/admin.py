@@ -1,19 +1,19 @@
 from django.contrib import admin
-from .models import LookbookClothes, ShopClothes, UserRequestClothes
+from .models import LookbookClothes, ShopClothes, UserUploadClothes
 
 
 class LookbookClothesAdmin(admin.ModelAdmin):
-    list_display = ("id", "member_id", "category_id", "registered_date")
+    list_display = ("id", "member", "category", "registered_date")
 
 
 class ShopClothesAdmin(admin.ModelAdmin):
-    list_display = ("id", "lookbook_clothes_id")
+    list_display = ("id", "lookbook_clothes")
 
 
-class UserRequestClothesAdmin(admin.ModelAdmin):
-    list_display = ("id", "user_id", "request_date", "lookbook_clothes_id")
+class UserUploadClothesAdmin(admin.ModelAdmin):
+    list_display = ("id", "user", "upload_date", "lookbook_clothes")
 
 
 admin.site.register(LookbookClothes, LookbookClothesAdmin)
 admin.site.register(ShopClothes, ShopClothesAdmin)
-admin.site.register(UserRequestClothes, UserRequestClothesAdmin)
+admin.site.register(UserUploadClothes, UserUploadClothesAdmin)
