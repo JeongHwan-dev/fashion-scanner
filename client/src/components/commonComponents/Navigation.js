@@ -1,14 +1,20 @@
 import React, { useContext, useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
 import { useTranslation } from 'react-i18next';
 import { LangContext } from 'context/LanguageContext';
 import 'components/commonComponents/css/Navigation.css';
 
 const Navigation = () => {
+  const history = useHistory();
   const isMobile = useMediaQuery({ maxWidth: 500 });
   const [menu, setMenu] = useState(false); // 햄버거 버튼
   const { setEng, setKor } = useContext(LangContext); // 전역으로 상태 관리: 현재 언어, 영어로 지정, 한국어로 지정
   const { t } = useTranslation();
+
+  const onMoveMain = () => {
+    history.push('/');
+  };
 
   return (
     <>
@@ -28,16 +34,24 @@ const Navigation = () => {
           <div className={`link-group ${menu === true ? 'active' : ''}`}>
             <ul className="link">
               <li>
-                <a href="/#section__introduction">{t('nav1')}</a>
+                <a href="#section__introduction" onClick={onMoveMain}>
+                  {t('nav1')}
+                </a>
               </li>
               <li>
-                <a href="/#section__lookbook">{t('nav2')}</a>
+                <a href="#section__lookbook" onClick={onMoveMain}>
+                  {t('nav2')}
+                </a>
               </li>
               <li>
-                <a href="/#section__memberMatching">{t('nav3')}</a>
+                <a href="#section__memberMatching" onClick={onMoveMain}>
+                  {t('nav3')}
+                </a>
               </li>
               <li>
-                <a href="/#section__request">{t('nav4')}</a>
+                <a href="#section__request" onClick={onMoveMain}>
+                  {t('nav4')}
+                </a>
               </li>
               {isMobile && (
                 <>
