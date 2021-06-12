@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import Navigation from 'components/commonComponents/Navigation';
+import NavigationMatching from 'components/commonComponents/NavigationMatching';
 import MemberCard from 'components/matchingComponents/MemberCard';
 import InfoCard from 'components/matchingComponents/InfoCard';
 import Footer from 'components/commonComponents/Footer';
@@ -25,7 +25,7 @@ const Result = () => {
   return (
     <>
       <div className="result">
-        <Navigation />
+        <NavigationMatching />
         <div className="result__inner">
           <div className={`guide ${isClicked ? 'clicked' : ''}`}>
             {!isClicked ? (

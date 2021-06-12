@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
-import Navigation from 'components/commonComponents/Navigation';
+import NavigationMatching from '../components/commonComponents/NavigationMatching';
 import Footer from 'components/commonComponents/Footer';
 import loadingVideo from 'videos/Loading.mov';
 import 'routes/css/Loading.css';
@@ -24,7 +24,7 @@ const Loading = () => {
 
   return (
     <>
-      <Navigation />
+      <NavigationMatching />
       {/* 01: LOADING PAGE */}
       <div className="loading">
         <div className="loading__title">

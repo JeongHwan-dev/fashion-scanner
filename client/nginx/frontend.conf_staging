@@ -1,6 +1,21 @@
 server {
     listen 80;
     server_name blackpink.fashion-scanner.site www.fashion-scanner.site;
+    charset utf-8;
+
+    location / {
+        return 307 https://blackpink.fashion-scanner.site$request_uri;
+    }
+}
+
+server {
+    listen 443; 
+    listen [::]:443;
+    ssl on;
+    server_name blackpink.fashion-scanner.site www.fashion-scanner.site;
+
+    ssl_certificate /etc/letsencrypt/live/blackpink.fashion-scanner.site/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/blackpink.fashion-scanner.site/privkey.pem;
 
     location / {
         sub_filter_once on;
@@ -16,8 +31,12 @@ server {
         try_files $uri /index.html;
     }
 
+    location /media {
+        proxy_pass http://www.fashion-scanner.site:8001;
+    }
+
     location /api {
-        proxy_pass http://elice-kdt-ai-track-vm-distribute-13.koreacentral.cloudapp.azure.com:8001;
+        proxy_pass http://www.fashion-scanner.site:8001;
     }
 
     location =/sitemap.xml {
@@ -27,4 +46,5 @@ server {
     location =/robots.txt {
         alias /usr/src/app/build/robots.txt;
     }
+
 }
