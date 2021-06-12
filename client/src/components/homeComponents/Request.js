@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import { useMediaQuery } from 'react-responsive';
 import { useTranslation } from 'react-i18next';
 import axios from 'axios';
 import swal from 'sweetalert';
 import 'components/homeComponents/css/Request.css';
 
 const Request = () => {
+  const isMobile = useMediaQuery({ maxWidth: 500 });
   const { t } = useTranslation('request');
   const [previewImg, setPreviewImg] = useState('/images/request_sample.jpg');
   const [requestImg, setRequestImg] = useState('');
@@ -127,6 +129,13 @@ const Request = () => {
           text: '요청해 주신 사진 업데이트는 약 1주일 간의 시간이 소요됩니다.',
           icon: 'success',
           button: '확인',
+        }).catch(() => {
+          swal({
+            title: '허용 사진 용량을 초과',
+            text: '50MB 이하의 사진을 업로드해 주세요.',
+            icon: 'warning',
+            button: '확인',
+          });
         });
       }
     } else {
@@ -173,6 +182,13 @@ const Request = () => {
               text: 'We will send you an email notification within 1 week.',
               icon: 'success',
               button: 'Confirm',
+            }).catch(() => {
+              swal({
+                title: 'Exceeds allowed photo capacity',
+                text: 'Please upload a picture under 50MB.',
+                icon: 'warning',
+                button: 'Confirm',
+              });
             });
           } else {
             // 유효 하지 않은 이메일 형식일 경우
@@ -256,13 +272,27 @@ const Request = () => {
                 <label className="material-icons" htmlFor="reqeust-file">
                   upload_file<span>{t('image_upload')}</span>
                 </label>
-                <input
-                  type="file"
-                  id="reqeust-file"
-                  accept="image/png, image/jpeg, image/jpg"
-                  onChange={onFileChange}
-                  style={{ display: 'none' }}
-                />
+                {!isMobile ? (
+                  <>
+                    <input
+                      type="file"
+                      id="reqeust-file"
+                      accept="image/*"
+                      onChange={onFileChange}
+                      style={{ display: 'none' }}
+                    />
+                  </>
+                ) : (
+                  <>
+                    <input
+                      type="file"
+                      id="reqeust-file"
+                      accept="image/png, image/jpeg, image/jpg"
+                      onChange={onFileChange}
+                      style={{ display: 'none' }}
+                    />
+                  </>
+                )}
               </div>
             </div>
             <div className="body__info">

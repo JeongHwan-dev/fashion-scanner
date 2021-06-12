@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import { useMediaQuery } from 'react-responsive';
 import { useTranslation } from 'react-i18next';
 import axios from 'axios';
 import swal from 'sweetalert';
@@ -7,6 +8,7 @@ import Example from 'components/matchingComponents/Example';
 import 'components/matchingComponents/css/Picture.css';
 
 const Picture = () => {
+  const isMobile = useMediaQuery({ maxWidth: 500 });
   const history = useHistory();
   const [previewImg, setPreviewImg] = useState('');
   const [requestImg, setRequestImg] = useState('');
@@ -70,8 +72,8 @@ const Picture = () => {
         })
         .catch(() => {
           swal({
-            title: '사진 전송 오류',
-            text: 'error',
+            title: '허용 사진 용량을 초과',
+            text: '50MB 이하의 사진을 업로드해 주세요.',
             icon: 'warning',
             button: '확인',
           });
@@ -120,8 +122,8 @@ const Picture = () => {
         })
         .catch(() => {
           swal({
-            title: 'Failed to send Photo',
-            text: 'error',
+            title: 'Exceeds allowed photo capacity',
+            text: 'Please upload a picture under 50MB.',
             icon: 'warning',
             button: 'Confirm',
           });
@@ -154,13 +156,27 @@ const Picture = () => {
                 <label className="material-icons" htmlFor="input-file">
                   add_a_photo
                 </label>
-                <input
-                  type="file"
-                  id="input-file"
-                  accept="image/png, image/jpeg, image/jpg;capture=camera"
-                  onChange={onFileChange}
-                  style={{ display: 'none' }}
-                />
+                {!isMobile ? (
+                  <>
+                    <input
+                      type="file"
+                      id="input-file"
+                      accept="image/*;capture=camera"
+                      onChange={onFileChange}
+                      style={{ display: 'none' }}
+                    />
+                  </>
+                ) : (
+                  <>
+                    <input
+                      type="file"
+                      id="input-file"
+                      accept="image/png, image/jpeg, image/jpg;capture=camera"
+                      onChange={onFileChange}
+                      style={{ display: 'none' }}
+                    />
+                  </>
+                )}
                 {previewImg && (
                   <div className="upload__preview">
                     <img src={previewImg} alt="첨부한 이미지" />
