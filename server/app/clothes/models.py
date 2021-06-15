@@ -1,6 +1,7 @@
 import os
 import uuid
 from django.db import models
+from datetime import datetime
 
 
 def image_upload_to(instance, filename):
@@ -8,8 +9,9 @@ def image_upload_to(instance, filename):
 
 
 def image_upload_to_with_uuid(instance, filename):
+    ymd_path = datetime.now().strftime("%Y/%m/%d")
     ext = filename.split(".")[-1]
-    return os.path.join(instance.UPLOAD_PATH, f"{uuid.uuid4()}.{ext}")
+    return os.path.join(instance.UPLOAD_PATH, ymd_path, f"{uuid.uuid4()}.{ext}")
 
 
 class LookbookClothes(models.Model):
