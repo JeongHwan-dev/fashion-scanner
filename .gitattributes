@@ -1,0 +1,1 @@
+server/app/ai/mmfashion/checkpoint/AttrCatePredict/vgg16_global.pth filter=lfs diff=lfs merge=lfs -text
