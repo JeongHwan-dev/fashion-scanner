@@ -3,6 +3,9 @@
   <img src="./images/fs_banner.png" alt="FASHION SCANNER" height="200px" />
   <br />
   <h1>패션 스캐너 (FASHION SCANNER)</h1>
+  <a href="https://blackpink.fashion-scanner.site/">
+    <img src="https://img.shields.io/badge/NGINX-Active-009639?&logo=nginx&logoColor=white" alt="GitHub-Pages" />
+  </a>
   <br />
 </div>
 
@@ -65,6 +68,12 @@
     </ul>
   </div>
 </details>
+
+<br />
+
+[**🔗 배포된 웹 서비스로 바로가기 Click !**](https://blackpink.fashion-scanner.site/) 👈
+
+> 새 창 열기 방법 : CTRL+click (on Windows and Linux) | CMD+click (on MacOS)
 
 <br />
 
