@@ -120,20 +120,19 @@
 
 | [🔗와이어프레임(Wireframe)](https://www.figma.com/file/UpQVmuk7wFVKmdUTBRpiTZ/%EB%B8%94%EB%9E%99%ED%95%91%ED%81%AC-LookBook?node-id=0%3A1) |
 | :----------------------------------------------------------------------------------------------------------------------------------------: |
-|                                    <img src="./images/wireframe.png" alt="Wireframe" width="1000px" />                                     |
+|                                    <img src="./images/wireframe.png" alt="Wireframe" width="1200px" />                                     |
 
 |       [🔗스토리보드](./documents/fashion-scanner_storyboard.pdf)        |
 | :---------------------------------------------------------------------: |
-| <img src="./images/storyboard1.png" alt="Storyboard1" width="1000px" /> |
-| <img src="./images/storyboard2.png" alt="Storyboard2" width="1000px" /> |
+| <img src="./images/storyboard1.png" alt="Storyboard1" width="1200px" /> |
 
 |                          아키텍처(Architecture)                           |
 | :-----------------------------------------------------------------------: |
-| <img src="./images/architecture.png" alt="Architecture" width="1000px" /> |
+| <img src="./images/architecture.png" alt="Architecture" width="1200px" /> |
 
 |                   개체-관계 모델(ERD)                   |
 | :-----------------------------------------------------: |
-| <img src="./images/erd.png" alt="ERD" width="1000px" /> |
+| <img src="./images/erd.png" alt="ERD" width="1200px" /> |
 
 <br />
 
@@ -143,19 +142,39 @@
 
 |                             메인 페이지                             |
 | :-----------------------------------------------------------------: |
-| <img src="./images/main_page.png" alt="Main Page" width="1100px" /> |
+| <img src="./images/main_page.png" alt="Main Page" width="1200px" /> |
 
 |                                 룩북 페이지                                 |
 | :-------------------------------------------------------------------------: |
-| <img src="./images/lookbook_page.png" alt="Lookbook Page" width="1100px" /> |
+| <img src="./images/lookbook_page.png" alt="Lookbook Page" width="1200px" /> |
 
 |                                매칭 페이지                                 |                                                                                                             로딩 페이지                                                                                                              |
 | :------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| <img src="./images/matching_page.png" alt="Matching Page" width="550px" /> | <img src="./images/loading_page.png" alt="Loading Page" width="550px" /><br /><img src="./images/result_page1.png" alt="Result Page1" width="550px" /><br /><img src="./images/result_page2.png" alt="Result Page2" width="550px" /> |
+| <img src="./images/matching_page.png" alt="Matching Page" width="600px" /> | <img src="./images/loading_page.png" alt="Loading Page" width="600px" /><br /><img src="./images/result_page1.png" alt="Result Page1" width="600px" /><br /><img src="./images/result_page2.png" alt="Result Page2" width="600px" /> |
 
 |                          조직문화 페이지                           |                                                                                                                                         FAQ 페이지                                                                                                                                          |
 | :----------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| <img src="./images/team_page.png" alt="Main Page" width="550px" /> | <img src="./images/faq_page1.png" alt="Team Page" width="550px" /><br /><img src="./images/faq_page2.png" alt="FAQ Page1" width="550px" /><br /><img src="./images/failure_page.png" alt="FAQ Page2" width="550px" /><br /><img src="./images/404_page.png" alt="404 Page" width="550px" /> |
+| <img src="./images/team_page.png" alt="Main Page" width="600px" /> | <img src="./images/faq_page1.png" alt="Team Page" width="600px" /><br /><img src="./images/faq_page2.png" alt="FAQ Page1" width="600px" /><br /><img src="./images/failure_page.png" alt="FAQ Page2" width="600px" /><br /><img src="./images/404_page.png" alt="404 Page" width="600px" /> |
+
+|                                메인 페이지1(모바일)                                |                                메인 페이지2(모바일)                                |                                메인 페이지3(모바일)                                |
+| :--------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------: |
+| <img src="./images/mobile_main_page1.png" alt="Mobile Main Page1" width="400px" /> | <img src="./images/mobile_main_page2.png" alt="Mobile Main Page2" width="400px" /> | <img src="./images/mobile_main_page3.png" alt="Mobile Main Page3" width="400px" /> |
+
+|                                메인 페이지4(모바일)                                |                                메인 페이지5(모바일)                                |                                메인 페이지6(모바일)                                |
+| :--------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------: |
+| <img src="./images/mobile_main_page4.png" alt="Mobile Main Page4" width="400px" /> | <img src="./images/mobile_main_page5.png" alt="Mobile Main Page5" width="400px" /> | <img src="./images/mobile_main_page6.png" alt="Mobile Main Page6" width="400px" /> |
+
+|                                    매칭 페이지1(모바일)                                    |                                    매칭 페이지2(모바일)                                    |                                    매칭 페이지3(모바일)                                    |
+| :----------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------: |
+| <img src="./images/mobile_matching_page1.png" alt="Mobile Matching Page1" width="400px" /> | <img src="./images/mobile_matching_page2.png" alt="Mobile Matching Page2" width="400px" /> | <img src="./images/mobile_matching_page3.png" alt="Mobile Matching Page3" width="400px" /> |
+
+|                               FAQ 페이지1(모바일)                                |                               FAQ 페이지2(모바일)                                |                               404 페이지(모바일)                                |
+| :------------------------------------------------------------------------------: | :------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------: |
+| <img src="./images/mobile_faq_page1.png" alt="Mobile FAQ Page1" width="400px" /> | <img src="./images/mobile_faq_page2.png" alt="Mobile FAQ Page2" width="400px" /> | <img src="./images/mobile_404_page.png" alt="Mobile 404 Page3" width="400px" /> |
+
+|                              조직문화 페이지1(모바일)                              |                              조직문화 페이지2(모바일)                              |                              조직문화 페이지(모바일)                               |
+| :--------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------: |
+| <img src="./images/mobile_team_page1.png" alt="Mobile Team Page1" width="400px" /> | <img src="./images/mobile_team_page2.png" alt="Mobile Team Page2" width="400px" /> | <img src="./images/mobile_team_page3.png" alt="Mobile Team Page3" width="400px" /> |
 
 <br />
 
