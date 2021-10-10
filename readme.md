@@ -83,24 +83,24 @@
 
 **Front-end**
 
-- ![HTML5](https://img.shields.io/badge/-HTML5-E34F26?&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/-CSS3-1572B6?&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?&logo=javascript&logoColor=white)
-- ![React](https://img.shields.io/badge/-React-61DAFB?&logo=react&logoColor=white)
-- ![Swiper](https://img.shields.io/badge/-Swiper-6332F6?&logo=swiper&logoColor=white)
+- ![HTML5](https://img.shields.io/badge/-HTML5-E34F26?&logo=html5&logoColor=white&style=flat-square) ![CSS3](https://img.shields.io/badge/-CSS3-1572B6?&logo=css3&logoColor=white&style=flat-square) ![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?&logo=javascript&logoColor=white&style=flat-square)
+- ![React](https://img.shields.io/badge/-React-61DAFB?&logo=react&logoColor=white&style=flat-square)
+- ![Swiper](https://img.shields.io/badge/-Swiper-6332F6?&logo=swiper&logoColor=white&style=flat-square)
 
 **Back-end**
 
-- ![Python](https://img.shields.io/badge/-Python-3776AB?&logo=python&logoColor=white)
-- ![Django](https://img.shields.io/badge/-Django-092E20?&logo=django&logoColor=white)
-- ![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-4169E1?&logo=postgresql&logoColor=white)
+- ![Python](https://img.shields.io/badge/-Python-3776AB?&logo=python&logoColor=white&style=flat-square)
+- ![Django](https://img.shields.io/badge/-Django-092E20?&logo=django&logoColor=white&style=flat-square)
+- ![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-4169E1?&logo=postgresql&logoColor=white&style=flat-square)
 
 **AI**
 
-- ![PyTorch](https://img.shields.io/badge/-PyTorch-EE4C2C?&logo=pytorch&logoColor=white)
+- ![PyTorch](https://img.shields.io/badge/-PyTorch-EE4C2C?&logo=pytorch&logoColor=white&style=flat-square)
 
 **DevOps**
 
-- ![Git](https://img.shields.io/badge/-Git-F05032?&logo=git&logoColor=white) ![GitLab](https://img.shields.io/badge/-GitLab-FCA121?&logo=gitlab&logoColor=white)
-- ![Docker](https://img.shields.io/badge/-Docker-2496ED?&logo=docker&logoColor=white) ![NGINX](https://img.shields.io/badge/-NGINX-009639?&logo=nginx&logoColor=white) ![Azure](https://img.shields.io/badge/-Azure-0078D4?&logo=microsoftazure&logoColor=white)
+- ![Git](https://img.shields.io/badge/-Git-F05032?&logo=git&logoColor=white&style=flat-square) ![GitLab](https://img.shields.io/badge/-GitLab-FCA121?&logo=gitlab&logoColor=white&style=flat-square)
+- ![Docker](https://img.shields.io/badge/-Docker-2496ED?&logo=docker&logoColor=white&style=flat-square) ![NGINX](https://img.shields.io/badge/-NGINX-009639?&logo=nginx&logoColor=white&style=flat-square) ![Azure](https://img.shields.io/badge/-Azure-0078D4?&logo=microsoftazure&logoColor=white&style=flat-square)
 
 **Data-set**
 
