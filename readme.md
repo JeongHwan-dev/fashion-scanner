@@ -204,6 +204,65 @@
 
 ## 👪 개발 팀 소개
 
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/Sarah-Cha">
+        <img src="https://avatars.githubusercontent.com/u/83054347?v=4" alt="차시현 프로필" />
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/chanmi1127">
+        <img src="https://avatars.githubusercontent.com/u/47763664?v=4" alt="차시현 프로필" />
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/JeongHwan-dev">
+        <img src="https://avatars.githubusercontent.com/u/68452755?v=4" alt="박정환 프로필" />
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/alveloper">
+        <img src="https://avatars.githubusercontent.com/u/73899253?v=4" alt="김수연 프로필" />
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/bky373">
+        <img src="https://avatars.githubusercontent.com/u/49539592?v=4" alt="이보람 프로필" />
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/Sarah-Cha">
+        차시현<br />(PM & AI)
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/chanmi1127">
+        이찬미<br />(AI)
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/JeongHwan-dev">
+        박정환<br />(Front-end)
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/alveloper">
+        김수연<br />(Front-end)
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/bky373">
+        이보람<br />(Back-end)
+      </a>
+    </td>
+  </tr>
+</table>
+
+<br />
+
 |  이름  |   역할    |                                                                                        개발 내용                                                                                        |
 | :----: | :-------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 | 차시현 |  PM & AI  |                           프로젝트 문서 작성<br />스토리보드 작성<br />아마존 쇼핑몰 데이터 크롤링<br />딥패션 데이터 활용한 모델 1, 모델 2 개발<br />UX 작성                           |
