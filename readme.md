@@ -1,6 +1,6 @@
 <div align="center">
   <br />
-  <img src="./readme_assets/fs_banner.png" alt="FASHION SCANNER" height="200px" />
+  <img src="./readme_assets/fs_banner.png" alt="FASHION SCANNER" />
   <br />
   <h1>패션 스캐너 (FASHION SCANNER)</h1>
   <a href="https://blackpink.fashion-scanner.site/">
