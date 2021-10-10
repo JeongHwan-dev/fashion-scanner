@@ -1,6 +1,6 @@
 <div align="center">
   <br />
-  <img src="./images/fs_banner.png" alt="FASHION SCANNER" height="200px" />
+  <img src="./readme_assets/fs_banner.png" alt="FASHION SCANNER" height="200px" />
   <br />
   <h1>패션 스캐너 (FASHION SCANNER)</h1>
   <a href="https://blackpink.fashion-scanner.site/">
@@ -130,19 +130,19 @@
 
 | [🔗와이어프레임(Wireframe)](https://www.figma.com/file/UpQVmuk7wFVKmdUTBRpiTZ/%EB%B8%94%EB%9E%99%ED%95%91%ED%81%AC-LookBook?node-id=0%3A1) |
 | :----------------------------------------------------------------------------------------------------------------------------------------: |
-|                                    <img src="./images/wireframe.png" alt="Wireframe" width="1200px" />                                     |
+|                                 <img src="./readme_assets/wireframe.png" alt="Wireframe" width="1200px" />                                 |
 
-|       [🔗스토리보드](./documents/fashion-scanner_storyboard.pdf)        |
-| :---------------------------------------------------------------------: |
-| <img src="./images/storyboard1.png" alt="Storyboard1" width="1200px" /> |
+|           [🔗스토리보드](./documents/fashion-scanner_storyboard.pdf)           |
+| :----------------------------------------------------------------------------: |
+| <img src="./readme_assets/storyboard1.png" alt="Storyboard1" width="1200px" /> |
 
-|                          아키텍처(Architecture)                           |
-| :-----------------------------------------------------------------------: |
-| <img src="./images/architecture.png" alt="Architecture" width="1200px" /> |
+|                              아키텍처(Architecture)                              |
+| :------------------------------------------------------------------------------: |
+| <img src="./readme_assets/architecture.png" alt="Architecture" width="1200px" /> |
 
-|                   개체-관계 모델(ERD)                   |
-| :-----------------------------------------------------: |
-| <img src="./images/erd.png" alt="ERD" width="1200px" /> |
+|                      개체-관계 모델(ERD)                       |
+| :------------------------------------------------------------: |
+| <img src="./readme_assets/erd.png" alt="ERD" width="1200px" /> |
 
 <br />
 
