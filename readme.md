@@ -310,7 +310,7 @@
 
 <br />
 
-### 국가별 통계
+### 국가 통계
 
 <img src="./readme_assets/country_stats.png" alt="국가별 통계" />
 <img src="./readme_assets/map_stats.png" alt="국가별 통계(세계지도)" />
@@ -319,7 +319,7 @@
 
 <br />
 
-### 언어별 통계
+### 언어 통계
 
 <img src="./readme_assets/language_stats.png" alt="언어별 통계" />
 
