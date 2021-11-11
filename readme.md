@@ -4,7 +4,7 @@
   <br />
   <h1>패션 스캐너 (FASHION SCANNER)</h1>
   <a href="https://blackpink.fashion-scanner.site/">
-    <img src="https://img.shields.io/badge/NGINX-Active-009639?&logo=nginx&logoColor=white" alt="NGINX" />
+    <img src="https://img.shields.io/badge/NGINX-Deactivate-ff7f00?&logo=nginx&logoColor=white" alt="NGINX" />
   </a>
   <br />
 </div>
@@ -73,6 +73,8 @@
 [**🔗 배포된 웹 서비스로 바로가기 Click !**](https://blackpink.fashion-scanner.site/) 👈
 
 > 새 창 열기 방법 : CTRL+click (on Windows and Linux) | CMD+click (on MacOS)
+
+> 🚫 서버 비용 유지 문제로 현재는 서비스를 중단한 상태입니다.
 
 <br />
 
@@ -296,7 +298,9 @@
 
 ## 📊 구글 애널리틱스 통계
 
-구글 애널리틱스를 세팅하고 배포를 진행해 6월 12일부터 10월 31일까지 약 5달간 서비스를 진행하였습니다.
+구글 애널리틱스를 세팅하고 배포를 진행하여 6월 12일부터 10월 31일까지 약 5달간 서비스를 진행하였습니다.
+
+> 서비스 기간: 2021년 6월 12일 ~ 2021년 10월 31일 (약 5달)
 
 ### 사용자 통계
 
