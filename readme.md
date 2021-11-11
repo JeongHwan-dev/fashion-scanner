@@ -82,28 +82,41 @@
 
 ## 🛠 기술 스택
 
-**Front-end**
+### **Front-end**
 
-- ![HTML5](https://img.shields.io/badge/-HTML5-E34F26?&logo=html5&logoColor=white&style=flat-square) ![CSS3](https://img.shields.io/badge/-CSS3-1572B6?&logo=css3&logoColor=white&style=flat-square) ![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?&logo=javascript&logoColor=white&style=flat-square)
-- ![React](https://img.shields.io/badge/-React-61DAFB?&logo=react&logoColor=white&style=flat-square)
-- ![Swiper](https://img.shields.io/badge/-Swiper-6332F6?&logo=swiper&logoColor=white&style=flat-square)
+| <img src="https://profilinator.rishav.dev/skills-assets/html5-original-wordmark.svg" alt="HTML5" width="50px" height="50px" /> | <img src="https://profilinator.rishav.dev/skills-assets/css3-original-wordmark.svg" alt="CSS3" width="50px" height="50px" /> | <img src="https://profilinator.rishav.dev/skills-assets/javascript-original.svg" alt="JavaScript" width="50px" height="50px" /> |
+| :----------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------: |
+|                                                             HTML5                                                              |                                                             CSS3                                                             |                                                         JavaScript(ES6)                                                         |
 
-**Back-end**
+| <img src="https://profilinator.rishav.dev/skills-assets/react-original-wordmark.svg" alt="React.js" width="50px" height="50px" /> | <img src="https://camo.githubusercontent.com/9f29e3d7fc79b01485632a99af0fd6a0f65d921adc720d0d30cdce9475caa9ca/68747470733a2f2f6769746875622e7375726d6f6e2e6d652f696d616765732f636f6d6d6f6e2f7377697065722d6c6f676f2e737667" alt="Swiper" width="50px" height="50px" /> |
+| :-------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+|                                                             React.js                                                              |                                                                                                                                 Swiper                                                                                                                                 |
 
-- ![Python](https://img.shields.io/badge/-Python-3776AB?&logo=python&logoColor=white&style=flat-square)
-- ![Django](https://img.shields.io/badge/-Django-092E20?&logo=django&logoColor=white&style=flat-square)
-- ![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-4169E1?&logo=postgresql&logoColor=white&style=flat-square)
+### **Back-end**
 
-**AI**
+| <img src="https://profilinator.rishav.dev/skills-assets/python-original.svg" alt="Python" width="50px" height="50px" /> | <img src="https://profilinator.rishav.dev/skills-assets/django-original.svg" alt="Django" width="50px" height="50px" /> | <img src="https://profilinator.rishav.dev/skills-assets/postgresql-original-wordmark.svg" alt="PostgreSQL" width="50px" height="50px" /> |
+| :---------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------: |
+|                                                         Python                                                          |                                                         Django                                                          |                                                                PostgreSQL                                                                |
 
-- ![PyTorch](https://img.shields.io/badge/-PyTorch-EE4C2C?&logo=pytorch&logoColor=white&style=flat-square)
+### **AI**
 
-**DevOps**
+| <img src="https://profilinator.rishav.dev/skills-assets/pytorch-icon.svg" alt="PyTorch" width="50px" height="50px" /> |
+| :-------------------------------------------------------------------------------------------------------------------: |
+|                                                        PyTorch                                                        |
 
-- ![Git](https://img.shields.io/badge/-Git-F05032?&logo=git&logoColor=white&style=flat-square) ![GitLab](https://img.shields.io/badge/-GitLab-FCA121?&logo=gitlab&logoColor=white&style=flat-square)
-- ![Docker](https://img.shields.io/badge/-Docker-2496ED?&logo=docker&logoColor=white&style=flat-square) ![NGINX](https://img.shields.io/badge/-NGINX-009639?&logo=nginx&logoColor=white&style=flat-square) ![Azure](https://img.shields.io/badge/-Azure-0078D4?&logo=microsoftazure&logoColor=white&style=flat-square)
+### **DevOps**
 
-**Data-set**
+| <img src="https://profilinator.rishav.dev/skills-assets/docker-original-wordmark.svg" alt="Docker" width="50px" height="50px" /> | <img src="https://seeklogo.com/images/N/netlify-logo-758722CDF4-seeklogo.com.png" alt="Netlify" width="50px" height="50px" /> | <img src="https://profilinator.rishav.dev/skills-assets/microsoft_azure-icon.svg" alt="Azure" width="50px" height="50px" /> |
+| :------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------: |
+|                                                              Docker                                                              |                                                            Netlify                                                            |                                                            Azure                                                            |
+
+### **Version Control**
+
+| <img src="https://profilinator.rishav.dev/skills-assets/git-scm-icon.svg" alt="Git" width="50px" height="50px" /> | <img src="https://profilinator.rishav.dev/skills-assets/gitlab.svg" alt="GitLab" width="50px" height="50px" /> |
+| :---------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------: |
+|                                                        Git                                                        |                                                     GitLab                                                     |
+
+### **Data-set**
 
 - DeepFashion 데이터
 - 아마존(US) 크롤링 데이터
