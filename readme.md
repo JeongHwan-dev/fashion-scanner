@@ -70,11 +70,9 @@
 
 <br />
 
-[**🔗 배포된 웹 서비스로 바로가기 Click !**](https://blackpink.fashion-scanner.site/) 👈
+[**🔗 데모 영상 바로가기 Click !**](https://youtu.be/aNEavvA3kIk) 👈
 
 > 새 창 열기 방법 : CTRL+click (on Windows and Linux) | CMD+click (on MacOS)
-
-> 🚫 서버 비용 유지 문제로 현재는 서비스를 중단한 상태입니다.
 
 <br />
 
@@ -105,12 +103,6 @@
 | <img src="https://profilinator.rishav.dev/skills-assets/docker-original-wordmark.svg" alt="Docker" width="50px" height="50px" /> | <img src="https://profilinator.rishav.dev/skills-assets/nginx-original.svg" alt="NGiNX" width="50px" height="50px" /> | <img src="https://profilinator.rishav.dev/skills-assets/microsoft_azure-icon.svg" alt="Azure" width="50px" height="50px" /> |
 | :------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------: |
 |                                                              Docker                                                              |                                                         NGiNX                                                         |                                                            Azure                                                            |
-
-### **Version Control**
-
-| <img src="https://profilinator.rishav.dev/skills-assets/git-scm-icon.svg" alt="Git" width="50px" height="50px" /> | <img src="https://profilinator.rishav.dev/skills-assets/gitlab.svg" alt="GitLab" width="50px" height="50px" /> |
-| :---------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------: |
-|                                                        Git                                                        |                                                     GitLab                                                     |
 
 ### **Data-set**
 
@@ -158,7 +150,11 @@
 
 <div id="5"></div>
 
-## 🎥 데모 영상
+## 🖥 데모 영상
+
+[**🔗 데모 영상 바로가기 Click !**](https://youtu.be/aNEavvA3kIk) 👈
+
+> 새 창 열기 방법 : CTRL+click (on Windows and Linux) | CMD+click (on MacOS)
 
 |                          메인 페이지                          |
 | :-----------------------------------------------------------: |
